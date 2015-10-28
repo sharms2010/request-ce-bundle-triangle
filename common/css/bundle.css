@@ -1,0 +1,55 @@
+Note: Mockup is based on 960px grid.
+Default padding: I like round numbers (and simple math). I usually use 40px between large elements and 20px bewteen small elements for padding.
+
+
+header {
+background-image: url (images/background.png); 
+background-repeat:repeat;
+height:140px;}
+
+Dark navbar overlay, Dark footer overlay {
+padding-top:70px;
+height:70px;
+border-top:1px solid #fff;
+background-color:#050c13;
+opacity: 0.75;
+}
+
+Yellow link 
+{color:#d4cd65;}
+
+Yellow header, yellow footer rule 
+{background-color:#d6ce61;}
+
+Teal navbar, Teal icon bar on homepage, Teal header, Teal footer rule
+{background-color: #5ea5b2;}
+
+Teal icon bar on homepage {
+    font-family: Roboto Light;
+    font-size:20px;
+    height:240px;
+    padding:40px 0;
+}
+
+Teal links and Teal "VIEW MORE" arrows
+{color:#3babc0;}
+
+Black icons, Black headers 
+{color:#242e38;}
+
+Black type
+h1 {font-family: Roboto Light;font-size:42px;color:#242e38;}
+
+Gray body copy
+{font-family: Roboto Regular;font-size:14px;color:#818181;}
+
+Grey rules in modules
+{color:#e6e6e6;}
+
+* Most white values are #fff *
+The exception? The background color on pages with dashboard-y modules 
+{background-color: #f5f5f5;}
+
+Detail/request pages w/o dashboard-y modules  
+{background-color: #fff;}
+
