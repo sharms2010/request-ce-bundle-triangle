@@ -85,6 +85,9 @@ form{
 	width: 560px;
 	padding-right: 40px;
 }
+table{
+	background-color: #fff;
+}
 
 .col-sm-7 thead:first-child{
 	background: #242e38;
@@ -92,11 +95,21 @@ form{
 
 table{
 	margin-top: 40px;
+	box-shadow: 1px 1px 10px #999;
 }
 
-thead td{
+thead td:first-child{
 	color: #fff; 
 }
+
+.box div{
+	color: #fff;
+}
+
+table div{
+	padding: 20px;
+}
+
 /*5 column deff*/
 .col-xs-odd,
 .col-sm-odd,
