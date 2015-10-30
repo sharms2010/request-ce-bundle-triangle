@@ -29,12 +29,27 @@
       <div id="overlay">
         <div class="container">
           <div class="row">
-              <div id="logo" class="col-sm-9">
-                ACME
+            <div id="logo" class="col-sm-9 col-xs-5">
+              ACME
+            </div>
+            <div class="col-sm-2 col-xs-5">
+              <div class="row">
+                <div class="col-sm-4 col-xs-4">
+                  <a class="profile" href="javascript:void(0)" data-target="div.user-card">
+                    <i class="gravatar-icon">
+                      <img src="https://lh4.googleusercontent.com/-6RDPOohcFhI/AAAAAAAAAAI/AAAAAAAAAAw/3xMmdleVrLU/photo.jpg?sz=50" alt="Profile Image" class="avatar">
+                    </i>
+                  </a>
+                </div>
+                <div class="col-sm-8 col-xs-8">
+                  <p class="navName">Hello Mike</p>
+                  <p class="navAccount">Your Account</p> 
+                </div>
               </div>
-              <div class="col-sm-3">
+            </div>
+            <div class="col-sm-1 col-xs-2">
               <a href="#"><i class="fa fa-th fa-3x"></i></a>
-              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -88,52 +103,139 @@
       </div>
     </div>
     <div class="container">
-      <div class="col-sm-7">
-        <table>
-          <thead>
-            <tr>
-              <td>Your Requests</td>
-              <td></td>
-            </tr>
-          </thead>
-          <tbody>
+      <div class="row">
+        <div class="col-sm-7">
+          <table>
+            <thead>
               <tr>
-                <td>SUMMARY</td>
-                <td>STATUS</td>
+                <td>YOUR REQUESTS</td>
+                <td></td>
               </tr>
-            <tr>
-                <td>HR Request: Employee Onboarding Request</td>
-            </tr>
-            <tr>
-              <td>Request #KR0000000000788923 - 10/28/2015</td>
-              <td>Incomplete</td>
-            </tr>
-            <tr>
-              <td>IT Request: iPad Request</td>
-            </tr>
-            <tr>
-              <td>Request #KR0000000000788923 - 10/28/2015</td>
-              <td>Approved</td>
-            </tr>
-            <tr>
-              <td>HR Request: Employee Onboarding Request</td>
-            </tr>
-            <tr>
-              <td>Request #KR0000000000788923 - 10/28/2015</td>
-              <td>Fulfilled</td>
-            </tr>
-            <tr>
-              <td>view more</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-      <div class="col-sm-5">
+            </thead>
+            <tbody>
+              <td>
+                <table>
+                  <thead>
+                    <tr>
+                      <td>SUMMARY</td>
+                      <td>STATUS</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>HR Request: Employee Onboarding Request</td>
+                      <td rowspan="2">Incomplete</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                    <tr>
+                      <td>IT Request: iPad Request</td>
+                      <td rowspan="2">Approved</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                    <tr>
+                      <td>HR Request: Employee Onboarding Request</td>
+                      <td rowspan="2">Fulfilled</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2"><center>VIEW MORE</center></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </td>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <td>YOUR APPROVALS</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <td>
+                <table>
+                  <thead>
+                    <tr>
+                      <td>SUMMARY</td>
+                      <td>STATUS</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>HR Request: Employee Onboarding Request</td>
+                      <td rowspan="2">Incomplete</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                    <tr>
+                      <td>IT Request: iPad Request</td>
+                      <td rowspan="2">Approved</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                    <tr>
+                      <td>HR Request: Employee Onboarding Request</td>
+                      <td rowspan="2">Fulfilled</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2"><center>VIEW MORE</center></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </td>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-5">
+          <table>
+            <thead>
+              <tr>
+                <td>ALERTS &amp OUTAGES</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PeopleSoft offline October 17-18</td>
+              </tr>
+              <tr>
+                <td>PeopleSoft will be offline this weekend for routine updates starting at midnight Friday, October 16. The system should be back online by Monday, October 19 at 8:00am.</td>
+              </tr>
+            </tbody>
+          </table>
+          <a class="twitter-timeline" href="https://twitter.com/KineticData" data-widget-id="569678005275226112" data-chrome="nofooter">Tweets by @KineticData</a>
+        </div>
       </div>
     </div>
   </body>
+  <footer id="footer">
+    <div id="overlay-foot">
+      <div class="container">
+        <div class="row">
+            fsdfsadf
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="subfooter" class="container">
+    <div>&copy 2015 Acme Industries, Inc.</div>
+  <div>
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  </script>
 </html>
