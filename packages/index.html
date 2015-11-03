@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>This is a title</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,12 +13,227 @@
         <link rel="icon" type="image/png" href="../common/images/favicon-16x16.png" sizes="16x16">
         <link rel="shortcut icon" href="../common/images/favicon.ico" type="image/x-icon"/>
 
-        <link href="../common/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../common/libraries/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link type="text/css" rel="stylesheet" href="../common/libraries/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
 
-        <script type="text/javascript" src="../common/libraries/jquery/jquery.min.js" />
-        <script type="text/javascript" src="../common/libraries/bootstrap/bootstrap.min.js" />
+        <script type="text/javascript" src="../common/libraries/jquery/jquery-1.11.3.min.js" ></script>
+        <script type="text/javascript" src="../common/libraries/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../common/css/projectCss.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700,300,100italic,300italic,400italic,500,500italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
     </head>
-    <body>
-      Hello
-    </body>
+  <body>
+    <header id="header">
+      <div id="overlay">
+        <div class="container">
+          <div class="row">
+            <div id="logo" class="col-sm-9 col-xs-5">
+              ACME
+            </div>
+            <div class="col-sm-2 col-xs-5">
+              <div class="row">
+                <div class="col-sm-4 col-xs-4">
+                  <a class="profile" href="javascript:void(0)" data-target="div.user-card">
+                    <i class="gravatar-icon">
+                      <img src="https://lh4.googleusercontent.com/-6RDPOohcFhI/AAAAAAAAAAI/AAAAAAAAAAw/3xMmdleVrLU/photo.jpg?sz=50" alt="Profile Image" class="avatar">
+                    </i>
+                  </a>
+                </div>
+                <div class="col-sm-8 col-xs-8">
+                  <p class="navName">Hello Mike</p>
+                  <p class="navAccount">Your Account</p> 
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1 col-xs-2 pull-right">
+              <a href="#"><i class="fa fa-th fa-3x"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <h1>How can we help you today?</h1>
+      <form role="form"> 
+        <div class="form-group has-feedback">
+          <input type="text" class="form-control" />
+          <i class="form-control-feedback fa fa-search"></i>
+        </div>
+      </form>
+    </div>
+    <div id="tealnav">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-odd">
+            <div class="box">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-wrench fa-stack-1x fa-inverse"></i>
+              </span>
+              <div>Facilities Request</div>
+            </div>
+          </div>
+          <div class="col-sm-odd">
+            <div class="box">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+              </span>
+              <div>Finance Requests</div>
+            </div>
+          </div>
+          <div class="col-sm-odd">
+            <div class="box">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-star fa-stack-1x fa-inverse"></i>
+              </span>
+              <div>Popular Requests</div>
+            </div>
+          </div>
+          <div class="col-sm-odd">
+          
+          </div>
+          <div class="col-sm-odd">
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <table>
+            <thead>
+              <tr>
+                <td>YOUR REQUESTS</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <td>
+                <table>
+                  <thead>
+                    <tr>
+                      <td>SUMMARY</td>
+                      <td>STATUS</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>HR Request: Employee Onboarding Request</td>
+                      <td rowspan="2">Incomplete</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                    <tr>
+                      <td>IT Request: iPad Request</td>
+                      <td rowspan="2">Approved</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                    <tr>
+                      <td>HR Request: Employee Onboarding Request</td>
+                      <td rowspan="2">Fulfilled</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2"><center>VIEW MORE</center></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </td>
+            </tbody>
+          </table>
+          <table>
+            <thead>
+              <tr>
+                <td>YOUR APPROVALS</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <td>
+                <table>
+                  <thead>
+                    <tr>
+                      <td>SUMMARY</td>
+                      <td>STATUS</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>HR Request: Employee Onboarding Request</td>
+                      <td rowspan="2">Incomplete</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                    <tr>
+                      <td>IT Request: iPad Request</td>
+                      <td rowspan="2">Approved</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                    <tr>
+                      <td>HR Request: Employee Onboarding Request</td>
+                      <td rowspan="2">Fulfilled</td>
+                    </tr>
+                    <tr>
+                      <td>Request #KR0000000000788923 - 10/28/2015</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2"><center>VIEW MORE</center></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </td>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-5">
+          <table>
+            <thead>
+              <tr>
+                <td>ALERTS &amp OUTAGES</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PeopleSoft offline October 17-18</td>
+              </tr>
+              <tr>
+                <td>PeopleSoft will be offline this weekend for routine updates starting at midnight Friday, October 16. The system should be back online by Monday, October 19 at 8:00am.</td>
+              </tr>
+            </tbody>
+          </table>
+          <a class="twitter-timeline" href="https://twitter.com/KineticData" data-widget-id="569678005275226112" data-chrome="nofooter">Tweets by @KineticData</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer id="footer">
+    <div id="overlay-foot">
+      <div class="container">
+        <div class="row">
+            fsdfsadf
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="subfooter" class="container">
+    <div>&copy 2015 Acme Industries, Inc.</div>
+  <div>
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  </script>
 </html>
