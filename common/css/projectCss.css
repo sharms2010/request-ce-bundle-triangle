@@ -16,6 +16,11 @@ h1 {
 	text-align: center;
 }
 
+h5{
+	font-family: "Roboto Light";
+	font-size:	.857rem; /*equal to 12px*/
+}
+
 i{
 	color: white;
 }
@@ -35,6 +40,11 @@ i{
 
 #subfooter{
 	height: 5rem; /*equal to 70px*/
+	vertical-align: middle;
+}
+
+#subfooter p{
+	margin-top: 2.143rem; /*equal to 30px*/
 }
 
 #overlay{
@@ -53,9 +63,8 @@ i{
 	bottom: 0px;
 	height: 17.5rem; /*equal to 245px*/
 	width: 100%;
-    background-color: #050c13;
+    background-color: rgba(5, 12, 19, 0.75);
     border-top: .071rem solid #fff;
-    opacity: 0.75;
 
     filter: alpha(opacity=75); /* For IE8 and earlier */
 }
@@ -190,6 +199,31 @@ i{
 	color:#818181;
 }
 
+#overlay-foot > div > div > div > div{
+	color: #fff;
+}
+
+#overlay-foot > div > div > div > div:first-child{
+	padding-top: 2.5rem; /*equal to 35px*/
+	
+}
+
+#overlay-foot > div > div > div:first-child > div:first-child{
+	border-bottom: .357rem solid #d6ce61;
+}
+
+#overlay-foot > div > div > div:not(:first-child) > div:first-child{
+	border-bottom: .357rem solid #5ea5b2;
+}
+
+#overlay-foot > div > div > div:not(:first-child) > div{
+	margin-left: 2.143rem; /*equal to 30px*/
+}
+
+#overlay-foot > div > div > div:not(:first-child) > div > h5{
+	margin-bottom: 0;
+}
+
 /* table control*/
 /*.col-sm-7 table{
 	width: 560px;
@@ -289,10 +323,6 @@ table > tbody > tr > td > table > tfoot > tr > td{
 	font-family: "Roboto Black";
 	color:#3babc0;
 	padding: 20px;
-}
-
-#subfooter div{
-	margin: 30px;
 }*/
 
 /*5 column deff*/
@@ -311,6 +341,7 @@ table > tbody > tr > td > table > tfoot > tr > td{
 }
 
 /*media control*/
+/*five column control*/
 @media (max-width: 768px){
 .col-xs-odd {
     width: 20%;
@@ -368,4 +399,46 @@ form{
 	width: 11.429rem; /*equal to 160px*/
 	height: 17.143rem; /*equal to 240px*/
 }
+}
+
+/*to be used with a 5 column control*/
+.col-xs-2odd{
+    position: relative;
+    min-height: 1px;
+    padding: 0px;
+}
+.col-sm-2odd,
+.col-md-2odd,
+.col-lg-2odd {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/*media control*/
+@media (max-width: 768px){
+	.col-xs-2odd {
+	    width: 40%;
+	    float: left;
+	}
+}
+
+@media (min-width: 768px) {
+	.col-sm-2odd {
+        width: 40%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-2odd {
+        width: 40%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-2odd {
+        width: 40%;
+        float: left;
+    }
 }
