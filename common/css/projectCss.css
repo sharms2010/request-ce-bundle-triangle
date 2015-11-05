@@ -7,19 +7,15 @@ body{
 }
 
 h1 {
-	margin: 0;
-	padding-top: 2.857rem; /*equal to 40px*/
-	padding-bottom: .714rem; /*equal to 10px*/
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 300;
 	font-size:	3rem; /*equal to 42px*/
 	color:	#242e38;
-	text-align: center;
 }
 
 h5{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 300;
 	font-size:	.857142857rem; /*equal to 12px*/
 }
 
@@ -27,59 +23,68 @@ i{
 	color: white;
 }
 
-#header{
+a {
+	color:#3babc0;
+}
+
+#logo{
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 100;
+	font-size: 3.571rem; /*equal to 50px*/
+	color: #fff;
+}
+
+.header{
 	background: url("../images/background.png");
 	height: 7.5rem; /*equal to 105px*/
 	position: relative;
 }
 
-#footer{
+.footer{
 	background: url("../images/background.png");
 	height: 20rem; /*equal to 280px*/
 	position: relative;
 	margin-top: 2.857rem; /*equal to 40px*/
 }
 
-#subfooter{
+.subfooter{
 	height: 5rem; /*equal to 70px*/
 	vertical-align: middle;
 }
 
-#subfooter p{
+.subfooter p{
 	margin-top: 2.143rem; /*equal to 30px*/
 }
 
-#overlay{
-	position: absolute;
-	bottom: 0;
-	height: 5rem; /*equal to 70px*/
+.overlay{
+
 	width: 100%;
     background-color: rgba(5, 12, 19, 0.75);
-    border-top: .071rem solid #fff;
 
     filter: alpha(opacity=75); /* For IE8 and earlier */
 }
 
-#overlay-foot{
+.header .overlay{
+	position: absolute;
+	height: 5rem; /*equal to 70px*/
+	bottom: 0;
+}
+
+.footer .overlay{
 	position: absolute;
 	bottom: 0px;
 	height: 17.5rem; /*equal to 245px*/
-	width: 100%;
-    background-color: rgba(5, 12, 19, 0.75);
-    border-top: .071rem solid #fff;
-
-    filter: alpha(opacity=75); /* For IE8 and earlier */
-}
-
-#logo{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-	font-size: 3.571rem; /*equal to 50px*/
-	color: #fff;
 }
 
 .fa-th{
 	padding-top: 1.071rem; /*equal to 15px*/
+}
+
+#search-title{
+	margin: 0;
+	padding-top: 2.857rem; /*equal to 40px*/
+	padding-bottom: .714rem; /*equal to 10px*/
+	text-align: center;
 }
 
 .fa-search{
@@ -100,9 +105,9 @@ i{
 	margin-bottom: 0px;
 }
 
-.navAccount{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+.navAccount a{
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 500;
 	color: #d6ce61;
 }
 
@@ -136,6 +141,14 @@ i{
 	margin-bottom: 2.857rem; /*equal to 40px*/
 }
 
+#tealnav a{
+	color: #fff;
+}
+
+#tealnav p{
+	display: inline-block;
+}
+
 /*panel control*/
 .leftside .panel-heading{
 	background-color: #242e38 !important;
@@ -156,8 +169,8 @@ i{
 
 .panel-title h4{
 	color: #fff; 
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 500;
 }
 
 .panel-body > table{
@@ -166,8 +179,8 @@ i{
 
 .panel-body > table > thead > tr > td{
 	padding-top: 0;
-	  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+  	font-weight: 700;
 	color:#818181;
 }
 
@@ -176,66 +189,64 @@ i{
 }
 
 .panel-body > table > tbody > tr:nth-child(odd) > td:nth-child(1){
-	  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+  	font-weight: 700;
 	padding-bottom: 0;
 }
 
 .panel-body > table > tbody > tr:nth-child(even) > td:nth-child(1){
-	  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-	color:#3babc0;
+	font-family: 'Roboto', sans-serif;
+  	font-weight: 700;
 	padding-top: 0;
 	border: none;
 }
 
 .panel-body > table > tbody > tr > td:nth-child(2){
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 700;
 	color:#818181;
 	text-align: right;
 	vertical-align: bottom;
 }
 
 .panel-body > table > tfoot > tr > td{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-	color:#3babc0;
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 700;
 }
 
 .panel-body > p{
 	font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  	font-weight: 700;
 }
 
 .panel-body > div{
 	font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  	font-weight: 700;
 	color:#818181;
 }
 
-#overlay-foot > div > div > div > div{
+.footer .overlay> div > div > div > div{
 	color: #fff;
 }
 
-#overlay-foot > div > div > div > div:first-child{
+.footer .overlay > div > div > div > div:first-child{
 	padding-top: 2.5rem; /*equal to 35px*/
 	
 }
 
-#overlay-foot > div > div > div:first-child > div:first-child{
+.footer .overlay> div > div > div:first-child > div:first-child{
 	border-bottom: .357rem solid #d6ce61;
 }
 
-#overlay-foot > div > div > div:not(:first-child) > div:first-child{
+.footer .overlay > div > div > div:not(:first-child) > div:first-child{
 	border-bottom: .357rem solid #5ea5b2;
 }
 
-#overlay-foot > div > div > div:not(:first-child) > div{
+.footer .overlay > div > div > div:not(:first-child) > div{
 	margin-left: 2.143rem; /*equal to 30px*/
 }
 
-#overlay-foot > div > div > div:not(:first-child) > div > h5{
+.footer .overlay > div > div > div:not(:first-child) > div > h5{
 	margin-bottom: 0;
 }
 

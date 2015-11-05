@@ -25,8 +25,8 @@
 
   </head>
   <body>
-    <header id="header">
-      <div id="overlay">
+    <header class="header">
+      <div class="overlay">
         <div class="container">
           <div class="row">
             <div id="logo" class="col-xs-6 col-sm-6 col-md-8 col-lg-9">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-sm-8 col-xs-8">
                   <p class="navName">Hello Mike</p>
-                  <p class="navAccount">Your Account</p> 
+                  <p class="navAccount"><a href="#">Your Account</a></p>
                 </div>
               </div>
             </div>
@@ -54,102 +54,141 @@
         </div>
       </div>
     </header>
-    <div class="container hidden-xs">
-      <h1>How can we help you today?</h1>
-      <form role="form"> 
-        <div class="form-group has-feedback">
-          <input type="text" class="form-control" />
-          <i class="form-control-feedback fa fa-search"></i>
-        </div>
-      </form>
-    </div>
+    
     <div id="tealnav">
       <div class="container">
         <div class="row">
-          <div class="col-sm-odd col-xs-odd">
-            <div class="box text-center">
+          <div class="col-sm-2">
+              <p class="hidden-xs"><a href="#">HOME</a></p>
+          </div>
+          <div class="col-sm-2">
+              <p class="hidden-xs"><a href="#">My APPROVALS</a></p>
+          </div>
+          <div class="col-sm-2">
+              <p class="hidden-xs"><a href="#">FACILITIES REQUESTS</a></p>
+          </div>
+          <div class="col-sm-2">            
+              <p class="hidden-xs"><a href="#">FINANCE REQUESTS</a></p>
+          </div>
+          <div class="col-sm-2">      
+              <p class="hidden-xs"><a href="#">HR REQUESTS</a></p>
+          </div>
+          <div class="col-sm-2">         
+              <p class="hidden-xs"><a href="#">IT REQUESTS</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <h1>Your Requests</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 rightside">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body text-center">
               <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-wrench fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-frown-o fa-stack-1x fa-inverse"></i>
               </span>
               <span class="fa-stack fa-3x center-block visible-sm-inline-block">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-wrench fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-frown-o fa-stack-1x fa-inverse"></i>
               </span>
               <span class="fa-stack fa-2x center-block visible-xs-inline-block">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-wrench fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-frown-o fa-stack-1x fa-inverse"></i>
               </span>
-              <div class="hidden-xs">Facilities Request</div>
+              <h3>Tax Changes</h3>
+              <p><a href="#">#KR0000000000788923</a></p>
+              <div>October 27, 2015</div>
+              <div>In progress</div>
+              <button class="btn btn-primary">DETAILS
+                <i class="icon-control-feedback fa fa-play"></i>
+              </button>
             </div>
           </div>
-          <div class="col-sm-odd col-xs-odd">
-            <div class="box text-center">
+        </div>
+        <div class="col-sm-3 rightside">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body text-center">
               <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-gift fa-stack-1x fa-inverse"></i>
               </span>
               <span class="fa-stack fa-3x center-block visible-sm-inline-block">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-gift fa-stack-1x fa-inverse"></i>
               </span>
               <span class="fa-stack fa-2x center-block visible-xs-inline-block">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-gift fa-stack-1x fa-inverse"></i>
               </span>
-              <div class="hidden-xs">Finance Requests</div>
+              <h3>Expense Inquiry</h3>
+              <p><a href="#">#KR0000000000784651</a></p>
+              <div>October 23, 2015</div>
+              <div>In progress</div>
+              <button class="btn btn-primary">DETAILS
+                <i class="icon-control-feedback fa fa-play"></i>
+              </button>
             </div>
           </div>
-          <div class="col-sm-odd col-xs-odd">
-            <div class="box text-center">
+        </div>
+        <div class="col-sm-3 rightside">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body text-center">
               <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-money fa-stack-1x fa-inverse"></i>
               </span>
               <span class="fa-stack fa-3x center-block visible-sm-inline-block">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-money fa-stack-1x fa-inverse"></i>
               </span>
               <span class="fa-stack fa-2x center-block visible-xs-inline-block">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-money fa-stack-1x fa-inverse"></i>
               </span>
-              <div class="hidden-xs">HR Requests</div>
+              <h3>Missing Payment</h3>
+              <p><a href="#">#KR0000000000784851</a></p>
+              <div>October 15, 2015</div>
+              <div>In progress</div>
+              <button class="btn btn-primary">DETAILS
+                <i class="icon-control-feedback fa fa-play"></i>
+              </button>
             </div>
           </div>
-          <div class="col-sm-odd col-xs-odd">
-            <div class="box text-center">
+        </div>
+        <div class="col-sm-3 rightside">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body text-center">
               <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-television fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-bus fa-stack-1x fa-inverse"></i>
               </span>
               <span class="fa-stack fa-3x center-block visible-sm-inline-block">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-television fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-bus fa-stack-1x fa-inverse"></i>
               </span>
               <span class="fa-stack fa-2x center-block visible-xs-inline-block">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-television fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-bus fa-stack-1x fa-inverse"></i>
               </span>
-              <div class="hidden-xs">IT Requests</div>
-            </div>
-          </div>
-          <div class="col-sm-odd col-xs-odd">
-            <div class="box text-center">
-                <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-star fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="fa-stack fa-3x center-block visible-sm-inline-block">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-star fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="fa-stack fa-2x center-block visible-xs-inline-block">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-star fa-stack-1x fa-inverse"></i>
-                </span>
-                <div class="hidden-xs">Popular Requests</div>
-              </div>
+              <h3>Travel Expenses</h3>
+              <p><a href="#">#KR0000000000784203</a></p>
+              <div>October 27, 2015</div>
+              <div>In progress</div>
+              <button class="btn btn-primary">DETAILS
+                <i class="icon-control-feedback fa fa-play"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -157,152 +196,89 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-7 leftside">
+        <div class="col-sm-3 rightside">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <div class="panel-title"><h4>YOUR REQUESTS</h4></div>
             </div>
-              <div class="panel-body">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <td>SUMMARY</td>
-                      <td class="hidden-xs">STATUS</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>HR Request: Employee Onboarding Request</td>
-                      <td class="hidden-xs" rowspan="2">Incomplete</td>
-                    </tr>
-                    <tr>
-                      <td>Request #KR0000000000788923 - 10/28/2015</td>
-                    </tr>
-                    <tr>
-                      <td>IT Request: iPad Request</td>
-                      <td class="hidden-xs" rowspan="2">Approved</td>
-                    </tr>
-                    <tr>
-                      <td>Request #KR0000000000788923 - 10/28/2015</td>
-                    </tr>
-                    <tr>
-                      <td>HR Request: Employee Onboarding Request</td>
-                      <td class="hidden-xs" rowspan="2">Fulfilled</td>
-                    </tr>
-                    <tr>
-                      <td>Request #KR0000000000788923 - 10/28/2015</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td colspan="2"><center>VIEW MORE</center></td>
-                    </tr>
-                  </tfoot>
-                </table>
+            <div class="panel-body text-center">
+              <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gift fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="fa-stack fa-3x center-block visible-sm-inline-block">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gift fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="fa-stack fa-2x center-block visible-xs-inline-block">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-gift fa-stack-1x fa-inverse"></i>
+              </span>
+              <h3>Expense Inquiry</h3>
+              <p><a href="#">#KR0000000000784651</a></p>
+              <div>October 23, 2015</div>
+              <div>In progress</div>
+              <button class="btn btn-primary">DETAILS
+                <i class="icon-control-feedback fa fa-play"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="overlay">
+        <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <div>
+                    <h4>FOOTER HERE</h4>
+                  </div>
+                  <div>
+                    <h4>Me gusta la clase de español porque es divertido. Me no gusta la clase de comunicación porque es el lunes y miércoles. Me no gusta la universidad porque es lejos de mi casa. Me gusta la clase de computación porque computación es mi especialización. Me gusta mi compañeros. Son muy inteligente.</h4>
+                  </div>
               </div>
-            </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <div class="panel-title"><h4>YOUR APPROVALS</h4></div>
-            </div>
-              <div class="panel-body">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <td>SUMMARY</td>
-                      <td class="hidden-xs">STATUS</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>HR Request: Employee Onboarding Request</td>
-                      <td class="hidden-xs" rowspan="2">Incomplete</td>
-                    </tr>
-                    <tr>
-                      <td>Request #KR0000000000788923 - 10/28/2015</td>
-                    </tr>
-                    <tr>
-                      <td>IT Request: iPad Request</td>
-                      <td class="hidden-xs" rowspan="2">Approved</td>
-                    </tr>
-                    <tr>
-                      <td>Request #KR0000000000788923 - 10/28/2015</td>
-                    </tr>
-                    <tr>
-                      <td>HR Request: Employee Onboarding Request</td>
-                      <td class="hidden-xs" rowspan="2">Fulfilled</td>
-                    </tr>
-                    <tr>
-                      <td>Request #KR0000000000788923 - 10/28/2015</td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td colspan="2"><center>VIEW MORE</center></td>
-                    </tr>
-                  </tfoot>
-                </table>
-               </div>
-            </div>
-          </div>
-        <div class="col-sm-5 rightside">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <div class="panel-title"><h4>ALERTS &amp OUTAGES</h4></div>
-            </div>
-            <div class="panel-body">
-              <p>PeopleSoft offline October 17-18</p>
-              <div>PeopleSoft will be offline this weekend for routine updates starting at midnight Friday, October 16. The system should be back online by Monday, October 19 at 8:00am.</div>
-            </div>
-          </div>
-          <div class=" hidden-xs">
-          <a class="twitter-timeline" href="https://twitter.com/KineticData" data-widget-id="569678005275226112" data-chrome="nofooter">Tweets by @KineticData</a>
+              <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
+                  <div>
+                    <h4>LINKS HERE</h4>
+                  </div>
+                  <div>
+                    <h5><a href="#">Links aquí</a></h5>
+                    <h5><a href="#">يرتبط هنا؟</a></h5>
+                    <h5><a href="#">liens ici</a></h5>
+                    <h5><a href="#">এখানে লিংক</a></h5>
+                    <h5><a href="#">這裡友情鏈接</a></h5>
+                  </div>
+              </div>
+              <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
+                  <div>
+                    <h4>LINKS HERE</h4>
+                  </div>
+                  <div>
+                    <h5><a href="#">ಸಂಪರ್ಕ ಕೂಡುತ್ತದೆ</a></h5>
+                    <h5><a href="#">לינקס דאָ</a></h5>
+                    <h5><a href="#">linki tutaj</a></h5>
+                    <h5><a href="#">länkar här</a></h5>
+                    <h5><a href="#">ການເຊື່ອມຕໍ່ທີ່ນີ້</a></h5>
+                  </div>
+              </div>
+              <!-- <div class="col-md-odd visible-md-inline-block visible-lg-inline-block">
+                  <div>
+                    <h4>LINKS HERE</h4>
+                  </div>
+                  <div>
+                    <h5><a href="#">skakels hierheen</a></h5>
+                    <h5><a href="#">Αναφορές στη σελίδα</a></h5>
+                    <h5><a href="#">odkazuje sem</a></h5>
+                    <h5><a href="#">энд холбоосууд</a></h5>
+                    <h5><a href="#">Links ebe a</a></h5>
+                  </div>
+              </div> -->
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   </body>
-  <footer id="footer">
-    <div id="overlay-foot">
-      <div class="container">
-        <div class="row">
-            <div class="col-md-2odd">
-                <div>
-                  <h4>FOOTER HERE</h4>
-                </div>
-                <div>
-                  <h5>Me gusta la clase de español porque es divertido. Me no gusta la clase de comunicación porque es el lunes y miércoles. Me no gusta la universidad porque es lejos de mi casa. Me gusta la clase de computación porque computación es mi especialización. Me gusta mi compañeros. Son muy inteligente.</h5>
-                </div>
-            </div>
-            <div class="col-md-odd visible-md-inline-block visible-lg-inline-block">
-                <div>
-                  <h4>LINKS HERE</h4>
-                </div>
-                <div>
-                  <h5>Links aquí</h5><h5>يرتبط هنا؟</h5><h5>liens ici</h5><h5>এখানে লিংক</h5><h5>這裡友情鏈接</h5>
-                </div>
-            </div>
-            <div class="col-md-odd visible-md-inline-block visible-lg-inline-block">
-                <div>
-                  <h4>LINKS HERE</h4>
-                </div>
-                <div>
-                  <h5>ಸಂಪರ್ಕ ಕೂಡುತ್ತದೆ</h5><h5>לינקס דאָ</h5><h5>linki tutaj</h5><h5>länkar här</h5><h5>ການເຊື່ອມຕໍ່ທີ່ນີ້</h5>
-                </div>
-            </div>
-            <div class="col-md-odd visible-md-inline-block visible-lg-inline-block">
-                <div>
-                  <h4>LINKS HERE</h4>
-                </div>
-                <div>
-                  <h5>skakels hierheen</h5><h5>Αναφορές στη σελίδα</h5><h5>odkazuje sem</h5><h5>энд холбоосууд</h5><h5>Links ebe a</h5>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div id="subfooter" class="container">
+  <div class="subfooter container">
     <p>&copy 2015 Acme Industries, Inc.</p>
   <div>
 
