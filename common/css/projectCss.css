@@ -7,10 +7,30 @@ body{
 }
 
 h1 {
+	margin: 0;
   	font-family: 'Roboto', sans-serif;
   	font-weight: 300;
 	font-size:	3rem; /*equal to 42px*/
 	color:	#242e38;
+}
+
+h3{
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+  	font-weight: 500;
+  	font-size: 1.71428571429rem; /*equal to 24px*/
+}
+
+h4{
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+  	font-weight: 500;
+  	font-size: 1.28571428571rem; /*equal to 18px*/
+}
+
+p{
+	font-size: 1.14285714286em; /*equal to 16px*/
+	margin: 0;
 }
 
 h5{
@@ -26,12 +46,19 @@ i{
 a {
 	color:#3babc0;
 }
+ul{
+	padding: 0;
+}
 
 #logo{
   	font-family: 'Roboto', sans-serif;
   	font-weight: 100;
 	font-size: 3.571rem; /*equal to 50px*/
 	color: #fff;
+}
+
+.margin-bottom-40{
+	margin-bottom: 2.857rem; /*equal to 40px*/
 }
 
 .header{
@@ -76,13 +103,12 @@ a {
 	height: 17.5rem; /*equal to 245px*/
 }
 
-.fa-th{
+.overlay .fa-th{
 	padding-top: 1.071rem; /*equal to 15px*/
 }
 
 #search-title{
 	margin: 0;
-	padding-top: 2.857rem; /*equal to 40px*/
 	padding-bottom: .714rem; /*equal to 10px*/
 	text-align: center;
 }
@@ -145,8 +171,24 @@ a {
 	color: #fff;
 }
 
+#tealnav ul {
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    margin: 0;
+    padding: 0;
+}
+
+#tealnav li {
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    list-style-type: none;
+    padding: 10px;
+}
+
 #tealnav p{
-	display: inline-block;
+	text-align: center;
 }
 
 /*panel control*/
@@ -225,6 +267,37 @@ a {
 	color:#818181;
 }
 
+.requests .panel-heading{
+	padding-bottom: 0;
+	background-color: #242e38;
+}
+
+.requests > .list > div > div > ul > li{
+	display: flex;
+}
+
+.requests > .list > div > div > ul > li:not(:last-child){
+	border-bottom: 2px solid black; 
+}
+
+.requests > .list > div > div > ul > li{
+	padding: 1rem 0 1rem 0;
+}
+
+.requests > .list > div > div > ul > li > div:last-child > span{
+	margin-top: 25%;
+	margin-bottom: 25%;
+}
+
+.requests > div > div > div > div > h4{
+	vertical-align: bottom;
+	color: #818181;
+}
+
+.requests > div > div > div > div > i{
+	color: #818181;
+}
+
 .footer .overlay> div > div > div > div{
 	color: #fff;
 }
@@ -282,7 +355,6 @@ a {
 form{
 	margin: 0 auto;
 	width: 75%; 
-	padding-bottom: 2.857rem; /*equal to 40px*/
 	}
 		.box{
 	margin: 0 auto;
@@ -299,7 +371,6 @@ form{
 form{
 	margin: 0 auto;
 	width: 60%; 
-	padding-bottom: 2.857rem; /*equal to 40px*/
 	}
 .box{
 	margin: 0 auto;
@@ -316,7 +387,6 @@ form{
     form{
 	margin: 0 auto;
 	width: 50%; 
-	padding-bottom: 2.857rem; /*equal to 40px*/
 	}
 	.box{
 	margin: 0 auto;
