@@ -8,4 +8,9 @@ $(document).ready(function(){
         $(".list").show();
         $(".grid").hide();
     });
+    $(".fa-play").hover(function(){
+        $(".easter").addClass("fa-spin");
+    }, function(){
+    	$(".easter").removeClass("fa-spin");
+    });
 });

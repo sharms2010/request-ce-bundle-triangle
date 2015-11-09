@@ -18,7 +18,7 @@ h3{
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
   	font-weight: 500;
-  	font-size: 1.71428571429rem; /*equal to 24px*/
+  	font-size: 2rem; /*equal to 24px*/
 }
 
 h4{
@@ -53,12 +53,12 @@ ul{
 #logo{
   	font-family: 'Roboto', sans-serif;
   	font-weight: 100;
-	font-size: 3.571rem; /*equal to 50px*/
+	font-size: 3.57142857143rem; /*equal to 50px*/
 	color: #fff;
 }
 
 .margin-bottom-40{
-	margin-bottom: 2.857rem; /*equal to 40px*/
+	margin-bottom: 2.85714285714rem; /*equal to 40px*/
 }
 
 .header{
@@ -71,7 +71,7 @@ ul{
 	background: url("../images/background.png");
 	height: 20rem; /*equal to 280px*/
 	position: relative;
-	margin-top: 2.857rem; /*equal to 40px*/
+	margin-top: 2.85714285714rem; /*equal to 40px*/
 }
 
 .subfooter{
@@ -80,7 +80,7 @@ ul{
 }
 
 .subfooter p{
-	margin-top: 2.143rem; /*equal to 30px*/
+	margin-top: 2.14285714286rem; /*equal to 30px*/
 }
 
 .overlay{
@@ -104,16 +104,16 @@ ul{
 }
 
 .overlay .fa-th{
-	padding-top: 1.071rem; /*equal to 15px*/
+	padding-top: 1.07142857143rem; /*equal to 15px*/
 }
 
 #search-title{
 	margin: 0;
-	padding-bottom: .714rem; /*equal to 10px*/
+	padding-bottom: 0.71428571428rem; /*equal to 10px*/
 	text-align: center;
 }
 
-.fa-search{
+form > div > i{
 	color: #c7c7c7;
 }
 
@@ -124,10 +124,10 @@ ul{
 }
 
 .navName{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 500;
 	color: #fff;
-	margin-top: .357rem; /*equal to 5px*/
+	margin-top: 0.35714285714rem; /*equal to 5px*/
 	margin-bottom: 0px;
 }
 
@@ -138,7 +138,7 @@ ul{
 }
 
 .identity-block{
-	padding-top: .714rem; /*equal to 5px*/
+	padding-top: 0.71428571428rem; /*equal to 10px*/
 }
 
 /*teal nav bar control*/
@@ -164,7 +164,6 @@ ul{
 
 #tealnav{
 	background-color: #5ea5b2;
-	margin-bottom: 2.857rem; /*equal to 40px*/
 }
 
 #tealnav a{
@@ -172,23 +171,26 @@ ul{
 }
 
 #tealnav ul {
-    display: -moz-box;
+/*    display: -moz-box;
     display: -webkit-box;
-    display: box;
+    display: box;*/
     margin: 0;
     padding: 0;
+    text-align: left;
+    list-style-type: none;
 }
 
 #tealnav li {
-    -moz-box-flex: 1;
+/*    -moz-box-flex: 1;
     -webkit-box-flex: 1;
-    box-flex: 1;
-    list-style-type: none;
-    padding: 10px;
+    box-flex: 1;*/
+    display: inline-block;
+    margin-left: 4.28571428571rem;  /* equal to 60px */
+    padding: 0.71428571428rem 0 0.71428571428rem 0;
 }
 
-#tealnav p{
-	text-align: center;
+#tealnav li a{
+	font-size: 1.125rem;
 }
 
 /*panel control*/
@@ -202,7 +204,7 @@ ul{
 
 .panel{
 	border: none;
-	margin-bottom: 2.857rem; /*equal to 40px*/
+	margin-bottom: 2.85714285714rem; /*equal to 40px*/
 }
 
 .panel-body{
@@ -284,18 +286,28 @@ ul{
 	padding: 1rem 0 1rem 0;
 }
 
-.requests > .list > div > div > ul > li > div:last-child > span{
-	margin-top: 25%;
-	margin-bottom: 25%;
-}
-
 .requests > div > div > div > div > h4{
-	vertical-align: bottom;
+	line-height: 2rem; /*equal to 28px*/
 	color: #818181;
 }
 
 .requests > div > div > div > div > i{
 	color: #818181;
+}
+.requests .btn-primary{
+	background-color: #5ea5b2;
+}
+
+.requests > .list > div > div > ul > li > div > span{
+	text-align: left;
+}
+
+.details{
+	background-color: #fff;
+}
+
+.requests > div > div > div > div{
+	line-height: 2.42857142857rem; /* equal to 34px */
 }
 
 .footer .overlay> div > div > div > div{
@@ -304,19 +316,26 @@ ul{
 
 .footer .overlay > div > div > div > div:first-child{
 	padding-top: 2.5rem; /*equal to 35px*/
-	
+}
+
+.footer > .overlay > div > div > div > div:first-child > h4{
+	margin-bottom: .75rem;
+}
+
+.footer > .overlay > div > div > div:first-child > div:last-child > h4{
+	margin-top: .75rem;
 }
 
 .footer .overlay> div > div > div:first-child > div:first-child{
-	border-bottom: .357rem solid #d6ce61;
+	border-bottom: 0.35714285714rem solid #d6ce61;
 }
 
 .footer .overlay > div > div > div:not(:first-child) > div:first-child{
-	border-bottom: .357rem solid #5ea5b2;
+	border-bottom: 0.35714285714rem solid #5ea5b2;
 }
 
 .footer .overlay > div > div > div:not(:first-child) > div{
-	margin-left: 2.143rem; /*equal to 30px*/
+	margin-left: 2.14285714286rem; /*equal to 30px*/
 }
 
 .footer .overlay > div > div > div:not(:first-child) > div > h5{
@@ -341,59 +360,91 @@ ul{
 /*media control*/
 /*five column control*/
 @media (max-width: 768px){
-.col-xs-odd {
-    width: 20%;
-    float: left;
-}
+	.col-xs-odd {
+    	width: 20%;
+    	float: left;
+	}
+
+	.requests > .list > div > div > ul > li > div:nth-child(2) > span{
+		margin-top: -1%
+	}
+
+	.requests > .list > div > div > ul > li > div:last-child > span{
+		line-height: 4rem; /*equal to 56px*/
+	}
 }
 
 @media (min-width: 768px) {
-.col-sm-odd {
+	.col-sm-odd {
         width: 20%;
         float: left;
     }
-form{
-	margin: 0 auto;
-	width: 75%; 
+	
+	.requests > .list > div > div > ul > li > div:nth-child(2) > span{
+		margin-top: -1%
 	}
-		.box{
-	margin: 0 auto;
-	padding: 2.857rem 1.429rem 2.857rem 1.429rem;
-	width: 9.286768rem; /*equal to 130px*/
-	height: 17.143rem; /*equal to 240px*/
-}
+
+    .requests > .list > div > div > ul > li > div:last-child > span{
+		line-height: 4rem; /*equal to 56px*/
+	}
+	.index form{
+		margin: 0 auto;
+		width: 75%; 
+	}
+	.box{
+		margin: 0 auto;
+		padding: 2.85714285714rem 1.429rem 2.85714285714rem 1.429rem;
+		width: 9.28571428571rem; /*equal to 130px*/
+		height: 17.1428571429rem; /*equal to 240px*/
+	}
 }
 @media (min-width: 992px) {
     .col-md-odd {
         width: 20%;
         float: left;
     }
-form{
-	margin: 0 auto;
-	width: 60%; 
+
+	.requests > .list > div > div > ul > li > div:nth-child(2) > span{
+		margin-top: 2%
 	}
-.box{
-	margin: 0 auto;
-	padding: 2.857rem 1.786rem 2.857rem 1.786rem;
-	width: 11.429rem; /*equal to 160px*/
-	height: 17.143rem; /*equal to 240px*/
-}
+
+	.requests > .list > div > div > ul > li > div:last-child > span{
+		line-height: 6rem; /*equal to 84px*/
+	}
+	.index form{
+		margin: 0 auto;
+		width: 60%; 
+	}
+	.box{
+		margin: 0 auto;
+		padding: 2.85714285714rem 1.786rem 2.85714285714rem 1.786rem;
+		width: 11.4285714286rem; /*equal to 160px*/
+		height: 17.1428571429rem; /*equal to 240px*/
+	}
 }
 @media (min-width: 1200px) {
     .col-lg-odd {
         width: 20%;
         float: left;
     }
-    form{
-	margin: 0 auto;
-	width: 50%; 
+
+	.requests > .list > div > div > ul > li > div:nth-child(2) > span{
+		margin-top: 3%
+	}
+
+	.requests > .list > div > div > ul > li > div:last-child > span{
+		line-height: 8rem; /*equal to 112px*/
+	}
+    .index form{
+		margin: 0 auto;
+		width: 50%; 
 	}
 	.box{
-	margin: 0 auto;
-	padding: 2.857rem 1.786rem 2.857rem 1.786rem;
-	width: 11.429rem; /*equal to 160px*/
-	height: 17.143rem; /*equal to 240px*/
-}
+		margin: 0 auto;
+		padding: 2.85714285714rem 1.786rem 2.85714285714rem 1.786rem;
+		width: 11.4285714286rem; /*equal to 160px*/
+		height: 17.1428571429rem; /*equal to 240px*/
+	}
 }
 
 /*to be used with a 5 column control*/
