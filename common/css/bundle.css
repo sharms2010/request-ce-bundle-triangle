@@ -1,55 +1,110 @@
-Note: Mockup is based on 960px grid.
-Default padding: I like round numbers (and simple math). I usually use 40px between large elements and 20px bewteen small elements for padding.
-
-
+.code {
+    font-family: monospace;
+}
+.pre {
+    white-space: pre-wrap;
+}
+.clear {
+    clear: both;
+}
+body{
+    background-color: #f1f1f1;
+}
+body > .container {
+    padding-top: 60px;
+}
 header {
-background-image: url (images/background.png); 
-background-repeat:repeat;
-height:140px;}
-
-Dark navbar overlay, Dark footer overlay {
-padding-top:70px;
-height:70px;
-border-top:1px solid #fff;
-background-color:#050c13;
-opacity: 0.75;
+    background-color: lightgrey;
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+section > .page-header {
+    background: #EDE4A8;
+    padding: 1em 1em .6em;
+    font-size: 1.6em;
+    margin: 0;
+}
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    margin-top: 1em;
+    padding: 15px;
+    border-top: 1px solid #e7e7e7;
+    background-color: #f8f8f8;
+    color: #777;
+}
+.errors {
+    display: none;
+    margin:0 auto;
+    width:90%;
+}
+.errors 
+.build {
+    font-size: 11px;
 }
 
-Yellow link 
-{color:#d4cd65;}
-
-Yellow header, yellow footer rule 
-{background-color:#d6ce61;}
-
-Teal navbar, Teal icon bar on homepage, Teal header, Teal footer rule
-{background-color: #5ea5b2;}
-
-Teal icon bar on homepage {
-    font-family: Roboto Light;
-    font-size:20px;
-    height:240px;
-    padding:40px 0;
+img.desaturate{
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+filter: gray;
+filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
 }
-
-Teal links and Teal "VIEW MORE" arrows
-{color:#3babc0;}
-
-Black icons, Black headers 
-{color:#242e38;}
-
-Black type
-h1 {font-family: Roboto Light;font-size:42px;color:#242e38;}
-
-Gray body copy
-{font-family: Roboto Regular;font-size:14px;color:#818181;}
-
-Grey rules in modules
-{color:#e6e6e6;}
-
-* Most white values are #fff *
-The exception? The background color on pages with dashboard-y modules 
-{background-color: #f5f5f5;}
-
-Detail/request pages w/o dashboard-y modules  
-{background-color: #fff;}
-
+section.page{
+    background-color: #fff;
+}
+form{
+    margin-left: 0;
+    padding: 26px 24px 46px;
+    font-weight: 400;
+    overflow: hidden;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
+    box-shadow: 0 1px 3px rgba(0,0,0,.13);
+}
+form button{
+    background-color: #24B166;
+    color:#fff;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    margin-right: 1em;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+form label{
+    color: #62787d;
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+}
+form .radio label:first-child,
+form .checkbox label:first-child{
+    padding-left: 0;
+    font-weight: 600;
+}
+form .checkbox label + input{
+    padding-left: 20px;
+}
+form input[type="text"],
+form textarea{
+    border:2px solid #B3C1C4;
+    outline: none;
+}
+form input[type="text"]:focus,
+form textarea:focus{
+    border-color: #7FCEE0;
+}
