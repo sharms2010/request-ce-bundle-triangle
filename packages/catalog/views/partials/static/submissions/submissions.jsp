@@ -1,9 +1,5 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../../../package/initialization.jspf" %>
-<<<<<<< HEAD
-<table class="table table-striped table-hover">
-    <c:forEach items="${submissionsList}" var="submission">
-=======
 <div class="container requests">
     <div class="row margin-bottom-40">
         <div class="hidden-xs hidden-sm col-md-4">
@@ -113,31 +109,4 @@
         </c:forEach>
     </div>
 </div>
-<!-- <table class="table table-striped table-hover">
-    <thead>
->>>>>>> origin/master
-        <tr>
-          <td>${app:escape(submission.form.name)}</td>
-          <td class="hidden-xs" rowspan="2">${submission.coreState}</td>
-        </tr>
-<<<<<<< HEAD
-        <tr>
-          <td><a href="#">Request #KR0000000000788923 - ${submission.submittedAt}</a></td>
-        </tr>
-    </c:forEach>
-</table>
-=======
-    </thead>
-    <tbody>
-        <c:forEach items="${submissionsList}" var="submission">
-            <tr>
-                <td>${submission.createdAt}</td>
-                <td>${app:escape(submission.createdBy)}</td>
-                <td>${app:escape(submission.form.name)}</td>
-                <td>${submission.coreState}</td>
-                <td><a href="${bundle.spaceLocation}/submissions/${submission.id}">${submission.id}</a></td>
-            </tr>
-        </c:forEach>
-    </tbody>
-</table> -->
->>>>>>> origin/master
+
