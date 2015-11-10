@@ -1,12 +1,13 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../../package/initialization.jspf" %>
-
+ <link rel="stylesheet" type="text/css" href="${bundle.packageLocation}/css/temp.css"/>
 <header class="header margin-bottom-40">
       <div class="overlay">
         <div class="container">
           <div class="row">
             <div id="logo" class="col-xs-6 col-sm-6 col-md-8 col-lg-9">
-              ACME
+              ACME ${space.kapps}
+              ${space.bridges}
             </div>
             <div class="col-sm-4 col-md-3 col-lg-2 hidden-xs identity-block">
               <div class="row">

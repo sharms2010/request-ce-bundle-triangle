@@ -4,7 +4,7 @@
 <bundle:layout page="views/layouts/packageLayout.jsp">
     <bundle:variable name="head">
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
-        <link rel="stylesheet" type="text/css" href="${bundle.packageLocation}/css/temp.css"/>
+       
     </bundle:variable>
     
    
