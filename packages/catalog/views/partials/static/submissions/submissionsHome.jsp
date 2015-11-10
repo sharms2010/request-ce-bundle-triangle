@@ -7,7 +7,7 @@
           <td class="hidden-xs" rowspan="2">${submission.coreState}</td>
         </tr>
         <tr>
-          <td><a href="#">Request #KR0000000000788923 - ${submission.submittedAt}</a></td>
+          <td><a href="#">Request #KR0000000000788923 - 10/28/2015</a></td>
         </tr>
     </c:forEach>
 </table>

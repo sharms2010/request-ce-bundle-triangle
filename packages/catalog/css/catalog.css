@@ -173,6 +173,10 @@ ul{
     padding-top: 1.07142857143rem; /*equal to 15px*/
 }
 
+header > div > div > div > div > ul > li > a > i{
+    color: black;
+}
+
 #search-title{
     margin: 0;
     padding-bottom: 0.71428571428rem; /*equal to 10px*/
@@ -297,6 +301,10 @@ div > div > form > div > i{
 
 .panel-body > table > thead > tr > td:nth-child(2){
     text-align: right;
+}
+
+.panel-body > table > tbody > tr > td{
+    background-color: #fff !important;
 }
 
 .panel-body > table > tbody > tr:nth-child(odd) > td:nth-child(1){

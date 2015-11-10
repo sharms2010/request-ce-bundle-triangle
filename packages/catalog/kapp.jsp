@@ -1,15 +1,24 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="package/initialization.jspf" %>
 
+<% com.kineticdata.core.authentication.Identity identity = 
+        (com.kineticdata.core.authentication.Identity) request.getAttribute("identity");
+    java.util.Map<String,String> searchOptions = new java.util.HashMap<>();
+    searchOptions.put("createdBy", identity.getUsername());
+    request.setAttribute("searchOptions", searchOptions); 
+    String view = "catalog";
+    request.setAttribute("view", view); 
+ %>
+
 <bundle:layout page="views/layouts/packageLayout.jsp">
     <bundle:variable name="head">
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
        
     </bundle:variable>
-    
    
 <div class="container hidden-xs margin-bottom-40 index">
       <h1 id="search-title">How can we help you today?</h1>
+
       <form role="form"> 
         <div class="form-group has-feedback">
           <input type="text" class="form-control" />
@@ -58,14 +67,18 @@
                     </tr>
                   </thead>
                   <tbody>
+                  <!-- <c:forEach items="${kapp.forms}" var="forms">
                     <tr>
-                      <td>HR Request: Employee Onboarding Request</td>
+                      <td>${forms.name}</td>
                       <td class="hidden-xs" rowspan="2">Incomplete</td>
                     </tr>
                     <tr>
                       <td><a href="#">Request #KR0000000000788923 - 10/28/2015</a></td>
                     </tr>
-                    <tr>
+                  </c:forEach> -->
+                  <h3>${app:escape(form.name)}</h3>
+                    <c:import url="views/partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+                    <!-- <tr>
                       <td>IT Request: iPad Request</td>
                       <td class="hidden-xs" rowspan="2">Approved</td>
                     </tr>
@@ -78,11 +91,11 @@
                     </tr>
                     <tr>
                       <td><a href="#">Request #KR0000000000788923 - 10/28/2015</a></td>
-                    </tr>
+                    </tr> -->
                   </tbody>
                   <tfoot>
                     <tr>
-                      <td colspan="2"><center><a href="#">VIEW MORE</a></center></td>
+                      <td colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
                     </tr>
                   </tfoot>
                 </table>

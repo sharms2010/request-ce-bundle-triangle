@@ -6,8 +6,7 @@
         <div class="container">
           <div class="row">
             <div id="logo" class="col-xs-6 col-sm-6 col-md-8 col-lg-9">
-              ACME ${space.kapps}
-              ${space.bridges}
+              ACME 
             </div>
             <div class="col-sm-4 col-md-3 col-lg-2 hidden-xs identity-block">
               <div class="row">
@@ -32,9 +31,12 @@
               <span class="caret"></span>
               </div>
               <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
-                <c:forEach items="${space.kapps}" var="kappX">
-                  <li class="visible-xs-inline-block"> 
-                    <div>${kappX.name}
+                <c:forEach items="${space.kapps}" var="kapps">
+                  <li> 
+                    <a href="/kinetic/${space.slug}/${kapps.slug}">
+                      <i class="fa ${kapps.getAttributeValue("Kapp FA logo")} fa-1x pull-left"></i>
+                      <div class="pull-right">${kapps.name}</div>
+                    </a>
                   </li>
                 </c:forEach>
                 <li class="visible-xs-inline-block"> 
