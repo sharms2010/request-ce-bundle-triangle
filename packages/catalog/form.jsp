@@ -4,10 +4,10 @@
     <bundle:variable name="head">
         <title>${app:escape(form.name)}</title>
     </bundle:variable>
-    <section class="page">
-      <div class="page-header">
+    <section class="page container">
+      <header class="page-header">
         <h1>${app:escape(form.name)}</h1>
-      </div>
+      </header>
       <div class="errors"></div>
       <app:bodyContent/>
     </section>

@@ -6,8 +6,7 @@
         <div class="container">
           <div class="row">
             <div id="logo" class="col-xs-6 col-sm-6 col-md-8 col-lg-9">
-              ACME ${space.kapps}
-              ${space.bridges}
+              ${kapp.getAttributeValue("Company Name")}
             </div>
             <div class="col-sm-4 col-md-3 col-lg-2 hidden-xs identity-block">
               <div class="row">

@@ -13,17 +13,7 @@ body{
 body > .container {
     padding-top: 60px;
 }
-header {
-    background-color: lightgrey;
-    margin-bottom: 1em;
-    line-height: 1.5;
-}
-section > .page-header {
-    background: #EDE4A8;
-    padding: 1em 1em .6em;
-    font-size: 1.6em;
-    margin: 0;
-}
+
 footer {
     bottom: 0;
     width: 100%;
