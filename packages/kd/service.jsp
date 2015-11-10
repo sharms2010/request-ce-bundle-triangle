@@ -4,11 +4,9 @@
     <bundle:variable name="head">
         <title>${app:escape(form.name)}</title>
     </bundle:variable>
-    <section class="page container">
-      <header class="page-header">
-        <h1>${app:escape(form.name)}</h1>
-      </header>
-      <div class="errors"></div>
-      <app:bodyContent/>
-    </section>
+    <h3><span class="fa ${app:escape(form.getAttributeValue('Image Class'))}"></span> ${app:escape(form.name)}</h3>
+    <div class="errors"></div>
+    <div>
+        <app:bodyContent/>
+    </div>
 </bundle:layout>
