@@ -31,13 +31,18 @@
               <span class="caret"></span>
               </div>
               <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
+                <c:forEach items="${space.kapps}" var="kappX">
+                  <li class="visible-xs-inline-block"> 
+                    <div>${kappX.name}
+                  </li>
+                </c:forEach>
                 <li class="visible-xs-inline-block"> 
-                  <form role="form"> 
-                    <div class="form-group has-feedback">
-                      <input type="text" class="form-control" placeholder="search"/>
-                    </div>
-                  </form>
-                </li>
+                    <form role="form"> 
+                      <div class="form-group has-feedback">
+                        <input type="text" class="form-control" placeholder="search"/>
+                      </div>
+                    </form>
+                  </li>
               </ul>
             </div>
           </div>
