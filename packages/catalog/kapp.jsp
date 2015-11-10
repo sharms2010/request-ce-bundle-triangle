@@ -4,10 +4,11 @@
 <bundle:layout page="views/layouts/packageLayout.jsp">
     <bundle:variable name="head">
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
+        <link rel="stylesheet" type="text/css" href="${bundle.packageLocation}/css/temp.css"/>
     </bundle:variable>
     
    
-<div class="container hidden-xs margin-bottom-40">
+<div class="container hidden-xs margin-bottom-40 index">
       <h1 id="search-title">How can we help you today?</h1>
       <form role="form"> 
         <div class="form-group has-feedback">
@@ -19,94 +20,25 @@
     <div id="tealnav" class="margin-bottom-40">
       <div class="container">
         <div class="row">
-            <c:forEach items="${kapp.categories}" var="category">
-              <div class="col-sm-odd col-xs-odd">
-                <div class="box text-center">
-                  <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <span class="fa-stack fa-3x center-block visible-sm-inline-block">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <span class="fa-stack fa-2x center-block visible-xs-inline-block">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <div class="hidden-xs">${app:escape(category.name)}</div>
-                </div>
-              </div>
-            </c:forEach>
-          <!-- <div class="col-sm-odd col-xs-odd">
-            <div class="box text-center">
-              <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="fa-stack fa-3x center-block visible-sm-inline-block">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="fa-stack fa-2x center-block visible-xs-inline-block">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
-              </span>
-              <div class="hidden-xs">Finance Requests</div>
-            </div>
-          </div>
-          <div class="col-sm-odd col-xs-odd">
-            <div class="box text-center">
-              <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-users fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="fa-stack fa-3x center-block visible-sm-inline-block">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-users fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="fa-stack fa-2x center-block visible-xs-inline-block">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-users fa-stack-1x fa-inverse"></i>
-              </span>
-              <div class="hidden-xs">HR Requests</div>
-            </div>
-          </div>
-          <div class="col-sm-odd col-xs-odd">
-            <div class="box text-center">
-              <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-television fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="fa-stack fa-3x center-block visible-sm-inline-block">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-television fa-stack-1x fa-inverse"></i>
-              </span>
-              <span class="fa-stack fa-2x center-block visible-xs-inline-block">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-television fa-stack-1x fa-inverse"></i>
-              </span>
-              <div class="hidden-xs">IT Requests</div>
-            </div>
-          </div>
-          <div class="col-sm-odd col-xs-odd">
-            <div class="box text-center">
+          <c:forEach items="${kapp.categories}" var="category">
+            <div class="col-sm-odd col-xs-odd">
+              <div class="box text-center">
                 <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-star fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <span class="fa-stack fa-3x center-block visible-sm-inline-block">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-star fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <span class="fa-stack fa-2x center-block visible-xs-inline-block">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-star fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
                 </span>
-                <div class="hidden-xs">Popular Requests</div>
+                <div class="hidden-xs">${app:escape(category.name)}</div>
               </div>
-            </div> 
-          </div>-->
+            </div>
+          </c:forEach>
         </div>
       </div>
     </div>

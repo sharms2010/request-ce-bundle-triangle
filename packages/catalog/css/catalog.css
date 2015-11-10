@@ -134,10 +134,13 @@ ul{
     background: url("../images/background.png");
     height: 20rem; /*equal to 280px*/
     position: relative;
-    margin-top: 2.85714285714rem; /*equal to 40px*/
+    border: none !important;
+    padding: 0;
+    /*margin-top: 2.85714285714rem; /*equal to 40px*/
 }
 
 .subfooter{
+    padding-top: 1rem !important;
     height: 5rem; /*equal to 70px*/
     vertical-align: middle;
 }
@@ -176,7 +179,8 @@ ul{
     text-align: center;
 }
 
-form > div > i{
+div > div > form > div > i{
+    top: 10px !important;
     color: #c7c7c7;
 }
 
