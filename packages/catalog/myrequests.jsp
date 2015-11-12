@@ -10,6 +10,9 @@
     request.setAttribute("view", view);
 %>
 <bundle:layout page="views/layouts/packageLayout.jsp">
+    <bundle:scriptpack>
+        <bundle:script src="${bundle.packagePath}/js/myrequests.js" />
+    </bundle:scriptpack>
     <bundle:variable name="head">
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
     </bundle:variable>

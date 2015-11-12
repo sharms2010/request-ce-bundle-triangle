@@ -7,7 +7,7 @@
     searchOptions.put("createdBy", identity.getUsername());
     request.setAttribute("searchOptions", searchOptions); 
     String view = "catalog";
-    request.setAttribute("view", view); 
+    request.setAttribute("view", view);    
  %>
 
 <bundle:layout page="views/layouts/packageLayout.jsp">
@@ -18,7 +18,6 @@
    
 <div class="container hidden-xs margin-bottom-40 index">
       <h1 id="search-title">How can we help you today?</h1>
-
       <form role="form"> 
         <div class="form-group has-feedback">
           <input type="text" class="form-control" />
@@ -31,21 +30,23 @@
         <div class="row">
           <c:forEach items="${kapp.categories}" var="category">
             <div class="col-sm-odd col-xs-odd">
-              <div class="box text-center">
-                <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="fa-stack fa-3x center-block visible-sm-inline-block">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="fa-stack fa-2x center-block visible-xs-inline-block">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
-                </span>
-                <div class="hidden-xs">${app:escape(category.name)}</div>
-              </div>
+              <a href="${bundle.spaceLocation}/${kapp.slug}/categories?category=${category.name}">
+                <div class="box text-center">
+                  <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="fa-stack fa-3x center-block visible-sm-inline-block">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <span class="fa-stack fa-2x center-block visible-xs-inline-block">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <div class="hidden-xs">${app:escape(category.name)}</div>
+                </div>
+              </a>
             </div>
           </c:forEach>
         </div>
@@ -67,31 +68,10 @@
                     </tr>
                   </thead>
                   <tbody>
-                  <!-- <c:forEach items="${kapp.forms}" var="forms">
-                    <tr>
-                      <td>${forms.name}</td>
-                      <td class="hidden-xs" rowspan="2">Incomplete</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#">Request #KR0000000000788923 - 10/28/2015</a></td>
-                    </tr>
-                  </c:forEach> -->
-                  <h3>${app:escape(form.name)}</h3>
+                    <c:set var="table" value="request" scope="session"/>
+                    <h3>${app:escape(form.name)}</h3>
                     <c:import url="views/partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
-                    <!-- <tr>
-                      <td>IT Request: iPad Request</td>
-                      <td class="hidden-xs" rowspan="2">Approved</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#">Request #KR0000000000788923 - 10/28/2015</a></td>
-                    </tr>
-                    <tr>
-                      <td>HR Request: Employee Onboarding Request</td>
-                      <td class="hidden-xs" rowspan="2">Fulfilled</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#">Request #KR0000000000788923 - 10/28/2015</a></td>
-                    </tr> -->
+                    
                   </tbody>
                   <tfoot>
                     <tr>
@@ -114,27 +94,10 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>HR Request: Employee Onboarding Request</td>
-                      <td class="hidden-xs" rowspan="2">Incomplete</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#">Request #KR0000000000788923 - 10/28/2015</a></td>
-                    </tr>
-                    <tr>
-                      <td>IT Request: iPad Request</td>
-                      <td class="hidden-xs" rowspan="2">Approved</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#">Request #KR0000000000788923 - 10/28/2015</a></td>
-                    </tr>
-                    <tr>
-                      <td>HR Request: Employee Onboarding Request</td>
-                      <td class="hidden-xs" rowspan="2">Fulfilled</td>
-                    </tr>
-                    <tr>
-                      <td><a href="#">Request #KR0000000000788923 - 10/28/2015</a></td>
-                    </tr>
+                    <c:set var="table" value="approval" scope="session"/>
+                    <h3>${app:escape(form.name)}</h3>
+                    <c:import url="views/partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+                    
                   </tbody>
                   <tfoot>
                     <tr>

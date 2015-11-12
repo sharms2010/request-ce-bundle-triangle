@@ -116,6 +116,7 @@ ul{
 #logo{
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
+    line-height: 3.3rem;
     font-size: 3.57142857143rem; /*equal to 50px*/
     color: #fff;
 }
@@ -150,7 +151,7 @@ ul{
 }
 
 .overlay{
-
+    margin: 0;
     width: 100%;
     background-color: rgba(5, 12, 19, 0.75);
 
@@ -158,6 +159,8 @@ ul{
 }
 
 .header .overlay{
+    border: none;
+    border-radius: 0;
     position: absolute;
     height: 5rem; /*equal to 70px*/
     bottom: 0;
@@ -168,12 +171,15 @@ ul{
     bottom: 0px;
     height: 17.5rem; /*equal to 245px*/
 }
-
-.overlay .fa-th{
-    padding-top: 1.07142857143rem; /*equal to 15px*/
+#bs-example-navbar-collapse-1 > ul > li.dropdown > a{
+    padding-right: 0 !important;
 }
 
-header > div > div > div > div > ul > li > a > i{
+#bs-example-navbar-collapse-1 > ul > li:nth-child(1) > a{
+    padding: 0.71428571428rem 1rem 0.71428571428rem 1rem;
+}
+
+#bs-example-navbar-collapse-1 > ul > li > ul > li > a > i{
     color: black;
 }
 
@@ -183,8 +189,14 @@ header > div > div > div > div > ul > li > a > i{
     text-align: center;
 }
 
-div > div > form > div > i{
+.index form > div > i{
     top: 10px !important;
+    color: #c7c7c7;
+}
+
+.requests form > div > i{
+    top: 0 !important;
+    right: 5px !important;
     color: #c7c7c7;
 }
 
@@ -198,7 +210,7 @@ div > div > form > div > i{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #fff;
-    margin-top: 0.35714285714rem; /*equal to 5px*/
+    margin-top: 1rem; /*equal to 14px*/
     margin-bottom: 0px;
 }
 

@@ -2,54 +2,58 @@
 <%@include file="../../../package/initialization.jspf" %>
  <link rel="stylesheet" type="text/css" href="${bundle.packageLocation}/css/temp.css"/>
 <header class="header margin-bottom-40">
-      <div class="overlay">
-        <div class="container">
-          <div class="row">
-            <div id="logo" class="col-xs-6 col-sm-6 col-md-8 col-lg-9">
-              ${kapp.getAttributeValue("Company Name")}
-            </div>
-            <div class="col-sm-4 col-md-3 col-lg-2 hidden-xs identity-block">
-              <div class="row">
-                <div class="col-sm-4 col-xs-4">
-                  <a class="profile" href="javascript:void(0)" data-target="div.user-card">
-                    <i class="gravatar-icon">
-                      <img src="https://lh4.googleusercontent.com/-6RDPOohcFhI/AAAAAAAAAAI/AAAAAAAAAAw/3xMmdleVrLU/photo.jpg?sz=50" alt="Profile Image" class="avatar">
-                    </i>
-                  </a>
-                </div>
-                <div class="col-sm-8 col-xs-8">
-                  <p class="navName">Hello Mike</p>
-                  <div class="navAccount"><a href="#">Your Account</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="dropdown">
-              <div class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <div class="col-xs-6 col-sm-2 col-md-1 col-lg-1">
-                  <i class="fa fa-th fa-3x pull-right"></i>
-                </div>
-              <span class="caret"></span>
-              </div>
-              <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
-                <c:forEach items="${space.kapps}" var="kapps">
-                  <li> 
-                    <a href="/kinetic/${space.slug}/${kapps.slug}">
-                      <i class="fa ${kapps.getAttributeValue("Kapp FA logo")} fa-1x pull-left"></i>
-                      <div class="pull-right">${kapps.name}</div>
-                    </a>
-                  </li>
-                </c:forEach>
-                <li class="visible-xs-inline-block"> 
-                    <form role="form"> 
-                      <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="search"/>
-                      </div>
-                    </form>
-                  </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <nav class="navbar navbar-default overlay">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="${bundle.spaceLocation}/${kapp.slug}" id="logo" class="navbar-brand col-xs-6 col-sm-6 col-md-8 col-lg-9">${kapp.getAttributeValue("Company Name")}</a>
       </div>
-    </header>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav pull-right">
+          <li>
+            <a class="profile" href="javascript:void(0)" data-target="div.user-card">
+              <i class="gravatar-icon">
+                <img src="https://lh4.googleusercontent.com/-6RDPOohcFhI/AAAAAAAAAAI/AAAAAAAAAAw/3xMmdleVrLU/photo.jpg?sz=50" alt="Profile Image" class="avatar">
+              </i>
+            </a>
+          </li>
+          <li> 
+            <p class="navName">Hello Mike</p>
+            <div class="navAccount"><a href="${bundle.spaceLocation}/${kapp.slug}/profile-page">Your Account</a></div>
+          </li>
+          <li class="dropdown">          
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+              <i class="fa fa-th fa-3x"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <c:forEach items="${space.kapps}" var="kapps">
+                <li> 
+                  <a href="/kinetic/${space.slug}/${kapps.slug}">
+                    <i class="fa ${kapps.getAttributeValue("Kapp FA logo")} fa-1x pull-left"></i>
+                    <div class="pull-right">${kapps.name}</div>
+                  </a>
+                </li>
+              </c:forEach>
+              <li class="visible-xs-inline-block"> 
+                <form role="form"> 
+                  <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="search"/>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav>
+</header>
 

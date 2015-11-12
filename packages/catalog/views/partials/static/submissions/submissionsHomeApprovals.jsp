@@ -3,7 +3,7 @@
 <table class="table table-hover">
 	<c:set var="count" value="0"/>
     <c:forEach items="${submissionsList}" var="submission">
-    	<c:if test="${submission.type.name == 'Work Order'}">
+    	<c:if test="${submission.type.name == 'Approval'}">
     		<c:if test="${count < 3}">
 	        	<tr>	
 		          <td>${app:escape(submission.form.name)}</td>
