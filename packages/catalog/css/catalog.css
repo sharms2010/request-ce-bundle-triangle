@@ -125,20 +125,24 @@ ul{
     margin-bottom: 2.85714285714rem; /*equal to 40px*/
 }
 
-/*.header{
-    background: url("../images/background.png");
+.margin-top-40{
+    margin-top: 2.85714285714rem; /*equal to 40px*/
+}
+
+.header{
+   /* background: url("../images/background.png");*/
     height: 7.5rem; 
     position: relative;
 }
 
 .footer{
-    background: url("../images/background.png");
+   /* background: url("../images/background.png");*/
     height: 20rem; 
     position: relative;
     border: none !important;
     padding: 0;
     margin-top: 2.85714285714rem; 
-}*/
+}
 
 .subfooter{
     padding-top: 1rem !important;

@@ -21,7 +21,7 @@
         <bundle:style src="${bundle.packagePath}/css/catalog.css "/>
     </bundle:stylepack>
    
-<div class="container hidden-xs margin-bottom-40 index">
+<div class="container hidden-xs margin-bottom-40 margin-top-40 index">
       <h1 id="search-title">How can we help you today?</h1>
       <form role="form"> 
         <div class="form-group has-feedback">

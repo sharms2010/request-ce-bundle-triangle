@@ -1,7 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../../package/initialization.jspf" %>
  <link rel="stylesheet" type="text/css" href="${bundle.packageLocation}/css/temp.css"/>
-<header class="header margin-bottom-40">
+<header class="header">
   <nav class="navbar navbar-default overlay">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->

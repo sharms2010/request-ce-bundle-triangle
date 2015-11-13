@@ -1,13 +1,9 @@
 .header{
     background: url("../images/background.png");
-    height: 7.5rem; /*equal to 105px*/
-    position: relative;
+
 }
 
 .footer{
     background: url("../images/background.png");
-    height: 20rem; /*equal to 280px*/
-    position: relative;
-    border: none !important;
-    /*margin-top: 2.85714285714rem; /*equal to 40px*/
+
 }
