@@ -10,7 +10,7 @@
 		          <td class="hidden-xs" rowspan="2">${submission.coreState}</td>
 		        </tr>
 		        <tr>
-		          <td><a href="#">${submission.getLabel()} - 10/28/2015</a></td>
+		          <td><a href="${bundle.spaceLocation}/request-details?id=${submission.id}">${submission.getLabel()} - ${submission.submittedAt}</a></td>
 		        </tr>
 		        <c:set var="count" value="${count+1}"/>	
 		    </c:if>

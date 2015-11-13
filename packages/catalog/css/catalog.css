@@ -125,20 +125,20 @@ ul{
     margin-bottom: 2.85714285714rem; /*equal to 40px*/
 }
 
-.header{
+/*.header{
     background: url("../images/background.png");
-    height: 7.5rem; /*equal to 105px*/
+    height: 7.5rem; 
     position: relative;
 }
 
 .footer{
     background: url("../images/background.png");
-    height: 20rem; /*equal to 280px*/
+    height: 20rem; 
     position: relative;
     border: none !important;
     padding: 0;
-    /*margin-top: 2.85714285714rem; /*equal to 40px*/
-}
+    margin-top: 2.85714285714rem; 
+}*/
 
 .subfooter{
     padding-top: 1rem !important;
@@ -457,7 +457,7 @@ ul{
     }
 
     .requests > .list > div > div > ul > li > div:last-child > span{
-        line-height: 4rem; /*equal to 56px*/
+        line-height: 2rem; /*equal to 28px*/
     }
 }
 
@@ -472,7 +472,7 @@ ul{
     }
 
     .requests > .list > div > div > ul > li > div:last-child > span{
-        line-height: 4rem; /*equal to 56px*/
+        line-height: 2rem; /*equal to 28px*/
     }
     .index form{
         margin: 0 auto;
@@ -496,7 +496,7 @@ ul{
     }
 
     .requests > .list > div > div > ul > li > div:last-child > span{
-        line-height: 6rem; /*equal to 84px*/
+        line-height: 3rem; /*equal to 36px*/
     }
     .index form{
         margin: 0 auto;
@@ -520,7 +520,7 @@ ul{
     }
 
     .requests > .list > div > div > ul > li > div:last-child > span{
-        line-height: 8rem; /*equal to 112px*/
+        line-height: 4rem; /*equal to 48px*/
     }
     .index form{
         margin: 0 auto;

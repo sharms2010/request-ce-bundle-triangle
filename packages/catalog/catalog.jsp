@@ -13,8 +13,13 @@
 <bundle:layout page="views/layouts/packageLayout.jsp">
     <bundle:variable name="head">
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
-       
     </bundle:variable>
+    <bundle:scriptpack>
+        <bundle:script src="${bundle.packagePath}/js/catalog.js" />
+    </bundle:scriptpack>
+    <bundle:stylepack>
+        <bundle:style src="${bundle.packagePath}/css/catalog.css "/>
+    </bundle:stylepack>
    
 <div class="container hidden-xs margin-bottom-40 index">
       <h1 id="search-title">How can we help you today?</h1>

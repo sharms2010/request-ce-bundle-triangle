@@ -6,13 +6,16 @@
   request.setAttribute("category", category); 
 %>
 
-
-
 <bundle:layout page="views/layouts/packageLayout.jsp">
     <bundle:variable name="head">
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
     </bundle:variable>
-
+    <bundle:scriptpack>
+        <bundle:script src="${bundle.packagePath}/js/categories.js" />
+    </bundle:scriptpack>
+    <bundle:stylepack>
+        <bundle:style src="${bundle.packagePath}/css/categories.css "/>
+    </bundle:stylepack>
 <div class="container requests">
     <div class="row margin-bottom-40">
       <div class="hidden-xs hidden-sm col-md-4">

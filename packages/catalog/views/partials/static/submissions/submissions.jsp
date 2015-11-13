@@ -53,12 +53,19 @@
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa ${submission.form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
                   </span>
-                  <h3><a href="${bundle.spaceLocation}/submissions/${submission.id}">${app:escape(submission.form.name)}</a></h3>
+                  <h3>${app:escape(submission.form.name)}</h3>
                   <div>${submission.createdAt}</div>
                   <div>${submission.coreState}</div>
-                  <button class="btn btn-primary">DETAILS
-                    <i class="icon-control-feedback fa fa-play"></i>
-                  </button>
+                  <a href="${bundle.kappLocation}/request-details?id=${submission.id}">
+                    <button class="btn btn-primary">DETAILS
+                      <i class="icon-control-feedback fa fa-play"></i>
+                    </button>
+                  </a>
+                  <a href="${bundle.kappLocation}/${submission.form.slug}">
+                    <button class="btn btn-primary">REORDER
+                      <i class="icon-control-feedback fa fa-play"></i>
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -90,16 +97,23 @@
                 </div>
                 <div class="col-sm-8">
                   <span class="pull-left">
-                    <h3><a href="${bundle.spaceLocation}/submissions/${submission.id}">${app:escape(submission.form.name)}</a></h3>
+                    <h3>${app:escape(submission.form.name)}</h3>
                     <p>${submission.createdAt}</p>
                     <div>${submission.coreState}</div>
                   </span>
                 </div>
                 <div class="col-sm-2">
                   <span class="pull-right">
+                    <a href="${bundle.kappLocation}/request-details?id=${submission.id}">
                     <button class="btn btn-primary">DETAILS
                       <i class="icon-control-feedback fa fa-play"></i>
                     </button>
+                  </a>
+                  <a href="${bundle.kappLocation}/${submission.form.slug}">
+                    <button class="btn btn-primary">REORDER
+                      <i class="icon-control-feedback fa fa-play"></i>
+                    </button>
+                  </a>
                   </span>
                 </div>
               </li>
