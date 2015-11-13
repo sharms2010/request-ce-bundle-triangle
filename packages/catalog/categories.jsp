@@ -16,7 +16,7 @@
     <bundle:stylepack>
         <bundle:style src="${bundle.packagePath}/css/categories.css "/>
     </bundle:stylepack>
-<div class="container requests">
+<div class="container requests margin-top-40">
     <div class="row margin-bottom-40">
       <div class="hidden-xs hidden-sm col-md-4">
         <h1>${kapp.getCategory(category).name}</h1>

@@ -1,7 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../../package/initialization.jspf" %>
 
-<div id="tealnav" class="margin-bottom-40">
+<div id="tealnav">
   <div class="container">
     <div class="row">
         <ul>

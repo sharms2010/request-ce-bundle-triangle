@@ -1,6 +1,6 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../../../package/initialization.jspf" %>
-<div class="container requests">
+<div class="container requests margin-top-40">
     <div class="row margin-bottom-40">
         <div class="hidden-xs hidden-sm col-md-4">
           <h1>Your Requests</h1>
@@ -83,15 +83,15 @@
                   <span class="pull-left">
                     <span class=" fa-stack fa-4x  hidden-sm hidden-xs">
                       <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa ${form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
+                      <i class="fa ${submission.form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
                     </span>
                     <span class="fa-stack fa-3x visible-sm-inline-block">
                       <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa ${form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
+                      <i class="fa ${submission.form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
                     </span>
                     <span class="fa-stack fa-2x visible-xs-inline-block">
                       <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa ${form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
+                      <i class="fa ${submission.form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
                     </span>
                   </span>
                 </div>

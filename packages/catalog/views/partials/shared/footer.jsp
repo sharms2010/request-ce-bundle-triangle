@@ -41,10 +41,12 @@
       </div>
     </div>
 </footer>
-<div class="subfooter container">
-  <div>Build Date: ${buildDate}</div>
-  <div>Build Number: ${buildNumber}</div>
-  <div>Version: ${buildVersion}</div>
+<div class="subfooter">
+  <div class="container">
+    <div>Build Date: ${buildDate}</div>
+    <div>Build Number: ${buildNumber}</div>
+    <div>Version: ${buildVersion}</div>
+  </div>
 <div>
 
 <!-- having the script tag her is a temporary work around due to url issue so that the twitter feed will show on the kapp page-->
