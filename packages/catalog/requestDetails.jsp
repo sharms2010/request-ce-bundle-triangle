@@ -1,6 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="package/initialization.jspf" %>
 
+
 <bundle:layout page="views/layouts/packageLayout.jsp">
 	<c:import url="${bundle.packagePath}/views/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:scriptpack>
@@ -15,7 +16,7 @@
 
         <div class ="container-fluid details splitBackgound">
         <div class="container">
-        <div id="leftDetails" class="col-md-4 padding-bottom-40 padding-top-40 padding-bottom-40">
+        <div id="leftDetails" class="col-md-4 pad-bot-40 pad-top-40">
           <h1>Equipment Move Request</h1>
           <h4>Request ID:</h4>
           <h4>#KR0000000000788923</h4>
@@ -32,7 +33,7 @@
             <i class="icon-control-feedback fa fa-play"></i>
           </button>
         </div>
-        <div id="rightDetails" class="col-md-8 padding-bottom-40 padding-bottom-40 padding-top-40">
+        <div id="rightDetails" class="col-md-8 pad-bot-40 pad-top-40">
           <ul>
             <li class="panel panel-default arrow_box">
               <div class="panel-body">

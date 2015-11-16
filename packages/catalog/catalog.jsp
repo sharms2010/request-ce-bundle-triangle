@@ -21,8 +21,8 @@
         <bundle:style src="${bundle.packagePath}/css/catalog.css "/>
     </bundle:stylepack>
    
-<div class="container hidden-xs margin-bottom-40 margin-top-40 index">
-      <h1 id="search-title">How can we help you today?</h1>
+<div class="container hidden-xs mgn-bot-40 mgn-top-40 search-catalog">
+      <h1 class="pad-bot-10 text-center">How can we help you today?</h1>
       <form role="form"> 
         <div class="form-group has-feedback">
           <input type="text" class="form-control" />
@@ -30,7 +30,7 @@
         </div>
       </form>
     </div>
-    <div id="tealnav" class="margin-bottom-40">
+    <div id="tealnav" class="mgn-bot-40">
       <div class="container">
         <div class="row">
           <c:forEach items="${kapp.categories}" var="category">
@@ -57,36 +57,35 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container mgn-bot-40">
       <div class="row">
         <div class="col-sm-7 leftside">
           <div class="panel panel-default">
             <div class="panel-heading">
               <div class="panel-title"><h4>YOUR REQUESTS</h4></div>
             </div>
-              <div class="panel-body">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <td>SUMMARY</td>
-                      <td class="hidden-xs">STATUS</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <c:set var="table" value="request" scope="session"/>
-                    <h3>${app:escape(form.name)}</h3>
-                    <c:import url="views/partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
-                    
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
+            <div class="panel-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <td>SUMMARY</td>
+                    <td class="hidden-xs">STATUS</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <c:set var="table" value="request" scope="session"/>
+                  <h3>${app:escape(form.name)}</h3>
+                  <c:import url="views/partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
+                  </tr>
+                </tfoot>
+              </table>
             </div>
-          <div class="panel panel-default">
+          </div>
+          <div class="panel panel-default ">
             <div class="panel-heading">
               <div class="panel-title"><h4>YOUR APPROVALS</h4></div>
             </div>
