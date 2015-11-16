@@ -1,5 +1,17 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="package/initialization.jspf" %>
+<%
+private Run[] runs;
+String submissionId = request.getParameter("id");
+Submission submission = ${submission.findById(submissionId)};
+runs = Run.findFromTask4(submission);
+
+%>
+
+
+
+
+
 
 <bundle:layout page="views/layouts/packageLayout.jsp">
 	<c:import url="${bundle.packagePath}/views/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
