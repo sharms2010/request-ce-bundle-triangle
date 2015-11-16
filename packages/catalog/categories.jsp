@@ -7,6 +7,7 @@
 %>
 
 <bundle:layout page="views/layouts/packageLayout.jsp">
+  <c:import url="${bundle.packagePath}/views/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:variable name="head">
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
     </bundle:variable>
@@ -16,11 +17,10 @@
     <bundle:stylepack>
         <bundle:style src="${bundle.packagePath}/css/categories.css "/>
     </bundle:stylepack>
-<div class="container requests margin-top-40">
-    <div class="row margin-bottom-40">
+<div class="container requests mgn-top-40 mgn-bot-40">
+    <div class="row mgn-bot-40">
       <div class="hidden-xs hidden-sm col-md-4">
         <h1>${kapp.getCategory(category).name}</h1>
-        
       </div>
     </div>
     <div class="grid">

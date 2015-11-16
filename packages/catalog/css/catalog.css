@@ -112,13 +112,29 @@ a {
 ul{
     padding: 0;
 }
-
-.padding-bottom-40{
+/*custom padding and margin control*/
+.pad-bot-40{
     padding-bottom: 2.85714285714rem; /*equal to 40px*/
 }
 
-.padding-top-40{
+.pad-top-40{
     padding-top: 2.85714285714rem; /*equal to 40px*/
+}
+
+.pad-bot-10{
+    padding-bottom: 0.71428571428rem; /*equal to 10px*/
+}
+
+.pad-top-10{
+    padding-top: 0.71428571428rem; /*equal to 10px*/
+}
+
+.mgn-bot-40{
+    margin-bottom: 2.85714285714rem; /*equal to 40px*/
+}
+
+.mgn-top-40{
+    margin-top: 2.85714285714rem; /*equal to 40px*/
 }
 
 #logo{
@@ -127,14 +143,6 @@ ul{
     line-height: 3.3rem;
     font-size: 3.57142857143rem; /*equal to 50px*/
     color: #fff;
-}
-
-.margin-bottom-40{
-    margin-bottom: 2.85714285714rem; /*equal to 40px*/
-}
-
-.margin-top-40{
-    margin-top: 2.85714285714rem; /*equal to 40px*/
 }
 
 .header{
@@ -159,10 +167,6 @@ ul{
     vertical-align: middle;
 }
 
-.subfooter p{
-    margin-top: 2.14285714286rem; /*equal to 30px*/
-}
-
 .overlay{
     margin: 0;
     width: 100%;
@@ -183,6 +187,7 @@ ul{
     bottom: 0px;
     height: 17.5rem; /*equal to 245px*/
 }
+
 #bs-example-navbar-collapse-1 > ul > li.dropdown > a{
     padding-right: 0 !important;
 }
@@ -195,13 +200,7 @@ ul{
     color: black;
 }
 
-#search-title{
-    margin: 0;
-    padding-bottom: 0.71428571428rem; /*equal to 10px*/
-    text-align: center;
-}
-
-.index form > div > i{
+.search-catalog form > div > i{
     top: 10px !important;
     color: #c7c7c7;
 }
@@ -299,7 +298,6 @@ ul{
 
 .panel{
     border: none;
-    margin-bottom: 2.85714285714rem; /*equal to 40px*/
 }
 
 .panel-body{
@@ -482,7 +480,7 @@ ul{
     .requests > .list > div > div > ul > li > div:last-child > span{
         line-height: 2rem; /*equal to 28px*/
     }
-    .index form{
+    .search-catalog form{
         margin: 0 auto;
         width: 75%; 
     }
@@ -506,7 +504,7 @@ ul{
     .requests > .list > div > div > ul > li > div:last-child > span{
         line-height: 3rem; /*equal to 36px*/
     }
-    .index form{
+    .search-catalog form{
         margin: 0 auto;
         width: 60%; 
     }
@@ -530,7 +528,7 @@ ul{
     .requests > .list > div > div > ul > li > div:last-child > span{
         line-height: 4rem; /*equal to 48px*/
     }
-    .index form{
+    .search-catalog form{
         margin: 0 auto;
         width: 50%; 
     }
@@ -539,47 +537,5 @@ ul{
         padding: 2.85714285714rem 1.786rem 2.85714285714rem 1.786rem;
         width: 11.4285714286rem; /*equal to 160px*/
         height: 17.1428571429rem; /*equal to 240px*/
-    }
-}
-
-/*to be used with a 5 column control*/
-.col-xs-2odd{
-    position: relative;
-    min-height: 1px;
-    padding: 0px;
-}
-.col-sm-2odd,
-.col-md-2odd,
-.col-lg-2odd {
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-/*media control*/
-@media (max-width: 768px){
-    .col-xs-2odd {
-        width: 40%;
-        float: left;
-    }
-}
-
-@media (min-width: 768px) {
-    .col-sm-2odd {
-        width: 40%;
-        float: left;
-    }
-}
-@media (min-width: 992px) {
-    .col-md-2odd {
-        width: 40%;
-        float: left;
-    }
-}
-@media (min-width: 1200px) {
-    .col-lg-2odd {
-        width: 40%;
-        float: left;
     }
 }
