@@ -1,8 +1,8 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../../package/initialization.jspf" %>
 
-<footer class="footer">
-    <div class="overlay">
+<footer class="footer mgn-none">
+    <div class="overlay mgn-none">
       <div class="container">
         <div class="row">
           <div class="col-md-6">

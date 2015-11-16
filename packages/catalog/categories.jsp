@@ -27,7 +27,7 @@
       <c:forEach items="${kapp.getCategory(category).forms}" var="form">
           <div class="col-sm-3 rightside">
             <div class="panel panel-default">
-              <div class="panel-heading">
+              <div class="panel-heading  background-tertiary pad-top-10">
               </div>
               <div class="panel-body text-center">
                 <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">

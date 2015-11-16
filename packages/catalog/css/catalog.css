@@ -61,6 +61,7 @@ section.configbar li.active{
 }
 
 
+
 html{
     font-size: 14px
 }
@@ -126,7 +127,7 @@ ul{
 }
 
 .pad-top-10{
-    padding-top: 0.71428571428rem; /*equal to 10px*/
+    padding: 0.71428571428rem 0 0 0; /*equal to 10px*/
 }
 
 .mgn-bot-40{
@@ -135,6 +136,23 @@ ul{
 
 .mgn-top-40{
     margin-top: 2.85714285714rem; /*equal to 40px*/
+}
+
+.mgn-none{
+    margin: 0;
+}
+
+.pad-none{
+    padding: 0;
+}
+
+/*color control*/
+.background-tertiary{
+    background-color: #242e38 !important;
+}
+
+.background-quaternary{
+    background-color: #d6ce61;
 }
 
 #logo{
@@ -157,7 +175,6 @@ ul{
     position: relative;
     border: none !important;
     padding: 0;
-    margin: 0; 
 }
 
 .subfooter{
@@ -168,7 +185,6 @@ ul{
 }
 
 .overlay{
-    margin: 0;
     width: 100%;
     background-color: rgba(5, 12, 19, 0.75);
     filter: alpha(opacity=75); /* For IE8 and earlier */
@@ -288,12 +304,8 @@ ul{
 }
 
 /*panel control*/
-.leftside .panel-heading{
-    background-color: #242e38 !important;
-}
-
 .rightside .panel-heading{
-    background: #d6ce61;
+    
 }
 
 .panel{
@@ -308,10 +320,6 @@ ul{
     color: #fff; 
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-}
-
-.panel-body > table{
-    margin: 0;
 }
 
 .panel-body > table > thead > tr > td{
@@ -364,11 +372,6 @@ ul{
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color:#818181;
-}
-
-.requests .panel-heading{
-    padding-bottom: 0;
-    background-color: #242e38;
 }
 
 .requests > .list > div > div > ul > li{

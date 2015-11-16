@@ -61,11 +61,11 @@
       <div class="row">
         <div class="col-sm-7 leftside">
           <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading background-tertiary">
               <div class="panel-title"><h4>YOUR REQUESTS</h4></div>
             </div>
             <div class="panel-body">
-              <table class="table">
+              <table class="mgn-none">
                 <thead>
                   <tr>
                     <td>SUMMARY</td>
@@ -86,11 +86,11 @@
             </div>
           </div>
           <div class="panel panel-default ">
-            <div class="panel-heading">
+            <div class="panel-heading background-tertiary">
               <div class="panel-title"><h4>YOUR APPROVALS</h4></div>
             </div>
               <div class="panel-body">
-                <table class="table">
+                <table class="mgn-none">
                   <thead>
                     <tr>
                       <td>SUMMARY</td>
@@ -112,9 +112,9 @@
                </div>
             </div>
           </div>
-        <div class="col-sm-5 rightside">
+        <div class="col-sm-5">
           <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading background-quaternary">
               <div class="panel-title"><h4>ALERTS &amp OUTAGES</h4></div>
             </div>
             <div class="panel-body">

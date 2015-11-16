@@ -2,7 +2,7 @@
 <%@include file="../../../package/initialization.jspf" %>
  <link rel="stylesheet" type="text/css" href="${bundle.packageLocation}/css/temp.css"/>
 <header class="header">
-  <nav class="navbar navbar-default overlay">
+  <nav class="navbar navbar-default overlay mgn-none">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
