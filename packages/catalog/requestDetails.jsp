@@ -1,18 +1,5 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="package/initialization.jspf" %>
-<%
-private Run[] runs;
-String submissionId = request.getParameter("id");
-Submission submission = ${submission.findById(submissionId)};
-runs = Run.findFromTask4(submission);
-
-%>
-
-
-
-
-
-
 
 <bundle:layout page="views/layouts/packageLayout.jsp">
 	<c:import url="${bundle.packagePath}/views/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
@@ -26,6 +13,13 @@ runs = Run.findFromTask4(submission);
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
     </bundle:variable>
 
+        <c:set var="submission" value="${submission.retrieve(param.id).tasks}" />
+        
+        <c:forEach var="task" items="${Run.find(submission).tasks}">
+            <p>${task.getOriginId()}</p>
+            
+        </c:forEach>
+        
         <div class ="container-fluid details splitBackgound">
         <div class="container">
         <div id="leftDetails" class="col-md-4 pad-bot-40 pad-top-40">

@@ -155,6 +155,10 @@ ul{
     background-color: #d6ce61;
 }
 
+.background-white{
+    background-color: #fff;
+}
+
 #logo{
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
@@ -174,14 +178,6 @@ ul{
     height: 20rem; 
     position: relative;
     border: none !important;
-    padding: 0;
-}
-
-.subfooter{
-    background-color: #fff;
-    padding-top: 1rem !important;
-    height: 5rem; /*equal to 70px*/
-    vertical-align: middle;
 }
 
 .overlay{

@@ -1,0 +1,40 @@
+<%@page import="java.util.Map"%>
+<%!
+    public static class TaskMessage extends TaskModel {
+        
+        /***********************************************************************
+         * Member Variables
+         **********************************************************************/
+
+        private String date;
+        private String id;
+        private String taskId;
+        private String message;
+        
+        /***********************************************************************
+         * Constructors
+         **********************************************************************/
+        
+        /**
+         * Constructor that takes a Map (parsed from JSON object) that should be
+         * used when retrieving task message records from the task api.
+         */
+        public TaskMessage(Map<String,Object> taskMessageObject) {
+            // Set the member variables
+            this.date = convertDate((String)taskMessageObject.get("createdAt"));
+            this.id = Long.toString((Long)taskMessageObject.get("id"));
+            this.message = (String)taskMessageObject.get("text");
+        }
+        
+        /***********************************************************************
+         * Accessors
+         **********************************************************************/
+
+        public String getDate() { return this.date; }
+        public String getId() { return this.id; }
+        public String getTaskId() { return this.taskId; }
+        public String getMessage() { return this.message; }
+        
+        public void setTaskId(String taskId) { this.taskId = taskId; }
+    }
+%>

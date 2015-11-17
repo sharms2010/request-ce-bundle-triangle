@@ -3,8 +3,10 @@
 
 <% com.kineticdata.core.authentication.Identity identity = 
         (com.kineticdata.core.authentication.Identity) request.getAttribute("identity");
-    java.util.Map<String,String> searchOptions = new java.util.HashMap<>();
-    searchOptions.put("createdBy", identity.getUsername());
+    java.util.Map<String,String[]> searchOptions = new java.util.HashMap<>();
+    searchOptions.put("createdBy", new String[] {identity.getUsername()});
+    searchOptions.put("end", new String[] {"2015-10-17T21:00:00.000Z"} );
+    searchOptions.put("start", new String[] {"2015-10-05T21:00:00.000Z"} );
     request.setAttribute("searchOptions", searchOptions); 
     String view = "catalog";
     request.setAttribute("view", view);    

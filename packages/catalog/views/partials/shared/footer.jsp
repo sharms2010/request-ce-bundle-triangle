@@ -1,7 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../../package/initialization.jspf" %>
 
-<footer class="footer mgn-none">
+<footer class="footer pad-none">
     <div class="overlay mgn-none">
       <div class="container">
         <div class="row">
@@ -41,7 +41,7 @@
       </div>
     </div>
 </footer>
-<div class="subfooter">
+<div class="pad-top-10 background-white">
   <div class="container">
     <div>Build Date: ${buildDate}</div>
     <div>Build Number: ${buildNumber}</div>
