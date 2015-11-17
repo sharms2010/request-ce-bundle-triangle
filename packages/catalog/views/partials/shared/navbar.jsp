@@ -12,7 +12,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="${bundle.spaceLocation}/${kapp.slug}" id="logo" class="navbar-brand col-xs-6 col-sm-6 col-md-8 col-lg-9">${kapp.getAttributeValue("Company Name")}</a>
+        <a href="${bundle.spaceLocation}/${kapp.slug}" id="logo" class="navbar-brand col-xs-6 col-sm-6 col-md-8 col-lg-9"></a>
       </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,7 +37,7 @@
               <c:forEach items="${space.kapps}" var="kapps">
                 <li> 
                   <a href="/kinetic/${space.slug}/${kapps.slug}">
-                    <i class="fa ${kapps.getAttributeValue("Kapp FA logo")} fa-1x pull-left"></i>
+                    <i class="fa  fa-1x pull-left"></i>
                     <div class="pull-right">${kapps.name}</div>
                   </a>
                 </li>
