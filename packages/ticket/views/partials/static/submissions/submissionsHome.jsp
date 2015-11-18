@@ -8,7 +8,7 @@
         <li class="list-group-item">
               <div class="row">
                 <div class="col-md-12">
-                  <a href="${bundle.spaceLocation}/request-details?id=${submission.id}">${submission.getValue('Summary').getValue()}</a>
+                  <a href="${bundle.spaceLocation}/submissions/${submission.id}">${submission.getValue('Summary').getValue()}</a>
                 </div>
               </div>
               <div class="row">

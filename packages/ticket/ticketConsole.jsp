@@ -45,11 +45,10 @@
               </div>
             </div>
             <div>
-
-
-                  <c:import url="views/partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
-                  <center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
-                  
+                <c:import url="views/partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+                <center>
+                  <a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a>
+                </center>
             </div>
           </div>
 

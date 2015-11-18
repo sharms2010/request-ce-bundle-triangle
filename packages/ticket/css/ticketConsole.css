@@ -443,6 +443,9 @@ li .fa {
     border-left: none;
     border-right: none;
 }
+.panel-title .btn {
+    margin-left: 3px;
+}
 
 /*5 column deff*/
 .col-xs-odd{
