@@ -44,24 +44,12 @@
                 </h4>
               </div>
             </div>
-            <div class="panel-body">
+            <div>
 
-              <table class="mgn-none">
-                <thead>
-                  <tr>
-                  </tr>
-                </thead>
-                <tbody>
-                  <c:set var="table" value="request" scope="session"/>
-                  <h3>${app:escape(form.name)}</h3>
+
                   <c:import url="views/partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
-                  </tr>
-                </tfoot>
-              </table>
+                  <center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
+                  
             </div>
           </div>
 

@@ -434,6 +434,16 @@ ul{
     margin-bottom: 0;
 }
 
+/* Ticket console customizations */
+
+li .fa {
+    color: #242e38;
+}
+.list-group-item {
+    border-left: none;
+    border-right: none;
+}
+
 /*5 column deff*/
 .col-xs-odd{
     position: relative;

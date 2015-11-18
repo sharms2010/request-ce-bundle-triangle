@@ -1,11 +1,11 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../../../package/initialization.jspf" %>
 
-<div class="row">
+<ul class="list-group">
   <c:set var="count" value="0"/>
     <c:forEach items="${submissionsList}" var="submission">
       <c:if test="${count < 8}">
-            <div class="col-md-12 well">
+        <li class="list-group-item">
               <div class="row">
                 <div class="col-md-12">
                   <a href="${bundle.spaceLocation}/request-details?id=${submission.id}">${submission.getValue('Summary').getValue()}</a>
@@ -24,8 +24,8 @@
                 <div class="col-md-5 col-xs-5 text-danger"><i class="fa fa-calendar fa-fw"></i> a month ago
                 </div>
               </div>
-            </div>
+        </li>
         <c:set var="count" value="${count+1}"/> 
       </c:if>
     </c:forEach>    
-</div>
+</ul>
