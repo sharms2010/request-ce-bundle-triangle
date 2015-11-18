@@ -32,7 +32,7 @@
           <button type="submit" class="btn btn-default">Group Tickets</button>
           <button type="submit" class="btn btn-default">Unassigned Tickets</button>
         </div></br></br></br>
-        <div class="col-sm-4 leftside">
+        <div class="col-sm-5 leftside">
           <div class="panel panel-default">
             <div class="panel-heading background-tertiary">
               <div class="panel-title">
@@ -66,7 +66,7 @@
           </div>
 
           </div>
-        <div class="col-sm-8">
+        <div class="col-sm-7">
           <div class="panel panel-default">
             <div class="panel-heading background-tertiary">
               <div class="panel-title"><h4>DETAILS</h4></div>
