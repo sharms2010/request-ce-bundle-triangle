@@ -12,26 +12,20 @@
     <bundle:variable name="head">
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
     </bundle:variable>
-
-        <c:set var="submission" value="${submission.retrieve(param.id).tasks}" />
-        
-        <c:forEach var="task" items="${Run.find(submission).tasks}">
-            <p>${task.getOriginId()}</p>
-            
-        </c:forEach>
+        <c:set var="submission" value="${submissions.retrieve(param.id)}" />
         
         <div class ="container-fluid details splitBackgound">
         <div class="container">
         <div id="leftDetails" class="col-md-4 pad-bot-40 pad-top-40">
-          <h1>Equipment Move Request</h1>
+          <h1>${submission.form.name}</h1>
           <h4>Request ID:</h4>
-          <h4>#KR0000000000788923</h4>
+          <h4>${submission.id}</h4>
          
           <h4>Request Date:</h4>
-          <h4>October 27, 2015</h4>
+          <h4>${submission.submittedAt}</h4>
           
           <h4>Status:</h4>
-          <h4>In progress</h4>
+          <h4>${submission.coreState}</h4>
         
           <p>This could be instructions. This could be a brief description. This could also be a status update. Esto podría ser instrucciones. Esto podría ser una breve descripción. Esto también podría ser una actualización de estado. Kini mahimong mga panudlo. Kini mahimo nga usa ka mubo nga paghulagway. Kini mahimo usab nga usa ka status update.</p>
 
@@ -41,13 +35,17 @@
         </div>
         <div id="rightDetails" class="col-md-8 pad-bot-40 pad-top-40">
           <ul>
-            <li class="panel panel-default arrow_box">
-              <div class="panel-body">
-                <h4>Request Submitted</h4>
-                <h4>October 23, 2015</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at posuere massa, a dictum lorem. Mauris eget diam ut sapien.</p>
-              </div>
-            </li>
+            <c:forEach var="run" items="${runs.find(submission)}">
+                <c:forEach var="task" items="${run.tasks}">
+                    <li class="panel panel-default arrow_box">
+                        <div class="panel-body">
+                            <h4>${task.getName()}</h4>
+                            <h4>${task.getCreateDate()}</h4>
+                            <p>${task.getResult('output')}</p>
+                        </div>
+                    </li>
+                </c:forEach>
+            </c:forEach>
              <li class="panel panel-default arrow_box">
               <div class="panel-body">
                 <h4>Request Submitted</h4>

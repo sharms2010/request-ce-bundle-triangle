@@ -1,6 +1,6 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../../../package/initialization.jspf" %>
-<table class="table table-hover">
+
 	<c:set var="count" value="0"/>
     <c:forEach items="${submissionsList}" var="submission">
     	<c:if test="${submission.type.name == 'Approval'}">
@@ -16,4 +16,3 @@
 		    </c:if>
         </c:if>
     </c:forEach>
-</table>

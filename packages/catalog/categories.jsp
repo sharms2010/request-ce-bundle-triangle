@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="grid">
-      <c:forEach items="${kapp.getCategory(category).forms}" var="form">
+      <c:forEach var="form" items="${kapp.getCategory(category).forms}">
           <div class="col-sm-3 rightside">
             <div class="panel panel-default">
               <div class="panel-heading  background-tertiary pad-top-10">

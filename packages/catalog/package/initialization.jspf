@@ -12,3 +12,4 @@
 <%@include file="models/kineticTask/Run.jspf" %>
 <%@include file="models/kineticTask/Task.jspf" %>
 <%@include file="models/kineticTask/TaskMessage.jspf" %>
+<% request.setAttribute("runs", new Runs()); %>

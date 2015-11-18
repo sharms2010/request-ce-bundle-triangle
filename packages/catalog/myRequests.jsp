@@ -6,8 +6,8 @@
     java.util.Map<String,String[]> searchOptions = new java.util.HashMap<>();
     searchOptions.put("createdBy", new String[] {identity.getUsername()});
     request.setAttribute("searchOptions", searchOptions);
-    searchOptions.put("end", new String[] {"2015-10-17T21:00:00.000Z"} );
-    searchOptions.put("start", new String[] {"2015-10-05T21:00:00.000Z"} );
+    searchOptions.put("end", new String[] {"2015-11-30T21:00:00.000Z"} );
+    searchOptions.put("start", new String[] {"2015-11-01T21:00:00.000Z"} );
     String view = "submissions";
     request.setAttribute("view", view);
 %>

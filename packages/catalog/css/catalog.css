@@ -152,7 +152,7 @@ ul{
 }
 
 .background-quaternary{
-    background-color: #d6ce61;
+    background-color: #d6ce61 !important;
 }
 
 .background-white{
@@ -169,7 +169,7 @@ ul{
 
 .header{
    /* background: url("../images/background.png");*/
-    height: 7.5rem; 
+    min-height: 7.5rem; 
     position: relative;
 }
 
@@ -189,9 +189,9 @@ ul{
 .header .overlay{
     border: none;
     border-radius: 0;
-    position: absolute;
-    height: 5rem; /*equal to 70px*/
-    bottom: 0;
+    position: relative;
+    min-height: 5rem; /*equal to 70px*/
+    top: 2.5rem;
 }
 
 .footer .overlay{
@@ -200,15 +200,16 @@ ul{
     height: 17.5rem; /*equal to 245px*/
 }
 
-#bs-example-navbar-collapse-1 > ul > li.dropdown > a{
+#navbar-collapse > ul > li.dropdown > a{
+    color: black!important;
     padding-right: 0 !important;
 }
 
-#bs-example-navbar-collapse-1 > ul > li:nth-child(1) > a{
+#navbar-collapse > ul > li:nth-child(1) > a{
     padding: 0.71428571428rem 1rem 0.71428571428rem 1rem;
 }
 
-#bs-example-navbar-collapse-1 > ul > li > ul > li > a > i{
+#navbar-collapse > ul > li > ul > li > a > i{
     color: black;
 }
 
@@ -223,7 +224,7 @@ ul{
     color: #c7c7c7;
 }
 
-.avatar {
+.avatar > img{
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;

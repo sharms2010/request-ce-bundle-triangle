@@ -5,8 +5,8 @@
         (com.kineticdata.core.authentication.Identity) request.getAttribute("identity");
     java.util.Map<String,String[]> searchOptions = new java.util.HashMap<>();
     searchOptions.put("createdBy", new String[] {identity.getUsername()});
-    searchOptions.put("end", new String[] {"2015-10-17T21:00:00.000Z"} );
-    searchOptions.put("start", new String[] {"2015-10-05T21:00:00.000Z"} );
+    searchOptions.put("end", new String[] {"2015-11-30T21:00:00.000Z"} );
+    searchOptions.put("start", new String[] {"2015-11-01T21:00:00.000Z"} );
     request.setAttribute("searchOptions", searchOptions); 
     String view = "catalog";
     request.setAttribute("view", view);    
@@ -67,7 +67,7 @@
               <div class="panel-title"><h4>YOUR REQUESTS</h4></div>
             </div>
             <div class="panel-body">
-              <table class="mgn-none">
+              <table class="table mgn-none">
                 <thead>
                   <tr>
                     <td>SUMMARY</td>
@@ -92,7 +92,7 @@
               <div class="panel-title"><h4>YOUR APPROVALS</h4></div>
             </div>
               <div class="panel-body">
-                <table class="mgn-none">
+                <table class="table mgn-none">
                   <thead>
                     <tr>
                       <td>SUMMARY</td>

@@ -10,60 +10,73 @@
 <%@page import="org.apache.http.impl.client.DefaultHttpClient"%>
 <%@page import="org.apache.http.client.methods.HttpGet"%>
 <%@page import="org.apache.http.client.HttpClient"%>
-
 <%!
-    public static class Run extends TaskModel {
-
+    public static class Runs {
+        
         /***********************************************************************
-         * Static Retrieval Methods
+         * Retrieval Methods
          **********************************************************************/
 
-        public static Run[] find(Submission submission) {
+        public Run[] find(Submission submission) {
             try {
                 // Get the configured task server for the submission/template.
-                String taskServer = submission.getKapp().getAttribute("Task Server Url").getValue();
-                String sourceName = submission.getKapp().getAttribute("Task Source Name").getValue();
-                String encodedSourceName = UrlUtils.escapeUrlSegment(sourceName);
-                String encodedSourceId = UrlUtils.escapeParameter(submission.getId().toString());
-
-                String path = taskServer + "/app/api/v1/sources/" + encodedSourceName + 
-                        "/runs?include=tasks,tasks.messages&sourceId=" + encodedSourceId;
-
-                // Make the get API call to the tasks route.
-                HttpClient client = new DefaultHttpClient();
-                HttpGet request = new HttpGet(path);
-                org.apache.http.HttpResponse response = client.execute(request);
-
-                // Gross code for getting the response body as a string.
-                StringBuilder builder = new StringBuilder();
-                InputStream inputStream = response.getEntity().getContent();
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader reader = new BufferedReader(inputStreamReader);
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    builder.append(line);
-                }
-                String body = builder.toString();
                 
-                // Raise an error if the response was not a 200.
-                int statusCode = response.getStatusLine().getStatusCode();
-                if (statusCode != 200) {
-                    throw new RuntimeException("Received " + statusCode + " response" + 
-                    " retrieving runs from task 4: " + body);
-                }
+                
+                String taskServer = submission.getKapp().getAttributeValue("Task Server Url");
+                String sourceName = submission.getKapp().getAttributeValue("Task Source Name");
+                
+                // Declare the results
+                Run[] results;
+                if (taskServer == null || sourceName == null) {
+                    results = new Run[]{};
+                } else {
+                    String encodedSourceName = UrlUtils.escapeUrlSegment(sourceName);
+                    String encodedSourceId = UrlUtils.escapeParameter(submission.getId().toString());
 
-                // Parse the JSON data and instantiate run objects.
-                Map<String,Object> jsonObject = (Map)JSONValue.parse(body);
-                List<Map<String,Object>> runList = (List)jsonObject.get("runs");
-                Run[] result = new Run[runList.size()];
-                for (int i=0; i<runList.size(); i++) {
-                    result[i] = new Run(runList.get(i));
+                    String path = taskServer + "/app/api/v1/sources/" + encodedSourceName + 
+                            "/runs?include=tasks,tasks.messages&sourceId=" + encodedSourceId;
+
+                    // Make the get API call to the tasks route.
+                    HttpClient client = new DefaultHttpClient();
+                    HttpGet request = new HttpGet(path);
+                    org.apache.http.HttpResponse response = client.execute(request);
+
+                    // Gross code for getting the response body as a string.
+                    StringBuilder builder = new StringBuilder();
+                    InputStream inputStream = response.getEntity().getContent();
+                    InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                    BufferedReader reader = new BufferedReader(inputStreamReader);
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        builder.append(line);
+                    }
+                    String body = builder.toString();
+
+                    // Raise an error if the response was not a 200.
+                    int statusCode = response.getStatusLine().getStatusCode();
+                    if (statusCode != 200) {
+                        throw new RuntimeException("Received " + statusCode + " response" + 
+                        " retrieving runs from task 4: " + body);
+                    }
+
+                    // Parse the JSON data and instantiate run objects.
+                    Map<String,Object> jsonObject = (Map)JSONValue.parse(body);
+                    List<Map<String,Object>> runList = (List)jsonObject.get("runs");
+                    results = new Run[runList.size()];
+                    for (int i=0; i<runList.size(); i++) {
+                        results[i] = new Run(runList.get(i));
+                    }
                 }
-                return result;
+                return results;
             } catch (IOException e) {
                 throw new RuntimeException("Caught error retrieving runs from Task API", e);
             }
         }
+    }
+%>
+
+<%!
+    public static class Run extends TaskModel {
 
         /***********************************************************************
          * Member Variables
