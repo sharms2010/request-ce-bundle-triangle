@@ -5,7 +5,7 @@
         (com.kineticdata.core.authentication.Identity) request.getAttribute("identity");
     java.util.Map<String,String[]> searchOptions = new java.util.HashMap<>();
     searchOptions.put("createdBy", new String[] {identity.getUsername()});
-    searchOptions.put("end", new String[] {"2015-10-17T21:00:00.000Z"} );
+    searchOptions.put("end", new String[] {"2015-12-17T21:00:00.000Z"} );
     searchOptions.put("start", new String[] {"2015-10-05T21:00:00.000Z"} );
     request.setAttribute("searchOptions", searchOptions); 
     String view = "catalog";
@@ -21,56 +21,34 @@
     <bundle:stylepack>
         <bundle:style src="${bundle.packagePath}/css/ticketConsole.css "/>
     </bundle:stylepack>
-   
+
+
 <div class="container hidden-xs mgn-bot-40 mgn-top-40 search-catalog">
-      <h1 class="pad-bot-10 text-center">How can we help you today?</h1>
-      <form role="form"> 
-        <div class="form-group has-feedback">
-          <input type="text" class="form-control" />
-          <i class="form-control-feedback fa fa-search"></i>
-        </div>
-      </form>
-    </div>
-    <div id="tealnav" class="mgn-bot-40">
-      <div class="container">
-        <div class="row">
-          <c:forEach items="${kapp.categories}" var="category">
-            <div class="col-sm-odd col-xs-odd">
-              <a href="${bundle.spaceLocation}/${kapp.slug}/categories?category=${category.name}">
-                <div class="box text-center">
-                  <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <span class="fa-stack fa-3x center-block visible-sm-inline-block">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <span class="fa-stack fa-2x center-block visible-xs-inline-block">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa ${category.getAttributeValue("Category FA logo")} fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <div class="hidden-xs">${app:escape(category.name)}</div>
-                </div>
-              </a>
-            </div>
-          </c:forEach>
-        </div>
-      </div>
-    </div>
+
     <div class="container mgn-bot-40">
       <div class="row">
-        <div class="col-sm-7 leftside">
+        <div class="btn-group col-sm-12" role="group" aria-label="...">
+          <button type="submit" class="btn btn-info">My Tickets</button>
+          <button type="submit" class="btn btn-default">Group Tickets</button>
+          <button type="submit" class="btn btn-default">Unassigned Tickets</button>
+        </div></br></br></br>
+        <div class="col-sm-4 leftside">
           <div class="panel panel-default">
             <div class="panel-heading background-tertiary">
-              <div class="panel-title"><h4>YOUR REQUESTS</h4></div>
+              <div class="panel-title">
+                <h4>
+                  OPEN TICKETS
+                <button class="btn btn-info btn-xs pull-right dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-sort-amount-desc" ></i></button>
+                <button class="btn btn-info btn-xs pull-right dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-filter" ></i></button>
+                <button class="btn btn-info btn-xs pull-right"><i class="fa fa-refresh"></i></button>
+                </h4>
+              </div>
             </div>
             <div class="panel-body">
+
               <table class="mgn-none">
                 <thead>
                   <tr>
-                    <td>SUMMARY</td>
-                    <td class="hidden-xs">STATUS</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -86,45 +64,16 @@
               </table>
             </div>
           </div>
-          <div class="panel panel-default ">
-            <div class="panel-heading background-tertiary">
-              <div class="panel-title"><h4>YOUR APPROVALS</h4></div>
-            </div>
-              <div class="panel-body">
-                <table class="mgn-none">
-                  <thead>
-                    <tr>
-                      <td>SUMMARY</td>
-                      <td class="hidden-xs">STATUS</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <c:set var="table" value="approval" scope="session"/>
-                    <h3>${app:escape(form.name)}</h3>
-                    <c:import url="views/partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
-                    
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td colspan="2"><center><a href="#">VIEW MORE</a></center></td>
-                    </tr>
-                  </tfoot>
-                </table>
-               </div>
-            </div>
+
           </div>
-        <div class="col-sm-5">
+        <div class="col-sm-8">
           <div class="panel panel-default">
-            <div class="panel-heading background-quaternary">
-              <div class="panel-title"><h4>ALERTS &amp OUTAGES</h4></div>
+            <div class="panel-heading background-tertiary">
+              <div class="panel-title"><h4>DETAILS</h4></div>
             </div>
             <div class="panel-body">
-              <p>PeopleSoft offline October 17-18</p>
-              <div>PeopleSoft will be offline this weekend for routine updates starting at midnight Friday, October 16. The system should be back online by Monday, October 19 at 8:00am.</div>
+              
             </div>
-          </div>
-          <div class=" hidden-xs">
-          <a class="twitter-timeline" href="https://twitter.com/KineticData" data-widget-id="569678005275226112" data-chrome="nofooter">Tweets by @KineticData</a>
           </div>
         </div>
       </div>
