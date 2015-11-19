@@ -73,9 +73,9 @@
                     <a id="detail-tab" href="#detail" role="tab" data-toggle="tab" aria-controls="detail" aria-expanded="true">Detail</a>
                   </li>
                   <li role="presentation">
-                    <a id="notes-tab" href="#notes" role="tab" data-toggle="tab" aria-controls="notes">Work</a></li>
+                    <a id="notes-tab" href="#notes" role="tab" data-toggle="tab" aria-controls="notes">Notes</a></li>
                   <li role="presentation">
-                    <a id="resolution-tab" href="#resolution" role="tab" data-toggle="tab" aria-controls="resolution">Notes</a></li>
+                    <a id="resolution-tab" href="#resolution" role="tab" data-toggle="tab" aria-controls="resolution">Resolution</a></li>
                   <li role="presentation">
                     <a id="related-tab" href="#related" role="tab" data-toggle="tab" aria-controls="related">Related</a></li>
                 </ul>
@@ -83,15 +83,7 @@
               </div>
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="detail" aria-labelledby="detail-tab">
-                  <ul>
-                    <li>Last Name: </li>
-                    <li>First Name: </li>
-                    <li>Email Address:  </li>
-                    <li>Telephone:  </li>
-                    <li>Summary:  </li>
-                    <li>Description:  </li>
-                    <li>Urgency:  </li>
-                  </ul>
+                  Dtail content
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="notes" aria-labelledby="notes-tab">
                   Notes content
