@@ -24,7 +24,7 @@
     font-size:.7em;
     color: #428BCA;
     text-transform: uppercase;
-}*/
+} */
 .feed-content {
     border: 1px solid black;
     padding: 15px;
@@ -402,4 +402,83 @@ ul{
         width: 11.4285714286rem; /*equal to 160px*/
         height: 17.1428571429rem; /*equal to 240px*/
     }
+}
+
+
+
+
+#tealnav{
+    background-color: #5ea5b2;
+}
+
+#tealnav ul {
+/*    display: -moz-box;
+    display: -webkit-box;
+    display: box;*/
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style-type: none;
+}
+
+#tealnav li {
+/*    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;*/
+    display: inline-block;
+    margin-left: 4.28571428571rem;  /* equal to 60px */
+    padding: 0.71428571428rem 0 0.71428571428rem 0;
+}
+
+#tealnav li a{
+    font-size: 1.125rem;
+}
+
+/*panel control*/
+.panel{ /*common*/
+    border: none;
+}
+
+.panel-body{ /*common*/
+    box-shadow: 1px 4px 10px #eaeaea;
+}
+
+.panel-body > table > thead > tr > td:nth-child(2){ /*catalog could be replaced with more general catalog*/
+    text-align: right;
+}
+
+.panel-body > table > tbody > tr:nth-child(even) > td:nth-child(1){ /*catalog could be replaced with more general catalog*/
+    border: none;
+}
+
+.panel-body > table > tbody > tr > td:nth-child(2){
+    vertical-align: bottom;
+}
+
+.requests > .list > div > div > ul > li{
+    display: flex;
+}
+
+.requests > .list > div > div > ul > li:not(:last-child){
+    border-bottom: 2px solid black; 
+}
+
+.requests > .list > div > div > ul > li{
+    padding: 1rem 0 1rem 0;
+}
+
+.requests > div > div > div > div > h4{
+    line-height: 2rem; /*equal to 28px*/
+}
+
+.requests .btn-primary{
+    background-color: #5ea5b2;
+}
+
+.requests > .list > div > div > ul > li > div > span{
+    text-align: left;
+}
+
+.requests > div > div > div > div{
+    line-height: 2.42857142857rem; /* equal to 34px */
 }
