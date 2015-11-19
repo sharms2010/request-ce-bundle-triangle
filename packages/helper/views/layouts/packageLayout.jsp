@@ -1,5 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../package/initialization.jspf" %>
+<%@include file="../../package/partials.jspf" %>
+
 <bundle:layout>
 
     <bundle:variable name="head">
@@ -9,8 +11,13 @@
         </bundle:stylepack>
         <bundle:scriptpack>
             <bundle:script src="${bundle.packagePath}/libraries/jquery-datatables/jquery.dataTables.js" />
-            <bundle:script src="${bundle.packagePath}/js/helper.js" />
         </bundle:scriptpack>
+
+        <script>
+            var bundle = {
+                'spacePath': "${app:escapeJs(bundle.spacePath)}"
+            };
+        </script>
 
         <bundle:yield name="head"/>
 

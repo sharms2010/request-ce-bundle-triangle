@@ -1,34 +1,39 @@
 $(function() {
     $('form .form-group input, form .form-group textarea, form .form-group select').addClass('form-control');
+    
     $('#helperFormList .list-group a').click(function(){
-        var id = $(this).attr('data-for');
-        // Define container
-        var detailsContainer = $('#helperSubmissionList');
-        // Set ajax options
-        var ajaxOptions = {
-            dataType: 'html',
-            cache: false,
-            type: 'get',
-            //url: encodeURI(BUNDLE.packagePath + 'interface/callbacks/osc/tasks.html.jsp?id=' + id),
-            url: BUNDLE.config.oscPackageUrl + '&callback=tasks' + '&id=' + id,
-            beforeSend: function(jqXHR, settings) {
-                // Display loader
-                detailsContainer.html(loader);
+        // Ajax call to get HTML
+        $.ajax({
+            method: 'get',
+            url: '?partial=helperSubmissionList',
+            data: {"formSlug":$(this).data("for")},
+            success: function(data, textStatus, jqXHR){
+                $('#helperObjectDetails').html(data);
             },
-            success: function(data, textStatus, jqXHR) {
-                // Load results into ui
-                detailsContainer.html(data);
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                // Clear container
-                detailsContainer.empty();
-                alert('An error has occurred attempting to get the objects reords');
+            error: function(jqXHR, textStatus, errorThrown){
+                $('#helperObjectDetails').html('<b>Error fetching HTML</b>');
             }
-        };
-        // Execute the ajax request.
-        BUNDLE.ajax(ajaxOptions);        
-    })
+        });
+
+    });
+
+    // Helper Console Search Submissions
+    $('#search').on('keyup', function(event) {
+        var term = $(this).val().toLowerCase();
+        $('#helperSubmissionList li a').each(function() {
+            if ($(this).text().toLowerCase().indexOf(term) > -1) {
+                $(this).parent().show();
+            } else {
+                $(this).parent().hide();
+            }
+        });
+    });
+
 });
+
+
+
+
 
 
 
