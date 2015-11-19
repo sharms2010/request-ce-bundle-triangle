@@ -26,12 +26,20 @@
 <div class="container hidden-xs mgn-bot-40 mgn-top-40 search-catalog">
 
     <div class="container mgn-bot-40">
-      <div class="row">
-        <div class="btn-group col-sm-12" role="group" aria-label="...">
-          <button type="submit" class="btn btn-info">My Tickets</button>
-          <button type="submit" class="btn btn-default">Group Tickets</button>
-          <button type="submit" class="btn btn-default">Unassigned Tickets</button>
-        </div></br></br></br>
+      <div>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="submit" class="btn btn-info">My Own
+            <span class="badge">4</span>
+          </button>
+          <button type="submit" class="btn btn-default">My Groups
+            <span class="badge">16</span>
+          </button>
+          <button type="submit" class="btn btn-default">Unassigned
+            <span class="badge">7</span>
+          </button>
+        </div>
+        <button type="submit" class="btn btn-default">Submit New</button>
+      </br></br></br>
         <div class="col-sm-5 leftside">
           <div class="panel panel-default">
             <div class="panel-heading background-tertiary">
@@ -59,7 +67,34 @@
               <div class="panel-title"><h4>DETAILS</h4></div>
             </div>
             <div class="panel-body">
-              
+              <div>
+                <ul id="ticketDetailTabs" class="nav nav-tabs">
+                  <li role="presentation" class="active">
+                    <a id="detail-tab" href="#detail" role="tab" data-toggle="tab" aria-controls="detail" aria-expanded="true">Detail</a>
+                  </li>
+                  <li role="presentation">
+                    <a id="notes-tab" href="#notes" role="tab" data-toggle="tab" aria-controls="notes">Notes</a></li>
+                  <li role="presentation">
+                    <a id="resolution-tab" href="#resolution" role="tab" data-toggle="tab" aria-controls="resolution">Resolution</a></li>
+                  <li role="presentation">
+                    <a id="related-tab" href="#related" role="tab" data-toggle="tab" aria-controls="related">Related</a></li>
+                </ul>
+                </br>
+              </div>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="detail" aria-labelledby="detail-tab">
+                  Dtail content
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="notes" aria-labelledby="notes-tab">
+                  Notes content
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="resolution" aria-labelledby="resolution-tab">
+                  Resolution content
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="related" aria-labelledby="related-tab">
+                  Related Content
+                </div>
+              </div>
             </div>
           </div>
         </div>
