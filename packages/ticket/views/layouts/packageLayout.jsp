@@ -13,6 +13,19 @@
 
         <bundle:yield name="head"/>
 
+        <script>
+            var bundle = {
+                'kappLocation' : "${app:escapeJs(bundle.kappLocation)}",
+                'kappPath' : "${app:escapeJs(bundle.kappPath)}",
+                'location': "${app:escapeJs(bundle.location)}",
+                'packageLocation': "${app:escapeJs(bundle.packageLocation)}",
+                'packagePath' : "${app:escapeJs(bundle.packagePath)}",
+                'path': "${app:escapeJs(bundle.path)}",
+                'spaceLocation' : "${app:escapeJs(bundle.spaceLocation)}",
+                'spacePath': "${app:escapeJs(bundle.spacePath)}"
+            };
+        </script>
+
     </bundle:variable>
 
     <div>

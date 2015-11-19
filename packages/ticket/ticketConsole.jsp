@@ -24,10 +24,11 @@
     </bundle:stylepack>
 
 
-<div class="container hidden-xs mgn-bot-40 mgn-top-40 search-catalog">
+<div class="container mgn-bot-40 mgn-top-40 search-catalog">
 
     <div class="container mgn-bot-40">
       <div>
+        <div class="col-sm-5 leftside">
         <div class="btn-group" role="group" aria-label="...">
           <button type="submit" class="btn btn-info">My Own
             <span class="badge">4</span>
@@ -39,7 +40,10 @@
             <span class="badge">7</span>
           </button>
         </div>
-        <button type="submit" class="btn btn-default">Submit New</button>
+        </div>
+        <div class="col-sm-7">
+        <button id="submitNew" type="submit" class="btn btn-default">Submit New</button>
+        </div>
       </br></br></br>
         <div class="col-sm-5 leftside">
           <div class="panel panel-default">
@@ -55,9 +59,6 @@
             </div>
             <div>
                 <c:import url="views/partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
-                <center>
-                  <a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a>
-                </center>
             </div>
           </div>
 
@@ -84,7 +85,14 @@
               </div>
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="detail" aria-labelledby="detail-tab">
-                  Detail content
+                  Submission ID: <span class="detail-submission-id"></span></br>
+                  Customer Name: <span class="detail-customer-name"></span></br>
+                  Customer Email: <span class="detail-customer-email"></span></br>
+                  Customer Phone: <span class="detail-customer-phone"></span></br>
+                  <hr></hr>
+                  Summary: <span class="detail-summary"></span></br>
+                  <hr></hr>
+                  Description: <span class="detail-description"></span></br>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="notes" aria-labelledby="notes-tab">
                   Notes content
@@ -101,6 +109,7 @@
         </div>
       </div>
     </div>
+
 
 
     <app:bodyContent/>
