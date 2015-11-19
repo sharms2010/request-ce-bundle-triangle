@@ -8,7 +8,7 @@
         <div class="col-sm-6 col-md-5">
           <div class="row">
             <div class="col-xs-4">
-              <h4 class="pull-right gray">FILTER BY:</h4>
+              <h4 class="pull-right">FILTER BY:</h4>
             </div>
             <div class="col-xs-8">
               <form role="form"> 
@@ -23,13 +23,13 @@
         <div class="col-sm-6 col-md-3 veiw-style">
           <div class="row pull-right">
             <div class="col-xs-6">
-              <h4 class="pull-right gray">VIEW AS:</h4>
+              <h4 class="pull-right">VIEW AS:</h4>
             </div>
             <div class="col-xs-3">
-              <i id="grid" class="fa fa-th fa-2x gray"></i>
+              <i id="grid" class="fa fa-th fa-2x"></i>
             </div>
             <div class="col-xs-3">
-              <i id="list" class="fa fa-list-ul fa-2x gray"></i>
+              <i id="list" class="fa fa-list-ul fa-2x"></i>
             </div>
           </div>
         </div>
@@ -54,8 +54,8 @@
                     <i class="fa ${submission.form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
                   </span>
                   <h3>${app:escape(submission.form.name)}</h3>
-                  <div class="font-bold gray">${submission.createdAt}</div>
-                  <p class="font-bold gray">${submission.coreState}</p>
+                  <div>${submission.createdAt}</div>
+                  <div>${submission.coreState}</div>
                   <a href="${bundle.kappLocation}/request-details?id=${submission.id}">
                     <button class="btn btn-primary">DETAILS
                       <i class="icon-control-feedback fa fa-play"></i>
@@ -98,8 +98,8 @@
                 <div class="col-sm-8">
                   <span class="pull-left">
                     <h3>${app:escape(submission.form.name)}</h3>
-                    <p class="font-bold gray">${submission.createdAt}</p>
-                    <div class="font-bold gray">${submission.coreState}</div>
+                    <p>${submission.createdAt}</p>
+                    <div>${submission.coreState}</div>
                   </span>
                 </div>
                 <div class="col-sm-2">
