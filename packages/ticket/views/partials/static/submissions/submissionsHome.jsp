@@ -21,7 +21,7 @@
                 <div class="col-md-7 col-xs-7">
                   <i class="fa fa-user fa-fw"></i>${submission.getValue('Assigned Individual').getValue()}
                 </div>
-                <div class="col-md-5 col-xs-5 text-danger"><i class="fa fa-calendar fa-fw"></i> a month ago
+                <div class="col-md-5 col-xs-5"><i class="fa fa-calendar fa-fw"></i><span class="date-time-relative">${submission.createdAt}</span>
                 </div>
               </div>
         </li>
@@ -29,3 +29,4 @@
       </c:if>
     </c:forEach>    
 </ul>
+

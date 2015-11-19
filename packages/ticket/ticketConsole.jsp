@@ -17,6 +17,7 @@
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
     </bundle:variable>
     <bundle:scriptpack>
+        <bundle:script src="${bundle.packagePath}/js/ticket.js "/>
     </bundle:scriptpack>
     <bundle:stylepack>
         <bundle:style src="${bundle.packagePath}/css/ticketConsole.css "/>
@@ -83,7 +84,7 @@
               </div>
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="detail" aria-labelledby="detail-tab">
-                  Dtail content
+                  Detail content
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="notes" aria-labelledby="notes-tab">
                   Notes content
