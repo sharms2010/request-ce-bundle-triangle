@@ -20,11 +20,16 @@
     </bundle:scriptpack>
    
 <div class="container">
-      <h1 style="float:left">Helper Console</h1>
-      <c:if test="${identity.isSpaceAdmin()}">
-        <button type="button" data-toggle="modal" class="btn btn-info pull-right" data-target="#newObject">Build New Object</button>
-        <%--<a href="${bundle.spaceLocation}/app/#/author/forms" class="btn btn-info pull-right" role="button">Build New Object</a>--%>
-       </c:if>
+    <div class="col-sm-6">
+        <h1>Helper Console</h1>
+    </div>
+    <div class="col-sm-6">
+        <c:if test="${identity.isSpaceAdmin()}">
+        <h1>
+            <button type="button" data-toggle="modal" class="btn btn-info pull-right" data-target="#newObject">Build New Object</button>
+            </h1>
+        </c:if>
+    </div>
 </div>
 
 <div class="container">
