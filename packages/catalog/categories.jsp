@@ -32,15 +32,15 @@
               <div class="panel-body text-center">
                 <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${form.getAttributeValue("FA logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <span class="fa-stack fa-3x center-block visible-sm-inline-block">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${form.getAttributeValue("FA logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <span class="fa-stack fa-2x center-block visible-xs-inline-block">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${form.getAttributeValue("Form FA logo")} fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${form.getAttributeValue("FA logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <h3><a href="${bundle.spaceLocation}/${kapp.slug}/${form.slug}">${form.name}</a></h3>
                 <button class="btn btn-primary">START
