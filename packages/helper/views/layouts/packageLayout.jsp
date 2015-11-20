@@ -15,7 +15,8 @@
 
         <script>
             var bundle = {
-                'spacePath': "${app:escapeJs(bundle.spacePath)}"
+                'spacePath': "${app:escapeJs(bundle.spacePath)}",
+                'kappPath' : "${app:escapeJs(bundle.kappLocation)}"
             };
         </script>
 
@@ -23,12 +24,10 @@
 
     </bundle:variable>
 
-    <div class="">
         <c:import url="${bundle.packagePath}/views/partials/shared/navbar.jsp" charEncoding="UTF-8"/>
 
         <bundle:yield/>
 
-    </div>
 
     <c:import url="${bundle.packagePath}/views/partials/shared/footer.jsp" charEncoding="UTF-8"/>
 

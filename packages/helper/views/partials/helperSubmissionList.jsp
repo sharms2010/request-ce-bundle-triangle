@@ -8,12 +8,9 @@
         <h3 class="panel-title">${kapp.getForm(param['formSlug']).title}</h3>
     </div>
     <div class="panel-body">
-        <form class="form-inline" role="search">
-            <div class="form-group">
-                <input type="text" id="search" class="form-control" placeholder="Filter">
-            </div>
-            <button type="submit" class="btn btn-default">Filter Results</button>
-        </form>
+        <div class="form-group">
+            <input type="text" id="search" class="form-control" placeholder="Filter List">
+        </div>
     </div>
 
     <!-- List group -->

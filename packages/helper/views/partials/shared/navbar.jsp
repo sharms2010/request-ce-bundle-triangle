@@ -1,6 +1,5 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../../package/initialization.jspf" %>
-<header class="header">
   <nav class="navbar navbar-default overlay mgn-none">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -52,5 +51,5 @@
       </div>
     </div>
   </nav>
-</header>
+
 

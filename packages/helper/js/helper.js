@@ -2,13 +2,28 @@ $(function() {
     $('form .form-group input, form .form-group textarea, form .form-group select').addClass('form-control');
     
     $('#helperFormList .list-group a').click(function(){
+        $('#helperObjectDetailsDiv #helperObjectDetails').html('');
+        $('#helperObjectDetailsDiv #inner').html('<i class="fa fa-spinner fa-spin fa-5x">').show();
+
         // Ajax call to get HTML
         $.ajax({
             method: 'get',
             url: '?partial=helperSubmissionList',
             data: {"formSlug":$(this).data("for")},
             success: function(data, textStatus, jqXHR){
+                $('#helperObjectDetailsDiv #inner').hide();
                 $('#helperObjectDetails').html(data);
+                    // Helper Console Search Submissions
+                    $('#search').on('keyup', function(event) {
+                        var term = $(this).val().toLowerCase();
+                        $('#helperSubmissionList li a').each(function() {
+                            if ($(this).text().toLowerCase().indexOf(term) > -1) {
+                                $(this).parent().show();
+                            } else {
+                                $(this).parent().hide();
+                            }
+                        });
+                    });
             },
             error: function(jqXHR, textStatus, errorThrown){
                 $('#helperObjectDetails').html('<b>Error fetching HTML</b>');
@@ -16,32 +31,7 @@ $(function() {
         });
 
     });
-
-    // Helper Console Search Submissions
-    $('#search').on('keyup', function(event) {
-        var term = $(this).val().toLowerCase();
-        console.log(term);
-        $('#helperSubmissionList li a').each(function() {
-            if ($(this).text().toLowerCase().indexOf(term) > -1) {
-                $(this).parent().show();
-            } else {
-                $(this).parent().hide();
-            }
-        });
-    });
-
 });
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  * Applies the Jquery DataTables plugin to a rendered HTML table to provide 

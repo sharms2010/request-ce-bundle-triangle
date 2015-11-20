@@ -19,21 +19,24 @@
         <bundle:script src="${bundle.packagePath}/js/helper.js" />
     </bundle:scriptpack>
    
-<div class="container hidden-xs mgn-bot-40 mgn-top-40 search-catalog">
-      <h1>Helper Console</h1>
+<div class="container">
+      <h1 style="float:left">Helper Console</h1>
+      <c:if test="${identity.isSpaceAdmin()}">
+        <a href="${bundle.spaceLocation}/app/#/author/forms" class="btn btn-info pull-right" role="button">Build New Object</a>
+       </c:if>
 </div>
 
 <div class="container">
     <div class="row">
 
-        <div id="helperFormList" class="col-sm-3">
+        <div id="helperFormList" class="col-sm-4">
             <div class="panel panel-default">
               <!-- Default panel contents -->
                 <div class="panel-heading">
                     <h3 class="panel-title">Helper Objects</h3>
                 </div>
               <div class="panel-body">
-                <p>The following objects have been configured in the Helper KAPP</p>
+                <p>The following objects have been configured in the Helper KAPP${user.spaceAdmin}</p>
               </div>
 
               <!-- List group -->
@@ -45,13 +48,29 @@
             </div>
         </div>
 
-        <div id="helperObjectDetails" class="col-sm-9"></div>
+        <div id="helperObjectDetailsDiv" class="col-sm-8">
+            <div id="inner">
+            </div>
+            <div id="helperObjectDetails">
+            </div>
+        </div>
             
     </div>
 </div>
 
-
-    <app:bodyContent/>
 </bundle:layout>
+
+<style>
+#inner {
+    width: 0%;
+    margin: 0 auto;
+}
+
+.list-group{
+    max-height:320px;
+    overflow-y:scroll; 
+}
+
+</style>
 
 
