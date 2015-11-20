@@ -9,12 +9,6 @@ $(function(){
 		$(this).show();
 	});
 
-    // Click tabs //
-	$('#ticketTabs a').click(function(event) {
-		event.preventDefault();
-		$(this).tab('show');
-	});
-
     // Function for Submit New request buton //
 	$('#submitNew').click(function(event) {
 		window.location.href = bundle.spaceLocation + "/ticket/ticket";
