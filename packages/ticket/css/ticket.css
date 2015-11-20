@@ -1,0 +1,67 @@
+
+/* Add red asterisk after required field labels */
+.form-group.required .field-label:after {
+  content:" *";
+  color:red;
+}
+/* Change border to red on required inputs when left blank and errored */
+.form-group.has-error input {
+  border: 2px solid red;
+}
+/* Adjust column input and selection lists height and width */
+form .col-md-6 input, form .col-md-6 select {
+  width:80%;
+  height: 25px;
+}
+.form-group input {
+  width:90%;
+}
+.form-group textarea {
+  width:90%;
+}
+/* Adjust the form padding for consistency */
+form {
+  padding-top: 0px;
+  padding-bottom: 24px;
+}
+/* Adjust the page title formatting */
+h3 {
+  color: #242e38;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  margin-top: 0px;
+}
+/* Adjust the background color and padding of the request header */
+section > .page-header {
+  background: #242e38;
+  padding: .1em .6em .2em;
+  margin-top: 10px;
+  }
+/* Adjust the color and size of the request header text */
+section > .page-header h2 {
+  color: white;
+  font-size: 30px;
+  padding-left: 5px;
+  }
+/* Adjust size of checkboxes and radio buttons so they don't overlap */
+form .col-sm-6 input[type="checkbox"] {
+    height: 22px;
+}
+form .col-sm-6 input[type="radio"] {
+    height: 22px;
+}
+/* Set tab color */
+.nav-tabs>li>a {
+    color: #5bc0de;
+}
+/* Make tab panes minimum height */
+.tab-pane {
+    min-height: 200px;  
+}
+/* Adjust the line height and spacing */
+body {
+  line-height: 1;
+  }
+.form-group {
+  margin-bottom: 5px;  
+}

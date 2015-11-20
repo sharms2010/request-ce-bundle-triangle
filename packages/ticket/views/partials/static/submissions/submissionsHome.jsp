@@ -21,7 +21,7 @@
                 <div class="col-md-7">
                   <i class="fa fa-user fa-fw"></i>${submission.getValue('Assigned Individual').getValue()}
                 </div>
-                <div class="col-md-5"><i class="fa fa-calendar fa-fw"></i><span class="date-time-relative" display="none">${submission.createdAt}</span>
+                <div class="col-md-5"><i class="fa fa-calendar fa-fw"></i>Open <span class="date-time-relative" display="none">${submission.createdAt}</span>
                 </div>
               </div>
         </li>

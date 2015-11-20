@@ -17,7 +17,7 @@
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
     </bundle:variable>
     <bundle:scriptpack>
-        <bundle:script src="${bundle.packagePath}/js/ticket.js "/>
+        <bundle:script src="${bundle.packagePath}/js/ticketConsole.js "/>
     </bundle:scriptpack>
     <bundle:stylepack>
         <bundle:style src="${bundle.packagePath}/css/ticketConsole.css "/>
@@ -28,8 +28,9 @@
 
     <div class="container mgn-bot-40">
       <div>
+
         <div class="col-sm-5 leftside">
-        <div class="btn-group" role="group" aria-label="...">
+        <div class="btn-group" role="group" aria-label="">
           <button type="submit" class="btn btn-info">My Own
             <span class="badge">4</span>
           </button>
@@ -40,20 +41,50 @@
             <span class="badge">7</span>
           </button>
         </div>
-        </div>
-        <div class="col-sm-7">
-        <button id="submitNew" type="submit" class="btn btn-default">Submit New</button>
-        </div>
-      </br></br></br>
-        <div class="col-sm-5 leftside">
+        </br></br>
           <div class="panel panel-default">
             <div class="panel-heading background-tertiary">
               <div class="panel-title">
                 <h4>
-                  OPEN TICKETS
-                <button class="btn btn-info btn-xs pull-right dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-sort-amount-desc" ></i></button>
-                <button class="btn btn-info btn-xs pull-right dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-filter" ></i></button>
-                <button class="btn btn-info btn-xs pull-right"><i class="fa fa-refresh"></i></button>
+                  TICKETS
+                <button class="btn btn-info btn-xs btn-filter pull-right"><i class="fa fa-sort-amount-desc" ></i>
+                </button>
+                <div class="btn-group btn-filter pull-right">
+                <button class="btn btn-info btn-xs btn-filter pull-right dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-filter" ></i></button>
+                    <ul class="dropdown-menu pull-right ticket-sort" role="menu" aria-labelledby="ticketListSort">
+                        <form>
+                          <li role="presentation" class="form-group">
+                            <label for="ticketStatus">Status</label>
+                            <select name="ticketStatus" class="form-control">
+                              <option value="All">All</option>
+                              <option value="Unassigned">Unassigned</option>
+                              <option value="Assigned">Assigned</option>
+                              <option value="Working">Working</option>
+                              <option value="Waiting">Waiting</option>
+                              <option value="Resolved">Resolved</option>
+                              <option value="Completed">Completed</option>
+                            </select>
+                          </li>
+                          <li role="separator" class="divider"></li>
+                           <li role="presentation" class="form-group">
+                            <label for="ticketAge">Age</label>
+                            <select name="ticketAge" class="form-control">
+                              <option value="All">All</option>
+                              <option value="Today">Today</option>
+                              <option value="This Week">This Week</option>
+                              <option value="Last Week">Last Week</option>
+                              <option value="This Month">This Month</option>
+                              <option value="Last Month">Last Month</option>
+                              <option value="Older">Older</option>
+                            </select>
+                          </li>
+                          <li>
+                            <button class="btn btn-info">Reset</button>
+                          </li>
+                        </form>
+                    </ul>
+                </div>
+                <button class="btn btn-info btn-xs btn-filter pull-right"><i class="fa fa-refresh"></i></button>
                 </h4>
               </div>
             </div>
@@ -64,6 +95,8 @@
 
           </div>
         <div class="col-sm-7">
+        <button id="submitNew" type="submit" class="btn btn-default">Submit New</button>
+          </br></br>
           <div class="panel panel-default">
             <div class="panel-heading background-tertiary">
               <div class="panel-title"><h4>DETAILS</h4></div>
@@ -93,15 +126,19 @@
                   Summary: <span class="detail-summary"></span></br>
                   <hr></hr>
                   Description: <span class="detail-description"></span></br>
+                  <hr></hr>
+                  Waiting On: <span class="detail-waitingon"></span></br>
+                  Categorization: <span class="detail-categorization"></span></br>
+                  Method Received:<span class="detail-method"></span></br>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="notes" aria-labelledby="notes-tab">
-                  Notes content
+                  Notes content will go here, waiting on sub-forms
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="resolution" aria-labelledby="resolution-tab">
                   Resolution content
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="related" aria-labelledby="related-tab">
-                  Related Content
+                  Related content will go here, waiting on sub-forms
                 </div>
               </div>
             </div>

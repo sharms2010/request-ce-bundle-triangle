@@ -5,7 +5,7 @@ $(function(){
 	var windowsLocale = window.navigator.userLanguage || window.navigator.language;
 	$('.date-time-relative').each(function(){
 		$(this).attr('title',$(this).html());
-		$(this).html(moment($(this).html(), "ddd MMM D HH:mm:ss z YYYY", windowsLocale).fromNow());
+		$(this).html(moment($(this).html(), "ddd MMM D HH:mm:ss z YYYY", windowsLocale).fromNow(true));
 		$(this).show();
 	});
 
@@ -15,7 +15,7 @@ $(function(){
 		$(this).tab('show');
 	});
 
-    // Load to submit new request //
+    // Function for Submit New request buton //
 	$('#submitNew').click(function(event) {
 		window.location.href = bundle.spaceLocation + "/ticket/ticket";
 	});

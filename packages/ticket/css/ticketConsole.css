@@ -435,7 +435,9 @@ ul{
 }
 
 /* Ticket console customizations */
-
+.nav-tabs>li>a {
+    color: #5bc0de;
+}
 li .fa {
     color: #242e38;
 }
@@ -443,8 +445,11 @@ li .fa {
     border-left: none;
     border-right: none;
 }
-.panel-title .btn {
+.btn-filter {
     margin-left: 3px;
+}
+.panel-title form {
+    min-width: 140px;
 }
 .list-group {
     margin-bottom: 0px;
@@ -459,6 +464,10 @@ li .fa {
 .pagination>.active>a:hover {
     background-color: #6C99A8;
     border-color: #6C99A8;
+}
+/* Make tab panes minimum height */
+.tab-pane {
+    min-height: 300px;  
 }
 /*5 column deff*/
 .col-xs-odd{
