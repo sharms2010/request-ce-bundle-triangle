@@ -16,7 +16,8 @@
         <script>
             var bundle = {
                 'spacePath': "${app:escapeJs(bundle.spacePath)}",
-                'kappPath' : "${app:escapeJs(bundle.kappLocation)}"
+                'kappPath' : "${app:escapeJs(bundle.kappLocation)}",
+                'kappLocation' : "${bundle.spaceLocation}"
             };
         </script>
 

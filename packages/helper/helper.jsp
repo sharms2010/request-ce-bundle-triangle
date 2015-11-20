@@ -22,7 +22,8 @@
 <div class="container">
       <h1 style="float:left">Helper Console</h1>
       <c:if test="${identity.isSpaceAdmin()}">
-        <a href="${bundle.spaceLocation}/app/#/author/forms" class="btn btn-info pull-right" role="button">Build New Object</a>
+        <button type="button" data-toggle="modal" class="btn btn-info pull-right" data-target="#newObject">Build New Object</button>
+        <%--<a href="${bundle.spaceLocation}/app/#/author/forms" class="btn btn-info pull-right" role="button">Build New Object</a>--%>
        </c:if>
 </div>
 
@@ -59,6 +60,40 @@
 </div>
 
 </bundle:layout>
+
+<!-- Modal -->
+<div id="newObject" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Create a new Object</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+            <div class="form-group">
+              <label for="object-name">Object Name</label>
+              <input type="text" id="object-name" class="form-control" id="object-name" placeholder="Friendly Object Name">
+            </div>
+            <div class="form-group">
+              <label for="object-slug">Object Slug</label>
+              <input type="text" id="object-slug" class="form-control" id="object-slug" placeholder="Name for URL">
+            </div>
+            <div class="form-group">
+              <label for="object-description">Object Description</label>
+              <input type="text" id="object-description" class="form-control" id="object-description" placeholder="Description of Object">
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="createObject" class="btn btn-success">Create Object</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <style>
 #inner {

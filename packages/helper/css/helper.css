@@ -4,3 +4,7 @@ body > .container {
 footer {
     position: absolute;
 }
+
+form{
+	margin-bottom:15px;
+}

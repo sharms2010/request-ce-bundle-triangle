@@ -31,6 +31,31 @@ $(function() {
         });
 
     });
+
+
+    $('#createObject').click(function(){
+        var objName = $('#newObject #object-name').val();
+        var objDescription = $('#newObject #object-description').val();
+        var objSlug = $('#newObject #object-slug').val();
+        var kappSlug = "helper";
+        var payload = JSON.stringify({"name": objName,"slug": objSlug,"description": objDescription});
+
+        $.ajax({
+            method: 'POST',
+            url: 'app/api/v1/kapps/helper/forms?kappSlug=helper',
+            dataType: "json",
+            data:   payload,
+            contentType: "application/json",
+            
+            success: function(data, textStatus, jqXHR){
+                $('#newObject').toggle();
+                window.location.href = bundle.kappLocation + "/app/#/author/form/" + data.form.slug + "/builder";
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                $('#newObject .modal-body').html("Status " + data.errorThrown);
+            }
+        });
+    });
 });
 
 /**
