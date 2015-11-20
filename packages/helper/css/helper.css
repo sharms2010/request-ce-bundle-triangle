@@ -1,10 +1,37 @@
-body > .container {
-    padding-top: 0px;
-}
-footer {
-    position: absolute;
+div.container {
+    padding: 0 15px;
 }
 
 form{
 	margin-bottom:15px;
+}
+
+#inner {
+    width: 0%;
+    margin: 0 auto;
+}
+
+.list-group{
+    max-height:320px;
+    overflow-y:scroll; 
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 80px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 80px;
+  background-color: #f5f5f5;
 }

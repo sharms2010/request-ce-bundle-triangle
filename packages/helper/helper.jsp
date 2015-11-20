@@ -13,7 +13,6 @@
         <title>Kinetic Data ${app:escape(kapp.name)}</title>
     </bundle:variable>
     <bundle:stylepack>
-        <bundle:style src="${bundle.packagePath}/css/helper.css "/>
     </bundle:stylepack>
     <bundle:scriptpack>
         <bundle:script src="${bundle.packagePath}/js/helper.js" />
@@ -25,8 +24,11 @@
     </div>
     <div class="col-sm-6">
         <c:if test="${identity.isSpaceAdmin()}">
-        <h1>
-            <button type="button" data-toggle="modal" class="btn btn-info pull-right" data-target="#newObject">Build New Object</button>
+            <h1 class="hidden-xs">
+                <button type="button" data-toggle="modal" class="btn btn-info pull-right" data-target="#newObject">Build New Object</button>
+            </h1>
+            <h1 class=" hidden-sm hidden-md hidden-lg">
+                <button type="button" data-toggle="modal" class="btn btn-info" data-target="#newObject">Build New Object</button>
             </h1>
         </c:if>
     </div>
@@ -100,17 +102,5 @@
   </div>
 </div>
 
-<style>
-#inner {
-    width: 0%;
-    margin: 0 auto;
-}
-
-.list-group{
-    max-height:320px;
-    overflow-y:scroll; 
-}
-
-</style>
 
 
