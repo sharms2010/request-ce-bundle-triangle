@@ -41,15 +41,15 @@
               <div class="box text-center">
                 <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${category.getAttributeValue("FA logo")} fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${category.getAttributeValue("FA Logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <span class="fa-stack fa-3x center-block visible-sm-inline-block">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${category.getAttributeValue("FA logo")} fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${category.getAttributeValue("FA Logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <span class="fa-stack fa-2x center-block visible-xs-inline-block">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${category.getAttributeValue("FA logo")} fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${category.getAttributeValue("FA Logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <div class="hidden-xs font-light">${app:escape(category.name)}</div>
               </div>
