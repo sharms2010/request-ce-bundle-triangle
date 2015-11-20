@@ -5,14 +5,14 @@
 <div class="panel panel-default">
   <!-- Default panel contents -->
     <div class="panel-heading">
-        <h3 class="panel-title">Helper Details</h3>
+        <h3 class="panel-title">${kapp.getForm(param['formSlug']).title}</h3>
     </div>
     <div class="panel-body">
         <form class="form-inline" role="search">
             <div class="form-group">
-                <input type="text" id="search" class="form-control" placeholder="Search">
+                <input type="text" id="search" class="form-control" placeholder="Filter">
             </div>
-            <button type="submit" class="btn btn-default">Search</button>
+            <button type="submit" class="btn btn-default">Filter Results</button>
         </form>
     </div>
 

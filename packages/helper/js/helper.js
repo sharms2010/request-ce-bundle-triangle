@@ -20,6 +20,7 @@ $(function() {
     // Helper Console Search Submissions
     $('#search').on('keyup', function(event) {
         var term = $(this).val().toLowerCase();
+        console.log(term);
         $('#helperSubmissionList li a').each(function() {
             if ($(this).text().toLowerCase().indexOf(term) > -1) {
                 $(this).parent().show();
