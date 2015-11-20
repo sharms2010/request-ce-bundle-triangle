@@ -8,9 +8,14 @@
         <h3 class="panel-title">${kapp.getForm(param['formSlug']).title}</h3>
     </div>
     <div class="panel-body">
-        <a href="${bundle.kappLocation}/${param['formSlug']}" class="btn btn-info pull-right" role="button">Add Record</a>
-        <div class="form-group">
-            <input type="text" id="search" class="form-control" placeholder="Filter List">
+        
+        <div class="col-sm-9">
+            <div class="form-group">
+                <input type="text" id="search" class="form-control" placeholder="Filter List">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <a href="${bundle.kappLocation}/${param['formSlug']}" class="btn btn-info pull-left" role="button">Add Record</a>
         </div>
     </div>
 
