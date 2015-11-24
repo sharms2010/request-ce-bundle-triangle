@@ -118,18 +118,20 @@
               </div>
               <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="detail" aria-labelledby="detail-tab">
-                  Submission ID: <span class="detail-submission-id"></span></br>
-                  Customer Name: <span class="detail-customer-name"></span></br>
-                  Customer Email: <span class="detail-customer-email"></span></br>
-                  Customer Phone: <span class="detail-customer-phone"></span></br>
-                  <hr></hr>
-                  Summary: <span class="detail-summary"></span></br>
-                  <hr></hr>
-                  Description: <span class="detail-description"></span></br>
-                  <hr></hr>
-                  Waiting On: <span class="detail-waitingon"></span></br>
-                  Categorization: <span class="detail-categorization"></span></br>
-                  Method Received:<span class="detail-method"></span></br>
+                  <dl class="dl-horizontal">
+                      <dt>Submission ID:</dt><dd class="detail-submission-id"></dd>
+                      <dt>Customer Name:</dt><dd class="detail-customer-name"></dd>
+                      <dt>Customer Email:</dt><dd class="detail-customer-email"></dd>
+                      <dt>Customer Phone:</dt><dd class="detail-customer-phone"></dd>
+                      <hr></hr>
+                      <dt>Summary:</dt><dd class="detail-summary"></dd>
+                      <hr></hr>
+                      <dt>Description:</dt><dd class="detail-description"></dd>
+                      <hr></hr>
+                      <dt>Waiting On:</dt><dd class="detail-waitingon"></dd>
+                      <dt>Categorization:</dt><dd class="detail-categorization"></dd>
+                      <dt>Method Received:</dt><dd class="detail-method"></dd>
+                  </dl>
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="notes" aria-labelledby="notes-tab">
                   Notes content will go here, waiting on sub-forms
