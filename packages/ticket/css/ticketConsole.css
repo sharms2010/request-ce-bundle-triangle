@@ -108,7 +108,7 @@ i{
 }
 
 a {
-    color:#3babc0;
+    color:#2badd4;
 }
 ul{
     padding: 0;
@@ -366,7 +366,6 @@ ul{
 
 .panel-body > div{
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
     color:#818181;
 }
 
@@ -454,16 +453,19 @@ ul{
 .list-group {
     margin-bottom: 0px;
 }
+.list-group  {
+    margin-bottom: 0px;
+}
 .pagination>li>a, .pagination>li>a:hover, .pagination>li>span {
-    color: #3babc0;
+    color: #5bc0de;
 }
 .pagination>.active>a {
-    background-color: #3babc0;
-    border-color: #3babc0;
+    background-color: #5bc0de;
+    border-color: #5bc0de;
 }
 .pagination>.active>a:hover {
-    background-color: #6C99A8;
-    border-color: #6C99A8;
+    background-color: #2aadd5;
+    border-color: #2aadd5;
 }
 /* Make tab panes minimum height */
 .tab-pane {

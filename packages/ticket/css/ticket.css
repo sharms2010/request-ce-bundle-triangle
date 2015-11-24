@@ -33,15 +33,16 @@ h3 {
 }
 /* Adjust the background color and padding of the request header */
 section > .page-header {
-  background: white;
-  padding: .1em .6em .2em;
-  margin-top: 10px;
+  background: #242e38;
+  padding: 0px 0px 0px 0px;
+  margin-top: 40px;
   }
 /* Adjust the color and size of the request header text */
 section > .page-header h2 {
-  color: #242e38;
+  color: white;
   font-size: 30px;
   font-weight: 800;
+  padding: 5px 0px 0px 10px;
   }
 /* Adjust size of checkboxes and radio buttons so they don't overlap */
 form .col-sm-6 input[type="checkbox"] {
