@@ -1,16 +1,16 @@
 $(document).ready(function(){
 	$(".grid").hide();
+        $("#list").addClass('active')
     $("#grid").click(function(){
         $(".grid").show();
         $(".list").hide();
+        $(this).toggleClass('active');
+        $("#list").removeClass('active');
     });
     $("#list").click(function(){
         $(".list").show();
         $(".grid").hide();
-    });
-    $(".fa-play").hover(function(){
-        $(".easter").addClass("fa-spin");
-    }, function(){
-    	$(".easter").removeClass("fa-spin");
+        $(this).toggleClass('active');
+        $("#grid").removeClass('active');
     });
 });

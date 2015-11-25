@@ -43,7 +43,7 @@
                   <i class="fa ${form.getAttributeValue("FA Logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <h3><a href="${bundle.spaceLocation}/${kapp.slug}/${form.slug}">${form.name}</a></h3>
-                <button class="btn btn-primary">START
+                <button class="btn btn-primary mgn-top-10">START
                   <i class="icon-control-feedback fa fa-play"></i>
                 </button>
               </div>

@@ -113,7 +113,7 @@ a {
 ul{
     padding: 0;
 }
-/*custom padding and margin control*/
+/*custom padding,position and margin control*/
 .pad-bot-40{
     padding-bottom: 2.85714285714rem; /*equal to 40px*/
 }
@@ -122,12 +122,44 @@ ul{
     padding-top: 2.85714285714rem; /*equal to 40px*/
 }
 
+.pos-top-10{
+    top: 0.71428571428rem; /*equal to 10px*/
+}
+
+.pad-10{
+    padding: 0.71428571428rem;
+}
+
 .pad-bot-10{
     padding-bottom: 0.71428571428rem; /*equal to 10px*/
 }
 
 .pad-top-10{
     padding: 0.71428571428rem 0 0 0; /*equal to 10px*/
+}
+
+.pad-rgt-10{
+    padding-right: 0.71428571428rem; /*equal to 10px*/
+}
+
+.pad-lft-10{
+    padding-left: 0.71428571428rem; /*equal to 10px*/
+}
+
+.mgn-bot-10{
+    margin-bottom: 0.71428571428rem; /*equal to 10px*/
+}
+
+.mgn-top-10{
+    margin-top: 0.71428571428rem; /*equal to 10px*/
+}
+
+.mgn-rgt-10{
+    margin-right: 0.71428571428rem; /*equal to 10px*/
+}
+
+.mgn-lft-10{
+    margin-left: 0.71428571428rem; /*equal to 10px*/
 }
 
 .mgn-bot-40{
@@ -142,6 +174,18 @@ ul{
     margin: 0 !important;
 }
 
+.mgn-top-none{
+    margin-top: 0 !important
+}
+
+.mgn-bot-none{
+     margin-bottom: 0 !important
+}
+
+.pos-top-none{
+    top: 0;
+}
+
 .pad-none{
     padding: 0 !important;
 }
@@ -152,6 +196,23 @@ ul{
 
 .pad-bot-none{
      padding-bottom: 0 !important
+}
+
+.line-height-50{
+    line-height: 3.57142857143rem; /*equal to 50px*/
+}
+
+.display-inl-blk{
+    display: inline-block !important;
+}
+
+.display-blk{
+    display: block;
+}
+
+/*border control*/
+.border-none{
+    border: none;
 }
 
 /*color control*/
@@ -225,7 +286,7 @@ ul{
     border-radius: 0;
     position: relative;
     min-height: 5rem; /*equal to 70px*/
-    top: 2.5rem;
+    margin-top: 2.5rem;
 }
 
 .footer .overlay{
@@ -254,11 +315,6 @@ ul{
     -webkit-border-radius: 50%;
 }
 
-.navName{
-    margin-top: 1rem; /*equal to 14px*/
-    margin-bottom: 0px;
-}
-
 .navAccount a{
     color: #d6ce61;
 }
@@ -267,20 +323,8 @@ ul{
     color: #242e38;
 }
 
-.footer .overlay> div > div > div > div{
-    color: #fff;
-}
-
 .footer .overlay > div > div > div > div:first-child{
     padding-top: 2.5rem; /*equal to 35px*/
-}
-
-.footer > .overlay > div > div > div > div:first-child > h4{
-    margin-bottom: .75rem;
-}
-
-.footer > .overlay > div > div > div:first-child > div:last-child > h4{
-    margin-top: .75rem;
 }
 
 .footer .overlay> div > div > div:first-child > div:first-child{
@@ -455,30 +499,10 @@ ul{
     vertical-align: bottom;
 }
 
-.requests > .list > div > div > ul > li{
-    display: flex;
-}
-
-.requests > .list > div > div > ul > li:not(:last-child){
-    border-bottom: 2px solid black; 
-}
-
-.requests > .list > div > div > ul > li{
-    padding: 1rem 0 1rem 0;
-}
-
-.requests > div > div > div > div > h4{
-    line-height: 2rem; /*equal to 28px*/
-}
+/*.requests > div > div > div > div > h4{
+    line-height: 2rem; equal to 28px
+}*/
 
 .requests .btn-primary{
     background-color: #5ea5b2;
-}
-
-.requests > .list > div > div > ul > li > div > span{
-    text-align: left;
-}
-
-.requests > div > div > div > div{
-    line-height: 2.42857142857rem; /* equal to 34px */
 }

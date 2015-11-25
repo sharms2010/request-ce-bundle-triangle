@@ -1,0 +1,20 @@
+.max-min-height{
+    max-height: 7rem; /*equal to 98px*/
+    min-height: 7rem;
+}
+
+#list:active{
+   text-shadow: 0px 0px 5px green;
+} 
+
+#list.active{
+   text-shadow: 0px 0px 5px green;
+}
+
+#grid:active{
+   text-shadow: 0px 0px 4px green;
+} 
+
+#grid.active{
+   text-shadow: 0px 0px 4px green;
+}

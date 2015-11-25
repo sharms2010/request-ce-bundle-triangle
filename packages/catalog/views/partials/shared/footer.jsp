@@ -4,37 +4,37 @@
 <footer class="footer pad-none">
     <div class="overlay mgn-none">
       <div class="container">
-        <div class="row">
+        <div class="row white">
           <div class="col-md-6">
               <div>
-                <h4>FOOTER HERE</h4>
+                <h4 class="mgn-bot-10">FOOTER HERE</h4>
               </div>
               <div>
-                <h4>Me gusta la clase de español porque es divertido. Me no gusta la clase de comunicación porque es el lunes y miércoles. Me no gusta la universidad porque es lejos de mi casa. Me gusta la clase de computación porque computación es mi especialización. Me gusta mi compañeros. Son muy inteligente.</h4>
-              </div>
-          </div>
-          <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
-              <div>
-                <h4>LINKS HERE</h4>
-              </div>
-              <div>
-                <h5><a href="#">Links aquí</a></h5>
-                <h5><a href="#">يرتبط هنا؟</a></h5>
-                <h5><a href="#">liens ici</a></h5>
-                <h5><a href="#">এখানে লিংক</a></h5>
-                <h5><a href="#">這裡友情鏈接</a></h5>
+                <h4 class="mgn-top-10">Acme stands out as an industry leader in a competitive field.  The quality of our products has won us the trust of our customers and the admiration of our industry peers.  Acme has had numerous accolades bestowed upon us in our 150 years in the business.  If you think Acme can be a solution to a problem you are having please let us know.</h4>
               </div>
           </div>
           <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
               <div>
-                <h4>LINKS HERE</h4>
+                <h4 class="mgn-bot-10">LINKS HERE</h4>
               </div>
               <div>
-                <h5><a href="#">ಸಂಪರ್ಕ ಕೂಡುತ್ತದೆ</a></h5>
-                <h5><a href="#">לינקס דאָ</a></h5>
-                <h5><a href="#">linki tutaj</a></h5>
-                <h5><a href="#">länkar här</a></h5>
-                <h5><a href="#">ການເຊື່ອມຕໍ່ທີ່ນີ້</a></h5>
+                <h5><a href="http://getbootstrap.com/">Bootstrap</a></h5>
+                <h5><a href="https://jquery.com/">jQuery</a></h5>
+                <h5><a href="https://www.ruby-lang.org/en/">Ruby</a></h5>
+                <h5><a href="http://www.kineticdata.com/">Kinetic Data</a></h5>
+                <h5><a href="http://www.exploreminnesota.com/index.aspx">Explore Minnesota</a></h5>
+              </div>
+          </div>
+          <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
+              <div>
+                <h4 class="mgn-bot-10">LINKS HERE</h4>
+              </div>
+              <div>
+               <h5><a href="http://getbootstrap.com/">ブートストラップ</a></h5>
+                <h5><a href="https://jquery.com/">јКуери</a></h5>
+                <h5><a href="https://www.ruby-lang.org/en/">hồng ngọc</a></h5>
+                <h5><a href="http://www.kineticdata.com/">кінэтычная дадзеных</a></h5>
+                <h5><a href="http://www.exploreminnesota.com/index.aspx">Εξερευνήστε Μινεσότα</a></h5>
               </div>
           </div>
         </div>
@@ -43,10 +43,20 @@
 </footer>
 <div class="pad-top-10 background-white">
   <div class="container">
-    <div>Build Date: ${buildDate}</div>
-    <div>Build Number: ${buildNumber}</div>
-    <div>Version: ${buildVersion}</div>
-  </div>
+      <div class="row">
+        <div class="col-md-6 gray line-height-50">Build Date: ${buildDate}</div>
+        <div class="col-md-6">
+        <span class="fa-stack fa-2x center-block pull-right">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+        <span class="fa-stack fa-2x center-block pull-right">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+        </div>
+      </div>
+    </div>
 <div>
 
 <!-- having the script tag her is a temporary work around due to url issue so that the twitter feed will show on the kapp page-->
