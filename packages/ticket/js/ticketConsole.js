@@ -18,7 +18,7 @@ $(function(){
 	$('#ticketDetails a').click(function(event) {
 		event.preventDefault();
 
-	})
+	});
 	/*
 	${submissions.retrieve(UUID submissionId)
 	*/
