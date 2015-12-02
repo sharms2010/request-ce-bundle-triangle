@@ -13,7 +13,7 @@ body{
 body > .container {
     padding-top: 60px;
 }
-
+/*
 footer {
     bottom: 0;
     width: 100%;
@@ -23,7 +23,7 @@ footer {
     border-top: 1px solid #e7e7e7;
     background-color: #f8f8f8;
     color: #777;
-}
+}*/
 .errors {
     display: none;
     margin:0 auto;

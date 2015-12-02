@@ -24,7 +24,7 @@
   </bundle:stylepack>
  
   <div class="container hidden-xs mgn-bot-40 mgn-top-40 search-catalog">
-    <h1 class="pad-bot-10 text-center">How can we help you today?!</h1>
+    <h1 class="pad-bot-10 text-center">How can we help you today?</h1>
     <form role="form"> 
       <div class="form-group has-feedback">
         <input type="text" class="form-control" />
