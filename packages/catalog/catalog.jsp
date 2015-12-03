@@ -32,7 +32,15 @@
       </div>
     </form>
   </div>
-  <div id="tealnav" class="mgn-bot-40">
+<!-- search -->
+    <div class="container visible-xs mgn-bot-40 mgn-top-40 search-catalog"> 
+       <form class="border-none mgn-none" role="search"> 
+         <div class="form-group">
+           <input type="text" class="form-control" placeholder="search"/>
+         </div>
+       </form>
+    </div>
+  <div id="tealnav" class="mgn-bot-40  pad-top-10">
     <div class="container">
       <div class="row">
         <c:forEach var="category" items="${kapp.categories}">

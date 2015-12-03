@@ -32,3 +32,13 @@ function submissionsTable (tableId) {
         ]
     });
 }
+$(document).ready(function(){
+$('#profile').click(function(){
+    $('#navbar-collapse').removeClass('in');
+    $('#search').addClass("collapsed");
+});
+$('#categories').click(function(){
+    $('#navbar-collapse').removeClass('in');
+    $('#search').addClass("collapsed");
+});
+});
