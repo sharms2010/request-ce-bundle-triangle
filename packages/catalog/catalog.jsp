@@ -16,9 +16,9 @@
   <bundle:variable name="head">
       <title>Kinetic Data ${app:escape(kapp.name)}</title>
   </bundle:variable>
-  <bundle:scriptpack>
-      <bundle:script src="${bundle.packagePath}/js/catalog.js" />
-  </bundle:scriptpack>
+    <bundle:scriptpack>
+        <bundle:script src="${bundle.packagePath}/js/catalog.js" />
+    </bundle:scriptpack>
   <bundle:stylepack>
       <bundle:style src="${bundle.packagePath}/css/catalog.css "/>
   </bundle:stylepack>
@@ -52,6 +52,7 @@
                   <i class="fa ${category.getAttributeValue("FA Logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <div class="hidden-xs font-light">${app:escape(category.name)}</div>
+                <h5 class="visible-xs font-bold">${app:escape(category.name)}</h5>
               </div>
             </a>
           </div>
@@ -118,10 +119,7 @@
           <div class="panel-heading background-quaternary">
             <div class="panel-title"><h4>ALERTS &amp OUTAGES</h4></div>
           </div>
-          <div class="panel-body">
-            <p>PeopleSoft offline October 17-18</p>
-            <div>PeopleSoft will be offline this weekend for routine updates starting at midnight Friday, October 16. The system should be back online by Monday, October 19 at 8:00am.</div>
-          </div>
+          <c:import url="views/partials/static/alertsAndOutages.jsp" charEncoding="UTF-8"/>
         </div>
         <div class=" hidden-xs">
         <a class="twitter-timeline" href="https://twitter.com/KineticData" data-widget-id="569678005275226112" data-chrome="nofooter">Tweets by @KineticData</a>

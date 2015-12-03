@@ -46,14 +46,18 @@
       <div class="row">
         <div class="col-md-6 gray line-height-50">Build Date: ${buildDate}</div>
         <div class="col-md-6">
-        <span class="fa-stack fa-2x center-block pull-right">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-        </span>
-        <span class="fa-stack fa-2x center-block pull-right">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-        </span>
+        <a href="https://twitter.com">
+            <span class="fa-stack fa-2x center-block pull-right">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+        <a href="https://facebook.com">
+            <span class="fa-stack fa-2x center-block pull-right">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
         </div>
       </div>
     </div>

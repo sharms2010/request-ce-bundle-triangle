@@ -202,6 +202,10 @@ ul{
     line-height: 3.57142857143rem; /*equal to 50px*/
 }
 
+.line-height-70{
+    line-height: 5rem; /*equal to 70px*/
+}
+
 .display-inl-blk{
     display: inline-block !important;
 }
@@ -257,9 +261,8 @@ ul{
     font-weight: 700;
 }
 
-#logo{
-    line-height: 3.3rem;
-    font-size: 3.57142857143rem; /*equal to 50px*/
+.font-size-50{
+   font-size: 3.57142857143rem; /*equal to 50px*/ 
 }
 
 .header{
@@ -296,16 +299,10 @@ ul{
 }
 
 /*get better class names for navbar-collapse*/
-#navbar-collapse > ul > li.dropdown > a{
-    color: black!important;
-    padding-right: 0 !important;
-}
-
 #navbar-collapse > ul > li:nth-child(1) > a{
     padding: 0.71428571428rem 1rem 0.71428571428rem 1rem;
 }
-
-#navbar-collapse > ul > li > ul > li > a > i{
+body > div > header > nav > div > div > ul > li > a > i{
     color: black;
 }
 
@@ -503,6 +500,10 @@ ul{
     line-height: 2rem; equal to 28px
 }*/
 
-.requests .btn-primary{
+.btn-primary{
     background-color: #5ea5b2;
+}
+
+.btn-primary:hover{
+    background-color: rgba(94, 165, 178, .5)
 }

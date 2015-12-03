@@ -9,7 +9,7 @@
         </bundle:stylepack>
         <bundle:scriptpack>
             <bundle:script src="${bundle.packagePath}/libraries/jquery-datatables/jquery.dataTables.js" />
-            <bundle:script src="${bundle.packagePath}/js/catalog.js" />
+            <bundle:script src="${bundle.packagePath}/js/common.js" />
         </bundle:scriptpack>
 
         <bundle:yield name="head"/>

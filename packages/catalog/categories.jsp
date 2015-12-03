@@ -42,10 +42,12 @@
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa ${form.getAttributeValue("FA Logo")} fa-stack-1x fa-inverse"></i>
                 </span>
-                <h3><a href="${bundle.spaceLocation}/${kapp.slug}/${form.slug}">${form.name}</a></h3>
-                <button class="btn btn-primary mgn-top-10">START
-                  <i class="icon-control-feedback fa fa-play"></i>
-                </button>
+                <h3 class="font-light">${form.name}</h3>
+                <a href="${bundle.spaceLocation}/${kapp.slug}/${form.slug}">
+                  <button class="btn btn-primary mgn-top-10">START
+                    <i class="icon-control-feedback fa fa-play"></i>
+                  </button>
+                </a>
               </div>
             </div>
           </div>

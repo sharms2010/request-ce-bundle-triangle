@@ -5,33 +5,29 @@
         <div class="hidden-xs hidden-sm col-md-4">
           <h1 class="line-height-50">Your Requests</h1>
         </div>
-        <div class="col-sm-6 col-md-5">
-          <div class="row">
+        <div class="col-sm-7 col-md-5">
             <div class="col-xs-4">
               <h4 class="pull-right gray line-height-50">FILTER BY:</h4>
             </div>
-            <div class="col-xs-8">
+            <div class="col-xs-8 pad-top-10">
               <form role="form"> 
                 <div class="form-group has-feedback">
                   <input type="text" class="form-control" />
                   <i class="form-control-feedback fa fa-play fa-rotate-90 gray pos-top-none pad-top-10"></i>
                 </div>
               </form>
-            </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3 veiw-style">
-          <div class="row pull-right">
-            <div class="col-xs-6">
+        <div class="col-sm-5 col-md-3 veiw-style pull-right">
+            <div class="col-xs-6 pad-rgt-10">
               <h4 class="pull-right gray line-height-50">VIEW AS:</h4>
             </div>
-            <div class="col-xs-3">
-              <i id="list" class="fa fa-list-ul fa-2x gray line-height-50"></i>
+            <div class="col-xs-3 pad-lft-10 pad-rgt-10">
+              <i id="list" class="fa fa-list-ul fa-2x gray line-height-50 pull-right"></i>
             </div>
-            <div class="col-xs-3">
-              <i id="grid" class="fa fa-th fa-2x gray line-height-50"></i>
+            <div class="col-xs-3 pad-lft-10">
+              <i id="grid" class="fa fa-th-large fa-2x gray line-height-50 pull-right"></i>
             </div>
-          </div>
         </div>
     </div>
     <div class="grid">
