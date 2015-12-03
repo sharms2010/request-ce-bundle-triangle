@@ -1,9 +1,0 @@
-<% 
-    if (request.getParameter("partial") != null && !"".equals(request.getParameter("partial"))) {
-    	// Normalize the partial path to ensure "../" can't be used to navigate to a file outside of partials 
-    	String partialPath = request.getParameter("partial");
-    	String path = bundle.getPackagePath()+"/views/partials/"+partialPath+".jsp";
-%><jsp:include page="<%=path%>"/><% 
-        return;
-    } 
-%>
