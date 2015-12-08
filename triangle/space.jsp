@@ -1,21 +1,21 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="bundle/initialization.jspf" %>
-<bundle:layout>
+<bundle:layout page="layouts/layout.jsp">
 
     <bundle:variable name="head">
-        <title>${app:escape(space.name)} Kapps</title>
+        <title>${text.escape(space.name)} Kapps</title>
     </bundle:variable>
 
 
 	<div class="container">
 	    <div class="page-header">
-			<h1>${app:escape(space.name)} &nbsp;<small>Kapps</small></h1>
+			<h1>${text.escape(space.name)} &nbsp;<small>Kapps</small></h1>
 		</div>
         <c:forEach var="kapp" items="${space.kapps}">
 			<div class="col-sm-6 col-md-4 kapps" style="display:none;">
 				<div class="panel panel-default">
 				  <div class="panel-heading">
-				    <h3 class="panel-title">${app:escape(kapp.name)}</h3>
+				    <h3 class="panel-title">${text.escape(kapp.name)}</h3>
 				  </div>
 				  <div class="panel-body" style="text-align:center">
 				  	<div class="row" style="padding-bottom:20px;">
@@ -29,7 +29,7 @@
 						</c:choose>
 					</div>
 					<div class="row">
-				    	<p><a href="${app:escape(kapp.slug)}" class="btn btn-warning" role="button">Open KAPP</a></p>
+				    	<p><a href="${text.escape(kapp.slug)}" class="btn btn-warning" role="button">Open KAPP</a></p>
 					</div>
 				  </div>
 				</div>

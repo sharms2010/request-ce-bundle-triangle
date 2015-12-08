@@ -1,7 +1,7 @@
 
 <%@page import="org.json.simple.JSONObject"%>
 <%@page pageEncoding="UTF-8" contentType="application/json" trimDirectiveWhitespaces="true"%>
-<%@include file="../../../package/initialization.jspf" %>
+<%@include file="../../bundle/initialization.jspf" %>
 
 <% 
     JSONObject obj = new JSONObject();
@@ -12,7 +12,7 @@
 
 
 <div class="panel-body alert-outages-body">
-   <c:set scope="request" var="jsonObject" value="${app:fromJson(obj)}"/>
+   <c:set scope="request" var="jsonObject" value="${json.parse(obj)}"/>
    <p>${jsonObject.date}</p>
    <div>${jsonObject.details}</div>
 </div>

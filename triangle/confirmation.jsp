@@ -1,12 +1,12 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="bundle/initialization.jspf" %>
-<bundle:layout page="layouts/packageLayout.jsp">
+<bundle:layout page="layouts/layout.jsp">
     <bundle:variable name="head">
-        <title>${app:escape(form.name)}</title>
+        <title>${text.escape(form.name)}</title>
     </bundle:variable>
     <section class="page">
       <div class="page-header">
-        <h1>${app:escape(form.name)}</h1>
+        <h1>${text.escape(form.name)}</h1>
       </div>
       <div class='row'>
         <div class='col-xs-12'>

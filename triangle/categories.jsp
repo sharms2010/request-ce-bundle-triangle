@@ -6,16 +6,16 @@
   request.setAttribute("category", category); 
 %>
 
-<bundle:layout page="layouts/packageLayout.jsp">
-  <c:import url="${bundle.packagePath}/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
+<bundle:layout page="layouts/layout.jsp">
+  <c:import url="${bundle.path}/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:variable name="head">
-        <title>Kinetic Data ${app:escape(kapp.name)}</title>
+        <title>Kinetic Data ${text.escape(kapp.name)}</title>
     </bundle:variable>
     <bundle:scriptpack>
-        <bundle:script src="${bundle.packagePath}/js/categories.js" />
+        <bundle:script src="${bundle.location}/js/categories.js" />
     </bundle:scriptpack>
     <bundle:stylepack>
-        <bundle:style src="${bundle.packagePath}/css/categories.css "/>
+        <bundle:style src="${bundle.location}/css/categories.css "/>
     </bundle:stylepack>
 <div class="container requests mgn-top-40 mgn-bot-40">
     <div class="row mgn-bot-40">

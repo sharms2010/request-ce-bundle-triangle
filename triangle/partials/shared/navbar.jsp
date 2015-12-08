@@ -1,7 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
-<%@include file="../../../package/initialization.jspf" %>
+<%@include file="../../bundle/initialization.jspf" %>
 
-<link rel="stylesheet" type="text/css" href="${bundle.packageLocation}/css/temp.css"/>
+<link rel="stylesheet" type="text/css" href="${bundle.location}/css/temp.css"/>
 
  <header class="header clearfix">
   <nav class=" overlay mgn-bot-none">

@@ -11,7 +11,7 @@
     String view = "submissions";
     request.setAttribute("view", view);
 %>
-<bundle:layout page="layouts/packageLayout.jsp">
+<bundle:layout page="layouts/layout.jsp">
     <c:import url="${bundle.packagePath}/views/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:scriptpack>
         <bundle:script src="${bundle.packagePath}/js/myRequests.js" />

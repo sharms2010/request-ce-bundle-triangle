@@ -1,5 +1,5 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
-<%@include file="../../../../package/initialization.jspf" %>
+<%@include file="../../../bundle/initialization.jspf" %>
 <div class="container requests mgn-top-40 mgn-bot-40">
     <div class="row mgn-bot-40">
         <div class="hidden-xs hidden-sm col-md-4">
@@ -49,7 +49,7 @@
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa ${submission.form.getAttributeValue("FA Logo")} fa-stack-1x fa-inverse"></i>
                   </span>
-                  <h3 class="max-min-height">${app:escape(submission.form.name)}</h3>
+                  <h3 class="max-min-height">${text.escape(submission.form.name)}</h3>
                   <div class="font-medium gray">${submission.createdAt}</div>
                   <p class="font-bold gray">${submission.coreState}</p>
                   <a class="display-blk" href="${bundle.kappLocation}/request-details?id=${submission.id}">
@@ -93,7 +93,7 @@
                 </div>
                 <div class="col-sm-8">
                   <span class="pull-left text-left">
-                    <h3>${app:escape(submission.form.name)}</h3>
+                    <h3>${text.escape(submission.form.name)}</h3>
                     <p class="font-bold gray">${submission.createdAt}</p>
                     <div class="font-bold gray">${submission.coreState}</div>
                   </span>
