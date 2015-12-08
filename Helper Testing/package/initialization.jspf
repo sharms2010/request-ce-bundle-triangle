@@ -9,3 +9,6 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@taglib prefix="app" uri="http://kineticdata.com/kinetic/core/web/taglibs/app" %>
 <%@taglib prefix="bundle" uri="http://kineticdata.com/kinetic/core/web/taglibs/bundle" %>
+
+<%-- This is required to use the json tag library --%>
+<%@taglib prefix="json" uri="http://kineticdata.com/bundles/json" %>
