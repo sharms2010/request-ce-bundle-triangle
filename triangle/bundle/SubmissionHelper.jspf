@@ -1,0 +1,52 @@
+<%!
+
+    public static class SubmissionHelper {
+        
+        private HttpServletRequest request;
+        private BundleSubmissionService service;
+        private Kapp kapp;
+        
+        public SubmissionHelper(HttpServletRequest request) {
+            this.request = request;
+            this.service = (BundleSubmissionService)request.getAttribute("Submissions");
+            this.kapp = (Kapp)request.getAttribute("kapp");
+        }
+        
+        public List<Submission> retrieveRecentSubmissions(String type, int number) {
+            com.kineticdata.core.authentication.Identity identity = 
+                (com.kineticdata.core.authentication.Identity) request.getAttribute("identity");
+            
+            java.time.Instant end = Time.now();
+            java.time.Instant start = Time
+                .subtract(end, 30, "days", java.time.ZoneId.systemDefault());
+                
+            java.util.Map<String,String[]> searchOptions = new java.util.HashMap<>();
+            searchOptions.put("createdBy", new String[] {identity.getUsername()});
+            searchOptions.put("end", new String[] {Time.format(end)} );
+            searchOptions.put("start", new String[] {Time.format(start)} );
+            searchOptions.put("limit", new String[] {String.valueOf(number)});
+            searchOptions.put("type", new String[] {type});
+            
+            return service.searchByKapp(kapp, searchOptions);
+        }
+        
+        public List<Submission> retrieveRecentSubmissions(String type) {
+            com.kineticdata.core.authentication.Identity identity = 
+                (com.kineticdata.core.authentication.Identity) request.getAttribute("identity");
+            
+            java.time.Instant end = Time.now();
+            java.time.Instant start = Time
+                .subtract(end, 30, "days", java.time.ZoneId.systemDefault());
+                
+            java.util.Map<String,String[]> searchOptions = new java.util.HashMap<>();
+            searchOptions.put("createdBy", new String[] {identity.getUsername()});
+            searchOptions.put("end", new String[] {Time.format(end)} );
+            searchOptions.put("start", new String[] {Time.format(start)} );
+            searchOptions.put("type", new String[] {type});
+            
+            return service.searchByKapp(kapp, searchOptions);
+        }
+        
+    }
+
+%>

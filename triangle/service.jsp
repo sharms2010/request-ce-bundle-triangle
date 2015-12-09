@@ -1,19 +1,19 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="bundle/initialization.jspf" %>
 <bundle:layout page="layouts/layout.jsp">
-  <c:import url="${bundle.packagePath}/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
+  <c:import url="${bundle.path}/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
   <bundle:scriptpack>
-    <bundle:script src="${bundle.packagePath}/js/service.js" />
+    <bundle:script src="${bundle.location}/js/service.js" />
   </bundle:scriptpack>
   <bundle:stylepack>
-    <bundle:style src="${bundle.packagePath}/css/service.css "/>
+    <bundle:style src="${bundle.location}/css/service.css "/>
   </bundle:stylepack>
   <bundle:variable name="head">
-    <title>${app:escape(form.name)}</title>
+    <title>${form.name}</title>
   </bundle:variable>
   <section class="page container pad-bot-40">
     <header class="page-header">
-      <h2>${app:escape(form.name)}
+      <h2>${form.name}
         <small> for: 
           <span id="reqForUser">${identity.username}</span> 
           <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#personSearchModal" data-personField="ReqForUserID">Change User</button>

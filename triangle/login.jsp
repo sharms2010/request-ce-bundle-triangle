@@ -4,7 +4,7 @@
         <title>${test.escape(kapp.name)} Login</title>
     </bundle:variable>
 
-    <form action="<c:url value="/${space.slug}/app/login.do"/>" method="POST">
+    <form action="<c:url value="/${bundle.spaceLocation}/app/login.do"/>" method="POST">
         <!-- CSRF Token field -->
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
