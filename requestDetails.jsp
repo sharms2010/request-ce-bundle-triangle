@@ -12,7 +12,7 @@
     <bundle:variable name="head">
         <title>Kinetic Data ${text.escape(kapp.name)}</title>
     </bundle:variable>
-      <c:set var="submission" value="${submissions.retrieve(param.id)}" />
+      <c:set var="submission" value="${Submissions.retrieve(param.id)}" />
       
       <div class ="container-fluid details splitBackgound">
       <div class="container">
@@ -35,13 +35,13 @@
       </div>
       <div id="rightDetails" class="col-md-8 pad-bot-40 pad-top-40">
         <ul>
-          <c:forEach var="run" items="${runs.find(submission)}">
+          <c:forEach var="run" items="${TaskRuns.find(submission)}">
               <c:forEach var="task" items="${run.tasks}">
                   <li class="panel panel-default arrow_box">
                       <div class="panel-body">
-                          <h4>${task.getName()}</h4>
-                          <h4>${task.getCreateDate()}</h4>
-                          <p class="font-bold gray">${task.getResult('output')}</p>
+                          <h4>${task.name}</h4>
+                          <h4>${task.createdAt}</h4>
+                          <p class="font-bold gray">${task.results}</p>
                       </div>
                   </li>
               </c:forEach>
