@@ -2,15 +2,15 @@
 <%@include file="bundle/initialization.jspf" %>
 
 <bundle:layout page="layouts/layout.jsp">
-	<c:import url="${bundle.packagePath}/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
+	<c:import url="${bundle.path}/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:scriptpack>
-        <bundle:script src="${bundle.packagePath}/js/requestDetails.js" />
+        <bundle:script src="${bundle.location}/js/requestDetails.js" />
     </bundle:scriptpack>
     <bundle:stylepack>
-        <bundle:style src="${bundle.packagePath}/css/requestDetails.css "/>
+        <bundle:style src="${bundle.location}/css/requestDetails.css "/>
     </bundle:stylepack>
     <bundle:variable name="head">
-        <title>Kinetic Data ${app:escape(kapp.name)}</title>
+        <title>Kinetic Data ${text.escape(kapp.name)}</title>
     </bundle:variable>
       <c:set var="submission" value="${submissions.retrieve(param.id)}" />
       
