@@ -17,8 +17,8 @@
       <bundle:style src="${bundle.location}/css/catalog.css "/>
   </bundle:stylepack>
  
-  <div class="container hidden-xs mgn-bot-40 mgn-top-40 search-catalog">
-    <h1 class="pad-bot-10 text-center">How can we help you today?</h1>
+  <div class="container hidden-xs m-b-4 m-t-4 search-catalog">
+    <h1 class="p-b-1 text-center">How can we help you today?</h1>
     <form role="form"> 
       <div class="form-group has-feedback">
         <input type="text" class="form-control" />
@@ -27,14 +27,14 @@
     </form>
   </div>
 <!-- search -->
-    <div class="container visible-xs mgn-bot-40 mgn-top-40 search-catalog"> 
-       <form class="border-none mgn-none" role="search"> 
+    <div class="container visible-xs m-b-4 m-t-4 search-catalog"> 
+       <form class="border-none m-a-0" role="search"> 
          <div class="form-group">
            <input type="text" class="form-control" placeholder="search"/>
          </div>
        </form>
     </div>
-  <div id="tealnav" class="mgn-bot-40  pad-top-10">
+  <div id="tealnav" class="m-b-4">
     <div class="container">
       <div class="row">
         <c:forEach var="category" items="${kapp.categories}">
@@ -43,15 +43,15 @@
               <div class="box text-center">
                 <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${category.getAttributeValue("FA Logo")} fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <span class="fa-stack fa-3x center-block visible-sm-inline-block">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${category.getAttributeValue("FA Logo")} fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <span class="fa-stack fa-2x center-block visible-xs-inline-block">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa ${category.getAttributeValue("FA Logo")} fa-stack-1x fa-inverse"></i>
+                  <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
                 </span>
                 <div class="hidden-xs font-light">${text.escape(category.name)}</div>
                 <h5 class="visible-xs font-bold">${text.escape(category.name)}</h5>
@@ -62,7 +62,7 @@
       </div>
     </div>
   </div>
-  <div class="container mgn-bot-40">
+  <div class="container m-b-4">
     <div class="row">
       <div class="col-sm-7 leftside">
         <div class="panel panel-default">
@@ -70,11 +70,11 @@
             <div class="panel-title"><h4 class="white">YOUR REQUESTS</h4></div>
           </div>
           <div class="panel-body">
-            <table class="table mgn-none">
+            <table class="table m-a-0">
               <thead>
                 <tr>
-                  <td class="font-bold pad-top-none gray">SUMMARY</td>
-                  <td class="font-bold pad-top-none text-right gray hidden-xs">STATUS</td>
+                  <td class="font-bold p-t-0 gray">SUMMARY</td>
+                  <td class="font-bold p-t-0 text-right gray hidden-xs">STATUS</td>
                 </tr>
               </thead>
               <tbody>
@@ -95,11 +95,11 @@
             <div class="panel-title"><h4 class="white">YOUR APPROVALS</h4></div>
           </div>
             <div class="panel-body">
-              <table class="table mgn-none">
+              <table class="table m-a-0">
                 <thead>
                   <tr>
-                    <td class="font-bold pad-top-none gray">SUMMARY</td>
-                    <td class="font-bold pad-top-none text-right gray hidden-xs">STATUS</td>
+                    <td class="font-bold p-t-0 gray">SUMMARY</td>
+                    <td class="font-bold p-t-0 text-right gray hidden-xs">STATUS</td>
                   </tr>
                 </thead>
                 <tbody>

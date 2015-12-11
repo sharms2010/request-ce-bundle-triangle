@@ -1,21 +1,21 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../bundle/initialization.jspf" %>
 
-<footer class="footer pad-none">
-    <div class="overlay mgn-none">
+<footer class="footer p-a-0">
+    <div class="overlay m-a-0">
       <div class="container">
         <div class="row white">
           <div class="col-md-6">
               <div>
-                <h4 class="mgn-bot-10">FOOTER HERE</h4>
+                <h4 class="m-b-1">FOOTER HERE</h4>
               </div>
               <div>
-                <h4 class="mgn-top-10">Acme stands out as an industry leader in a competitive field.  The quality of our products has won us the trust of our customers and the admiration of our industry peers.  Acme has had numerous accolades bestowed upon us in our 150 years in the business.  If you think Acme can be a solution to a problem you are having please let us know.</h4>
+                <h4 class="m-t-1">Acme stands out as an industry leader in a competitive field.  The quality of our products has won us the trust of our customers and the admiration of our industry peers.  Acme has had numerous accolades bestowed upon us in our 150 years in the business.  If you think Acme can be a solution to a problem you are having please let us know.</h4>
               </div>
           </div>
           <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
               <div>
-                <h4 class="mgn-bot-10">LINKS HERE</h4>
+                <h4 class="m-b-1">LINKS HERE</h4>
               </div>
               <div>
                 <h5><a href="http://getbootstrap.com/">Bootstrap</a></h5>
@@ -27,7 +27,7 @@
           </div>
           <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
               <div>
-                <h4 class="mgn-bot-10">LINKS HERE</h4>
+                <h4 class="m-b-1">LINKS HERE</h4>
               </div>
               <div>
                <h5><a href="http://getbootstrap.com/">ブートストラップ</a></h5>
@@ -41,7 +41,7 @@
       </div>
     </div>
 </footer>
-<div class="pad-top-10 background-white">
+<div class="p-t-1 background-white">
   <div class="container">
       <div class="row">
         <div class="col-md-6 gray line-height-50">Build Date: ${buildDate}</div>

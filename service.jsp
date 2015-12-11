@@ -11,7 +11,7 @@
   <bundle:variable name="head">
     <title>${form.name}</title>
   </bundle:variable>
-  <section class="page container pad-bot-40">
+  <section class="page container p-b-4">
     <header class="page-header">
       <h2>${form.name}
         <small> for: 
