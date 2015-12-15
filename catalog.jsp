@@ -119,9 +119,9 @@
       <div class="col-sm-5">
         <div class="panel panel-default">
           <div class="panel-heading background-quaternary">
-            <div class="panel-title"><h4>ALERTS &amp OUTAGES</h4></div>
+            <div class="panel-title"><h4>ALERTS</h4></div>
           </div>
-          <c:import url="partials/static/alertsAndOutages.jsp" charEncoding="UTF-8"/>
+          <c:import url="partials/static/alerts.jsp" charEncoding="UTF-8"/>
         </div>
         <div class=" hidden-xs">
         <a class="twitter-timeline" href="https://twitter.com/KineticData" data-widget-id="569678005275226112" data-chrome="nofooter">Tweets by @KineticData</a>

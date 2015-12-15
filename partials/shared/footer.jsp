@@ -44,7 +44,8 @@
 <div class="p-t-1 background-white">
   <div class="container">
       <div class="row">
-        <div class="col-md-6 gray line-height-50">Build Date: ${buildDate}</div>
+        <div class="col-md-3 gray line-height-50">Build Date: ${buildDate}</div>
+        <div class="col-md-3 line-height-50"><a href="${bundle.spaceLocation}/${kapp.slug}/feedback">feedback</a></div>
         <div class="col-md-6">
         <a href="https://twitter.com">
             <span class="fa-stack fa-2x center-block pull-right">
