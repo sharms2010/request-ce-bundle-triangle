@@ -453,8 +453,7 @@ body > div > header > nav > div > div > ul > li > a > i{
     -webkit-box-flex: 1;
     box-flex: 1;*/
     display: inline-block;
-    margin-left: 4.28571428571rem;  /* equal to 60px */
-    //padding: 0.71428571428rem 0 0.71428571428rem 0;
+    @extend .m-l-2;
     @extend .p-y-1;
 }
 

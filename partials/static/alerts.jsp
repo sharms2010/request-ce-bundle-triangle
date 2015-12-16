@@ -12,5 +12,5 @@
 
 <!--functionality necessary to do server side json calls and rendering has not been build out yet-->
 <div class="panel-body alert-outages-body">
-
+    
 </div>
