@@ -1,5 +1,8 @@
 ## Overview
-This bundle is for the demonstration of kinetic request CE.
+**Name**: Kinetic Request CE Triangle Bundle
+**Repo**: https://github.com/kineticdata/request-ce-bundle-triangle
+
+This bundle is for demonstrating a traditional catalog/self-service portal for Kinetic Request CE with a triangle theme.
 
 It includes the default:
 
