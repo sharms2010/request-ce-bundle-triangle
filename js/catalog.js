@@ -8,7 +8,7 @@ $.getJSON("alerts/for-display", function(data){
     $('.alert-outages-body').empty().append($('<div>', { text : 'there are no alerts at this time'}));
 }
 }).always(function() {
-    setAlertInterval();;
+    setAlertInterval();
   }).fail(function(){
     $('.alert-outages-body').empty().append($('<div>', { text : 'javascript failed to load'}));  
 });
@@ -17,3 +17,5 @@ function setAlertInterval(){
     setTimeout(getAlert, 5000);
 }
 getAlert();
+
+

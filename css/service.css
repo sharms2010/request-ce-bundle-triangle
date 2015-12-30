@@ -1,0 +1,10 @@
+input.form-control{
+    width: 20rem !important;
+}
+select.form-control{
+    width: 20rem !important;
+}
+
+textarea.form-control{
+    width: 40rem !important;
+}

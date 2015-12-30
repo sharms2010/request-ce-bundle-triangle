@@ -23,6 +23,7 @@
         <bundle:scriptpack>
             <bundle:script src="${bundle.path}/libraries/jquery/jquery.min.js" />
             <bundle:script src="${bundle.path}/libraries/bootstrap/bootstrap.min.js" />
+            
         </bundle:scriptpack>
 
         <bundle:stylepack>
@@ -31,6 +32,10 @@
         <bundle:scriptpack>
             <bundle:script src="${bundle.location}/libraries/jquery-datatables/jquery.dataTables.js" />
             <bundle:script src="${bundle.location}/js/common.js" />
+            <bundle:script src="${bundle.location}/libraries/typeahead/typeahead.js/bloodhound.min.js" />
+            <bundle:script src="${bundle.location}/libraries/typeahead/typeahead.js/typeahead.jquery.min.js" />
+            <bundle:script src="${bundle.location}/libraries/typeahead/typeahead.js/typeahead.bundle.min.js" />
+            <bundle:script src="${bundle.location}/libraries/typeahead/typeahead-front.js" />
         </bundle:scriptpack>
 
         <bundle:yield name="head"/>
