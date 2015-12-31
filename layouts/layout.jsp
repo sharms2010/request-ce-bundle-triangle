@@ -23,7 +23,7 @@
         </bundle:stylepack>
 
         <link href="${bundle.location}/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-
+        <link rel="stylesheet" type="text/css" href="${bundle.location}/css/temp.css"/>
         <bundle:scriptpack>
             <bundle:script src="${bundle.path}/libraries/jquery/jquery.min.js" />
             <bundle:script src="${bundle.path}/libraries/bootstrap/bootstrap.min.js" />
