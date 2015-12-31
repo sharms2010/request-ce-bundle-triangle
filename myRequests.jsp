@@ -18,3 +18,4 @@
     <c:import url="partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
     <app:bodyContent/>
 </bundle:layout>
+pan

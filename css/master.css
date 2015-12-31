@@ -1,4 +1,4 @@
-.p-a-0 {
+.p-a-0, #tealnav ul {
   padding: 0rem !important; }
 
 .p-t-0 {
@@ -136,7 +136,7 @@
   padding-top: 3.57143rem !important;
   padding-bottom: 3.57143rem !important; }
 
-.m-a-0 {
+.m-a-0, #tealnav ul {
   margin: 0rem !important; }
 
 .m-t-0 {
@@ -280,27 +280,6 @@
   color: #ccc;
   margin-left: 1em; }
 
-/*.panel {
-    width: 23%;
-    float: left;
-    text-align: center;
-    margin-right: .5em;
-    border: 1px solid #e8e8e8;
-}
-.panel .fa {
-    width: 100%;    // for clickability
-    height: 100%;   // for clickability
-    color: #428BCA;
-    font-size: 3em;
-}
-.panel-body {
-    padding: 7px;
-}
-.panel-footer {
-    font-size:.7em;
-    color: #428BCA;
-    text-transform: uppercase;
-} */
 .feed-content {
   border: 1px solid black;
   padding: 15px; }
@@ -615,8 +594,6 @@ body > div > header > nav > div > div > ul > li > a > i {
   /*    display: -moz-box;
       display: -webkit-box;
       display: box;*/
-  margin: 0;
-  padding: 0;
   text-align: left;
   list-style-type: none; }
 
@@ -655,4 +632,4 @@ body > div > header > nav > div > div > ul > li > a > i {
 .btn-primary:hover {
   background-color: rgba(94, 165, 178, 0.5); }
 
-/*# sourceMappingURL=common.css.map */
+/*# sourceMappingURL=master.css.map */

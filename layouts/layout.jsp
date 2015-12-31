@@ -13,9 +13,14 @@
         <link rel="icon" type="image/png" href="${bundle.location}/images/favicon-16x16.png" sizes="16x16">
         <link rel="shortcut icon" href="${bundle.location}/images/favicon.ico" type="image/x-icon"/>
         <app:headContent/>
+        
+        <%-- Bundle stylepack and scriptpack create a minified and single file of referanced stylesheet and javascript
+             Add ?debugjs to the end of your URL to view individual files --%>
+        
         <bundle:stylepack>
             <bundle:style src="${bundle.path}/libraries/bootstrap/bootstrap.min.css" />
             <bundle:style src="${bundle.path}/css/bundle.css" />
+            <bundle:style src="${bundle.location}/css/master.css "/>
         </bundle:stylepack>
 
         <link href="${bundle.location}/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -23,13 +28,6 @@
         <bundle:scriptpack>
             <bundle:script src="${bundle.path}/libraries/jquery/jquery.min.js" />
             <bundle:script src="${bundle.path}/libraries/bootstrap/bootstrap.min.js" />
-            
-        </bundle:scriptpack>
-
-        <bundle:stylepack>
-            <bundle:style src="${bundle.location}/css/common.css "/>
-        </bundle:stylepack>
-        <bundle:scriptpack>
             <bundle:script src="${bundle.location}/libraries/jquery-datatables/jquery.dataTables.js" />
             <bundle:script src="${bundle.location}/js/common.js" />
             <bundle:script src="${bundle.location}/libraries/typeahead/typeahead.js/bloodhound.min.js" />
@@ -41,12 +39,9 @@
         <bundle:yield name="head"/>
     </head>
     <body>
-    <div class="">
     <c:import url="${bundle.path}/partials/shared/navbar.jsp" charEncoding="UTF-8"/>
 
         <bundle:yield/>
-
-    </div>
 
     <c:import url="${bundle.path}/partials/shared/footer.jsp" charEncoding="UTF-8"/>
     </body>
