@@ -1,38 +1,5 @@
-.code {
-    font-family: monospace;
-}
-.pre {
-    white-space: pre-wrap;
-}
-.clear {
-    clear: both;
-}
-body{
-    background-color: #f1f1f1;
-}
-body > .container {
-    padding-top: 60px;
-}
-/*
-footer {
-    bottom: 0;
-    width: 100%;
-    height: 80px;
-    margin-top: 1em;
-    padding: 15px;
-    border-top: 1px solid #e7e7e7;
-    background-color: #f8f8f8;
-    color: #777;
-}*/
-.errors {
-    display: none;
-    margin:0 auto;
-    width:90%;
-}
-.errors 
-.build {
-    font-size: 11px;
-}
+
+
 
 img.desaturate{
 -webkit-filter: grayscale(100%);
