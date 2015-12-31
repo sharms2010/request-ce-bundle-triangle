@@ -19,7 +19,6 @@
         
         <bundle:stylepack>
             <bundle:style src="${bundle.path}/libraries/bootstrap/bootstrap.min.css" />
-            <bundle:style src="${bundle.path}/css/bundle.css" />
             <bundle:style src="${bundle.location}/css/master.css "/>
         </bundle:stylepack>
 
