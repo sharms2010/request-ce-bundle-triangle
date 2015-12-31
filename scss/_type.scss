@@ -1,1 +1,35 @@
 // heading, display classes, block quote, lists, and horizontal rule
+
+h1 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size:  3rem; /*equal to 42px*/
+    color:  #242e38;
+}
+
+h3{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2rem; /*equal to 24px*/
+}
+
+h4{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.28571428571rem; /*equal to 18px*/
+}
+
+
+h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size:  .857142857rem; /*equal to 12px*/
+}
+
+p{
+    font-size: 1.14285714286em; /*equal to 16px*/
+    margin: 0;
+}

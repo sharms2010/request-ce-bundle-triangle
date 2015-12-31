@@ -1,13 +1,29 @@
-@import "button";
-@import "forms";
-@import "grid";
+/*!
+ * Triangel v1-alpha
+ * Copyright Kinetic Data, Inc.
+ */
+// Core variables and mixins
+@import "variables";
 @import "mixins";
+
+
+// Core CSS
+@import "reboot";
+@import "type";
+@import "grid";
+@import "code";
+@import "tables";
+@import "forms";
+@import "button";
+
+// Components
 @import "nav";
 @import "navbar";
 @import "panels";
-@import "tables";
-@import "type";
+
+// Utility classes
 @import "utilities-spacing";
 @import "utilities";
 
+// Delete when moved over
 @import "common";
