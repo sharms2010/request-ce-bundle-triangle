@@ -144,6 +144,72 @@ form input[type="text"]:focus,
 form textarea:focus {
   border-color: #7FCEE0; }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *   Override Form Styles
+ *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.requests form > div > i {
+  top: 0 !important;
+  right: 5px !important;
+  color: #c7c7c7; }
+
+input.form-control {
+  width: 20rem !important; }
+
+select.form-control {
+  width: 20rem !important; }
+
+textarea.form-control {
+  width: 40rem !important; }
+
+/*teal nav bar control on catalog*/
+.box:hover {
+  background: #86bcc5; }
+
+.box div {
+  font-size: 1.429rem;
+  /*equal to 20px*/
+  font-color: #fff; }
+
+/*icon control in search box on catalog page*/
+.search-catalog-icon {
+  top: 10px !important;
+  color: #c7c7c7; }
+
+.max-min-height {
+  max-height: 7rem;
+  /*equal to 98px*/
+  min-height: 7rem; }
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; }
+
+.arrow_box {
+  position: relative; }
+
+.arrow_box:after, .arrow_box:before {
+  right: 100%;
+  top: 5rem;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.arrow_box:after {
+  border-color: rgba(204, 213, 187, 0);
+  border-right-color: #fff;
+  border-width: 14px;
+  margin-top: -40px; }
+
+.arrow_box:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-width: 20px;
+  margin-top: -46px; }
+
 .errors {
   display: none;
   margin: 0 auto;
