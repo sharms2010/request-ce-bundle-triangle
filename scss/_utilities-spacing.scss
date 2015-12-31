@@ -53,3 +53,13 @@
         margin-bottom: $incrementer * $margin-increment !important;
     }
 }
+
+// Position (make loop with variable)
+// -----------------------------------------------------------------------------
+.pos-top-10{
+    top: 0.71428571428rem; /*equal to 10px*/
+}
+
+.pos-top-none{
+    top: 0;
+}

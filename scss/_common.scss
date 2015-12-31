@@ -8,29 +8,6 @@
     border: 1px solid black;
     padding: 15px;
 }
-.errors {
-    background-color: #faf0ef;
-    border: 1px solid #d5d5d5;
-    color: #000;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 60%;
-    p {
-    font-style: bold;
-    font-size: larger;
-    background-color: #cc0000;
-    border-bottom: 1px solid #d5d5d5;
-    padding-left: .5em;
-    padding-right: .5em;
-    color: white;
-    padding: 3px;
-        &.testing{
-        color:green;
-        background:red;
-        }
-    }
-    
-}
 
 h3.uncategorized{
   color: #CCCCCC;
@@ -42,85 +19,6 @@ section.configbar{
 
 section.configbar li.active{
   font-weight:bold;
-}
-
-
-/*everything above came with bundle*/
-html{
-    font-size: 14px
-}
-
-body{
-    background-color: #f5f5f5;
-}
-
-h1 {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size:  3rem; /*equal to 42px*/
-    color:  #242e38;
-}
-
-h3{
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 2rem; /*equal to 24px*/
-}
-
-h4{
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 1.28571428571rem; /*equal to 18px*/
-}
-
-p{
-    font-size: 1.14285714286em; /*equal to 16px*/
-    margin: 0;
-}
-
-h5{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size:  .857142857rem; /*equal to 12px*/
-}
-
-i{
-    color: white;
-}
-
-a {
-    color:#3babc0;
-}
-ul{
-    padding: 0;
-}
-/*custom padding,position and margin control*/
-
-.pos-top-10{
-    top: 0.71428571428rem; /*equal to 10px*/
-}
-
-.pos-top-none{
-    top: 0;
-}
-
-.line-height-50{
-    line-height: 3.57142857143rem; /*equal to 50px*/
-}
-
-.line-height-70{
-    line-height: 5rem; /*equal to 70px*/
-}
-
-.display-inl-blk{
-    display: inline-block !important;
-}
-
-.display-blk{
-    display: block;
 }
 
 /*border control*/
