@@ -13,9 +13,7 @@
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/catalog.js" />
     </bundle:scriptpack>
-  <bundle:stylepack>
-      <bundle:style src="${bundle.location}/css/catalog.css "/>
-  </bundle:stylepack>
+
       
  <!-- search -->
   <div class="container hidden-xs m-b-4 m-t-4 search-catalog">

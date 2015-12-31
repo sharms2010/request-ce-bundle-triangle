@@ -9,9 +9,7 @@
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/myRequests.js" />
     </bundle:scriptpack>
-    <bundle:stylepack>
-        <bundle:style src="${bundle.location}/css/myRequests.css "/>
-    </bundle:stylepack>
+
     <bundle:variable name="head">
         <title>Kinetic Data ${kapp.name}</title>
     </bundle:variable>
