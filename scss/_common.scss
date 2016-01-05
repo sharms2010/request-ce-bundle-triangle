@@ -26,125 +26,10 @@ section.configbar li.active{
     border: none;
 }
 
-/*color control*/
-.background-tertiary{
-    background-color: #242e38 !important;
-}
-
-.background-quaternary{
-    background-color: #d6ce61 !important;
-}
-
-.background-white{
-    background-color: #fff !important;
-}
-
-.white{
-    color: #fff !important;
-}
-
-.gray{
-    color: #818181 !important;
-}
-
-/*font contorl*/
-.font-thin{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-}
-
-.font-light{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-}
-
-.font-medium{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-}
-
-.font-bold{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-}
-
-.font-size-50{
-   font-size: 3.57142857143rem; /*equal to 50px*/ 
-}
-
-.header{
-   /* background: url("../images/background.png");*/
-    min-height: 7.5rem; 
-    position: relative;
-}
-
-.footer{
-   /* background: url("../images/background.png");*/
-    height: 20rem; 
-    position: relative;
-    border: none !important;
-}
-
 .overlay{
     width: 100%;
     background-color: rgba(5, 12, 19, 0.75);
     filter: alpha(opacity=75); /* For IE8 and earlier */
-}
-
-.header .overlay{
-    border: none;
-    border-radius: 0;
-    position: relative;
-    min-height: 5rem; /*equal to 70px*/
-    margin-top: 2.5rem;
-}
-
-.footer .overlay{
-    position: absolute;
-    bottom: 0px;
-    height: 17.5rem; /*equal to 245px*/
-}
-
-/*get better class names for navbar-collapse*/
-#navbar-collapse > ul > li:nth-child(1) > a{
-    padding: 0.71428571428rem 1rem 0.71428571428rem 1rem;
-}
-body > div > header > nav > div > div > ul > li > a > i{
-    color: black;
-}
-
-.avatar > img{
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-}
-
-.navAccount a{
-    color: #d6ce61;
-}
-
-.fa-circle{
-    color: #242e38;
-}
-
-.footer .overlay > div > div > div > div:first-child{
-    padding-top: 2.5rem; /*equal to 35px*/
-}
-
-.footer .overlay> div > div > div:first-child > div:first-child{
-    border-bottom: 0.35714285714rem solid #d6ce61;
-}
-
-.footer .overlay > div > div > div:not(:first-child) > div:first-child{
-    border-bottom: 0.35714285714rem solid #5ea5b2;
-}
-
-.footer .overlay > div > div > div:not(:first-child) > div{
-    margin-left: 2.14285714286rem; /*equal to 30px*/
-}
-
-.footer .overlay > div > div > div:not(:first-child) > div > h5{
-    margin-bottom: 0;
 }
 
 /*5 column deff*/
@@ -196,7 +81,7 @@ body > div > header > nav > div > div > ul > li > a > i{
         margin: 0 auto;
         width: 75%; 
     }
-    .box{
+    .nav-box{
         margin: 0 auto;
         padding: 2.85714285714rem 1.429rem 2.85714285714rem 1.429rem;
         width: 9.28571428571rem; /*equal to 130px*/
@@ -220,7 +105,7 @@ body > div > header > nav > div > div > ul > li > a > i{
         margin: 0 auto;
         width: 60%; 
     }
-    .box{
+    .nav-box{
         margin: 0 auto;
         padding: 2.85714285714rem 1.786rem 2.85714285714rem 1.786rem;
         width: 11.4285714286rem; /*equal to 160px*/
@@ -244,69 +129,10 @@ body > div > header > nav > div > div > ul > li > a > i{
         margin: 0 auto;
         width: 50%; 
     }
-    .box{
+    .nav-box{
         margin: 0 auto;
         padding: 2.85714285714rem 1.786rem 2.85714285714rem 1.786rem;
         width: 11.4285714286rem; /*equal to 160px*/
         height: 17.1428571429rem; /*equal to 240px*/
     }
-}
-
-
-
-
-#tealnav{
-    background-color: #5ea5b2;
-}
-
-#tealnav ul {
-/*    display: -moz-box;
-    display: -webkit-box;
-    display: box;*/
-    @extend .m-a-0;
-    @extend .p-a-0;
-    text-align: left;
-    list-style-type: none;
-}
-
-#tealnav li {
-/*    -moz-box-flex: 1;
-    -webkit-box-flex: 1;
-    box-flex: 1;*/
-    display: inline-block;
-    @extend .m-l-2;
-    @extend .p-y-1;
-}
-
-#tealnav li a{
-    font-size: 1.125rem;
-}
-
-/*panel control*/
-.panel{ /*common*/
-    border: none;
-}
-
-.panel-body{ /*common*/
-    box-shadow: 1px 4px 10px #eaeaea;
-}
-
-.panel-body > table > thead > tr > td:nth-child(2){ /*catalog could be replaced with more general catalog*/
-    text-align: right;
-}
-
-.panel-body > table > tbody > tr:nth-child(even) > td:nth-child(1){ /*catalog could be replaced with more general catalog*/
-    border: none;
-}
-
-.panel-body > table > tbody > tr > td:nth-child(2){
-    vertical-align: bottom;
-}
-
-.btn-primary{
-    background-color: #5ea5b2;
-}
-
-.btn-primary:hover{
-    background-color: rgba(94, 165, 178, .5)
 }

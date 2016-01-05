@@ -1,11 +1,13 @@
+/*sass file _utilities*/
 //for floats and text align, center block
 
-.display-inl-blk{
+.display{
+    @at-root #{&}-inl-blk{
     display: inline-block !important;
-}
-
-.display-blk{
+    }
+    @at-root #{&}-blk{
     display: block;
+    }
 }
 
 .line-height-50{

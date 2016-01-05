@@ -20,7 +20,7 @@
     <h1 class="p-b-1 text-center">How can we help you today?</h1>
     <form action="/where" method="GET" role="form"> 
       <div class="form-group has-feedback">
-        <input type="text" class="states form-control test buttonPress y" name="states"/>
+        <input type="text" class="states form-control predictiveText x" name="states"/>
         <i class="form-control-feedback fa fa-search search-catalog-icon"></i>
       </div>
     </form>  
@@ -28,18 +28,18 @@
     <div class="container visible-xs m-b-4 m-t-4 search-catalog"> 
        <form action="/where" method="GET" class="border-none m-a-0" role="search"> 
          <div class="form-group">
-           <input type="text" class="states form-control test buttonPress x" placeholder="search" name="states"/>
+           <input type="text" class="states form-control predictiveText" placeholder="search" name="states"/>
          </div>
        </form>
     </div>
 
-  <div id="tealnav" class="m-b-4">
+  <div class="nav m-b-4">
     <div class="container">
       <div class="row">
         <c:forEach var="category" items="${kapp.categories}">
           <div class="col-sm-odd col-xs-odd">
-            <a class="white" href="${bundle.spaceLocation}/${kapp.slug}/categories?category=${category.name}">
-              <div class="box text-center">
+            <a href="${bundle.spaceLocation}/${kapp.slug}/categories?category=${category.name}">
+              <div class="nav-box text-center">
                 <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
@@ -171,7 +171,7 @@
         };
     };           
     
-    $('.test').typeahead({
+    $('.predictiveText').typeahead({
         hint: true,
         highlight: true,
         minLength: 1,

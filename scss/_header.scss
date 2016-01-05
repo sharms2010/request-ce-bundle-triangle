@@ -1,0 +1,14 @@
+/*sass file _header*/
+.header{
+   /* background: url("../images/background.png");*/
+    min-height: 7.5rem; 
+    position: relative;
+}
+
+.header .overlay{
+    border: none;
+    border-radius: 0;
+    position: relative;
+    min-height: 5rem; /*equal to 70px*/
+    margin-top: 2.5rem;
+}

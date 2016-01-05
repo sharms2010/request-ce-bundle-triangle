@@ -1,0 +1,29 @@
+/*sass file _font*/
+.font-thin{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.font-light{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.font-medium{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.font-bold{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.font-size-50{
+   font-size: 3.57142857143rem; /*equal to 50px*/ 
+}
+
+//this is a font awesome icon (should it be in the icon file?)
+.fa-circle{
+    color: #242e38;
+}

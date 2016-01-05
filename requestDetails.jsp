@@ -14,7 +14,7 @@
       
       <div class ="container-fluid details splitBackgound">
       <div class="container">
-      <div id="leftDetails" class="col-md-4 p-b-4 p-t-4">
+      <div class="left-column col-md-4">
         <h1>${submission.form.name}</h1>
         <h4>Request ID:</h4>
         <h4>${submission.id}</h4>
@@ -31,7 +31,7 @@
           <i class="icon-control-feedback fa fa-play"></i>
         </button>
       </div>
-      <div id="rightDetails" class="col-md-8 p-b-4 p-t-4">
+      <div class="rightDetails col-md-8 p-b-4 p-t-4">
         <ul>
           <c:forEach var="run" items="${TaskRuns.find(submission)}">
               <c:forEach var="task" items="${run.tasks}">

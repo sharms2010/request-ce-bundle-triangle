@@ -18,15 +18,15 @@
              Add ?debugjs to the end of your URL to view individual files --%>
         
         <bundle:stylepack>
-            <bundle:style src="${bundle.path}/libraries/bootstrap/bootstrap.min.css" />
+            <bundle:style src="${bundle.location}/libraries/bootstrap/bootstrap.min.css" />
             <bundle:style src="${bundle.location}/css/master.css "/>
         </bundle:stylepack>
 
         <link href="${bundle.location}/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="${bundle.location}/css/temp.css"/>
         <bundle:scriptpack>
-            <bundle:script src="${bundle.path}/libraries/jquery/jquery.min.js" />
-            <bundle:script src="${bundle.path}/libraries/bootstrap/bootstrap.min.js" />
+            <bundle:script src="${bundle.location}/libraries/jquery/jquery.min.js" />
+            <bundle:script src="${bundle.location}/libraries/bootstrap/bootstrap.min.js" />
             <bundle:script src="${bundle.location}/libraries/jquery-datatables/jquery.dataTables.js" />
             <bundle:script src="${bundle.location}/js/common.js" />
             <bundle:script src="${bundle.location}/libraries/typeahead/typeahead.js/bloodhound.min.js" />

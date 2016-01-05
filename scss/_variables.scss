@@ -1,5 +1,5 @@
 // Theme Colors
-$primary: #018bfe;
+$primary: #5ea5b2;
 $secondary: #ffa31c;
 $tertiary: #b996a5;
 
@@ -14,7 +14,28 @@ $gray-lighter:      lighten($black, 83%);
 $gray-lightest:     lighten($black, 96%);
 $white:             #ffffff;
 
+// Backgrond Color
 $bg-color:          #f5f5f5;
+
+.background-tertiary{
+    background-color: #242e38 !important;
+}
+
+.background-quaternary{
+    background-color: #d6ce61 !important;
+}
+
+.background-white{
+    background-color: $white !important;
+}
+
+.white{
+    color: $white !important;
+}
+
+.gray{
+    color: $gray !important;
+}
 
 // Margin & Padding Increments
 $margin-increment: 0.71428571428rem;

@@ -1,9 +1,38 @@
-/*teal nav bar control on catalog*/
-.box:hover{
-    background: #86bcc5;
+/*sass file _nav*/
+.nav{
+    background-color: $primary;
+}
+.nav{
+    @at-root #{&} ul{
+/*  display: -moz-box;
+    display: -webkit-box;
+    display: box;*/
+    @extend .m-a-0;
+    @extend .p-a-0;
+    text-align: left;
+    list-style-type: none;
+    }
+    @at-root #{&} li{
+/*  -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;*/
+    display: inline-block;
+    @extend .p-y-1;
+    }
+    @at-root #{&} a{
+    font-size: 1.125rem;
+    color: $white;
+    }
+    @at-root #{&}-box{
+    @extend .p-t-2;
+    @extend .p-b-2;
+    }
+    @at-root #{&}-box div{
+    font-size: 1.429rem; /*equal to 20px*/
+    color: $white;
+    }
+    @at-root #{&}-box:hover{
+    background-color: lighten($primary, 10%) 
+    }
 }
 
-.box div{
-    font-size: 1.429rem; /*equal to 20px*/
-    font-color: #fff;
-}
