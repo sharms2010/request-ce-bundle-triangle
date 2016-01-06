@@ -14,15 +14,15 @@
         <link rel="shortcut icon" href="${bundle.location}/images/favicon.ico" type="image/x-icon"/>
         <app:headContent/>
         <bundle:stylepack>
-            <bundle:style src="${bundle.path}/libraries/bootstrap/bootstrap.min.css" />
-            <bundle:style src="${bundle.path}/css/bundle.css" />
+            <bundle:style src="${bundle.location}/libraries/bootstrap/bootstrap.min.css" />
+            <bundle:style src="${bundle.location}/css/bundle.css" />
         </bundle:stylepack>
 
         <link href="${bundle.location}/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
         <bundle:scriptpack>
-            <bundle:script src="${bundle.path}/libraries/jquery/jquery.min.js" />
-            <bundle:script src="${bundle.path}/libraries/bootstrap/bootstrap.min.js" />
+            <bundle:script src="${bundle.location}/libraries/jquery/jquery.min.js" />
+            <bundle:script src="${bundle.location}/libraries/bootstrap/bootstrap.min.js" />
             
         </bundle:scriptpack>
 
