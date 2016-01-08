@@ -15,9 +15,9 @@
   color: #ffffff !important; }
 
 .gray {
-  color: gray !important; }
+  color: #858585 !important; }
 
-/*sass file _reboot*/
+/*scss file _reboot*/
 html {
   font-size: 14px; }
 
@@ -26,23 +26,17 @@ body {
 
 h1 {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
   font-size: 3rem;
   /*equal to 42px*/
   color: #242e38; }
 
 h3 {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
   font-size: 2rem;
   /*equal to 24px*/ }
 
 h4 {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
   font-size: 1.28571428571rem;
   /*equal to 18px*/ }
 
@@ -52,13 +46,11 @@ p {
   margin: 0; }
 
 h5 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
   font-size: .857142857rem;
   /*equal to 12px*/ }
 
 i {
-  color: white; }
+  color: #ffffff; }
 
 a {
   color: #3babc0; }
@@ -156,64 +148,26 @@ input.x {
   background-color: #81b8c3; }
 
 /*sass file _lists*/
-ul {
-  padding: 0; }
-
-.left-column > h4:nth-child(odd) {
-  color: gray; }
-.left-column > h4:nth-child(even) {
-  padding-top: 2rem; }
-.left-column > p {
-  padding: 2rem 0 2rem 0; }
-
-.left-column {
-  padding-right: 3rem;
-  background-color: #ffffff;
-  border-right: 1px solid whitesmoke;
-  -webkit-box-shadow: 1px 4px 10px #d4d4d4;
-  box-shadow: 1px 4px 10px #d4d4d4; }
-
-.rightDetails {
+.right-details {
   padding-left: .9rem; }
-
-.rightDetails > ul {
+.right-details > ul {
   list-style: none; }
-
-.rightDetails > ul > li {
+.right-details > ul > li {
   margin-left: 2.25rem !important; }
-
-.rightDetails > ul > li:before {
+.right-details > ul > li:before {
   color: #5ea5b2;
   content: '\f111';
   font-family: 'FontAwesome';
   position: absolute;
   left: -5rem;
   top: 4.25rem; }
-
-.rightDetails > ul > li > h4:nth-child(2) {
+.right-details > ul > li > h4:nth-child(2) {
   color: #818181; }
-
-.rightDetails > ul > li > div > p {
+.right-details > ul > li > div > p {
   color: #818181;
   margin-top: 1.25rem; }
 
 /*sass file _font*/
-.font-thin {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100; }
-
-.font-light {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300; }
-
-.font-medium {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500; }
-
-.font-bold {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700; }
-
 .font-size-50 {
   font-size: 3.57142857143rem;
   /*equal to 50px*/ }
@@ -221,34 +175,39 @@ ul {
 .fa-circle {
   color: #242e38; }
 
+.font, .font-thin, .font-light, h5, .font-medium, h1, h3, h4, .font-bold {
+  font-family: 'Roboto', sans-serif; }
+.font-thin {
+  font-weight: 100; }
+.font-light, h5 {
+  font-weight: 300; }
+.font-medium, h1, h3, h4 {
+  font-weight: 500; }
+.font-bold {
+  font-weight: 700; }
+
 /*sass file _footer*/
-.footer {
+.footer, .footer__overlay {
   /* background: url("../images/background.png");*/
   height: 20rem;
   position: relative;
   border: none !important; }
-
-.footer .overlay {
+.footer__overlay {
   position: absolute;
   bottom: 0px;
   height: 17.5rem;
   /*equal to 245px*/ }
-
-.footer .overlay > div > div > div > div:first-child {
+.footer__overlay > div > div > div > div:first-child {
   padding-top: 2.5rem;
   /*equal to 35px*/ }
-
-.footer .overlay > div > div > div:first-child > div:first-child {
+.footer__overlay > div > div > div:first-child > div:first-child {
   border-bottom: 0.35714285714rem solid #d6ce61; }
-
-.footer .overlay > div > div > div:not(:first-child) > div:first-child {
+.footer__overlay > div > div > div:not(:first-child) > div:first-child {
   border-bottom: 0.35714285714rem solid #5ea5b2; }
-
-.footer .overlay > div > div > div:not(:first-child) > div {
+.footer__overlay > div > div > div:not(:first-child) > div {
   margin-left: 2.14285714286rem;
   /*equal to 30px*/ }
-
-.footer .overlay > div > div > div:not(:first-child) > div > h5 {
+.footer__overlay > div > div > div:not(:first-child) > div > h5 {
   margin-bottom: 0; }
 
 /*sass file _header*/
@@ -257,7 +216,7 @@ ul {
   min-height: 7.5rem;
   position: relative; }
 
-.header .overlay {
+.header .overlay, .header .footer__overlay {
   border: none;
   border-radius: 0;
   position: relative;
@@ -276,10 +235,24 @@ ul {
   top: 10px !important;
   color: #c7c7c7; }
 
+.icon-black {
+  color: #000000; }
+.icon-white {
+  color: #ffffff; }
+.icon-gray {
+  color: #858585; }
+.icon-gray-lighter {
+  color: #d4d4d4; }
+.icon-primary {
+  color: #5ea5b2; }
+.icon-secondary {
+  color: #ffa31c; }
+.icon-tertiary {
+  color: #b996a5; }
+
 /*sass file _nav*/
 .nav {
   background-color: #5ea5b2; }
-
 .nav ul {
   /*  display: -moz-box;
       display: -webkit-box;
@@ -294,11 +267,11 @@ ul {
 .nav a {
   font-size: 1.125rem;
   color: #ffffff; }
-.nav-box div {
+.nav__box div {
   font-size: 1.429rem;
   /*equal to 20px*/
   color: #ffffff; }
-.nav-box:hover {
+.nav__box:hover {
   background-color: #81b8c3; }
 
 /*sass file _navbar*/
@@ -312,9 +285,6 @@ ul {
 
 #navbar-collapse > ul > li:nth-child(1) > a {
   padding: 0.71428571428rem 1rem 0.71428571428rem 1rem; }
-
-body > div > header > nav > div > div > ul > li > a > i {
-  color: black; }
 
 /*sass file _panels*/
 .max-min-height {
@@ -445,10 +415,10 @@ body > div > header > nav > div > div > ul > li > a > i {
 .p-a-2 {
   padding: 1.42857rem !important; }
 
-.p-t-2, .nav-box {
+.p-t-2, .nav__box {
   padding-top: 1.42857rem !important; }
 
-.p-b-2, .nav-box {
+.p-b-2, .nav__box {
   padding-bottom: 1.42857rem !important; }
 
 .p-r-2 {
@@ -491,10 +461,10 @@ body > div > header > nav > div > div > ul > li > a > i {
 .p-a-4 {
   padding: 2.85714rem !important; }
 
-.p-t-4, .left-column {
+.p-t-4 {
   padding-top: 2.85714rem !important; }
 
-.p-b-4, .left-column {
+.p-b-4 {
   padding-bottom: 2.85714rem !important; }
 
 .p-r-4 {
@@ -716,7 +686,7 @@ section.configbar li.active {
 .border-none {
   border: none; }
 
-.overlay {
+.overlay, .footer__overlay {
   width: 100%;
   background-color: rgba(5, 12, 19, 0.75);
   filter: alpha(opacity=75);

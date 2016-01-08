@@ -10,3 +10,16 @@
     top: 10px !important;
     color: #c7c7c7;
 }
+
+$color-names: black white gray gray-lighter primary secondary tertiary;
+$colors: $black $white $gray $gray-lighter $primary $secondary $tertiary;
+$block: icon;
+
+.#{$block}{
+    @each $color in $colors{
+        $i: index($colors, $color);
+        @at-root #{&}-#{nth($color-names,$i)}{
+           color: $color;
+        }
+    }
+}

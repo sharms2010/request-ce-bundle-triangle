@@ -1,57 +1,34 @@
 /*sass file _lists*/
-ul{
-    padding: 0;
-}
-
-.left-column{
-    @at-root #{&}>h4:nth-child(odd){
-        color: $gray;
+.right-details{
+    @at-root #{&}{
+        padding-left: .9rem;
     }
-    @at-root #{&}>h4:nth-child(even){
-        padding-top: 2rem;
+    @at-root #{&} > ul{
+        list-style: none;
     }
-    @at-root #{&}>p{
-        padding: 2rem 0 2rem 0;
+    @at-root #{&} > ul > li{
+        margin-left: 2.25rem !important;
+    }
+    @at-root #{&} > ul > li:before{
+        color: #5ea5b2;
+        content: '\f111';
+        font-family: 'FontAwesome';
+        position: absolute;
+        left: -5rem;
+        top: 4.25rem;
+    }
+    @at-root #{&} > ul > li > h4:nth-child(2){
+        color: #818181;
+    }
+    @at-root #{&} > ul > li > div > p{
+        color: #818181;
+        margin-top: 1.25rem;
     }
 }
 
-.left-column{
-  padding-right: 3rem;
-  background-color: $white;
-  border-right: 1px solid $gray-lightest;
-  -webkit-box-shadow: 1px 4px 10px $gray-lighter;
-  box-shadow: 1px 4px 10px $gray-lighter;
-  @extend .p-b-4; 
-  @extend .p-t-4;
-}
 
 
-.rightDetails{
-  padding-left: .9rem;
-}
 
-.rightDetails > ul{
-  list-style: none;
-}
 
-.rightDetails > ul > li{
-  margin-left: 2.25rem !important;
-}
 
-.rightDetails > ul > li:before{
-  color: #5ea5b2;
-  content: '\f111';
-  font-family: 'FontAwesome';
-  position: absolute;
-  left: -5rem;
-  top: 4.25rem;
-}
 
-.rightDetails > ul > li > h4:nth-child(2){
-  color: #818181;
-}
-
-.rightDetails > ul > li > div > p{
-  color: #818181;
-  margin-top: 1.25rem;
-}

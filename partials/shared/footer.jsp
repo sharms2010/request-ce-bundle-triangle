@@ -2,7 +2,7 @@
 <%@include file="../../bundle/initialization.jspf" %>
 
 <footer class="footer p-a-0">
-    <div class="overlay m-a-0">
+    <div class="footer__overlay m-a-0">
       <div class="container">
         <div class="row white">
           <div class="col-md-6">

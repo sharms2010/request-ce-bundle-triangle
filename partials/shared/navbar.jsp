@@ -34,7 +34,7 @@
             <c:forEach var="kapps" items="${space.kapps}">
               <li> 
                 <a href="/kinetic/${space.slug}/${kapps.slug}">
-                  <i class="fa ${kapps.getAttributeValue("fa-logo")} fa-1x pull-left"></i>
+                  <i class="fa ${kapps.getAttributeValue("fa-logo")} fa-1x pull-left icon-black"></i>
                   <div class="pull-right">${kapps.name}</div>
                 </a>
               </li>

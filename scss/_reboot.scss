@@ -1,4 +1,4 @@
-/*sass file _reboot*/
+/*scss file _reboot*/
 html{
     font-size: 14px
 }
@@ -9,23 +9,20 @@ body{
 
 h1 {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    @extend .font-medium;
     font-size:  3rem; /*equal to 42px*/
     color:  #242e38;
 }
 
 h3{
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    @extend .font-medium;
     font-size: 2rem; /*equal to 24px*/
 }
 
 h4{
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    @extend .font-medium;
     font-size: 1.28571428571rem; /*equal to 18px*/
 }
 
@@ -35,13 +32,12 @@ p{
 }
 
 h5{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    @extend .font-light;
     font-size:  .857142857rem; /*equal to 12px*/
 }
 
 i{
-    color: white;
+    color: $white;
 }
 
 a {

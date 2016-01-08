@@ -1,33 +1,38 @@
 /*sass file _footer*/
-.footer{
+$block: footer;
+$element: overlay;
+
+.#{$block}{
+    @at-root #{&}{
    /* background: url("../images/background.png");*/
     height: 20rem; 
     position: relative;
     border: none !important;
+    }
+    @at-root #{&}__#{$element}{
+        @extend .footer;
+        @extend .overlay;
+        position: absolute;
+        bottom: 0px;
+        height: 17.5rem; /*equal to 245px*/
+    }
+    @at-root #{&}__#{$element} > div > div > div > div:first-child{
+        padding-top: 2.5rem; /*equal to 35px*/
+    }
+    @at-root #{&}__#{$element} > div > div > div:first-child > div:first-child{
+        border-bottom: 0.35714285714rem solid #d6ce61;
+    }
+    @at-root #{&}__#{$element} > div > div > div:not(:first-child) > div:first-child{
+        border-bottom: 0.35714285714rem solid #5ea5b2;
+    }
+    @at-root #{&}__#{$element} > div > div > div:not(:first-child) > div{
+        margin-left: 2.14285714286rem; /*equal to 30px*/
+    }
+    @at-root #{&}__#{$element} > div > div > div:not(:first-child) > div > h5{
+        margin-bottom: 0;
+    }
 }
 
-.footer .overlay{
-    position: absolute;
-    bottom: 0px;
-    height: 17.5rem; /*equal to 245px*/
-}
 
-.footer .overlay > div > div > div > div:first-child{
-    padding-top: 2.5rem; /*equal to 35px*/
-}
 
-.footer .overlay> div > div > div:first-child > div:first-child{
-    border-bottom: 0.35714285714rem solid #d6ce61;
-}
 
-.footer .overlay > div > div > div:not(:first-child) > div:first-child{
-    border-bottom: 0.35714285714rem solid #5ea5b2;
-}
-
-.footer .overlay > div > div > div:not(:first-child) > div{
-    margin-left: 2.14285714286rem; /*equal to 30px*/
-}
-
-.footer .overlay > div > div > div:not(:first-child) > div > h5{
-    margin-bottom: 0;
-}
