@@ -26,7 +26,7 @@
         </div>
       </div>
 <!-- categories -->
-        <div class="dropdown pull-right border-none m-a-0 p-a-1">          
+        <div class="dropdown pull-right border-none m-a-0 p-a-2">          
           <a id="categories" href="#" class="dropdown-toggle p-a-0" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
             <i class="fa fa-th fa-3x line-height-50"></i>
           </a>

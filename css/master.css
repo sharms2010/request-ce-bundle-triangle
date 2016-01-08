@@ -229,7 +229,7 @@ input.x {
 #list.active,
 #grid:active,
 #grid.active {
-  text-shadow: 0px 0px 5px green; }
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4); }
 
 .search-catalog-icon {
   top: 10px !important;
@@ -249,6 +249,8 @@ input.x {
   color: #ffa31c; }
 .icon-tertiary {
   color: #b996a5; }
+.icon--height-50 {
+  line-height: 50px; }
 
 /*sass file _nav*/
 .nav {
