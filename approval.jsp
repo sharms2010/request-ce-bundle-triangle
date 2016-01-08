@@ -18,7 +18,7 @@
           </c:if>
         </div>
         <div class="errors"></div>
-        <app:bodyContent/>
+       
 
         <%-- Review Request Work Around for Approvals  --%>
         <div id="reviewRequest" style="display:none;">
@@ -63,4 +63,6 @@
         </div>
       </section>
     </div>
+          
+    <app:bodyContent/>
 </bundle:layout>
