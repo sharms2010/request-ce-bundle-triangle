@@ -5,9 +5,7 @@
   <bundle:scriptpack>
     <bundle:script src="${bundle.location}/js/service.js" />
   </bundle:scriptpack>
-  <bundle:stylepack>
-    <bundle:style src="${bundle.location}/css/service.css "/>
-  </bundle:stylepack>
+
   <bundle:variable name="head">
     <title>${form.name}</title>
   </bundle:variable>

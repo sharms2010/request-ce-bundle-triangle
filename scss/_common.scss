@@ -1,0 +1,109 @@
+/*border control*/
+.border-none{
+    border: none;
+}
+
+/*5 column deff*/
+.col-xs-odd{
+    position: relative;
+    min-height: 1px;
+    padding: 0px;
+}
+.col-sm-odd,
+.col-md-odd,
+.col-lg-odd {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/*media control*/
+/*five column control*/
+@media (max-width: 768px){
+    .col-xs-odd {
+        width: 20%;
+        float: left;
+    }
+
+    .requests > .list > div > div > ul > li > div:nth-child(2) > span{
+        margin-top: -1%
+    }
+
+    .requests > .list > div > div > ul > li > div:last-child > span{
+        line-height: 2rem; /*equal to 28px*/
+    }
+}
+
+@media (min-width: 768px) {
+    .col-sm-odd {
+        width: 20%;
+        float: left;
+    }
+    
+    .requests > .list > div > div > ul > li > div:nth-child(2) > span{
+        margin-top: -1%
+    }
+
+    .requests > .list > div > div > ul > li > div:last-child > span{
+        line-height: 2rem; /*equal to 28px*/
+    }
+    .search-catalog form{
+        margin: 0 auto;
+        width: 75%; 
+    }
+    .nav-box{
+        margin: 0 auto;
+        padding: 2.85714285714rem 1.429rem 2.85714285714rem 1.429rem;
+        width: 9.28571428571rem; /*equal to 130px*/
+        height: 17.1428571429rem; /*equal to 240px*/
+    }
+}
+@media (min-width: 992px) {
+    .col-md-odd {
+        width: 20%;
+        float: left;
+    }
+
+    .requests > .list > div > div > ul > li > div:nth-child(2) > span{
+        margin-top: 2%
+    }
+
+    .requests > .list > div > div > ul > li > div:last-child > span{
+        line-height: 3rem; /*equal to 36px*/
+    }
+    .search-catalog form{
+        margin: 0 auto;
+        width: 60%; 
+    }
+    .nav-box{
+        margin: 0 auto;
+        padding: 2.85714285714rem 1.786rem 2.85714285714rem 1.786rem;
+        width: 11.4285714286rem; /*equal to 160px*/
+        height: 17.1428571429rem; /*equal to 240px*/
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-odd {
+        width: 20%;
+        float: left;
+    }
+
+    .requests > .list > div > div > ul > li > div:nth-child(2) > span{
+        margin-top: 3%
+    }
+
+    .requests > .list > div > div > ul > li > div:last-child > span{
+        line-height: 4rem; /*equal to 48px*/
+    }
+    .search-catalog form{
+        margin: 0 auto;
+        width: 50%; 
+    }
+    .nav-box{
+        margin: 0 auto;
+        padding: 2.85714285714rem 1.786rem 2.85714285714rem 1.786rem;
+        width: 11.4285714286rem; /*equal to 160px*/
+        height: 17.1428571429rem; /*equal to 240px*/
+    }
+}

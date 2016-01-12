@@ -23,10 +23,10 @@
               <h4 class="pull-right gray line-height-50">VIEW AS:</h4>
             </div>
             <div class="col-xs-3 p-l-1 p-r-1">
-              <i id="list" class="fa fa-list-ul fa-2x gray pull-right" style="line-height:50px"></i>
+                <i id="list" class="fa fa-list-ul fa-2x gray icon--height-50 pull-right" style="line-height:50px"></i>
             </div>
             <div class="col-xs-3 p-l-1">
-              <i id="grid" class="fa fa-th-large fa-2x gray pull-right" style="line-height:50px"></i>
+              <i id="grid" class="fa fa-th-large fa-2x gray icon--height-50 pull-right" style="line-height:50px"></i>
             </div>
         </div>
     </div>

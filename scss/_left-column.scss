@@ -1,0 +1,21 @@
+/*scss _left-column file*/
+.left-column{
+    @at-root #{&}{
+        background-color: $white;
+        border-right: 1px solid $gray-lightest;
+        -webkit-box-shadow: 1px 4px 10px $gray-lighter;
+        box-shadow: 1px 4px 10px $gray-lighter;
+        padding-top: 2.85714285714px; //equal to 40px
+        padding-bottom: 2.85714285714px;
+        padding-right: 3rem;
+    }
+    @at-root #{&}>h4:nth-child(odd){
+        color: $gray;
+    }
+    @at-root #{&}>h4:nth-child(even){
+        padding-top: 2rem;
+    }
+    @at-root #{&}>p{
+        padding: 2rem 0 2rem 0;
+    }
+}

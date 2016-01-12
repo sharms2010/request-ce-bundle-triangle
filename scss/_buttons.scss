@@ -1,0 +1,10 @@
+/*sass file _buttons*/
+.btn{
+    @at-root #{&}-primary{
+        background-color: $primary;
+    }
+
+    @at-root #{&}-primary:hover{
+        background-color: lighten($primary, 10%)
+    }
+}

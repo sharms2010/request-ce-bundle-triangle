@@ -1,0 +1,21 @@
+/*sass file _header*/
+$block: header;
+$element: overlay;
+
+.#{$block}{
+    @at-root #{&}{
+        /* background: url("../images/background.png");*/
+        min-height: 7.5rem; 
+        position: relative;
+    }
+    @at-root #{&}__overlay{
+        @extend .header;
+        background-color: $overlay-color;
+        filter: alpha(opacity=75); /* For IE8 and earlier */
+        border: none;
+        border-radius: 0;
+        position: relative;
+        min-height: 5rem; /*equal to 70px*/
+        margin-top: 2.5rem;
+    }
+}

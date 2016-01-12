@@ -1,10 +1,10 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../../bundle/initialization.jspf" %>
 
-<link rel="stylesheet" type="text/css" href="${bundle.location}/css/temp.css"/>
+
 
  <header class="header clearfix">
-  <nav class=" overlay m-b-0">
+  <nav class="header__overlay m-b-0">
     <div class="container">
 <!-- logo -->
         <a href="${bundle.spaceLocation}/${kapp.slug}" class="navbar-brand p-a-0">
@@ -26,15 +26,15 @@
         </div>
       </div>
 <!-- categories -->
-        <div class="dropdown pull-right border-none m-a-0 p-a-1">          
+        <div class="dropdown pull-right border-none m-a-0">          
           <a id="categories" href="#" class="dropdown-toggle p-a-0" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
-            <i class="fa fa-th fa-3x line-height-50"></i>
+            <i class="fa fa-th fa-3x icon__padding--top p-r-1"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <c:forEach var="kapps" items="${space.kapps}">
               <li> 
                 <a href="/kinetic/${space.slug}/${kapps.slug}">
-                  <i class="fa ${kapps.getAttributeValue("fa-logo")} fa-1x pull-left"></i>
+                  <i class="fa ${kapps.getAttributeValue("fa-logo")} fa-1x pull-left icon-black"></i>
                   <div class="pull-right">${kapps.name}</div>
                 </a>
               </li>

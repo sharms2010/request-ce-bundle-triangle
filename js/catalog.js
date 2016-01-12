@@ -14,7 +14,7 @@ $.getJSON("alerts/for-display", function(data){
 });
 };
 function setAlertInterval(){
-    setTimeout(getAlert, 5000);
+    setTimeout(getAlert, 60000);
 }
 getAlert();
 

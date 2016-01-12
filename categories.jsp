@@ -14,9 +14,7 @@
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/categories.js" />
     </bundle:scriptpack>
-    <bundle:stylepack>
-        <bundle:style src="${bundle.location}/css/categories.css "/>
-    </bundle:stylepack>
+
 <div class="container requests m-t-4 m-b-4">
     <div class="row m-b-4">
       <div class="hidden-xs hidden-sm col-md-4">

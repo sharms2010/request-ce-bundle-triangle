@@ -1,0 +1,28 @@
+/*sass file _font*/
+.font-size-50{
+   font-size: 3.57142857143rem; /*equal to 50px*/ 
+}
+
+//this is a font awesome icon (should it be in the icon file?)
+.fa-circle{
+    color: #242e38;
+}
+
+$font-weight: 100 300 500 700;
+$block: font;
+$el-style: thin light medium bold;
+
+.#{$block}{
+    @at-root #{&}{
+        font-family: 'Roboto', sans-serif;
+    }
+    @each $style in $el-style{
+        @at-root #{&}-#{$style}{
+            $i: index($el-style, $style);
+            @at-root #{&}{
+                @extend .#{$block};
+                font-weight: nth($font-weight, $i);
+            }
+        }
+    }
+}

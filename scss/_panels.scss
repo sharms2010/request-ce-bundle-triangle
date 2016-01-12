@@ -1,0 +1,61 @@
+/*sass file _panels*/
+.max-min-height{
+    max-height: 7rem; /*equal to 98px*/
+    min-height: 7rem;
+}
+
+.arrow{
+    @at-root #{&}-right {
+        width: 0; 
+        height: 0; 
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent; 
+    }
+    @at-root #{&}_box {
+        position: relative;
+    }
+    @at-root #{&}_box:after, .arrow_box:before {
+        right: 100%;
+        top: 5rem;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    @at-root #{&}_box:after {
+        border-color: rgba(204, 213, 187, 0);
+        border-right-color: #fff;
+        border-width: 14px;
+        margin-top: -40px;
+    }
+    @at-root #{&}_box:before {
+        border-color: rgba(194, 225, 245, 0);
+        border-width: 20px;
+        margin-top: -46px;
+    }
+}
+
+.panel{ 
+    border: none;
+}
+
+.panel-body{ 
+    box-shadow: 1px 4px 10px $gray-lighter;
+}
+
+
+.panel-body > table > thead > tr > td:nth-child(2){ /*catalog could be replaced with more general catalog*/
+    text-align: right;
+}
+
+.panel-body > table > tbody > tr:nth-child(even) > td:nth-child(1){ /*catalog could be replaced with more general catalog*/
+    border: none;
+}
+
+.panel-body > table > tbody > tr > td:nth-child(2){
+    vertical-align: bottom;
+}
+
