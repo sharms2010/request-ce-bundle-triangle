@@ -22,7 +22,7 @@ $block: icon;
            color: $color;
         }
     }
-    @at-root #{&}--height-50{
-        line-height: 50px;
+    @at-root #{&}__padding--top{
+        padding-top: 1.28571428571rem;
     }
 }

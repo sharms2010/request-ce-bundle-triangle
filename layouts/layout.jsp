@@ -38,10 +38,10 @@
         <bundle:yield name="head"/>
     </head>
     <body>
-    <c:import url="${bundle.path}/partials/shared/navbar.jsp" charEncoding="UTF-8"/>
-
-        <bundle:yield/>
-
-    <c:import url="${bundle.path}/partials/shared/footer.jsp" charEncoding="UTF-8"/>
+        <c:import url="${bundle.path}/partials/shared/navbar.jsp" charEncoding="UTF-8"/>
+        <div class="view-port"> 
+            <bundle:yield/>
+        </div> 
+        <c:import url="${bundle.path}/partials/shared/footer.jsp" charEncoding="UTF-8"/>
     </body>
 </html>

@@ -1,19 +1,30 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="bundle/initialization.jspf" %>
 
+<%@page import="java.io.File,com.kineticdata.core.web.bundles.Bundle"%>
 <% 
     String view = "catalog";
-    request.setAttribute("view", view);    
+    request.setAttribute("view", view);  
+    
+     // Determine if the alerts bundle is installed on the server
+    Bundle bundle = (Bundle)request.getAttribute("bundle");
+    String alertsBundlePath = request.getServletContext().getRealPath(bundle.getPath() + "/../alerts");
+    File alertsBundleDirectory = new File(alertsBundlePath);
+    if (alertsBundleDirectory.exists() && alertsBundleDirectory.canRead()) {
+        request.setAttribute("alertsBundleExists", true);
+    }
  %>
 
 <bundle:layout page="layouts/layout.jsp">
   <bundle:variable name="head">
       <title>Kinetic Data ${text.escape(kapp.name)}</title>
   </bundle:variable>
+      
+  <c:if test="${alertsBundleExists}">
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/catalog.js" />
     </bundle:scriptpack>
-
+  </c:if>
       
  <!-- search -->
   <div class="container hidden-xs m-b-4 m-t-4 search-catalog">
@@ -116,12 +127,14 @@
           </div>
         </div>
       <div class="col-sm-5">
-        <div class="panel panel-default">
-          <div class="panel-heading background-quaternary">
-            <div class="panel-title"><h4>ALERTS</h4></div>
+        <c:if test="${alertsBundleExists}">
+          <div class="panel panel-default">
+            <div class="panel-heading background-quaternary">
+              <div class="panel-title"><h4>ALERTS</h4></div>
+            </div>
+            <c:import url="partials/static/alerts.jsp" charEncoding="UTF-8"/>
           </div>
-          <c:import url="partials/static/alerts.jsp" charEncoding="UTF-8"/>
-        </div>
+        </c:if>
         <div class=" hidden-xs">
         <a class="twitter-timeline" href="https://twitter.com/KineticData" data-widget-id="569678005275226112" data-chrome="nofooter">Tweets by @KineticData</a>
         </div>

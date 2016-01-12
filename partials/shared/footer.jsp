@@ -2,12 +2,12 @@
 <%@include file="../../bundle/initialization.jspf" %>
 
 <footer class="footer p-a-0">
-    <div class="footer__overlay m-a-0">
+    <div class="footer__overlay footer_header m-a-0">
       <div class="container">
-        <div class="row white">
+        <div class="row footer__content white">
           <div class="col-md-6">
               <div>
-                <h4 class="m-b-1">FOOTER HERE</h4>
+                <h4 class="footer_header m-b-1">FOOTER HERE</h4>
               </div>
               <div>
                 <h4 class="m-t-1">Acme stands out as an industry leader in a competitive field.  The quality of our products has won us the trust of our customers and the admiration of our industry peers.  Acme has had numerous accolades bestowed upon us in our 150 years in the business.  If you think Acme can be a solution to a problem you are having please let us know.</h4>
@@ -15,7 +15,7 @@
           </div>
           <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
               <div>
-                <h4 class="m-b-1">LINKS HERE</h4>
+                <h4 class="footer_header m-b-1">LINKS HERE</h4>
               </div>
               <div>
                 <h5><a href="http://getbootstrap.com/">Bootstrap</a></h5>
@@ -27,7 +27,7 @@
           </div>
           <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
               <div>
-                <h4 class="m-b-1">LINKS HERE</h4>
+                <h4 class="footer_header m-b-1">LINKS HERE</h4>
               </div>
               <div>
                <h5><a href="http://getbootstrap.com/">ブートストラップ</a></h5>
@@ -59,10 +59,9 @@
               <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
             </span>
         </a>
-        </div>
-      </div>
     </div>
-<div>
+  </div>
+</div>
 
 <!-- having the script tag her is a temporary work around due to url issue so that the twitter feed will show on the kapp page-->
    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

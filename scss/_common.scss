@@ -1,35 +1,6 @@
-.all-services {
-    font-size: .5em;
-    font-weight: normal;
-    color: #ccc;
-    margin-left: 1em;
-}
-.feed-content {
-    border: 1px solid black;
-    padding: 15px;
-}
-
-h3.uncategorized{
-  color: #CCCCCC;
-}
-
-section.configbar{
-  margin-top:1em;
-}
-
-section.configbar li.active{
-  font-weight:bold;
-}
-
 /*border control*/
 .border-none{
     border: none;
-}
-
-.overlay{
-    width: 100%;
-    background-color: rgba(5, 12, 19, 0.75);
-    filter: alpha(opacity=75); /* For IE8 and earlier */
 }
 
 /*5 column deff*/

@@ -4,7 +4,7 @@
 
 
  <header class="header clearfix">
-  <nav class=" overlay m-b-0">
+  <nav class="header__overlay m-b-0">
     <div class="container">
 <!-- logo -->
         <a href="${bundle.spaceLocation}/${kapp.slug}" class="navbar-brand p-a-0">
@@ -26,9 +26,9 @@
         </div>
       </div>
 <!-- categories -->
-        <div class="dropdown pull-right border-none m-a-0 p-a-2">          
+        <div class="dropdown pull-right border-none m-a-0">          
           <a id="categories" href="#" class="dropdown-toggle p-a-0" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
-            <i class="fa fa-th fa-3x line-height-50"></i>
+            <i class="fa fa-th fa-3x icon__padding--top p-r-1"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <c:forEach var="kapps" items="${space.kapps}">
