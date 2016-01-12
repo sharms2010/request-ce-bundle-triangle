@@ -18,8 +18,7 @@
   color: #858585 !important; }
 
 /*scss file _reboot*/
-html, body {
-  height: 100%;
+html {
   font-size: 14px; }
 
 body {
