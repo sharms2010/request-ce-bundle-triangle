@@ -19,27 +19,41 @@
         
         <bundle:stylepack>
             <bundle:style src="${bundle.location}/libraries/bootstrap/bootstrap.min.css" />
+            <bundle:style src="${bundle.location}/libraries/dataTables/media/css/jquery.dataTables.min.css" />
             <bundle:style src="${bundle.location}/css/master.css "/>
         </bundle:stylepack>
+        
+
+<!-- DataTables CSS-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.0.0/css/responsive.dataTables.min.css">
+
+<!-- DataTables JS-->
+<script type='text/javascript' src='https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js'></script>
+<script type='text/javascript' src='https://cdn.datatables.net/responsive/2.0.0/js/dataTables.responsive.min.js'></script>
+            
+
 
         <link href="${bundle.location}/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="${bundle.location}/css/temp.css"/>
         <bundle:scriptpack>
+             <bundle:script src="${bundle.location}/libraries/kd-search/search.js" />
             <bundle:script src="${bundle.location}/libraries/jquery/jquery.min.js" />
             <bundle:script src="${bundle.location}/libraries/bootstrap/bootstrap.min.js" />
             <bundle:script src="${bundle.location}/libraries/jquery-datatables/jquery.dataTables.js" />
             <bundle:script src="${bundle.location}/js/common.js" />
-            <bundle:script src="${bundle.location}/libraries/typeahead/typeahead.js/bloodhound.min.js" />
-            <bundle:script src="${bundle.location}/libraries/typeahead/typeahead.js/typeahead.jquery.min.js" />
-            <bundle:script src="${bundle.location}/libraries/typeahead/typeahead.js/typeahead.bundle.min.js" />
-            <bundle:script src="${bundle.location}/libraries/typeahead/typeahead-front.js" />
+            <bundle:script src="${bundle.location}/js/searchConfig.js" />
         </bundle:scriptpack>
-
+        
+        <script src="${bundle.location}/libraries/typeahead/typeahead.js/bloodhound.js"></script>
+        <script src="${bundle.location}/libraries/typeahead/typeahead.js/typeahead.jquery.js"></script>
+        <script src="${bundle.location}/libraries/typeahead/typeahead.js/typeahead.bundle.js"></script>
+        <script src="${bundle.location}/libraries/typeahead/typeahead-front.js"></script>
+        
         <bundle:yield name="head"/>
     </head>
     <body>
         <c:import url="${bundle.path}/partials/shared/navbar.jsp" charEncoding="UTF-8"/>
-        <div class="view-port"> 
+        <div class="temp"> 
             <bundle:yield/>
         </div> 
         <c:import url="${bundle.path}/partials/shared/footer.jsp" charEncoding="UTF-8"/>

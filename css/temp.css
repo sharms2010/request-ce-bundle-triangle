@@ -42,7 +42,7 @@
   margin: 0;
 }
 
-//this attempts to solve the problem of empty window content and footer pacement (revise)
-.veiw-port{
-    min-height: 55%
+/*this attempts to solve the problem of empty window content and footer pacement (revise)*/
+.temp{
+    min-height: 525px;
 }

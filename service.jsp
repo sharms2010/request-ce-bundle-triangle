@@ -14,7 +14,7 @@
       <h2>${form.name}
         <small> for: 
           
-          <span id="reqForUser">${identity.username}</span> 
+          <span id="reqForUser">Me</span> 
           <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#personSearchModal" data-personField="ReqForUserID">Change User</button>
         </small>
       </h2>
@@ -44,12 +44,10 @@
           </div>
         </div>
       </div>
-      <div id="personTableDiv" style="display:none">
-        <table id="personTable">
-        </table>
+      <div class="personTableDiv" >
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" id="closeModal" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" id="searchForPerson">Search</button>
       </div>
     </div><!-- /.modal-content -->
