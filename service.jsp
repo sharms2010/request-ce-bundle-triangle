@@ -15,7 +15,7 @@
         <small> for: 
           
           <span id="reqForUser">Me</span> 
-          <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#personSearchModal" data-personField="ReqForUserID">Change User</button>
+          <button type="button" class="btn btn-default btn-xs pull-right" data-toggle="modal" data-target="#personSearchModal" data-personField="ReqForUserID">Change User</button>
         </small>
       </h2>
     </header>
@@ -29,26 +29,18 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" id="closeModal" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Find a User</h4>
       </div>
       <div class="modal-body">
         <div id="searchInput">
           <div class="form-group">
-              <label for="first-name" class="control-label">First Name:</label>
-              <input type="text" class="form-control" id="first-name">
-          </div>
-          <div class="form-group">
-            <label for="last-name" class="control-label">Last Name:</label>
-            <input class="form-control" id="last-name"></input>
+              <label for="first-name" class="control-label">Enter the name of the user you are looking for:</label>
+              <input type="text" class="form-control" id="name">
           </div>
         </div>
       </div>
-      <div class="personTableDiv" >
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" id="closeModal" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="searchForPerson">Search</button>
+      <div id="personTableDiv">
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

@@ -31,7 +31,7 @@
           <i class="icon-control-feedback fa fa-play"></i>
         </button>
       </div>
-      <div class="rightDetails col-md-8 p-b-4 p-t-4">
+      <div class="right-details col-md-8 p-b-4 p-t-4">
         <ul>
           <c:forEach var="run" items="${TaskRuns.find(submission)}">
               <c:forEach var="task" items="${run.tasks}">

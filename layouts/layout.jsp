@@ -31,8 +31,6 @@
 <script type='text/javascript' src='https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js'></script>
 <script type='text/javascript' src='https://cdn.datatables.net/responsive/2.0.0/js/dataTables.responsive.min.js'></script>
             
-
-
         <link href="${bundle.location}/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="${bundle.location}/css/temp.css"/>
         <bundle:scriptpack>
@@ -48,7 +46,14 @@
         <script src="${bundle.location}/libraries/typeahead/typeahead.js/typeahead.jquery.js"></script>
         <script src="${bundle.location}/libraries/typeahead/typeahead.js/typeahead.bundle.js"></script>
         <script src="${bundle.location}/libraries/typeahead/typeahead-front.js"></script>
-        
+        <%--                    <script src="${bundle.location}/libraries/dataTables/media/js/jquery.dataTables.js" ></script>
+            <script src="${bundle.location}/libraries/dataTables/media/js/dataTables.bootstrap.js" ></script>
+            <script src="${bundle.location}/libraries/dataTables/media/js/dataTables.foundation.js" ></script>
+            <script src="${bundle.location}/libraries/dataTables/media/js/dataTables.jqueryui.js" ></script>
+            <script src="${bundle.location}/libraries/dataTables/extensions/Responsive/js/dataTables.responsive.js" ></script>
+            <script src="${bundle.location}/libraries/dataTables/extensions/Responsive/js/responsive.bootstrap.js" ></script>
+            <script src="${bundle.location}/libraries/dataTables/extensions/Responsive/js/responsive.foundation.js" ></script>
+            <script src="${bundle.location}/libraries/dataTables/extensions/Responsive/js/responsive.jqueryui.js" ></script>--%>
         <bundle:yield name="head"/>
     </head>
     <body>

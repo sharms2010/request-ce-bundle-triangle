@@ -18,7 +18,8 @@
   color: #858585 !important; }
 
 /*scss file _reboot*/
-html {
+html, body {
+  height: 100%;
   font-size: 14px; }
 
 body {
@@ -166,6 +167,22 @@ input.x {
 .right-details > ul > li > div > p {
   color: #818181;
   margin-top: 1.25rem; }
+
+/*scss _left-column file*/
+.left-column {
+  background-color: #ffffff;
+  border-right: 1px solid whitesmoke;
+  -webkit-box-shadow: 1px 4px 10px #d4d4d4;
+  box-shadow: 1px 4px 10px #d4d4d4;
+  padding-top: 2.85714285714px;
+  padding-bottom: 2.85714285714px;
+  padding-right: 3rem; }
+.left-column > h4:nth-child(odd) {
+  color: #858585; }
+.left-column > h4:nth-child(even) {
+  padding-top: 2rem; }
+.left-column > p {
+  padding: 2rem 0 2rem 0; }
 
 /*sass file _font*/
 .font-size-50 {
