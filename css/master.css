@@ -272,8 +272,9 @@ input.x {
   color: #ffa31c; }
 .icon-tertiary {
   color: #b996a5; }
-.icon__padding--top {
-  padding-top: 1.28571428571rem; }
+.icon__pad--y {
+  padding-top: 1.07142857143rem;
+  padding-bottom: 0.92857142857rem; }
 
 /*sass file _nav*/
 .nav {

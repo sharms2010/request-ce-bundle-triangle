@@ -1,0 +1,24 @@
+<%!
+    public static class SearchHelper {
+        
+        public List<Form> filter(List<Form> forms, String queryString) {
+            // Process the query string
+            List<String> terms = Arrays.asList(queryString.trim().split(" ")).stream()
+                .map(term -> term.toLowerCase())
+                .collect(Collectors.toList());
+            // Return the forms that match all search terms
+            return forms.stream()
+                .filter(form -> {
+                    return terms.stream()
+                        .allMatch(term -> {
+                            return form.getName().toLowerCase().contains(term)
+                                || form.getDescription().toLowerCase().contains(term)
+                                || form.getAttributes().stream()
+                                    .anyMatch(attribute -> attribute.getValues().stream()
+                                        .anyMatch(value -> value.toLowerCase().contains(term)));
+                        });
+                })
+                .collect(Collectors.toList());
+        }
+    }
+%>

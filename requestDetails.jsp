@@ -14,8 +14,8 @@
       
       <div class ="container-fluid details splitBackgound">
       <div class="container">
-      <div class="left-column col-md-4">
-        <h1>${submission.form.name}</h1>
+      <div class="left-column col-md-4 p-y-3">
+          <h1>${submission.form.name}</h1>
         <h4>Request ID:</h4>
         <h4>${submission.id}</h4>
        
@@ -26,10 +26,11 @@
         <h4>${submission.coreState}</h4>
       
         <p>This could be instructions. This could be a brief description. This could also be a status update. Esto podría ser instrucciones. Esto podría ser una breve descripción. Esto también podría ser una actualización de estado. Kini mahimong mga panudlo. Kini mahimo nga usa ka mubo nga paghulagway. Kini mahimo usab nga usa ka status update.</p>
-
-        <button class="btn btn-primary">BUTTON HERE
+        <a href="${bundle.spaceLocation}/submissions/${submission.id}?review">
+        <button class="btn btn-primary">Review Request
           <i class="icon-control-feedback fa fa-play"></i>
         </button>
+        </a>
       </div>
       <div class="right-details col-md-8 p-b-4 p-t-4">
         <ul>

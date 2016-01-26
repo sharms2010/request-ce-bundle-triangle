@@ -10,6 +10,22 @@
         <a href="${bundle.spaceLocation}/${kapp.slug}" class="navbar-brand p-a-0">
            <h1 class="p-l-1 font-thin white line-height-70 font-size-50">${kapp.getAttributeValue("Company Name")}</h1>
         </a>
+<!-- categories -->
+        <div class="dropdown pull-right border-none m-a-0">          
+          <a id="categories" href="#" class="dropdown-toggle p-a-0" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+            <i class="fa fa-bars fa-3x icon__pad--y p-l-1"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <c:forEach var="kapps" items="${space.kapps}">
+              <li> 
+                <a href="/kinetic/${space.slug}/${kapps.slug}">
+                  <i class="fa ${kapps.getAttributeValue("fa-logo")} fa-fw fa-1x icon-black"></i>
+                  <span>${kapps.name}</span>
+                </a>
+              </li>
+            </c:forEach>
+          </ul>
+        </div>
 <!-- Profile -->
       <div class="dropdown pull-right border-none m-a-0 p-a-1">          
         <a id="profile" href="#" class="dropdown-toggle p-a-0" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
@@ -25,22 +41,6 @@
             </div>
         </div>
       </div>
-<!-- categories -->
-        <div class="dropdown pull-right border-none m-a-0">          
-          <a id="categories" href="#" class="dropdown-toggle p-a-0" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
-            <i class="fa fa-th fa-3x icon__padding--top p-r-1"></i>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-right">
-            <c:forEach var="kapps" items="${space.kapps}">
-              <li> 
-                <a href="/kinetic/${space.slug}/${kapps.slug}">
-                  <i class="fa ${kapps.getAttributeValue("fa-logo")} fa-1x pull-left icon-black"></i>
-                  <div class="pull-right">${kapps.name}</div>
-                </a>
-              </li>
-            </c:forEach>
-          </ul>
-        </div>
     </div>
   </nav>
 </header>

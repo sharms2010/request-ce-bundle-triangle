@@ -22,7 +22,8 @@ $block: icon;
            color: $color;
         }
     }
-    @at-root #{&}__padding--top{
-        padding-top: 1.28571428571rem;
+    @at-root #{&}__pad--y{
+        padding-top: 1.07142857143rem;
+        padding-bottom: 0.92857142857rem;
     }
 }

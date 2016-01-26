@@ -43,7 +43,8 @@
          </div>
        </form>
     </div>
-
+ 
+ <!-- Teal category nav -->
   <div class="nav m-b-4">
     <div class="container">
       <div class="row">
@@ -72,38 +73,22 @@
       </div>
     </div>
   </div>
+ 
+<!-- set variables at parent level to be used to not display panels -->
+  <c:set scope="request" var="submissionsListDraft" value="${SubmissionHelper.retrieveRecentSubmissions('Service', 'Draft', 3)}"/>
+  <c:set scope="request" var="submissionsListSubmitted" value="${SubmissionHelper.retrieveRecentSubmissions('Service', 'Submitted', 3)}"/>
+  <c:set scope="request" var="submissionsListApproval" value="${SubmissionHelper.retrieveRecentSubmissions('Approval', 3)}"/>  
+
+<!-- Approval and Requests panel display 
+    If{not empty list} is used  to not display panel if the list is empty-->
   <div class="container m-b-4">
     <div class="row">
       <div class="col-sm-7 leftside">
-        <div class="panel panel-default">
-          <div class="panel-heading background-tertiary">
-            <div class="panel-title"><h4 class="white">YOUR REQUESTS</h4></div>
-          </div>
-          <div class="panel-body">
-            <table class="table m-a-0">
-              <thead>
-                <tr>
-                  <td class="font-bold p-t-0 gray">SUMMARY</td>
-                  <td class="font-bold p-t-0 text-right gray hidden-xs">STATUS</td>
-                </tr>
-              </thead>
-              <tbody>
-                <c:set var="table" value="request" scope="session"/>
-                <h3>${text.escape(form.name)}</h3>
-                <c:import url="partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td class="font-bold" colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-        </div>
-        <div class="panel panel-default ">
-          <div class="panel-heading background-tertiary">
-            <div class="panel-title"><h4 class="white">YOUR APPROVALS</h4></div>
-          </div>
+        <c:if test="${not empty submissionsListDraft}">
+          <div class="panel panel-default">
+            <div class="panel-heading background-tertiary">
+              <div class="panel-title"><h4 class="white">YOUR REQUESTS - DRAFT</h4></div>
+            </div>
             <div class="panel-body">
               <table class="table m-a-0">
                 <thead>
@@ -113,19 +98,77 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <c:set var="table" value="approval" scope="session"/>
+                  <c:set var="table" value="request-draft" scope="session"/>
                   <h3>${text.escape(form.name)}</h3>
                   <c:import url="partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
                 </tbody>
                 <tfoot>
                   <tr>
-                    <td class="font-bold" colspan="2"><center><a href="#">VIEW MORE</a></center></td>
+                    <td class="font-bold" colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
                   </tr>
                 </tfoot>
               </table>
-             </div>
+            </div>
           </div>
-        </div>
+        </c:if>
+        <c:if test="${not empty submissionsListSubmitted}">
+            <div class="panel panel-default">
+              <div class="panel-heading background-tertiary">
+                <div class="panel-title"><h4 class="white">YOUR REQUESTS - SUBMITTED</h4></div>
+              </div>
+              <div class="panel-body">
+                <table class="table m-a-0">
+                  <thead>
+                    <tr>
+                      <td class="font-bold p-t-0 gray">SUMMARY</td>
+                      <td class="font-bold p-t-0 text-right gray hidden-xs">STATUS</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <c:set var="table" value="request-submitted" scope="session"/>
+                    <h3>${text.escape(form.name)}</h3>
+                    <c:import url="partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td class="font-bold" colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+        </c:if>
+        <c:if test="${not empty submissionsListApproval}">
+            <div class="panel panel-default ">
+              <div class="panel-heading background-tertiary">
+                <div class="panel-title"><h4 class="white">YOUR APPROVALS</h4></div>
+              </div>
+                <div class="panel-body">
+                  <table class="table m-a-0">
+                    <thead>
+                      <tr>
+                        <td class="font-bold p-t-0 gray">SUMMARY</td>
+                        <td class="font-bold p-t-0 text-right gray hidden-xs">STATUS</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <c:set var="table" value="approval" scope="session"/>
+                      <h3>${text.escape(form.name)}</h3>
+                      <c:import url="partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td class="font-bold" colspan="2"><center><a href="#">VIEW MORE</a></center></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                 </div>
+              </div>
+        </c:if>
+      </div>
+        
+<!-- Alerts display panel 
+    If{bundleExists} will not display panel if the alerts bundle is not include in the space-->
       <div class="col-sm-5">
         <c:if test="${alertsBundleExists}">
           <div class="panel panel-default">
@@ -135,6 +178,8 @@
             <c:import url="partials/static/alerts.jsp" charEncoding="UTF-8"/>
           </div>
         </c:if>
+          
+<!-- Kinetic Twitter feed -->
         <div class=" hidden-xs">
         <a class="twitter-timeline" href="https://twitter.com/KineticData" data-widget-id="569678005275226112" data-chrome="nofooter">Tweets by @KineticData</a>
         </div>
