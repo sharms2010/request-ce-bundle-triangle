@@ -27,22 +27,15 @@
   </c:if>
       
  <!-- search -->
-  <div class="container hidden-xs m-b-4 m-t-4 search-catalog">
+  <div class="container m-b-4 m-t-4 search-catalog">
     <h1 class="p-b-1 text-center">How can we help you today?</h1>
-    <form action="/where" method="GET" role="form"> 
+    <form action="${bundle.kappLocation}/search" method="GET" role="form"> 
       <div class="form-group has-feedback">
-        <input type="text" class="states form-control predictiveText x" name="states"/>
+        <input type="text" class="states form-control predictiveText x" name="q"/>
         <i class="form-control-feedback fa fa-search search-catalog-icon"></i>
       </div>
     </form>  
   </div>
-    <div class="container visible-xs m-b-4 m-t-4 search-catalog"> 
-       <form action="/where" method="GET" class="border-none m-a-0" role="search"> 
-         <div class="form-group">
-           <input type="text" class="states form-control predictiveText" placeholder="search" name="states"/>
-         </div>
-       </form>
-    </div>
  
  <!-- Teal category nav -->
   <div class="nav m-b-4">
@@ -230,14 +223,19 @@
     };           
     
     $('.predictiveText').typeahead({
-        hint: true,
-        highlight: true,
-        minLength: 1,
-    },
-    {
-        source: substringMatcher(forms)
-    }).on('typeahead:selected', function(event, datum) {
-        window.location.href = window.bundle.kappLocation() + "/" + map[datum].formSlug;
-});;
+	        hint: true,
+	        highlight: true,
+	        minLength: 1,
+	    },
+	    {
+	        source: substringMatcher(forms)
+	    }).on('typeahead:selected', function(event, datum) {
+	        window.location.href = window.bundle.kappLocation() + "/" + map[datum].formSlug;
+	        $(this).off('keyup');
+		}).on('keyup', function(event) {
+			if (event.which == 13){
+		    	$(this).closest('form').submit();
+			}
+		});
 
 </script>

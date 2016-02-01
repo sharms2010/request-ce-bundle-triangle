@@ -19,6 +19,7 @@
         
         <bundle:stylepack>
             <bundle:style src="${bundle.location}/libraries/bootstrap/bootstrap.min.css" />
+            <bundle:style src="${bundle.location}/libraries/notifie/jquery.notifie.css" />
             <bundle:style src="${bundle.location}/libraries/dataTables/media/css/jquery.dataTables.min.css" />
             <bundle:style src="${bundle.location}/css/master.css "/>
         </bundle:stylepack>
@@ -37,6 +38,7 @@
              <bundle:script src="${bundle.location}/libraries/kd-search/search.js" />
             <bundle:script src="${bundle.location}/libraries/jquery/jquery.min.js" />
             <bundle:script src="${bundle.location}/libraries/bootstrap/bootstrap.min.js" />
+            <bundle:script src="${bundle.location}/libraries/notifie/jquery.notifie.js" />
             <bundle:script src="${bundle.location}/libraries/jquery-datatables/jquery.dataTables.js" />
             <bundle:script src="${bundle.location}/js/common.js" />
             <bundle:script src="${bundle.location}/js/searchConfig.js" />
