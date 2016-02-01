@@ -45,9 +45,6 @@
 
 
 <script>
-	
-
 	$('button').on('click', function(e){
-		
 	});
 </script>

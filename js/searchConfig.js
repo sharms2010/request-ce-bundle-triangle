@@ -66,7 +66,7 @@ searchConfig ={
 			console.log(this);
 		},
 		// Executes on click of element with class of select
-		clickCallback: function(results){          
+		clickCallback: function(results){
                         $('#reqForUser').empty().append(results["First Name"]+ ' ' + results["Last Name"]);
 			$('#closeModal').click()
 		},
@@ -76,10 +76,10 @@ searchConfig ={
 			console.log(aaData);
 		},
 		dom: 'Brtip',
-                
+
 	},
         /****NOT IN USE****/
-	// Example of full configuration of a seach object to return results as a List 
+	// Example of full configuration of a seach object to return results as a List
 //	personSearchBridgeList:{
 //		type: "BridgeList",
 //		bridgeConfig:{

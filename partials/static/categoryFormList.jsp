@@ -5,7 +5,8 @@
         <li>
             <h3>
                 <a href="${bundle.kappLocation}/${categoryForm.slug}">
-                    <i class="fa ${categoryForm.getAttribute("Image Class").value} fa-fw"></i> ${app:escape(categoryForm.name)}</a>
+                    <i class="fa ${categoryForm.getAttribute("Image Class").value} fa-fw"></i> ${app:escape(categoryForm.name)}
+                </a>
             </h3>
             <c:if test="${not empty categoryForm.description}">
             <p>${categoryForm.description}</p>

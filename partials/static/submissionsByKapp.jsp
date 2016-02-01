@@ -2,9 +2,8 @@
 <%@include file="../../bundle/initialization.jspf" %>
 
 <c:if test="${view eq 'submissions'}">
-            <c:set scope="request" var="submissionsList" 
-               value="${SubmissionHelper.retrieveRecentSubmissions('Service')}"/>
-<c:import url="partials/static/submissions/submissions.jsp" charEncoding="UTF-8"/>
+    <c:set scope="request" var="submissionsList" value="${SubmissionHelper.retrieveRecentSubmissions('Service')}"/>
+    <c:import url="partials/static/submissions/submissions.jsp" charEncoding="UTF-8"/>
 </c:if>
 
 <c:if test="${view eq 'catalog'}">
