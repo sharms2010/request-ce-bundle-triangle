@@ -30,7 +30,6 @@
 
             java.util.Map<String,String[]> searchOptions = new java.util.HashMap<>();
 
-            searchOptions.put("createdBy", new String[] {identity.getUsername()});
             searchOptions.put("end", new String[] {Time.format(end)} );
             searchOptions.put("start", new String[] {Time.format(start)} );
             searchOptions.put("type", new String[] {type});
