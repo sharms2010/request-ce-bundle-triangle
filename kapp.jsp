@@ -88,7 +88,7 @@
                             <tbody>
                                 <c:set var="table" value="request-draft" scope="session"/>
                                 <h3>${text.escape(form.name)}</h3>
-                                <c:import url="partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+                                <c:import url="partials/submissionsByKapp.jsp" charEncoding="UTF-8"/>
                             </tbody>
                             <tfoot>
                             <tr>
@@ -115,7 +115,7 @@
                             <tbody>
                                 <c:set var="table" value="request-submitted" scope="session"/>
                                 <h3>${text.escape(form.name)}</h3>
-                                <c:import url="partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+                                <c:import url="partials/submissionsByKapp.jsp" charEncoding="UTF-8"/>
                             </tbody>
                             <tfoot>
                             <tr>
@@ -144,7 +144,7 @@
                             <tbody>
                                 <c:set var="table" value="approval" scope="session"/>
                                 <h3>${text.escape(form.name)}</h3>
-                                <c:import url="partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+                                <c:import url="partials/submissionsByKapp.jsp" charEncoding="UTF-8"/>
                             </tbody>
                             <tfoot>
                             <tr>
@@ -164,7 +164,7 @@
                     <div class="panel-heading background-quaternary">
                         <div class="panel-title"><h4>ALERTS</h4></div>
                     </div>
-                    <c:import url="partials/static/alerts.jsp" charEncoding="UTF-8"/>
+                    <c:import url="partials/alerts.jsp" charEncoding="UTF-8"/>
                 </div>
                 </c:if>
                 <!-- Kinetic Twitter feed -->

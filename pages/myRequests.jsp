@@ -13,6 +13,6 @@
     <bundle:variable name="head">
         <title>Kinetic Data ${kapp.name}</title>
     </bundle:variable>
-    <c:import url="partials/static/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+    <c:import url="${bundle.path}/partials/submissionsByKapp.jsp" charEncoding="UTF-8"/>
     <app:bodyContent/>
 </bundle:layout>
