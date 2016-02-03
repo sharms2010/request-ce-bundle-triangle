@@ -1,11 +1,15 @@
-<%@page pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
-<%@page import="org.json.simple.JSONValue"%>
 <%-- Load Java libraries, Kinetic models & Identity --%>
-<%@page import="com.kineticdata.bundles.*" %>
-<%@page import="com.kineticdata.core.authentication.Identity" %>
-<%@page import="com.kineticdata.core.models.*" %>
-<%@page import="com.kineticdata.core.services.BundleSubmissionService"%>
+<%@page pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@page import="java.util.*" %>
+<%@page import="org.json.simple.JSONValue"%>
+<%@page import="com.kineticdata.core.models.*" %>
+<%@page import="com.kineticdata.core.web.bundles.Bundle" %>
+<%@page import="com.kineticdata.core.authentication.Identity" %>
+
+
+<%-- Bundle Java libraries --%>
+<%@page import="com.kineticdata.core.services.BundleSubmissionService"%>
+<%@page import="com.kineticdata.bundles.*" %>
 
 <%-- Load tag libraries (JSTL) used in most bundles --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -16,12 +20,16 @@
 <%@taglib prefix="json" uri="http://kineticdata.com/taglibs/json" %>
 
 <%@include file="/WEB-INF/app/includes/task4/task4.jspf" %>
+<%
+    //Get bundle object
+    Bundle bundle = (Bundle)request.getAttribute("bundle"); 
+%>
+
 <%@include file="SubmissionHelper.jspf" %>
 <%-- Load helper(s) --%>
 <%
     request.setAttribute("json", new com.kineticdata.bundles.JsonHelper());
     request.setAttribute("text", new com.kineticdata.bundles.TextHelper());
     request.setAttribute("time", new com.kineticdata.bundles.TimeHelper());
-
     request.setAttribute("SubmissionHelper", new SubmissionHelper(request));
 %>

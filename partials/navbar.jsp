@@ -1,5 +1,5 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
-<%@include file="../../bundle/initialization.jspf" %>
+<%@include file="../bundle/initialization.jspf" %>
 <header class="header clearfix">
     <nav class="header__overlay m-b-0">
         <div class="container">
@@ -34,7 +34,7 @@
                 <div class="dropdown-menu dropdown-menu-right p-a-1">
                     <p class="font-medium m-b-0">${identity.username}</p>
                     <div class="navAccount font-medium">
-                        <a href="${bundle.spaceLocation}/${kapp.slug}/profile">Your Account</a>
+                        <a href="${bundle.spaceLocation}/${kapp.slug}?page=profile">Your Account</a>
                     </div>
                 </div>
             </div>

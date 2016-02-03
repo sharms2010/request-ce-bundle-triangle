@@ -1,5 +1,5 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
-<%@include file="../../bundle/initialization.jspf" %>
+<%@include file="../bundle/initialization.jspf" %>
 <div class="nav">
     <div class="container">
         <div class="row">

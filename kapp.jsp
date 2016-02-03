@@ -1,18 +1,20 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="bundle/initialization.jspf" %>
+<%@include file="bundle/router.jspf" %>
+
 <%@page import="java.io.File,com.kineticdata.core.web.bundles.Bundle"%>
 <%
-String view = "catalog";
-request.setAttribute("view", view);
-// Determine if the alerts bundle is installed on the server
-Bundle bundle = (Bundle)request.getAttribute("bundle");
-String alertsBundlePath = request.getServletContext().getRealPath(bundle.getPath() + "/../alerts");
-File alertsBundleDirectory = new File(alertsBundlePath);
-if (alertsBundleDirectory.exists() && alertsBundleDirectory.canRead()) {
-request.setAttribute("alertsBundleExists", true);
-}
+    String view = "catalog";
+    request.setAttribute("view", view);
+    // Determine if the alerts bundle is installed on the server
+    //  Bundle bundle = (Bundle)request.getAttribute("bundle");
+    String alertsBundlePath = request.getServletContext().getRealPath(bundle.getPath() + "/../alerts");
+    File alertsBundleDirectory = new File(alertsBundlePath);
+    if (alertsBundleDirectory.exists() && alertsBundleDirectory.canRead()) {
+    request.setAttribute("alertsBundleExists", true);
+    }
 %>
-<bundle:layout page="layouts/layout.jsp">
+<bundle:layout page="${bundle.path}/layouts/layout.jsp">
     <bundle:variable name="head">
         <title>Kinetic Data ${text.escape(kapp.name)}</title>
     </bundle:variable>
@@ -24,8 +26,9 @@ request.setAttribute("alertsBundleExists", true);
     <!-- search -->
     <div class="container m-b-4 m-t-4 search-catalog">
         <h1 class="p-b-1 text-center">How can we help you today?</h1>
-        <form action="${bundle.kappLocation}/search" method="GET" role="form">
+        <form action="${bundle.kappLocation}" method="GET" role="form">
             <div class="form-group has-feedback">
+                <input type="hidden" value="search" name="page">
                 <input type="text" class="states form-control predictiveText x" name="q"/>
                 <i class="form-control-feedback fa fa-search search-catalog-icon"></i>
             </div>

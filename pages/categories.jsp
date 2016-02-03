@@ -1,11 +1,11 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
-<%@include file="bundle/initialization.jspf" %>
+<%@include file="../bundle/initialization.jspf" %>
 <%
 String category = request.getParameter("category");
 request.setAttribute("category", category);
 %>
-<bundle:layout page="layouts/layout.jsp">
-    <c:import url="${bundle.path}/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
+<bundle:layout page="${bundle.path}/layouts/layout.jsp">
+    <c:import url="${bundle.path}/partials/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:variable name="head">
         <title>Kinetic Data ${text.escape(kapp.name)}</title>
     </bundle:variable>

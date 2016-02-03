@@ -59,10 +59,10 @@
             <bundle:yield name="head"/>
     </head>
     <body>
-        <c:import url="${bundle.path}/partials/shared/navbar.jsp" charEncoding="UTF-8"/>
+        <c:import url="${bundle.path}/partials/navbar.jsp" charEncoding="UTF-8"/>
         <div class="temp">
             <bundle:yield/>
         </div>
-        <c:import url="${bundle.path}/partials/shared/footer.jsp" charEncoding="UTF-8"/>
+        <c:import url="${bundle.path}/partials/footer.jsp" charEncoding="UTF-8"/>
     </body>
 </html>

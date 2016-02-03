@@ -1,5 +1,5 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
-<%@include file="../../../bundle/initialization.jspf" %>
+<%@include file="../bundle/initialization.jspf" %>
 
 <c:forEach var="submission" items="${submissionsList}">
     <tr>	
