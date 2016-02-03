@@ -40,7 +40,7 @@
             if (number != null) {
                 searchOptions.put("limit", new String[] {String.valueOf(number)});
             }
-            if(type == "Approval"){
+            if("Approval".equals(type)){
                 searchOptions.put("values[Assigned Individual]", new String[] {identity.getUsername()});
             } else {
                 searchOptions.put("createdBy", new String[] {identity.getUsername()});
