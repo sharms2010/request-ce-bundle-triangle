@@ -5,7 +5,7 @@
     request.setAttribute("view", view);
 %>
 <bundle:layout page="${bundle.path}/layouts/layout.jsp">
-    <c:import url="${bundle.path}/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
+    <c:import url="${bundle.path}/partials/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/myRequests.js" />
     </bundle:scriptpack>

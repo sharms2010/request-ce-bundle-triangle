@@ -75,31 +75,31 @@
         <div class="row">
             <div class="col-sm-7 leftside">
                 <c:if test="${not empty submissionsListDraft}">
-                <div class="panel panel-default">
-                    <div class="panel-heading background-tertiary">
-                        <div class="panel-title"><h4 class="white">YOUR REQUESTS - DRAFT</h4></div>
-                    </div>
-                    <div class="panel-body">
-                        <table class="table m-a-0">
-                            <thead>
+                    <div class="panel panel-default">
+                        <div class="panel-heading background-tertiary">
+                            <div class="panel-title"><h4 class="white">YOUR REQUESTS - DRAFT</h4></div>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table m-a-0">
+                                <thead>
+                                    <tr>
+                                        <td class="font-bold p-t-0 gray">SUMMARY</td>
+                                        <td class="font-bold p-t-0 text-right gray hidden-xs">STATUS</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <c:set var="table" value="request-draft" scope="session"/>
+                                    <h3>${text.escape(form.name)}</h3>
+                                    <c:import url="partials/submissionsByKapp.jsp" charEncoding="UTF-8"/>
+                                </tbody>
+                                <tfoot>
                                 <tr>
-                                    <td class="font-bold p-t-0 gray">SUMMARY</td>
-                                    <td class="font-bold p-t-0 text-right gray hidden-xs">STATUS</td>
+                                    <td class="font-bold" colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}?page=my-requests">VIEW MORE</a></center></td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                <c:set var="table" value="request-draft" scope="session"/>
-                                <h3>${text.escape(form.name)}</h3>
-                                <c:import url="partials/submissionsByKapp.jsp" charEncoding="UTF-8"/>
-                            </tbody>
-                            <tfoot>
-                            <tr>
-                                <td class="font-bold" colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
-                            </tr>
-                            </tfoot>
-                        </table>
+                                </tfoot>
+                            </table>
+                        </div>
                     </div>
-                </div>
                 </c:if>
                 <c:if test="${not empty submissionsListSubmitted}">
                 <div class="panel panel-default">
