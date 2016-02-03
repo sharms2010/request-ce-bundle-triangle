@@ -34,7 +34,9 @@
                                 <div class="panel-body">
                                     <h4>${task.name}</h4>
                                     <h4>${task.createdAt}</h4>
-                                    <p class="font-bold gray">${task.results}</p>
+                                    <c:forEach var="entry" items="${task.messages}">
+                                        <p class="font-bold gray">${text.escape(entry.message)}</p>
+                                    </c:forEach>
                                 </div>
                             </li>
                         </c:forEach>
