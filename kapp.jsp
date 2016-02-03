@@ -40,7 +40,7 @@
             <div class="row">
                 <c:forEach var="category" items="${kapp.categories}">
                 <div class="col-sm-odd col-xs-odd">
-                    <a href="${bundle.spaceLocation}/${kapp.slug}/categories?category=${category.name}">
+                    <a href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}">
                         <div class="nav__box text-center">
                             <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                                 <i class="fa fa-circle fa-stack-2x"></i>

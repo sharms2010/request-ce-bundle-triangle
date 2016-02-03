@@ -10,7 +10,7 @@
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
                     </span>
-                    <a class="hidden-xs" href="${bundle.spaceLocation}/${kapp.slug}/categories?category=${category.name}">${category.name} </a>
+                    <a class="hidden-xs" href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}">${category.name} </a>
                 </li>
                 </c:forEach>
             </ul>
