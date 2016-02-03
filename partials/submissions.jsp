@@ -100,7 +100,7 @@
                         </div>
                         <div class="col-sm-2">
                             <span class="pull-right text-left">
-                                <a href="${bundle.kappLocation}/request-details?id=${submission.id}">
+                                <a href="${bundle.kappLocation}?page=request-details&id=${submission.id}">
                                     <button class="btn btn-primary">DETAILS
                                     <i class="icon-control-feedback fa fa-play"></i>
                                     </button>
