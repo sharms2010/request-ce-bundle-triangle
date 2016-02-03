@@ -52,7 +52,7 @@
                     <h3 class="max-min-height">${text.escape(submission.form.name)}</h3>
                     <div class="font-medium gray">${submission.createdAt}</div>
                     <p class="font-bold gray">${submission.coreState}</p>
-                    <a class="display-blk" href="${bundle.spaceLocation}/request-details?id=${submission.id}">
+                    <a class="display-blk" href="${bundle.spaceLocation}?page=request-details&id=${submission.id}">
                         <button class="btn btn-primary">DETAILS
                         <i class="icon-control-feedback fa fa-play"></i>
                         </button>
