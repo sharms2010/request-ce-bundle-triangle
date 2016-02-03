@@ -5,7 +5,14 @@
         <div class="container">
             <!-- logo -->
             <a href="${bundle.spaceLocation}/${kapp.slug}" class="navbar-brand p-a-0">
-                <h1 class="p-l-1 font-thin white line-height-70 font-size-50">${kapp.getAttributeValue("Company Name")}</h1>
+                <c:choose>
+                    <c:when test="${not empty kapp.getAttributeValue('Company Name')}">
+                        <h1 class="p-l-1 font-thin white line-height-70 font-size-50">${kapp.getAttributeValue("Company Name")}</h1>
+                    </c:when>
+                    <c:otherwise>
+                        <h1 class="p-l-1 font-thin white line-height-70 font-size-50">${kapp.name}</h1>
+                    </c:otherwise>
+                </c:choose>
             </a>
             <!-- categories -->
             <div class="dropdown pull-right border-none m-a-0">

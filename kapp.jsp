@@ -39,26 +39,28 @@
         <div class="container">
             <div class="row">
                 <c:forEach var="category" items="${kapp.categories}">
-                <div class="col-sm-odd col-xs-odd">
-                    <a href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}">
-                        <div class="nav__box text-center">
-                            <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <span class="fa-stack fa-3x center-block visible-sm-inline-block">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <span class="fa-stack fa-2x center-block visible-xs-inline-block">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <div class="hidden-xs font-light">${text.escape(category.name)}</div>
-                            <h5 class="visible-xs font-bold">${text.escape(category.name)}</h5>
+                    <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && not empty category.forms}">
+                        <div class="col-sm-odd col-xs-odd">
+                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}">
+                                <div class="nav__box text-center">
+                                    <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span class="fa-stack fa-3x center-block visible-sm-inline-block">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span class="fa-stack fa-2x center-block visible-xs-inline-block">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <div class="hidden-xs font-light">${text.escape(category.name)}</div>
+                                    <h5 class="visible-xs font-bold">${text.escape(category.name)}</h5>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
+                    </c:if>
                 </c:forEach>
             </div>
         </div>
