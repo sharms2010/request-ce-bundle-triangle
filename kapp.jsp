@@ -161,14 +161,6 @@
             <!-- Alerts display panel
             If{bundleExists} will not display panel if the alerts bundle is not include in the space-->
             <div class="col-sm-5">
-                <c:if test="${alertsBundleExists}">
-                <div class="panel panel-default">
-                    <div class="panel-heading background-quaternary">
-                        <div class="panel-title"><h4>ALERTS</h4></div>
-                    </div>
-                    <c:import url="partials/alerts.jsp" charEncoding="UTF-8"/>
-                </div>
-                </c:if>
                 <!-- Kinetic Twitter feed -->
                 <div class=" hidden-xs">
                     <a class="twitter-timeline" href="https://twitter.com/KineticData" data-widget-id="569678005275226112" data-chrome="nofooter">Tweets by @KineticData</a>
