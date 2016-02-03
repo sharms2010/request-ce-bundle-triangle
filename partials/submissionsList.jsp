@@ -9,12 +9,12 @@
      <c:choose>
         <c:when test="${table eq 'request-draft'}">
             <tr>
-                <td class="font-bold p-t-0"><a href="${bundle.spaceLocation}/${submission.id}">${submission.getLabel()} - ${submission.createdAt}</a></td>
+                <td class="font-bold p-t-0"><a href="${bundle.spaceLocation}/submissions/${submission.id}">${submission.getLabel()} - ${submission.createdAt}</a></td>
             </tr>
         </c:when>
         <c:otherwise>
             <tr>
-                <td class="font-bold p-t-0"><a href="${bundle.kappLocation}?page=request-details&id=${submission.id}">${submission.getLabel()} - ${submission.submittedAt}</a></td>
+                <td class="font-bold p-t-0"><a href="${bundle.kappLocation}?page=requestDetails&id=${submission.id}">${submission.getLabel()} - ${submission.submittedAt}</a></td>
             </tr>
         </c:otherwise>
     </c:choose>

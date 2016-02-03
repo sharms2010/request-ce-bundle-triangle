@@ -94,7 +94,7 @@
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <td class="font-bold" colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}?page=my-requests">VIEW MORE</a></center></td>
+                                    <td class="font-bold" colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}?page=myRequests">VIEW MORE</a></center></td>
                                 </tr>
                                 </tfoot>
                             </table>
@@ -121,7 +121,7 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <td class="font-bold" colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}/my-requests">VIEW MORE</a></center></td>
+                                <td class="font-bold" colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}?page=myRequests">VIEW MORE</a></center></td>
                             </tr>
                             </tfoot>
                         </table>

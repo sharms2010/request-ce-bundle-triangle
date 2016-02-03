@@ -1,7 +1,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
 <bundle:layout page="${bundle.path}/layouts/layout.jsp">
-    <c:import url="${bundle.path}/partials/shared/categoryNav.jsp" charEncoding="UTF-8"/>
+    <c:import url="${bundle.path}/partials/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/requestDetails.js" />
     </bundle:scriptpack>
