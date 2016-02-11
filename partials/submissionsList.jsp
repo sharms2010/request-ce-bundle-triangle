@@ -7,11 +7,16 @@
         <td class="font-bold text-right gray hidden-xs" rowspan="2">${submission.coreState}</td>
     </tr>
      <c:choose>
-        <c:when test="${table eq 'request-draft'}">
+        <c:when test="${submission.coreState == 'Draft'}">
             <tr>
                 <td class="font-bold p-t-0"><a href="${bundle.spaceLocation}/submissions/${submission.id}">${submission.getLabel()} - ${submission.createdAt}</a></td>
             </tr>
         </c:when>
+        <c:when test="${submission.coreState == 'Submitted' and submission.form.type.name == 'Approval'}">
+            <tr>
+                <td class="font-bold p-t-0"><a href="${bundle.spaceLocation}/submissions/${submission.id}?review">${submission.getLabel()} - ${submission.submittedAt}</a></td>
+            </tr>
+        </c:when>        
         <c:otherwise>
             <tr>
                 <td class="font-bold p-t-0"><a href="${bundle.kappLocation}?page=requestDetails&id=${submission.id}">${submission.getLabel()} - ${submission.submittedAt}</a></td>

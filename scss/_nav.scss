@@ -1,39 +1,37 @@
 /*sass file _nav*/
 .nav{
-    @at-root &{
-        background-color: $primary;
-    }
-    @at-root & ul{
-    /*  display: -moz-box;
-        display: -webkit-box;
-        display: box;*/
-        padding: none;
-        margin: none;
-        text-align: left;
-        list-style-type: none;
-    }
-    @at-root & li{
-    /*  -moz-box-flex: 1;
-        -webkit-box-flex: 1;
-        box-flex: 1;*/
-        display: inline-block;
-        padding-top: .71428571428rem;
-        padding-bottom: .71428571428rem;
-    }
-    @at-root & a{
-        font-size: 1.125rem;
-        color: $white;
-    }
-    @at-root &__box{
-        padding-top: 1.42857142857rem;
-        padding-bottom: 1.42857142857rem;
-    }
-    @at-root &__box div{
-        font-size: 1.429rem; /*equal to 20px*/
-        color: $white;
-    }
-    @at-root &__box:hover{
-        background-color: lighten($primary, 10%) 
+    background-color: $primary;
+}
+.nav & ul{
+/*  display: -moz-box;
+    display: -webkit-box;
+    display: box;*/
+    padding: none;
+    margin: none;
+    text-align: left;
+    list-style-type: none;
+}
+.nav li{
+/*  -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;*/
+    display: inline-block;
+    padding-top: .71428571428rem;
+    padding-bottom: .71428571428rem;
+}
+.nav a{
+    font-size: 1.125rem;
+    color: $white;
+}
+.nav__box{
+    padding-top: 1.42857142857rem;
+    padding-bottom: 1.42857142857rem;
+}
+.nav__box div{
+    font-size: 1.429rem; /*equal to 20px*/
+    color: $white;
+    :hover{
+    background-color: lighten($primary, 10%) 
     }
 }
 

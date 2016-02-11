@@ -1,5 +1,8 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
+<%
+    request.setAttribute("time", new TimeHelper());
+%>
 <bundle:layout page="${bundle.path}/layouts/layout.jsp">
     <c:import url="${bundle.path}/partials/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:scriptpack>
@@ -16,10 +19,20 @@
                 <h4>Request ID:</h4>
                 <h4>${submission.id}</h4>
                 <h4>Request Date:</h4>
-                <h4>${submission.submittedAt}</h4>
+                <h4 id="submittedAt">${time.format(submission.submittedAt,'MM/dd/YYYY HH:mm:ss','America/Chicago', Locale.ENGLISH)}</h4>
                 <h4>Status:</h4>
-                <h4>${submission.coreState}</h4>
-                <p>This could be instructions. This could be a brief description. This could also be a status update. Esto podría ser instrucciones. Esto podría ser una breve descripción. Esto también podría ser una actualización de estado. Kini mahimong mga panudlo. Kini mahimo nga usa ka mubo nga paghulagway. Kini mahimo usab nga usa ka status update.</p>
+                <c:if test="${submission.form.getField('Status') == null}">   
+                    <h4>${submission.coreState}</h4>
+                </c:if>
+                <c:if test="${submission.form.getField('Status') != null}">
+                    <h4>${submission.getValue('Status')}</h4>
+                </c:if>
+                <c:if test="${not empty submission.form.description}">
+                    <p>${submission.form.description}</p>
+                </c:if>
+                <c:if test="${empty submission.form.description}">
+                    <p>If there is content included in the description section of the form it will display here.  To get to the description section go to the Admin Console.  Select Author tab and choose the form.  Under the form name select the General category.</p>
+                </c:if>
                 <a href="${bundle.spaceLocation}/submissions/${submission.id}?review">
                     <button class="btn btn-primary">Review Request
                     <i class="icon-control-feedback fa fa-play"></i>

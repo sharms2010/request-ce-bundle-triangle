@@ -13,9 +13,8 @@
 
 $color-names: black white gray gray-lighter primary secondary tertiary;
 $colors: $black $white $gray $gray-lighter $primary $secondary $tertiary;
-$block: icon;
 
-.#{$block}{
+.icon{
     @each $color in $colors{
         $i: index($colors, $color);
         @at-root #{&}-#{nth($color-names,$i)}{

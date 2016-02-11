@@ -9,17 +9,16 @@
 }
 
 $font-weight: 100 300 500 700;
-$block: font;
 $el-style: thin light medium bold;
 
-.#{$block}{
-    @at-root #{&}{
+.font{
+    @at-root &{
         font-family: 'Roboto', sans-serif;
     }
     @each $style in $el-style{
-        @at-root #{&}-#{$style}{
+        @at-root &-#{$style}{
             $i: index($el-style, $style);
-            @at-root #{&}{
+            @at-root &{
                 @extend .#{$block};
                 font-weight: nth($font-weight, $i);
             }
