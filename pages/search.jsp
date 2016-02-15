@@ -6,6 +6,8 @@
         <title>${text.escape(space.name)} Search</title>
     </bundle:variable>
 
+    
+    
     <div class="container">
         <div class="page-header">
             <h1>Search Results</h1>
@@ -17,21 +19,21 @@
               </div>
             </form>  
         </div>
+                
         <div class="search-results">
             <c:if test="${text.isNotBlank(param['q'])}">
+                <c:set scope="request" var="formsMatchSearch" value="${SearchHelper.filter(kapp.forms,param['q'])}"/>
                 <ul class="list-unstyled">
-                    <c:forEach items="${kapp.forms}" var="form">
+                    <c:forEach var="form" items="${formsMatchSearch}">
                         <c:if test="${text.equals(form.type.name, 'Service') || text.equals(form.type.name, 'Template')}">
-                            <c:if test="${text.contains(text.downcase(form.name), text.downcase(param['q'])) || text.contains(text.downcase(form.description), text.downcase(param['q']))}">
-                                <li>
-                                    <div class="panel">
-                                        <div class="panel-heading">
-                                            <h3><a href="${bundle.kappLocation}/${form.slug}">${form.name}</a></h3>
-                                        </div>
-                                        <div class="panel-body">${form.description}</div>
+                            <li>
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <h3><a href="${bundle.kappLocation}/${form.slug}">${form.name}</a></h3>
                                     </div>
-                                </li>
-                            </c:if>
+                                    <div class="panel-body">${form.description}</div>
+                                </div>
+                            </li>
                         </c:if>
                     </c:forEach>
                 </ul>

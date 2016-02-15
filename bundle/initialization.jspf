@@ -25,6 +25,7 @@
     Bundle bundle = (Bundle)request.getAttribute("bundle"); 
 %>
 
+<%@include file="SearchHelper.jspf" %>
 <%@include file="SubmissionHelper.jspf" %>
 <%-- Load helper(s) --%>
 <%
@@ -32,4 +33,5 @@
     request.setAttribute("text", new com.kineticdata.bundles.TextHelper());
     request.setAttribute("time", new com.kineticdata.bundles.TimeHelper());
     request.setAttribute("SubmissionHelper", new SubmissionHelper(request));
+    request.setAttribute("SearchHelper", new SearchHelper());
 %>

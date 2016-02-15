@@ -1,3 +1,4 @@
+<%@page import="java.util.stream.Collectors"%>
 <%!
     public static class SearchHelper {
         
@@ -14,8 +15,10 @@
                             return form.getName().toLowerCase().contains(term)
                                 || form.getDescription().toLowerCase().contains(term)
                                 || form.getAttributes().stream()
-                                    .anyMatch(attribute -> attribute.getValues().stream()
-                                        .anyMatch(value -> value.toLowerCase().contains(term)));
+                                    .anyMatch(attribute -> {
+                                        return attribute.getValues() != null && attribute.getValues().stream()
+                                            .anyMatch(value -> value.toLowerCase().contains(term));
+                                    });
                         });
                 })
                 .collect(Collectors.toList());

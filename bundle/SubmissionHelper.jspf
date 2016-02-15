@@ -19,6 +19,10 @@
         public List<Submission> retrieveRecentSubmissions(String type, int number) {
             return retrieveRecentSubmissions(type, null, number);
         }
+        
+         public List<Submission> retrieveRecentSubmissions(String type, String coreState) {
+            return retrieveRecentSubmissions(type, coreState, null);
+        }
 
         public List<Submission> retrieveRecentSubmissions(String type, String coreState, Integer number) {
             com.kineticdata.core.authentication.Identity identity =

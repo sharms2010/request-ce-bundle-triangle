@@ -34,6 +34,7 @@
             <link rel="stylesheet" type="text/css" href="${bundle.location}/css/temp.css"/>
             <bundle:scriptpack>
                 <bundle:script src="${bundle.location}/libraries/moment/moment.js" />
+                <bundle:script src="${bundle.location}/libraries/moment/moment-timezone.js" />
                 <bundle:script src="${bundle.location}/libraries/kd-search/search.js" />
                 <bundle:script src="${bundle.location}/libraries/jquery/jquery.min.js" />
                 <bundle:script src="${bundle.location}/libraries/bootstrap/bootstrap.min.js" />
@@ -60,6 +61,19 @@
             <bundle:yield name="head"/>
     </head>
     <body>
+        <%--This is a work around to get localization--%>
+        <c:if test="${empty sessionScope.timezone}">
+            <script>
+            $(document).ready(function() {
+                $.ajax({
+                    type : "get",
+                    url : "?partial=setlocale",
+                    data: {"timezone":moment.tz.guess()}
+                });
+            });
+            </script>
+        </c:if>
+            
         <c:import url="${bundle.path}/partials/navbar.jsp" charEncoding="UTF-8"/>
         <div class="temp">
             <bundle:yield/>

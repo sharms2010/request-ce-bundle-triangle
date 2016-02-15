@@ -11,6 +11,7 @@
     <bundle:variable name="head">
         <title>Kinetic Data ${text.escape(kapp.name)}</title>
     </bundle:variable>
+    <c:set var="timezone" value="${param['timezone']}" scope="session"/>
     <c:set var="submission" value="${Submissions.retrieve(param.id)}" />
     <div class ="container-fluid details splitBackgound">
         <div class="container">

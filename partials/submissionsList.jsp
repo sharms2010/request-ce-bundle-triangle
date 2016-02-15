@@ -12,7 +12,7 @@
                 <td class="font-bold p-t-0"><a href="${bundle.spaceLocation}/submissions/${submission.id}">${submission.getLabel()} - ${submission.createdAt}</a></td>
             </tr>
         </c:when>
-        <c:when test="${submission.coreState == 'Submitted' and submission.form.type.name == 'Approval'}">
+        <c:when test="${submission.form.type.name == 'Approval' and submission.coreState == 'Submitted'}">
             <tr>
                 <td class="font-bold p-t-0"><a href="${bundle.spaceLocation}/submissions/${submission.id}?review">${submission.getLabel()} - ${submission.submittedAt}</a></td>
             </tr>
