@@ -42,3 +42,9 @@ $('#categories').click(function(){
     $('#search').addClass("collapsed");
 });
 });
+
+$(document).ready(function(){
+$('#search-icon').on('click', function(){
+   $(this).closest('form').submit();
+});
+});

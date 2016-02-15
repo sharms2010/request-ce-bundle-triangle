@@ -29,18 +29,18 @@
         <form action="${bundle.kappLocation}" method="GET" role="form">
             <div class="form-group has-feedback">
                 <input type="hidden" value="search" name="page">
-                <input type="text" class="states form-control predictiveText x" name="q"/>
-                <i class="form-control-feedback fa fa-search search-catalog-icon"></i>
+                <input id="search" type="text" class="form-control" name="q"/>
+                <i id="search-icon" class="form-control-feedback fa fa-search search-catalog-icon"></i>
             </div>
         </form>
     </div>
     <!-- Teal category nav -->
     <div class="nav m-b-4">
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 <c:forEach var="category" items="${kapp.categories}">
                     <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && not empty category.forms}">
-                        <div class="col-sm-odd col-xs-odd">
+                        <div class="col-sm-2 col-xs-2 col-centered">
                             <a href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}">
                                 <div class="nav__box text-center">
                                     <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
@@ -170,51 +170,3 @@
     </div>
     <app:bodyContent/>
 </bundle:layout>
-<script>
-    var data = <json:array  name="array" var="form" items="${kapp.forms}">
-        <c:if test="${(form.type.name == 'Service') || (form.type.name == 'Template')}">
-            <json:object>
-                <json:property name="formName" value="${form.name}"/>
-                <json:property name="formSlug" value="${form.slug}"/>
-            </json:object>
-        </c:if>
-    </json:array>;
-    forms = [];
-    map = {};
-    $.each(data, function (i, form) {
-        map[form.formName] = form;
-        forms.push(form.formName);
-    });
-    var substringMatcher = function(strs) {
-        return function findMatches(q, cb) {
-        var matches, substringRegex;
-        // an array that will be populated with substring matches
-        matches = [];
-        // regex used to determine if a string contains the substring `q`
-        substrRegex = new RegExp(q, 'i');
-        // iterate through the pool of strings and for any string that
-        // contains the substring `q`, add it to the `matches` array
-        $.each(strs, function(i, str) {
-            if (substrRegex.test(str)) {
-                matches.push(str);
-            }
-        });
-        cb(matches);
-        };
-    };
-    $('.predictiveText').typeahead({
-            hint: true,
-            highlight: true,
-            minLength: 1,
-        },
-        {
-        source: substringMatcher(forms)
-        }).on('typeahead:selected', function(event, datum) {
-            window.location.href = window.bundle.kappLocation() + "/" + map[datum].formSlug;
-        $(this).off('keyup');
-        }).on('keyup', function(event) {
-            if (event.which == 13){
-                $(this).closest('form').submit();
-            }
-        });
-</script>

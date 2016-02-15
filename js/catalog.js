@@ -19,5 +19,3 @@
 //    setTimeout(getAlert, 60000);
 //}
 //getAlert();
-
-

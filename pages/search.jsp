@@ -6,16 +6,14 @@
         <title>${text.escape(space.name)} Search</title>
     </bundle:variable>
 
-    
-    
     <div class="container">
         <div class="page-header">
             <h1>Search Results</h1>
             <form action="${bundle.kappLocation}" method="GET" role="form"> 
               <div class="form-group has-feedback">
                 <input type="hidden" value="search" name="page">
-                <input type="text" class="states form-control predictiveText x" name="q" value="${param['q']}"/>
-                <i class="form-control-feedback fa fa-search search-catalog-icon"></i>
+                <input type="text" class="form-control" name="q" value="${param['q']}"/>
+                <i id="search-icon" class="form-control-feedback fa fa-search search-catalog-icon"></i>
               </div>
             </form>  
         </div>
@@ -42,7 +40,3 @@
     </div>
 </bundle:layout>
 
-<script>
-    $('button').on('click', function(e){
-    });
-</script>

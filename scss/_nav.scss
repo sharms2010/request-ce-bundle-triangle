@@ -1,27 +1,28 @@
 /*sass file _nav*/
 .nav{
     background-color: $primary;
+     
+    ul{
+/*      display: -moz-box;
+        display: -webkit-box;
+        display: box;*/
+        padding: none;
+        margin: none;
+        text-align: left;
+        list-style-type: none;
 }
-.nav & ul{
-/*  display: -moz-box;
-    display: -webkit-box;
-    display: box;*/
-    padding: none;
-    margin: none;
-    text-align: left;
-    list-style-type: none;
+    li{
+/*      -moz-box-flex: 1;
+        -webkit-box-flex: 1;
+        box-flex: 1;*/
+        display: inline-block;
+        padding-top: .71428571428rem;
+        padding-bottom: .71428571428rem;
 }
-.nav li{
-/*  -moz-box-flex: 1;
-    -webkit-box-flex: 1;
-    box-flex: 1;*/
-    display: inline-block;
-    padding-top: .71428571428rem;
-    padding-bottom: .71428571428rem;
+    a{
+        font-size: 1.125rem;
+        color: $white;
 }
-.nav a{
-    font-size: 1.125rem;
-    color: $white;
 }
 .nav__box{
     padding-top: 1.42857142857rem;
