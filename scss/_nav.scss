@@ -1,7 +1,9 @@
 /*sass file _nav*/
 .nav{
     background-color: $primary;
-     
+    .nav__list{
+        text-align: center;
+    }
     ul{
 /*      display: -moz-box;
         display: -webkit-box;
@@ -18,6 +20,7 @@
         display: inline-block;
         padding-top: .71428571428rem;
         padding-bottom: .71428571428rem;
+        text-align: center;
 }
     a{
         font-size: 1.125rem;

@@ -304,6 +304,8 @@ form textarea:focus {
 /*sass file _nav*/
 .nav {
   background-color: #5ea5b2; }
+  .nav .nav__list {
+    text-align: center; }
   .nav ul {
     /*      display: -moz-box;
             display: -webkit-box;
@@ -318,7 +320,8 @@ form textarea:focus {
             box-flex: 1;*/
     display: inline-block;
     padding-top: .71428571428rem;
-    padding-bottom: .71428571428rem; }
+    padding-bottom: .71428571428rem;
+    text-align: center; }
   .nav a {
     font-size: 1.125rem;
     color: #ffffff; }

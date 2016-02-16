@@ -41,7 +41,7 @@
                 <c:forEach var="category" items="${kapp.categories}">
                     <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && not empty category.forms}">
                         <div class="col-sm-2 col-xs-2 col-centered">
-                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=categories&category=${category.name}">
+                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.name}">
                                 <div class="nav__box text-center">
                                     <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
                                         <i class="fa fa-circle fa-stack-2x"></i>

@@ -46,3 +46,10 @@
 .temp{
     min-height: 525px;
 }
+
+.truncate {
+  width: 20%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
