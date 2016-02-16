@@ -4,43 +4,57 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.stream.Collectors"%>
 <%!
-    public static class SearchHelper {
+public static class SearchHelper {
 
-        public List<Form> filter(List<Form> forms, String queryString) {
-            // Process the query string into a list
-            List<String> terms = new ArrayList<String>();
-        	for (String term : queryString.trim().split(" ")){
-        		terms.add(term.toLowerCase());
-        	}
-            
-            List<String> stringAttributes = new ArrayList<String>();
-            
-            List<Form> returnForms = new ArrayList<Form>();
+    public List<Form> filter(List<Form> forms, String queryString) {
+        // Process the query string into a list
+        List<String> terms = new ArrayList<String>();
+        for (String term : queryString.trim().split(" ")){
+                terms.add(term.toLowerCase());
+        }
 
-            for(Form form : forms){
-                List<Attribute> attributes = form.getAttributes();
-                for(Attribute attribute : attributes){
-                    if(attribute.getValue() != null){
-                        System.out.println(attribute.getValue().toLowerCase().toString());
-                        stringAttributes.add(attribute.getValue().toLowerCase().toString());
-                    }
-                }
-                for(String term : terms){
-                    if(form.getName().toLowerCase().contains(term)){
-                        returnForms.add(form);
-                        break;
-                    }
-                    if(form.getDescription().toLowerCase().contains(term)){
-                        returnForms.add(form);
-                        break;
-                    }
-                    if(stringAttributes.contains(term)){
-                        returnForms.add(form);
-                        break;
-                    }
-                }
+        List<Form> results = new ArrayList<>();
+        for (Form form : forms) {
+            if (matchesAllTerms(form, terms)) {
+                results.add(form);
             }
-        return returnForms;
+        }
+        return results;
+    }
+
+    private boolean matchesAllTerms(Form form, List<String> terms) {
+        boolean result = true;
+        for (String term : terms) {
+            if (!matchesTerm(form, term)) {
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+
+    private boolean matchesTerm(Form form, String term) {
+        return matches(form.getName(), term)
+            || matches(form.getDescription(), term)
+            || anyAttributesMatch(form.getAttributes(), term);
+    }
+
+    private boolean matches(String source, String match) {
+        return source != null 
+            && match != null
+            && source.toLowerCase().contains(match.toLowerCase());
+    }
+
+    private boolean anyAttributesMatch(List<Attribute> attributes, String term) {
+        boolean result = false;
+        for (Attribute attribute : attributes) {
+            if (matches(attribute.getValue(), term)) {
+                result = true;
+                break;
+            }
+        }
+        System.out.println(result);
+        return result;
     }
 }
 %>
