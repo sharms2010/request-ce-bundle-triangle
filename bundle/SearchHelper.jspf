@@ -8,9 +8,9 @@ public static class SearchHelper {
 
     public List<Form> filter(List<Form> forms, String queryString) {
         // Process the query string into a list
-        List<String> terms = new ArrayList<String>();
+        List<String> terms = new ArrayList<>();
         for (String term : queryString.trim().split(" ")){
-                terms.add(term.toLowerCase());
+            terms.add(term.toLowerCase());
         }
 
         List<Form> results = new ArrayList<>();
@@ -53,7 +53,6 @@ public static class SearchHelper {
                 break;
             }
         }
-        System.out.println(result);
         return result;
     }
 }
