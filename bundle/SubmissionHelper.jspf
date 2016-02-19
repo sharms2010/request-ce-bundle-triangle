@@ -3,13 +3,15 @@
     public static class SubmissionHelper {
 
         private HttpServletRequest request;
-        private BundleSubmissionService service;
+        private BundleSubmissionComponent submissionComponent;
         private Kapp kapp;
+        private Logger logger;
 
         public SubmissionHelper(HttpServletRequest request) {
             this.request = request;
-            this.service = (BundleSubmissionService)request.getAttribute("Submissions");
+            this.submissionComponent = (BundleSubmissionComponent)request.getAttribute("Submissions");
             this.kapp = (Kapp)request.getAttribute("kapp");
+            this.logger = (Logger)request.getAttribute("logger");
         }
 
         public List<Submission> retrieveRecentSubmissions(String type) {
@@ -49,9 +51,7 @@
                 searchOptions.put("createdBy", new String[] {identity.getUsername()});
             }
 
-            return service.searchByKapp(kapp, searchOptions);
+            return submissionComponent.searchByKapp(kapp, searchOptions);
         }
-
     }
-
 %>

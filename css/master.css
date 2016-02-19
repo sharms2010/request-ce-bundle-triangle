@@ -280,26 +280,46 @@ form textarea:focus {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4); }
 
 .search-catalog-icon {
+  height: 16px;
+  width: 20px;
+  display: block !important;
   top: 10px !important;
   color: #c7c7c7; }
 
 .icon-black {
   color: #000000; }
+
 .icon-white {
   color: #ffffff; }
+
 .icon-gray {
   color: #858585; }
+
 .icon-gray-lighter {
   color: #d4d4d4; }
+
 .icon-primary {
   color: #5ea5b2; }
+
 .icon-secondary {
   color: #ffa31c; }
+
 .icon-tertiary {
   color: #b996a5; }
+
 .icon__pad--y {
   padding-top: 1.07142857143rem;
   padding-bottom: 0.92857142857rem; }
+
+@media (max-width: 768px) {
+  .icon--size {
+    font-size: 2.5em !important; } }
+@media (min-width: 768px) {
+  .icon--size {
+    font-size: 3em !important; } }
+@media (min-width: 992px) {
+  .icon--size {
+    font-size: 4em !important; } }
 
 /*sass file _nav*/
 .nav {
