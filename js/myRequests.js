@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$(".grid").hide();
+    $(".grid").hide();
         $("#list").addClass('active')
     $("#grid").click(function(){
         $(".grid").show();

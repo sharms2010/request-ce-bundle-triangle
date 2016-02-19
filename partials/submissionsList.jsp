@@ -2,7 +2,7 @@
 <%@include file="../bundle/initialization.jspf" %>
 
 <c:forEach var="submission" items="${submissionsList}">
-    <tr>	
+    <tr>
         <td class="font-bold p-b-0">${text.escape(submission.form.name)}</td>
         <td class="font-bold text-right gray hidden-xs" rowspan="2">${submission.coreState}</td>
     </tr>
