@@ -42,7 +42,10 @@ i{
 }
 
 a {
-    color:#3babc0;
+    color: $primary-light;
+    @at-root &:hover{
+        color: $primary-darker
+    }
 }
 ul{
     padding: 0;

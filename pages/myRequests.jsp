@@ -26,9 +26,13 @@
             </div>
             <div class="col-xs-8 p-t-1">
                 <form role="form">
-                    <div class="form-group has-feedback">
+                    <div class="input-group">
                         <input type="text" class="form-control" />
-                        <i class="form-control-feedback fa fa-play fa-rotate-90 gray pos-top-none p-t-1"></i>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <i class="fa fa-play fa-rotate-90"></i>
+                            </button>
+                        </span>
                     </div>
                 </form>
             </div>

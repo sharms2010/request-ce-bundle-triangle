@@ -54,7 +54,9 @@ i {
   color: #ffffff; }
 
 a {
-  color: #3babc0; }
+  color: #81b8c3; }
+  a:hover {
+    color: #2f5a62; }
 
 ul {
   padding: 0; }
@@ -170,6 +172,16 @@ form textarea:focus {
   color: #818181;
   margin-top: 1.25rem; }
 
+.input-group button {
+  background-color: #b4d5db; }
+  .input-group button:hover {
+    backgroud-color: #2f5a62; }
+.input-group i {
+  color: #292929; }
+
+input {
+  border: 1px solid #d4d4d4 !important; }
+
 /*scss _left-column file*/
 .left-column {
   background-color: #ffffff;
@@ -278,13 +290,6 @@ form textarea:focus {
 #grid:active,
 #grid.active {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4); }
-
-.search-catalog-icon {
-  height: 16px;
-  width: 20px;
-  display: block !important;
-  top: 10px !important;
-  color: #c7c7c7; }
 
 .icon-black {
   color: #000000; }
