@@ -3,13 +3,13 @@ $primary: #5ea5b2;
 $secondary: #ffa31c;
 $tertiary: #b996a5;
 
-$primary-darkest:      darken($primary, 40%);
-$primary-darker:       darken($primary, 25%);
+$primary-darkest:      darken($primary, 30%);
+$primary-darker:       darken($primary, 20%);
 $primary-dark:         darken($primary, 10%);
 //Primary shades
 $primary-light:        lighten($primary, 10%);
-$primary-lighter:      lighten($primary, 25%);
-$primary-lightest:     lighten($primary, 40%);
+$primary-lighter:      lighten($primary, 20%);
+$primary-lightest:     lighten($primary, 30%);
 
 // Grays
 $black:             #000000;

@@ -44,7 +44,6 @@
     box-shadow: 1px 4px 10px $gray-lighter;
 }
 
-
 .panel-body > table > thead > tr > td:nth-child(2){ /*catalog could be replaced with more general catalog*/
     text-align: right;
 }
@@ -57,3 +56,26 @@
     vertical-align: bottom;
 }
 
+.panel__valign-text{
+    @media (max-width: 992px){
+        margin-top: -1%;
+    }
+    @media (min-width: 992px){
+        margin-top: 2%;
+    }
+    @media (min-width: 1200px){
+        margin-top: 3%;
+    }
+}
+
+.panel__valign-buttons{
+    @media (max-width: 992px){
+        line-height: 2rem; /*equal to 28px*/
+    }
+    @media (min-width: 992px){
+        line-height: 3rem; /*equal to 36px*/
+    }
+    @media (min-width: 1200px){
+        line-height: 4rem; /*equal to 48px*/
+    }
+}

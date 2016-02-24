@@ -44,9 +44,10 @@ i{
 a {
     color: $primary-light;
     @at-root &:hover{
-        color: $primary-darker
+        color: $primary-dark;
     }
 }
 ul{
     padding: 0;
+    margin: 0;
 }

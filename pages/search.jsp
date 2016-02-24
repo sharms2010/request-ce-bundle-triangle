@@ -6,7 +6,7 @@
         <title>${text.escape(space.name)} Search</title>
     </bundle:variable>
 
-    <div class="container">
+    <div class="container input-field">
         <div class="page-header">
             <h1>Search Results</h1>
             <form action="${bundle.kappLocation}" method="GET" role="form">
@@ -14,7 +14,7 @@
                     <input id="search" autocomplete="off" type="text" class="form-control" name="q">
                     <input type="hidden" value="search" name="page">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
+                        <button id="search-button" class="btn btn-default" type="button">
                             <i id="search-icon" class="fa fa-search"></i>
                         </button>
                     </span>

@@ -19,7 +19,7 @@ The one exception to this is "My Requests" and "My Approvals".  In order to grab
 This bundle easily allows for minor personalization by including optional attributes in your KAPP, Form and/or Categories.
 
 #### KAPP Attributes
-* **fa-logo:** We include font-awesome icons by default you can specify a icon for your kapp by including this attribute and a value. (Example fa-bank)
+* **Icon:** We include font-awesome icons by default you can specify a icon for your kapp by including this attribute and a value. (Example fa-bank)
 * **Company Name:** You can specify text to display your company name by including this attribute and a value. (Example ACME)
 
 ##### Task Related Attributes
@@ -28,10 +28,10 @@ In order to display information about the task fulfillment process when viewing 
 * **Task Source Name:** The name of Kinetic Task Source that corresponds to this instance of Kinetic Request CE (Ex: "Request CE").
 
 #### Form Attributes
-* **fa-logo:** We include font-awesome icons by default you can specify a icon for your form by including this attribute and a value. (Example fa-bank)
+* **Icon:** We include font-awesome icons by default you can specify a icon for your form by including this attribute and a value. (Example fa-bank)
 
 #### Category Attributes
-* **fa-logo:** We include font-awesome icons by default you can specify a icon for your category by including this attribute and a value. (Example fa-bank)
+* **Icon:** We include font-awesome icons by default you can specify a icon for your category by including this attribute and a value. (Example fa-bank)
 
 ## Customization
 When you customize this bundle it is a good idea to fork it on your own git server to track your customizations and merge in any code changes we make to the triangle bundle.
@@ -45,10 +45,12 @@ This triangle bundle uses our standard directory structure.  Bundles are complet
 /*bundle-name*
   /*bundle*: Initialization scripts and helpers
   /*css*: Cascading style sheets. If you use Sass, output compiled css here.
+  /*scss* : Extention to css.  Similar to Sass in functionality but a syntax closer to css style.
   /*images*: image files.
   /*js*: All javascript goes here.
   /*layouts*: One or more layouts wraps your views and generally includes your HTML head elements and any content that should show up on all pages.
   /*libraries*: Include CSS, JS or other libraries here including things like JQuery or bootstrap.
+  /*
   /*partials*: These are view snippets that get used in the top-layer JSP views. Feel free to include sub-directories here if your set of partials gets unwieldy.
   /*confirmation.jsp*: The default confirmation page on form submits.
   /*form.jsp*: The default form JSP wrapper.

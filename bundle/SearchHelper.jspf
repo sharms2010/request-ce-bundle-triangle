@@ -1,59 +1,54 @@
-<%@page import="com.kineticdata.core.models.Attribute"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.kineticdata.core.models.Form"%>
-<%@page import="java.util.List"%>
-<%@page import="java.util.stream.Collectors"%>
 <%!
-public static class SearchHelper {
+    public static class SearchHelper {
 
-    public List<Form> filter(List<Form> forms, String queryString) {
-        // Process the query string into a list
-        List<String> terms = new ArrayList<>();
-        for (String term : queryString.trim().split(" ")){
-            terms.add(term.toLowerCase());
-        }
-
-        List<Form> results = new ArrayList<>();
-        for (Form form : forms) {
-            if (matchesAllTerms(form, terms)) {
-                results.add(form);
+        public List<Form> filter(List<Form> forms, String queryString) {
+            // Process the query string into a list
+            List<String> terms = new ArrayList<>();
+            for (String term : queryString.trim().split(" ")){
+                terms.add(term.toLowerCase());
             }
-        }
-        return results;
-    }
 
-    private boolean matchesAllTerms(Form form, List<String> terms) {
-        boolean result = true;
-        for (String term : terms) {
-            if (!matchesTerm(form, term)) {
-                result = false;
-                break;
+            List<Form> results = new ArrayList<>();
+            for (Form form : forms) {
+                if (matchesAllTerms(form, terms)) {
+                    results.add(form);
+                }
             }
+            return results;
         }
-        return result;
-    }
 
-    private boolean matchesTerm(Form form, String term) {
-        return matches(form.getName(), term)
-            || matches(form.getDescription(), term)
-            || anyAttributesMatch(form.getAttributes(), term);
-    }
-
-    private boolean matches(String source, String match) {
-        return source != null 
-            && match != null
-            && source.toLowerCase().contains(match.toLowerCase());
-    }
-
-    private boolean anyAttributesMatch(List<Attribute> attributes, String term) {
-        boolean result = false;
-        for (Attribute attribute : attributes) {
-            if (matches(attribute.getValue(), term)) {
-                result = true;
-                break;
+        private boolean matchesAllTerms(Form form, List<String> terms) {
+            boolean result = true;
+            for (String term : terms) {
+                if (!matchesTerm(form, term)) {
+                    result = false;
+                    break;
+                }
             }
+            return result;
         }
-        return result;
+
+        private boolean matchesTerm(Form form, String term) {
+            return matches(form.getName(), term)
+                || matches(form.getDescription(), term)
+                || anyAttributesMatch(form.getAttributes(), term);
+        }
+
+        private boolean matches(String source, String match) {
+            return source != null 
+                && match != null
+                && source.toLowerCase().contains(match.toLowerCase());
+        }
+
+        private boolean anyAttributesMatch(List<Attribute> attributes, String term) {
+            boolean result = false;
+            for (Attribute attribute : attributes) {
+                if (matches(attribute.getValue(), term)) {
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
     }
-}
 %>

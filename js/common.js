@@ -44,7 +44,7 @@ $('#categories').click(function(){
 });
 
 $(document).ready(function(){
-$('#search-icon').on('click', function(){
+$('#search-button').on('click', function(){
    $(this).closest('form').submit();
 });
 });
