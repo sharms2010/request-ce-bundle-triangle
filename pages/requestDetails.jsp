@@ -42,19 +42,31 @@
             </div>
             <div class="right-details col-md-8 p-b-4 p-t-4">
                 <ul>
-                    <c:forEach var="run" items="${TaskRuns.find(submission)}">
-                        <c:forEach var="task" items="${run.tasks}">
-                            <li class="panel panel-default arrow_box">
-                                <div class="panel-body">
-                                    <h4>${task.name}</h4>
-                                    <h4>${task.createdAt}</h4>
-                                    <c:forEach var="entry" items="${task.messages}">
-                                        <p class="font-bold gray">${text.escape(entry.message)}</p>
-                                    </c:forEach>
-                                </div>
-                            </li>
+                    <c:catch var="taskRunException">
+                        <c:forEach var="run" items="${TaskRuns.find(submission)}">
+                            <c:forEach var="task" items="${run.tasks}">
+                                <li class="panel panel-default arrow_box">
+                                    <div class="panel-body">
+                                        <h4>${task.name}</h4>
+                                        <h4>${task.createdAt}</h4>
+                                        <c:forEach var="entry" items="${task.messages}">
+                                            <p class="font-bold gray">${text.escape(entry.message)}</p>
+                                        </c:forEach>
+                                    </div>
+                                </li>
+                            </c:forEach>
                         </c:forEach>
-                    </c:forEach>
+                    </c:catch>
+                    <c:if test="${taskRunException != null}">
+                        <li class="panel panel-default arrow_box">
+                            <div class="panel-body">
+                            There was a problem retrieving post processing task information
+                            for this submission.
+                            <hr>
+                            ${fn:escapeXml(taskRunException.message)}
+                            </div>
+                        </li>
+                    </c:if>
                 </ul>
             </div>
         </div>
