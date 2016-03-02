@@ -4,19 +4,23 @@
     <div class="container">
         <div class="row ">
             <ul class="nav__list">
-                <c:forEach items="${kapp.categories}" var="category">
+                <c:forEach end="4" var="category"  items="${kapp.categories}">
                     <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && not empty category.forms}">
-                        <li class="col-sm-2 col-xs-2 col-centered truncate">
-                            <span class="fa-stack fa-2x center-block hidden-xs">
+                        <li>
+                            <span class="fa-stack fa-2x center-block">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
+                                <i class="fa ${category.getAttributeValue("Icon")} fa-stack-1x fa-inverse"></i>
                             </span>
-                            <a  href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.name}">${category.name} </a>
+                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.name}">${category.name} </a>
                         </li>
                     </c:if>
                 </c:forEach>
-                <li class="col-sm-2 col-xs-2 col-centered truncate">
-                    <a href="${bundle.spaceLocation}/${kapp.slug}?page=categories">view all</a>
+                <li >
+                    <span class="fa-stack fa-2x center-block">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-ellipsis-h fa-stack-1x fa-inverse"></i>
+                    </span>
+                   <a href="${bundle.spaceLocation}/${kapp.slug}?page=categories">view all</a>
                 </li>
             </ul>
         </div>

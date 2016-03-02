@@ -40,9 +40,13 @@
                     </button>
                 </a>
             </div>
-            <div class="right-details col-md-8 p-b-4 p-t-4">
+            <div class="right-details col-md-8 p-y-4">
+                <c:catch var="runsException">
+                    <c:set var="runs" value="${TaskRuns.find(submission)}"/>
+                </c:catch>
+                <c:if test="${runsException eq null }">
                 <ul>
-                    <c:forEach var="run" items="${TaskRuns.find(submission)}">
+                    <c:forEach var="run" items="${runs}">
                         <c:forEach var="task" items="${run.tasks}">
                             <li class="panel panel-default arrow_box">
                                 <div class="panel-body">
@@ -53,9 +57,13 @@
                                     </c:forEach>
                                 </div>
                             </li>
-                        </c:forEach>
+                        </c:forEach> 
                     </c:forEach>
                 </ul>
+                </c:if>
+                <c:if test="${runsException ne null}">
+                    <p>${runsException}</p>
+                </c:if>
             </div>
         </div>
     </div>

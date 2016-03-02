@@ -7,9 +7,13 @@
 <%@page import="com.kineticdata.core.web.bundles.Bundle" %>
 <%@page import="com.kineticdata.core.authentication.Identity" %>
 <%@page import="org.slf4j.Logger" %>
+<%@page import="com.google.common.collect.ComparisonChain" %>
+<%@page import="com.google.common.collect.Ordering" %>
+<%@page import="com.kineticdata.bundles.Text" %>
 
 <%-- Bundle Java libraries --%>
 <%@page import="com.kineticdata.bundles.*" %>
+
 
 <%-- Load tag libraries (JSTL) used in most bundles --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -27,6 +31,8 @@
 
 <%@include file="SearchHelper.jspf" %>
 <%@include file="SubmissionHelper.jspf" %>
+<%@include file="FormHelper.jspf"%>
+<%@include file="CategoryHelper.jspf"%>
 <%-- Load helper(s) --%>
 <%
     request.setAttribute("json", new com.kineticdata.bundles.JsonHelper());
@@ -34,4 +40,6 @@
     request.setAttribute("time", new com.kineticdata.bundles.TimeHelper());
     request.setAttribute("SubmissionHelper", new SubmissionHelper(request));
     request.setAttribute("SearchHelper", new SearchHelper());
+    request.setAttribute("CategoryHelper", new CategoryHelper());
+    request.setAttribute("FormHelper", new FormHelper());
 %>

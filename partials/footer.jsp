@@ -36,10 +36,10 @@
 <div class="background-white">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-6 gray line-height-60">
+            <div class="col-md-6 col-sm-8 gray line-height-60">
                 <p>Build Date: ${buildDate}&nbsp;&nbsp;|&nbsp;&nbsp;<a href="${bundle.spaceLocation}/${kapp.slug}/feedback">feedback</a></p>
             </div>
-            <div class="col-md-6 col-sm-3">
+            <div class="col-md-6 col-sm-4">
                 <ul class="social-links pull-right">
                     <li>
                         <a href="https://twitter.com/kineticdata" class="line-height-60">

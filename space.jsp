@@ -17,8 +17,8 @@
 					<div class="panel-body" style="text-align:center">
 						<div class="row" style="padding-bottom:20px;">
 							<c:choose>
-								<c:when test="${not empty kapp.getAttributeValue('fa-logo')}">
-									<i class="fa fa-5x ${kapp.getAttributeValue('fa-logo')}"></i>
+								<c:when test="${not empty kapp.getAttributeValue('Icon')}">
+									<i class="fa fa-5x ${kapp.getAttributeValue('Icon')}"></i>
 								</c:when>
 								<c:otherwise>
 									<i class="fa fa-play-circle fa-5x"></i>

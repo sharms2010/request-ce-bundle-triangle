@@ -42,8 +42,12 @@ i{
 }
 
 a {
-    color:#3babc0;
+    color: $primary-light;
+    @at-root &:hover{
+        color: $primary-dark;
+    }
 }
 ul{
     padding: 0;
+    margin: 0;
 }

@@ -9,10 +9,10 @@
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/categories.js" />
     </bundle:scriptpack>
-    <div class="container requests m-t-4 m-b-4">
+    <div class="container m-y-4">
         <div class="row m-b-4">
             <div class="hidden-xs hidden-sm col-md-4">
-                <h1>${kapp.name}</h1>
+                <h1>All Categories</h1>
             </div>
         </div>
         <div class="grid">
@@ -22,21 +22,13 @@
                         <div class="panel-heading  background-tertiary p-t-1">
                         </div>
                         <div class="panel-body text-center">
-                            <span class="fa-stack fa-4x center-block hidden-sm hidden-xs">
+                            <span class="fa-stack center-block icon--size">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <span class="fa-stack fa-3x center-block visible-sm-inline-block">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <span class="fa-stack fa-2x center-block visible-xs-inline-block">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa ${category.getAttributeValue("fa-logo")} fa-stack-1x fa-inverse"></i>
+                                <i class="fa ${category.getAttributeValue("Icon")} fa-stack-1x fa-inverse"></i>
                             </span>
                             <h3 class="font-light max-min-height">${category.name}</h3>
                             <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.name}">
-                                <button class="btn btn-primary m-t-1">START
+                                <button class="btn btn-primary m-t-1">Find a Form
                                 <i class="icon-control-feedback fa fa-play"></i>
                                 </button>
                             </a>

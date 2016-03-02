@@ -6,15 +6,19 @@
         <title>${text.escape(space.name)} Search</title>
     </bundle:variable>
 
-    <div class="container">
+    <div class="container input-field">
         <div class="page-header">
             <h1>Search Results</h1>
-            <form action="${bundle.kappLocation}" method="GET" role="form"> 
-              <div class="form-group has-feedback">
-                <input type="hidden" value="search" name="page">
-                <input type="text" class="form-control" name="q" value="${param['q']}"/>
-                <i id="search-icon" class="form-control-feedback fa fa-search search-catalog-icon"></i>
-              </div>
+            <form action="${bundle.kappLocation}" method="GET" role="form">
+                <div class="input-group">
+                    <input id="search" autocomplete="off" type="text" class="form-control" name="q">
+                    <input type="hidden" value="search" name="page">
+                    <span class="input-group-btn">
+                        <button id="search-button" class="btn btn-default" type="button">
+                            <i id="search-icon" class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div><!-- /input-group -->
             </form>  
         </div>
                 
