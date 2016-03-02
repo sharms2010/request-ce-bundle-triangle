@@ -31,8 +31,8 @@
     <div class="nav m-b-4">
         <div class="container">
             <div class="row text-center">
-                <c:forEach end="4" var="category" items="${kapp.categories}">
-                    <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && not empty category.forms}">
+                <c:forEach end="4" var="category" items="${CategoryHelper.getCategories(kapp)}">
+                    <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && not empty category.forms }">
                         <div class="nav__box col-sm-2 col-xs-2 col-centered">
                             <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.name}">
                                 <div class="text-center">
@@ -46,6 +46,8 @@
                         </div>
                     </c:if>
                 </c:forEach>
+                
+                
                 <div class="nav__box col-sm-2 col-xs-2 col-centered">
                     <a href="${bundle.spaceLocation}/${kapp.slug}?page=categories">
                         <div class="text-center">

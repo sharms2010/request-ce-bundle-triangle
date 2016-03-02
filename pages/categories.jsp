@@ -12,7 +12,7 @@
     <div class="container m-y-4">
         <div class="row m-b-4">
             <div class="hidden-xs hidden-sm col-md-4">
-                <h1>${kapp.name}</h1>
+                <h1>All Categories</h1>
             </div>
         </div>
         <div class="grid">
@@ -28,7 +28,7 @@
                             </span>
                             <h3 class="font-light max-min-height">${category.name}</h3>
                             <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.name}">
-                                <button class="btn btn-primary m-t-1">START
+                                <button class="btn btn-primary m-t-1">Find a Form
                                 <i class="icon-control-feedback fa fa-play"></i>
                                 </button>
                             </a>

@@ -46,7 +46,7 @@
                 </c:catch>
                 <c:if test="${runsException eq null }">
                 <ul>
-                    <c:forEach var="run" items="runs">
+                    <c:forEach var="run" items="${runs}">
                         <c:forEach var="task" items="${run.tasks}">
                             <li class="panel panel-default arrow_box">
                                 <div class="panel-body">
@@ -57,7 +57,7 @@
                                     </c:forEach>
                                 </div>
                             </li>
-                        </c:forEach>
+                        </c:forEach> 
                     </c:forEach>
                 </ul>
                 </c:if>

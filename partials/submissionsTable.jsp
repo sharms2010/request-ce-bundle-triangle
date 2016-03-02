@@ -26,7 +26,7 @@
                     </c:when>        
                     <c:otherwise>
                         <tr>
-                            <td class="font-bold p-t-0"><a href="${bundle.kappLocation}?page=requestDetails&id=${submission.id}">${submission.getLabel()} - ${submission.submittedAt}</a></td>
+                            <td class="font-bold p-t-0"><a href="${bundle.kappLocation}?page=submissionDetails&id=${submission.id}">${submission.getLabel()} - ${submission.submittedAt}</a></td>
                         </tr>
                     </c:otherwise>
                 </c:choose>

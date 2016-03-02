@@ -13,13 +13,13 @@
     <div class="container requests m-y-4">
         <div class="row m-b-4">
             <div class="hidden-xs hidden-sm col-md-4">
-                <h1 class="line-height-50">Your Requests</h1>
+                <h1 class="line-height-50">Your Submissions</h1>
             </div>
             <div class="col-sm-7 col-md-5">
                 <div class="col-xs-4">
                     <h4 class="pull-right gray line-height-50">FILTER BY:</h4>
                 </div>
-                <div class="col-xs-8 p-t-1">
+                <div class="col-xs-8 p-t-1 input-field">
                     <form role="form">
                         <div class="input-group">
                             <input type="text" class="form-control" />
