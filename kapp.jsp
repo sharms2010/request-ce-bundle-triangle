@@ -7,11 +7,10 @@
     <bundle:variable name="head">
         <title>Kinetic Data ${text.escape(kapp.name)}</title>
     </bundle:variable>
-    <c:if test="${alertsBundleExists}">
-        <bundle:scriptpack>
-            <bundle:script src="${bundle.location}/js/catalog.js" />
-        </bundle:scriptpack>
-    </c:if>
+    <bundle:scriptpack>
+        <bundle:script src="${bundle.location}/js/catalog.js" />
+    </bundle:scriptpack>
+        
     <!-- search -->
     <div class="container m-y-4 input-field">       
         <h1 class="p-b-1 text-center">How can we help you today?</h1>

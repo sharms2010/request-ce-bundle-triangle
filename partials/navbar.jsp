@@ -39,10 +39,28 @@
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right p-a-1">
-                    <p class="font-medium m-b-0">${identity.username}</p>
-                    <div class="navAccount font-medium">
-                        <a href="${bundle.spaceLocation}/${kapp.slug}?page=profile">Your Account</a>
-                    </div>
+                    <c:choose>
+                        <c:when test="${identity.anonymous}">
+                            <div class="navAccount font-medium">
+                                <a href="${bundle.spaceLocation}/app/login">Login</a>
+                            </div>
+                        </c:when>
+                        <c:otherwise>
+                            <p class="font-medium m-b-0">${identity.username}</p>
+                            <div class="navAccount font-medium">
+                                <%-- if kapp null--%>
+                                <c:if test="${kapp == null}">
+                                    <a href="${bundle.spaceLocation}/?page=profile">Your Account</a>
+                                </c:if>
+                                <c:if test="${kapp != null}">
+                                    <a href="${bundle.spaceLocation}/${kapp.slug}?page=profile">Your Account</a>
+                                </c:if>
+                            </div>
+                            <div class="navAccount font-medium">
+                                <a href="${bundle.spaceLocation}/app/logout">Logout</a>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
                 </div>
             </div>
         </div>
