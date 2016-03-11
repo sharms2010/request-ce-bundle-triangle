@@ -42,7 +42,7 @@
                     <c:choose>
                         <c:when test="${identity.anonymous}">
                             <div class="navAccount font-medium">
-                                <a href="${bundle.spaceLocation}/app/login">Login</a>
+                                <a href="${kapp.slug}">Login</a>
                             </div>
                         </c:when>
                         <c:otherwise>
