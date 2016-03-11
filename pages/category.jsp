@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="grid">
-            <c:forEach var="form" items="${FormHelper.getFormsByStatus(kapp,kapp.getCategory(param['category']),'Active')}">
+            <c:forEach var="form" items="${FormHelper.getFormsByStatus(kapp.getCategory(param['category']),'Active')}">
                 <div class="col-sm-3 rightside">
                     <div class="panel panel-default">
                         <div class="panel-heading  background-tertiary p-t-1">

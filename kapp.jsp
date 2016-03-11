@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row text-center">
                 <c:forEach end="4" var="bundleCategory" items="${CategoryHelper.getCategories(kapp)}">
-                    <c:set var="formsStatusActive" value="${FormHelper.getFormsByStatus(kapp,bundleCategory.category,'Active')}"/>
+                    <c:set var="formsStatusActive" value="${FormHelper.getFormsByStatus(bundleCategory.category,'Active')}"/>
                     <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && not empty formsStatusActive }">
                         <div class="nav__box col-sm-2 col-xs-2 col-centered">
                             <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${bundleCategory.name}">
