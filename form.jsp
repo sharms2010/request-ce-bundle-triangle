@@ -1,6 +1,6 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="bundle/initialization.jspf" %>
-<bundle:layout page="layouts/layout.jsp">
+<bundle:layout page="layouts/form.jsp">
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/service.js" />
     </bundle:scriptpack>

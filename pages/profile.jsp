@@ -43,7 +43,7 @@
                 exitEvents: 'focus'
             });
             return;
-                }
+        }
         var data = {
             displayName: $('input#displayName').val().trim(),
             email: $('input#email').val().trim()

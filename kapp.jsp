@@ -7,11 +7,10 @@
     <bundle:variable name="head">
         <title>Kinetic Data ${text.escape(kapp.name)}</title>
     </bundle:variable>
-    <c:if test="${alertsBundleExists}">
-        <bundle:scriptpack>
-            <bundle:script src="${bundle.location}/js/catalog.js" />
-        </bundle:scriptpack>
-    </c:if>
+    <bundle:scriptpack>
+        <bundle:script src="${bundle.location}/js/catalog.js" />
+    </bundle:scriptpack>
+        
     <!-- search -->
     <div class="container m-y-4 input-field">       
         <h1 class="p-b-1 text-center">How can we help you today?</h1>
@@ -31,23 +30,22 @@
     <div class="nav m-b-4">
         <div class="container">
             <div class="row text-center">
-                <c:forEach end="4" var="category" items="${CategoryHelper.getCategories(kapp)}">
-                    <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && not empty category.forms }">
+                <c:forEach end="4" var="bundleCategory" items="${CategoryHelper.getCategories(kapp)}">
+                    <c:set var="formsStatusActive" value="${FormHelper.getFormsByStatus(bundleCategory.category,'Active')}"/>
+                    <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && not empty formsStatusActive }">
                         <div class="nav__box col-sm-2 col-xs-2 col-centered">
-                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.name}">
+                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${bundleCategory.name}">
                                 <div class="text-center">
                                     <span class="fa-stack center-block icon--size">
                                         <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa ${category.getAttributeValue("Icon")} fa-stack-1x fa-inverse"></i>
+                                        <i class="fa ${bundleCategory.getAttributeValue("Icon")} fa-stack-1x fa-inverse"></i>
                                     </span>
-                                    <div class="truncate nav__text font-light">${text.escape(category.name)}</div>
+                                    <div class="truncate nav__text font-light">${text.escape(bundleCategory.name)}</div>
                                 </div>
                             </a>
                         </div>
                     </c:if>
                 </c:forEach>
-                
-                
                 <div class="nav__box col-sm-2 col-xs-2 col-centered">
                     <a href="${bundle.spaceLocation}/${kapp.slug}?page=categories">
                         <div class="text-center">
@@ -62,10 +60,6 @@
             </div>
         </div>
     </div>
-    <!-- set variables at parent level to be used to not display panels -->
-
-
-
     <!-- Approval and Requests panel display
     If{not empty list} is used  to not display table if the list is empty-->
     <div class="container m-b-4">
