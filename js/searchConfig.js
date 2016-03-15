@@ -17,7 +17,7 @@ searchConfig ={
             "First Name":{
                 title:"FIRST",
                 className: "all",
-                                setField:"result firstname"
+                setField:"result firstname"
             },
             "Last Name":{
                 title:"Last",

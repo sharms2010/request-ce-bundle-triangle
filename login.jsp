@@ -20,31 +20,31 @@
         </div>
 
         <div class="form-group">
-          <button type="submit" class="btn btn-default">${resourceBundle.getString('auth.login.submit')}Login</button>
+          <button id="submit" type="submit" class="btn btn-default">${resourceBundle.getString('auth.login.submit')}Login</button>
         </div>
     </form>
 </div>
            
 <script>        
-    $.fn.serializeObject = function()
+$.fn.serializeObject = function()
     {
-    var o = {};
-    var a = this.serializeArray();
-    $.each(a, function() {
-        if (o[this.name] !== undefined) {
-            if (!o[this.name].push) {
-                o[this.name] = [o[this.name]];
+    var obj = {};
+    var arr = this.serializeArray();
+    $.each(arr, function() {
+        if (obj[this.name] !== undefined) {
+            if (!obj[this.name].push) {
+                obj[this.name] = [obj[this.name]];
             }
-            o[this.name].push(this.value || '');
+            obj[this.name].push(this.value || '');
         } else {
-            o[this.name] = this.value || '';
+            obj[this.name] = this.value || '';
         }
     });
-    return o;
+    return obj;
 };
 
 $(function() {
-    $('form').submit(function() {
+    $('#submit').click(function() {
         var data = JSON.stringify($('form').serializeObject());
          $.ajax({
             method: 'post',
