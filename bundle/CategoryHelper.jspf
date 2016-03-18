@@ -134,8 +134,25 @@
             
             public int compareTo(BundleCategory that) {
                 // Compare by Sort Order attribute, then by Display Name attribute, then by Name
+
+                // Regex for confirming sort order is an int
+                String regex = "[0-9]+";
+
+                // Null integers to compare
+                Integer thisInt = null;
+                Integer thatInt = null;
+
+                // Check for int otherwise keep null
+                if(this.getAttributeValue("Sort Order") != null && this.getAttributeValue("Sort Order").matches(regex)){
+                    thisInt = Integer.parseInt(this.getAttributeValue("Sort Order"));
+                }
+
+                if(that.getAttributeValue("Sort Order") != null && that.getAttributeValue("Sort Order").matches(regex)){
+                    thatInt = Integer.parseInt(that.getAttributeValue("Sort Order"));
+                }
+
                 return ComparisonChain.start()
-                        .compare(this.getAttributeValue("Sort Order"), that.getAttributeValue("Sort Order"), Ordering.natural().nullsLast())
+                        .compare(thisInt, thatInt, Ordering.natural().nullsLast())
                         .compare(this.getAttributeValue("Display Name"), that.getAttributeValue("Display Name"), Ordering.natural().nullsLast())
                         .compare(this.getName(), that.getName(), Ordering.natural().nullsLast())
                         .result();
