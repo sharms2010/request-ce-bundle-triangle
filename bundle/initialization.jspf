@@ -34,9 +34,11 @@
     Bundle bundle = (Bundle)request.getAttribute("bundle"); 
     Space space = (Space)request.getAttribute("space");
     Kapp kapp = (Kapp)request.getAttribute("kapp");
+    Identity identity = (Identity)request.getAttribute("identity");
 %>
 
-<%-- Define and initialize SetupAttribute helper --%>
+<%-- SetupHelper --%>
+<%@include file="SetupHelper.jspf"%>
 <%
     SetupHelper setupHelper = new SetupHelper()
         .addSetupAttribute("Task Server Url", 
@@ -61,9 +63,28 @@
     request.setAttribute("json", new com.kineticdata.bundles.JsonHelper());
     request.setAttribute("text", new com.kineticdata.bundles.TextHelper());
     request.setAttribute("time", new com.kineticdata.bundles.TimeHelper());
-    request.setAttribute("SubmissionHelper", new SubmissionHelper(request));
-    request.setAttribute("SearchHelper", new SearchHelper());
-    request.setAttribute("SetupHelper", setupHelper);
-    request.setAttribute("FormHelper", new FormHelper());
+%>
+
+<%-- CategoryHelper --%>
+<%@include file="CategoryHelper.jspf"%>
+<%
     request.setAttribute("CategoryHelper", new CategoryHelper());
+%>
+
+<%-- FormHelper --%>
+<%@include file="FormHelper.jspf"%>
+<%
+    request.setAttribute("FormHelper", new FormHelper());
+%>
+
+<%-- SearchHelper --%>
+<%@include file="SearchHelper.jspf"%>
+<%
+    request.setAttribute("SearchHelper", new SearchHelper());
+%>
+
+<%-- SubmissionHelper --%>
+<%@include file="SubmissionHelper.jspf"%>
+<%
+    request.setAttribute("SubmissionHelper", new SubmissionHelper(request));
 %>
