@@ -9,7 +9,7 @@ $(function(){
                 clearTimeout(timer);
                 var timer = setTimeout(function(){
                     K('field[name]').value($('#name').val())
-                    KDSearch.executeSearch(searchConfig.personSearchBridgeTable);
+                    KDSearch.executeSearch(searchConfigs.personSearchBridgeTable);
                 }, 500);
             }
             if($('#searchNotFound').length != 0){
