@@ -80,7 +80,69 @@
                 <bundle:yield/>
             </c:if>
             <c:if test="${identity.anonymous}">
-                <c:import url="${bundle.path}/login.jsp" charEncoding="UTF-8"/>
+                <%-- this is a work around for login redirect--%>
+                <div class="container">
+                    <form action="<c:url value="/${space.slug}/app/login.do"/>" method="POST">
+                        <!-- CSRF Token field -->
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+                        <!-- Username field -->
+                        <div class="form-group">
+                          <label for="j_username">${resourceBundle.getString('auth.login.username')}</label>
+                          <input type="text" name="j_username" id="j_username" class="form-control" autofocus/>
+                        </div>
+
+                        <!-- Password field -->
+                        <div class="form-group">
+                          <label for="j_password">${resourceBundle.getString('auth.login.password')}</label>
+                          <input type="password" name="j_password" id="j_password" class="form-control" autocomplete="off"/>
+                        </div>
+
+                        <div class="form-group">
+                          <button id="submit" type="submit" class="btn btn-default">Login</button>
+                        </div>
+                    </form>
+                </div>
+
+                <script>        
+                $.fn.serializeObject = function()
+                    {
+                    var obj = {};
+                    var arr = this.serializeArray();
+                    $.each(arr, function() {
+                        if (obj[this.name] !== undefined) {
+                            if (!obj[this.name].push) {
+                                obj[this.name] = [obj[this.name]];
+                            }
+                            obj[this.name].push(this.value || '');
+                        } else {
+                            obj[this.name] = this.value || '';
+                        }
+                    });
+                    return obj;
+                };
+
+                $(function() {
+                    $('#submit').click(function() {
+                        var data = JSON.stringify($('form').serializeObject());
+                         $.ajax({
+                            method: 'post',
+                            dataType: 'json',
+                            contentType: 'application/json',
+                            url: '/kinetic/${space.slug}/app/login.do',
+                            data: data,
+                            success: function(data, textStatus, jqXHR){
+                               window.location = "${kapp.slug}"
+                               console.log('success')
+                            },
+                            error: function(jqXHR, textStatus, errorThrown){
+                                console.log('error')
+                            },
+                        });
+
+                    });
+                });
+                </script>
             </c:if>
         </div>
         <c:import url="${bundle.path}/partials/footer.jsp" charEncoding="UTF-8"/>
