@@ -21,7 +21,7 @@
             </div>
     
             <div class="form-group">
-              <button type="submit" class="btn btn-default">${resourceBundle.getString('auth.login.submit')}Login</button>
+              <button type="submit" class="btn btn-default">${resourceBundle.getString('auth.login.submit')}</button>
             </div>
         </form>
     </div>
