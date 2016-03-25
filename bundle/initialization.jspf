@@ -23,11 +23,6 @@
 <%@taglib prefix="json" uri="http://kineticdata.com/taglibs/json" %>
 
 <%@include file="/WEB-INF/app/includes/task4/task4.jspf" %>
-<%@include file="SubmissionHelper.jspf" %>
-<%@include file="SearchHelper.jspf" %>
-<%@include file="SetupHelper.jspf"%>
-<%@include file="FormHelper.jspf"%>
-<%@include file="CategoryHelper.jspf"%>
 
 <%-- Get bundle, space, and kapp objects --%>
 <%
