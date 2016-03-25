@@ -3,7 +3,7 @@
     <title>${test.escape(kapp.name)} Login</title>
 </bundle:variable>
 <div class="container">
-    <form action="">
+    <form action="" method="post">
         <!-- CSRF Token field -->
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
@@ -20,7 +20,7 @@
         </div>
 
         <div class="form-group">
-          <button id="submit" type="submit" class="btn btn-default">${resourceBundle.getString('auth.login.submit')}Login</button>
+          <button id="submit" type="submit" class="btn btn-default">${resourceBundle.getString('auth.login.submit')}</button>
         </div>
     </form>
 </div>
