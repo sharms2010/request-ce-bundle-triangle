@@ -3,9 +3,15 @@
     <title>${test.escape(kapp.name)} Login</title>
 </bundle:variable>
 <div class="container">
-    <form action="" method="post">
+    <form action="<c:url value="${bundle.spacePath}/app/login.do"/>" method="POST">
         <!-- CSRF Token field -->
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+        <!-- Space to login to -->
+        <input type="hidden" name="j_space" value="${space.slug}"/>
+
+        <!-- Kapp to login to -->
+        <input type="hidden" name="j_kapp" value="${kapp.slug}"/>
 
         <!-- Username field -->
         <div class="form-group">
@@ -20,53 +26,8 @@
         </div>
 
         <div class="form-group">
-          <button id="submit" type="submit" class="btn btn-default">${resourceBundle.getString('auth.login.submit')}</button>
+          <button id="submit" type="submit" class="btn btn-default">${resourceBundle.getString('auth.login.submit')}Log</button>
         </div>
     </form>
 </div>
-           
-<script>        
-$.fn.serializeObject = function()
-    {
-    var obj = {};
-    var arr = this.serializeArray();
-    $.each(arr, function() {
-        if (obj[this.name] !== undefined) {
-            if (!obj[this.name].push) {
-                obj[this.name] = [obj[this.name]];
-            }
-            obj[this.name].push(this.value || '');
-        } else {
-            obj[this.name] = this.value || '';
-        }
-    });
-    return obj;
-};
-
-$(function() {
-    $('#submit').click(function() {
-        var data = JSON.stringify($('form').serializeObject());
-         $.ajax({
-            method: 'post',
-            dataType: 'json',
-            contentType: 'application/json',
-            url: '/kinetic/${space.slug}/app/login.do',
-            data: data,
-            beforeSend: function(jqXHR, settings){
-               console.log('before')
-            },
-            success: function(data, textStatus, jqXHR){
-               window.location = "${kapp.slug}"
-               console.log('success')
-            },
-            error: function(jqXHR, textStatus, errorThrown){
-                console.log('error')
-            },
-            complete: function(jqXHR, settings){
-                console.log('complete')
-            },
-        });
-        
-    });
-});
-</script>
+       
