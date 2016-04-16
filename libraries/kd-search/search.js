@@ -391,7 +391,7 @@ KD-Search CE
     });
     
    	/****************************************************************************
-								PRIVATE HELPERS / SHARED FUNCTIONS							   
+		PRIVATE HELPERS / SHARED FUNCTIONS							   
 	****************************************************************************/
 
 	/**
@@ -401,12 +401,12 @@ KD-Search CE
 	*/
     function setValuesFromResults(configData, results){ //rowCallback
         $.each(configData, function( k, v){
-			var field = K('field['+v["setField"]+']');
+		var field = K('field['+v["setField"]+']');
             if(v["setField"]!="" && typeof v["setField"] != "undefined" && field){
-				field.value(results[k]);
+		field.value(results[k]);
             }
 			// If callback property exists
-			if(v.callback){v.callback(results[k]);}
+            if(v.callback){v.callback(results[k]);}
         });
     }
 

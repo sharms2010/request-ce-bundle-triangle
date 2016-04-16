@@ -11,7 +11,7 @@
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa ${category.getAttributeValue("Icon")} fa-stack-1x fa-inverse"></i>
                             </span>
-                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.name}">${category.name} </a>
+                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.slug}">${category.name} </a>
                         </li>
                     </c:if>
                 </c:forEach>

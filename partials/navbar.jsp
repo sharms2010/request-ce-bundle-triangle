@@ -4,8 +4,14 @@
     <nav class="header__overlay m-b-0">
         <div class="container">
             <!-- logo -->
-            <a href="${bundle.spaceLocation}/${kapp.slug}" class="navbar-brand p-a-0">
-                <c:choose>
+            <a href="${bundle.kappLocation}" class="navbar-brand p-a-0">
+                 <!-- if the kapp has an attribute with the name Logo Url and there is a value associated to that value then the image will display
+                      if Logo Url is false then a attribute with the name Company Name is looked for if true then the string is displayed
+                      if Logo Url is false and Company Name is false then the kapp mane is displayed. -->
+                <c:choose>   
+                    <c:when test="${not empty kapp.getAttribute('Logo Url') && not empty kapp.getAttributeValue('Logo Url')}">
+                        <img class="header__image" src="${kapp.getAttributeValue('Logo Url')}" alt="logo">
+                    </c:when>
                     <c:when test="${not empty kapp.getAttributeValue('Company Name')}">
                         <h1 class="p-l-1 font-thin white line-height-70 font-size-50">${kapp.getAttributeValue("Company Name")}</h1>
                     </c:when>
