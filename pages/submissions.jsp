@@ -5,7 +5,7 @@
     <c:import url="${bundle.path}/partials/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/myRequests.js" />
-    </bundle:scriptpack> 
+    </bundle:scriptpack>
     <bundle:variable name="head">
         <title>Kinetic Data ${kapp.name}</title>
     </bundle:variable>

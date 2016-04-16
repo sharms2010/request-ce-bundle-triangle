@@ -1,157 +1,78 @@
+(function($){
 searchConfigs = {
-    personSearchBridgeTable:{
+    requestedForConfig:{
+        // type: "BridgeDataTable", "BridgeList", "BridgeGetSingle", or "performSDRTable".  Determines default values to be used and behavior.
         type: "BridgeDataTable",
         //responsive: OPTIONAL Default for "BridgeDataTable" is true but can be over written.
         //responsive: false,
         bridgeConfig:{
+            //The name of the model used is specified here (this is the name that was given to the Bridge Resource on the form.)
             model: "Search By Name",
-            //qualification_mapping: "Recipients By Notification",
-            //Params to be created and passed to the Bridge.  VALUE MUST BE JQUERY SELECTOR.
+            //Parameters to be passed to the bridge.  We are using Kinetic selectors to get the value from a field on the form.
             parameters: {'Notification Name': function(){ return K('field[name]').value();}},
         },
+        //For console tables or tables you want to always display, even if there is just one record, this should be set to false.  
         processSingleResult: false,
         clearOnClick:false,
-        //Properties in the data must match the attributes of the Bridge Request
+        //Properties in the data must match the attributes of the Bridge Model that was chosen for the Bridge Resource on the form.
         data:{
             "First Name":{
+                 //This will be the title of the column or the label of the element, depending on the search type
                 title:"FIRST",
-                className: "all",
-                //setField:"result firstname"
             },
             "Last Name":{
                 title:"Last",
-                className: "min-tablet",
-                callback:function(value){;
-                    console.log(value);
-                },
-                //setField:"result lastname"
+                //This will be the class given to the column/cell/div as appropriate for the search type
+                //A class of all will always display.
+                //see https://datatables.net/extensions/responsive/classes for more details and options
+                className: "all"
             },
             "Email":{
                 title:"EMAIL",
-                className: "min-phone",
             },
             "Login Id":{
                 title:"LOGIN",
+                //A class of none is in the subrow data (responsive data)
+                //see https://datatables.net/extensions/responsive/classes for more details and options
                 className: "none",
             },
             "Work Phone Number":{
                 title:"PHONE",
+                //For non-responsive datatables, a class of hidden will hide the column. 
+                //see https://datatables.net/extensions/responsive/classes for more details and options
                 className: "hidden",
             }
         },
-        //Where to append the table
+        //Where to append the table. This element should exist on the page
+        //If a string is returned it will be processed as jQuery. Otherwise
+        //return the element in a function.
         appendTo: function(){return $('div#personTableDiv');},
-        // OPTIONAL: Create Table function or string to become jQuery obj
-        //ID to give the table when creating it.
+        //ID to give the table when creating it. This should not already exist
         resultsContainerId: 'requestedForTable',
-        //After the Table has been created.
-        before: function(){ //before search
+        before: function(){ //before search function can be used to disable buttons or add other custom behavior
         },
-        error: function(){
+        error: function(){  //this is done if the search errors
         },
-        //Define action to take place after SDR is complete.
-        success: function (){
+        success: function (){ //this is done when results are returned successfully
         },
-        success_empty: function(){
+        success_empty: function(){ //this is done if a successful search returns no results
             $('#requestedForTable_wrapper').remove();
             $('#personTableDiv').empty().append('<p id="searchNotFound" class="m-b-3 text-center">No one matiching that name could be found</p>');
         },
-        complete: function(){
+        complete: function(){ //this is done when the build of the table completes
         },
-        // Executes on click of element with class of select
-        clickCallback: function(results){
+        clickCallback: function(results){ //this can be used to create behavior after a row from a table is selected
             $('#reqForUser').empty().append(results["First Name"]+ ' ' + results["Last Name"]);
             $('#closeModal').click()
         },
-        createdRow: function ( row, data, index ) {
-        
+        createdRow: function ( row, data, index ) { //this is done when the row is being built (a pass through to datatables)
+           //see https://datatables.net/reference/option/createdRow for details/options
         },
         fnFooterCallback: function ( nRow, aaData, iStart, iEnd, aiDisplay ) {
         },
+        //The dom propertiy can be used to add or remove DataTable elements around the table
+        //see https://datatables.net/reference/option/dom to learn more
         dom: 'Brtip',
    },
-//API Config
-//    contentConfig:{
-//        type: "ApiDataTable",
-//        // responsive: OPTIONAL Default for "BridgeDataTable" is true but can be over written.
-//        //responsive: false,
-//        apiConfig:{
-//            url: function(){return bundle.apiLocation()+'/kapps/'+bundle.kappSlug()+'/submissions'},
-////            "space-slug": "professional-services",
-////            "kapp-slug": "catalog",
-////            "form-slug": "my-form",
-//            //fields and values must be escaped with encodeURIComponent(item) within the query
-////            query: {'Notification Name': function(){debugger; return K('field[Notification Name]').value();}},
-//        },
-//        processSingleResult: false,
-//        clearOnClick:false,
-//        // Properties in the data must match the attributes of the Bridge Request
-//        data: {
-//            "submittedAt":{
-//                title:"FIRST",
-//                className: "all",
-//                //setField:"result firstname"
-//            },
-//            "submittedBy":{
-//                title:"Last",
-//                className: "min-tablet",
-//                callback:function(value){;
-//                    console.log(value);
-//                },
-//                //setField:"result lastname"
-//            },
-//            "id":{
-//                title:"EMAIL",
-//                className: "min-phone",
-//            },
-//            "Login Id":{
-//                title:"LOGIN",
-//                className: "none",
-//            },
-//            "Work Phone Number":{
-//                title:"PHONE",
-//                className: "hidden",
-//            }
-//        },
-//        //Where to append the table
-//        appendTo: function(){return $('div#personTableDiv');},
-//        // OPTIONAL: Create Table function or string to become jQuery obj
-//        resultsContainerId: 'requestedForTable',
-//        //After the Table has been created.
-//        before: function(){ //before search
-//            
-//        },
-//        error: function(){
-//        },
-//        //Define action to take place after SDR is complete.
-//        success: function (){
-//        },
-//        success_empty: function(){
-//        },
-//        complete: function(){
-//        },
-//        // Executes on click of element with class of select
-//        clickCallback: function(results){
-//        },
-//        createdRow: function ( row, data, index ) {
-//
-//        $('td',row).eq(6).addClass("cursorPointer");
-//            rowButtonHTML = '<i class="fa fa-pencil"></i>';
-//            $('td',row).eq(6).html(rowButtonHTML);
-//            $('td',row).eq(6).click(function(e) {
-//                K('field[Record Type]').value("Content");
-//                K('field[GlobalVsSpecific]').value(data["Global or Specific"]);
-//                K('field[Scope]').value(data["Scope"]);
-//                K('field[Language]').value(data["Language Type"]);
-//                K('field[Specific Lanuage]').value(data["Language"]);
-//                K('field[Subject]').value(data["Subject"]);
-//                K('field[Body]').value(data["Body"]);
-//                K('field[id]').value(data["id"]);
-//
-//            });
-//        },
-//            fnFooterCallback: function ( nRow, aaData, iStart, iEnd, aiDisplay ) {
-//        },
-//        dom: 'Bfrtip',
-//   }
-}
+};
+})(jQuery);

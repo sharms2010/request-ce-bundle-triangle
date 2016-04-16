@@ -9,6 +9,9 @@
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/requestDetails.js" />
     </bundle:scriptpack>
+    <bundle:scriptpack>
+        <bundle:script src="${bundle.location}/js/requestDetails.js" />
+    </bundle:scriptpack>
     <bundle:variable name="head">
         <title>Kinetic Data ${text.escape(kapp.name)}</title>
     </bundle:variable>
