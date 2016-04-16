@@ -11,7 +11,7 @@
         <bundle:script src="${bundle.location}/js/catalog.js" />
     </bundle:scriptpack>  
     <!-- search -->
-    <div class="container m-y-4 input-field">       
+    <div class="container m-y-4 input-field"> 
         <h1 class="p-b-1 text-center">How can we help you today?</h1>
         <form class="input-field--responsive" action="${bundle.kappLocation}" method="GET" role="form">
             <div class="input-group">
@@ -33,7 +33,7 @@
                     <c:set var="formsStatusActive" value="${FormHelper.getFormsByStatus(bundleCategory.category,'Active')}"/>
                     <c:if test="${fn:toLowerCase(category.getAttribute('Hidden').value) ne 'true' && not empty formsStatusActive }">
                         <div class="nav__box col-sm-2 col-xs-2 col-centered">
-                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${bundleCategory.name}">
+                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${bundleCategory.slug}">
                                 <div class="text-center">
                                     <span class="fa-stack center-block icon--size">
                                         <i class="fa fa-circle fa-stack-2x"></i>

@@ -10,7 +10,7 @@
                     clearTimeout(timer);
                     var timer = setTimeout(function(){
                         K('field[name]').value($('#name').val())
-                        KDSearch.executeSearch(searchConfigs.personSearchBridgeTable);
+                        KDSearch.executeSearch(searchConfigs.requestedForConfig);
                     }, 500);
                 }
                 if($('#searchNotFound').length != 0){

@@ -295,6 +295,9 @@ form textarea:focus {
   /*equal to 70px*/
   margin-top: 2.5rem; }
 
+.header__image {
+  height: 5rem; }
+
 /*sass file _icons*/
 #list:active,
 #list.active,
