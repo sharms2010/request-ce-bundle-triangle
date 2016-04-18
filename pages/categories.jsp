@@ -27,7 +27,7 @@
                                 <i class="fa ${category.getAttributeValue("Icon")} fa-stack-1x fa-inverse"></i>
                             </span>
                             <h3 class="font-light max-min-height">${category.name}</h3>
-                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.name}">
+                            <a href="${bundle.spaceLocation}/${kapp.slug}?page=category&category=${category.slug}">
                                 <button class="btn btn-primary m-t-1">Find a Form
                                 <i class="icon-control-feedback fa fa-play"></i>
                                 </button>

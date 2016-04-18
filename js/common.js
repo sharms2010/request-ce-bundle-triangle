@@ -1,3 +1,4 @@
+(function($){
 /**
  * Applies the Jquery DataTables plugin to a rendered HTML table to provide 
  * column sorting and Moment.js functionality to date/time values.
@@ -33,18 +34,19 @@ function submissionsTable (tableId) {
     });
 }
 $(document).ready(function(){
-$('#profile').click(function(){
-    $('#navbar-collapse').removeClass('in');
-    $('#search').addClass("collapsed");
-});
-$('#categories').click(function(){
-    $('#navbar-collapse').removeClass('in');
-    $('#search').addClass("collapsed");
-});
+    $('#profile').click(function(){
+        $('#navbar-collapse').removeClass('in');
+        $('#search').addClass("collapsed");
+    });
+    $('#categories').click(function(){
+        $('#navbar-collapse').removeClass('in');
+        $('#search').addClass("collapsed");
+    });
 });
 
 $(document).ready(function(){
-$('#search-button').on('click', function(){
-   $(this).closest('form').submit();
+    $('#search-button').on('click', function(){
+       $(this).closest('form').submit();
+    });
 });
-});
+})(jQuery);

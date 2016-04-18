@@ -1,16 +1,18 @@
-$(document).ready(function(){
-    $(".grid").hide();
-        $("#list").addClass('active')
-    $("#grid").click(function(){
-        $(".grid").show();
-        $(".list").hide();
-        $(this).toggleClass('active');
-        $("#list").removeClass('active');
-    });
-    $("#list").click(function(){
-        $(".list").show();
+(function($){
+    $(document).ready(function(){
         $(".grid").hide();
-        $(this).toggleClass('active');
-        $("#grid").removeClass('active');
+            $("#list").addClass('active')
+        $("#grid").click(function(){
+            $(".grid").show();
+            $(".list").hide();
+            $(this).toggleClass('active');
+            $("#list").removeClass('active');
+        });
+        $("#list").click(function(){
+            $(".list").show();
+            $(".grid").hide();
+            $(this).toggleClass('active');
+            $("#grid").removeClass('active');
+        });
     });
-});
+})(jQuery);

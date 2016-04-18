@@ -4,6 +4,7 @@
     <bundle:variable name="head">
         <title>${text.escape(form.name)}</title>
     </bundle:variable>
+
     <section class="page">
         <div class="container">
             <div class="page-header">

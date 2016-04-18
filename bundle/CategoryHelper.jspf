@@ -69,6 +69,7 @@
             
             public Category getCategory(){ return this.category; }
             public String getName() { return this.category.getName(); }
+            public String getSlug() { return this.category.getSlug(); }
             public List<Attribute> getAttributes() { return this.category.getAttributes(); }
             public Attribute getAttribute(String name) { return this.category.getAttribute(name); }
             public String getAttributeValue(String name) { return this.category.getAttributeValue(name); }

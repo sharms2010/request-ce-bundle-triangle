@@ -5,7 +5,7 @@
     <c:import url="${bundle.path}/partials/categoryNav.jsp" charEncoding="UTF-8"/>
     <bundle:scriptpack>
         <bundle:script src="${bundle.location}/js/myRequests.js" />
-    </bundle:scriptpack> 
+    </bundle:scriptpack>
     <bundle:variable name="head">
         <title>Kinetic Data ${kapp.name}</title>
     </bundle:variable>
@@ -66,7 +66,7 @@
                             <h3 class="max-min-height">${text.escape(submission.form.name)}</h3>
                             <div class="font-medium gray">${submission.createdAt}</div>
                             <p class="font-bold gray">${submission.coreState}</p>
-                            <a class="display-blk" href="${bundle.spaceLocation}?page=requestDetails&id=${submission.id}">
+                            <a class="display-blk" href="${bundle.spaceLocation}?page=submissionDetails&id=${submission.id}">
                                 <button class="btn btn-primary">DETAILS
                                 <i class="icon-control-feedback fa fa-play"></i>
                                 </button>
@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="col-sm-2">
                                     <span class="pull-right text-left panel__valign-buttons">
-                                        <a href="${bundle.kappLocation}?page=requestDetails&id=${submission.id}">
+                                        <a href="${bundle.kappLocation}?page=submissionDetails&id=${submission.id}">
                                             <button class="btn btn-primary">DETAILS
                                             <i class="icon-control-feedback fa fa-play"></i>
                                             </button>
