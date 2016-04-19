@@ -16,6 +16,7 @@
                 <h1 class="line-height-50">Your Submissions</h1>
             </div>
             <div class="col-sm-7 col-md-5">
+<!-- TODO: get a filter for the submissions page display already complete    
                 <div class="col-xs-4">
                     <h4 class="pull-right gray line-height-50">FILTER BY:</h4>
                 </div>
@@ -30,7 +31,7 @@
                             </span>
                         </div>
                     </form>
-                </div>
+                </div>-->
             </div>
             <div class="col-sm-5 col-md-3 veiw-style pull-right">
                 <div class="col-xs-6 p-r-1">
@@ -44,14 +45,9 @@
                 </div>
             </div>
         </div>
-        <c:choose>
-            <c:when test="${param['state']}">
-                <c:set scope="request" var="submissionsList" value="${SubmissionHelper.retrieveRecentSubmissions(param['type'], param['state'])}"/>
-            </c:when>
-            <c:otherwise>
-                <c:set scope="request" var="submissionsList" value="${SubmissionHelper.retrieveRecentSubmissions(param['type'])}"/>
-            </c:otherwise>
-        </c:choose>
+        <%-- Get a full list of all submissions by type --%>
+        <c:set scope="request" var="submissionsList" value="${SubmissionHelper.retrieveRecentSubmissions(param['type'])}"/>
+
         <div class="grid">
             <c:forEach items="${submissionsList}" var="submission">
                 <div class="col-sm-4 col-md-3 rightside">
@@ -66,16 +62,32 @@
                             <h3 class="max-min-height">${text.escape(submission.form.name)}</h3>
                             <div class="font-medium gray">${submission.createdAt}</div>
                             <p class="font-bold gray">${submission.coreState}</p>
-                            <a class="display-blk" href="${bundle.spaceLocation}?page=submissionDetails&id=${submission.id}">
-                                <button class="btn btn-primary">DETAILS
-                                <i class="icon-control-feedback fa fa-play"></i>
-                                </button>
-                            </a>
-                            <a href="${bundle.kappLocation}/${submission.form.slug}">
-                                <button class="btn btn-primary m-t-1">REORDER
-                                <i class="icon-control-feedback fa fa-play"></i>
-                                </button>
-                            </a>
+                            <c:choose>
+                                <c:when test="${submission.coreState == 'Submitted'}">
+                                    <a class="display-blk" href="${bundle.spaceLocation}?page=submissionDetails&id=${submission.id}">
+                                        <button class="btn btn-primary">DETAILS
+                                        <i class="icon-control-feedback fa fa-play"></i>
+                                        </button>
+                                    </a>
+                                    <a href="${bundle.kappLocation}/${submission.form.slug}">
+                                        <button class="btn btn-primary m-t-1">REORDER
+                                        <i class="icon-control-feedback fa fa-play"></i>
+                                        </button>
+                                    </a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="${bundle.spaceLocation}/submissions/${submission.id}">
+                                        <button class="btn btn-primary">CONTINUE
+                                        <i class="icon-control-feedback fa fa-play"></i>
+                                        </button>
+                                    </a>
+                                    <a href="${bundle.kappLocation}/${submission.form.slug}">
+                                        <button class="btn btn-primary m-t-1">REORDER
+                                        <i class="icon-control-feedback fa fa-play"></i>
+                                        </button>
+                                    </a>
+                                </c:otherwise>
+                            </c:choose>
                         </div>
                     </div>
                 </div>
@@ -104,20 +116,40 @@
                                         <div class="font-bold gray">${submission.coreState}</div>
                                     </span>
                                 </div>
-                                <div class="col-sm-2">
-                                    <span class="pull-right text-left panel__valign-buttons">
-                                        <a href="${bundle.kappLocation}?page=submissionDetails&id=${submission.id}">
-                                            <button class="btn btn-primary">DETAILS
-                                            <i class="icon-control-feedback fa fa-play"></i>
-                                            </button>
-                                        </a>
-                                        <a href="${bundle.kappLocation}/${submission.form.slug}">
-                                            <button class="btn btn-primary">REORDER
-                                            <i class="icon-control-feedback fa fa-play"></i>
-                                            </button>
-                                        </a>
-                                    </span>
-                                </div>
+                                <c:choose>
+                                <c:when test="${submission.coreState == 'Submitted'}">
+                                    <div class="col-sm-2">
+                                        <span class="pull-right text-left panel__valign-buttons">
+                                            <a href="${bundle.kappLocation}?page=submissionDetails&id=${submission.id}">
+                                                <button class="btn btn-primary">DETAILS
+                                                <i class="icon-control-feedback fa fa-play"></i>
+                                                </button>
+                                            </a>
+                                            <a href="${bundle.kappLocation}/${submission.form.slug}">
+                                                <button class="btn btn-primary">REORDER
+                                                <i class="icon-control-feedback fa fa-play"></i>
+                                                </button>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </c:when>
+                                <c:otherwise>
+                                    <div class="col-sm-2">
+                                        <span class="pull-right text-left panel__valign-buttons">
+                                            <a href="${bundle.spaceLocation}/submissions/${submission.id}">
+                                                <button class="btn btn-primary">CONTINUE
+                                                <i class="icon-control-feedback fa fa-play"></i>
+                                                </button>
+                                            </a>
+                                            <a href="${bundle.kappLocation}/${submission.form.slug}">
+                                                <button class="btn btn-primary">REORDER
+                                                <i class="icon-control-feedback fa fa-play"></i>
+                                                </button>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </c:otherwise>
+                            </c:choose>
                             </li>
                         </div>
                     </div>                    
