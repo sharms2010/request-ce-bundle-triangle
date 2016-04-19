@@ -1,17 +1,18 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" trimDirectiveWhitespaces="true"%>
 <%@include file="../bundle/initialization.jspf" %>
-<div class="footer">
-    <div class="footer__overlay footer_header m-a-0">
+<footer class="footer ">
+<div class="footer--top">
+    <div class="footer--top__overlay footer--top_header m-a-0 ">
         <div class="container">
-            <div class="row footer__content white">
+            <div class="row footer--top__content white">
                 <div class="col-md-6">
-                    <h4 class="footer__header--description m-b-1">About us</h4>
+                    <h4 class="footer--top__header--description m-b-1">About us</h4>
                     <div>
                         <p>Acme stands out as an industry leader in a competitive field.  The quality of our products has won us the trust of our customers and the admiration of our industry peers.  Acme has had numerous accolades bestowed upon us in our 150 years in the business.  If you think Acme can be a solution to a problem you are having please let us know.</h4>
                     </div>
                 </div>
                 <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
-                    <h4 class="footer__header m-b-1">Kinetic Favorites</h4>
+                    <h4 class="footer--top__header m-b-1">Kinetic Favorites</h4>
                     <ul class="list-unstyled">
                         <li><a href="http://getbootstrap.com/">Bootstrap</a><li>
                         <li><a href="https://jquery.com/">jQuery</a></li>
@@ -21,7 +22,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3 visible-md-inline-block visible-lg-inline-block">
-                    <h4 class="footer__header m-b-1">Legal</h4>
+                    <h4 class="footer--top__header m-b-1">Legal</h4>
                     <ul class="list-unstyled">
                         <li><a href="http://getbootstrap.com/">Terms</a></li>
                         <li><a href="https://jquery.com/">Legal</a></li>
@@ -33,7 +34,7 @@
         </div>
     </div>
 </div>
-<footer>
+
     <div class="background-white">
         <div class="container">
             <div class="row">

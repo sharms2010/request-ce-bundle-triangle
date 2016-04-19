@@ -2,14 +2,7 @@
     background: url("../images/background.png");
 }
 
-.footer{
-    background: url("../images/background.png");
-}
 
-/*this attempts to solve the problem of empty window content and footer pacement (revise)*/
-.temp{
-    min-height: 525px;
-}
 
 .truncate {
   width: 100%;

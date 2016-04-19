@@ -18,11 +18,13 @@
   color: #858585 !important; }
 
 /*scss file _reboot*/
-html, body {
-  height: 100%;
+html {
+  position: relative;
+  min-height: 100%;
   font-size: 14px; }
 
 body {
+  margin-bottom: 24.2857142857rem;
   background-color: #f5f5f5; }
 
 h1 {
@@ -236,39 +238,46 @@ form textarea:focus {
   font-weight: 700; }
 
 /*sass file _footer*/
-.footer, .footer__overlay {
-  /* background: url("../images/background.png");*/
-  height: 20rem;
-  width: 100%;
+.footer--top {
+  background: url("../images/background.png");
   position: relative;
-  border: none !important; }
-.footer__overlay {
+  border: none !important;
+  height: 20rem; }
+
+.footer--top__overlay {
+  width: 100%;
   background-color: rgba(5, 12, 19, 0.75);
   filter: alpha(opacity=75);
   /* For IE8 and earlier */
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   height: 17.5rem;
   /*equal to 245px*/ }
-.footer__content {
+
+.footer--top__content {
   padding-top: 2.5rem;
   /*equal to 35px*/ }
-.footer__overlay > div > div > div:first-child > div:first-child {
+
+.footer--top__overlay > div > div > div:first-child > div:first-child {
   border-bottom: 0.35714285714rem solid #d6ce61; }
-.footer__overlay > div > div > div:not(:first-child) > div:first-child {
+
+.footer--top__overlay > div > div > div:not(:first-child) > div:first-child {
   border-bottom: 0.35714285714rem solid #5ea5b2; }
-.footer__overlay > div > div > div:not(:first-child) > div {
+
+.footer--top__overlay > div > div > div:not(:first-child) > div {
   margin-left: 2.14285714286rem;
   /*equal to 30px*/ }
-.footer__overlay content header > div > div > div:not(:first-child) > div > h5 {
+
+.footer--top__overlay content header > div > div > div:not(:first-child) > div > h5 {
   margin-bottom: 0; }
 
-.footer__header, .footer__header--description {
+.footer--top__header, .footer--top__header--description {
   border-bottom: 0.35714285714rem solid #5ea5b2;
   padding-bottom: 0.71429rem;
   margin-bottom: 0.71429rem; }
-  .footer__header--description {
-    border-color: #d6ce61; }
+
+.footer--top__header--description {
+  border-color: #d6ce61; }
 
 .social-links {
   margin: 0; }
@@ -277,6 +286,12 @@ form textarea:focus {
     display: inline-block;
     padding-right: 5px;
     padding-left: 5px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 24.2857142857rem; }
 
 /*sass file _header*/
 .header, .header__overlay {

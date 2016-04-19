@@ -1,10 +1,12 @@
 /*scss file _reboot*/
-html,body{
-    height: 100%;
+html{
+    position: relative;
+    min-height: 100%;
     font-size: 14px;
 }
 
 body{
+    margin-bottom: 24.2857142857rem;
     background-color: $bg-color;
 }
 
