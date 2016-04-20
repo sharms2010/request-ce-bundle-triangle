@@ -1,17 +1,18 @@
 /*sass file _header*/
 
 .header{
-    /* background: url("../images/background.png");*/
+    background: url("../images/background.png");
     min-height: 7.5rem; 
     position: relative;
 }
 .header__overlay{
-    @extend .header;
     background-color: $overlay-color;
     filter: alpha(opacity=75); /* For IE8 and earlier */
     border: none;
     border-radius: 0;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     min-height: 5rem; /*equal to 70px*/
     margin-top: 2.5rem;
 }

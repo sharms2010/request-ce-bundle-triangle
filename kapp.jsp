@@ -11,7 +11,7 @@
         <bundle:script src="${bundle.location}/js/catalog.js" />
     </bundle:scriptpack>  
     <!-- search -->
-    <div class="container m-y-4 input-field"> 
+    <div class="container m-y-4 input-field">
         <h1 class="p-b-1 text-center">How can we help you today?</h1>
         <form class="input-field--responsive" action="${bundle.kappLocation}" method="GET" role="form">
             <div class="input-group">
@@ -132,6 +132,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>                   
     <app:bodyContent/>
 </bundle:layout>

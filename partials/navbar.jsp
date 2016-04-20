@@ -12,7 +12,7 @@
                     <c:when test="${not empty kapp.getAttribute('Logo Url') && not empty kapp.getAttributeValue('Logo Url')}">
                         <img class="header__image" src="${kapp.getAttributeValue('Logo Url')}" alt="logo">
                     </c:when>
-                    <c:when test="${not empty kapp.getAttributeValue('Company Name')}">
+                    <c:when test="${not empty kapp.getAttributeValue('Company Name') && not empty kapp.getAttributeValue('Company Name')}}">
                         <h1 class="p-l-1 font-thin white line-height-70 font-size-50">${kapp.getAttributeValue("Company Name")}</h1>
                     </c:when>
                     <c:otherwise>

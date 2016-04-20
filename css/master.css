@@ -294,8 +294,8 @@ form textarea:focus {
   height: 24.2857142857rem; }
 
 /*sass file _header*/
-.header, .header__overlay {
-  /* background: url("../images/background.png");*/
+.header {
+  background: url("../images/background.png");
   min-height: 7.5rem;
   position: relative; }
 
@@ -305,7 +305,9 @@ form textarea:focus {
   /* For IE8 and earlier */
   border: none;
   border-radius: 0;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   min-height: 5rem;
   /*equal to 70px*/
   margin-top: 2.5rem; }
@@ -815,5 +817,11 @@ form textarea:focus {
 /*border control*/
 .border-none {
   border: none; }
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 /*# sourceMappingURL=master.css.map */
