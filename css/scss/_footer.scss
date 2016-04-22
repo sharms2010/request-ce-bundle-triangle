@@ -3,7 +3,7 @@ $element: overlay content header;
 
 
 .footer--top{ 
-    background: url("../images/background.png");
+    background: url("../images/parallelogram-background.jpg");
     position: relative;
     border: none !important;
     height: 20rem;
@@ -32,13 +32,13 @@ $element: overlay content header;
     margin-bottom: 0;
 }
 .footer--top__header{
-    border-bottom: 0.35714285714rem solid #5ea5b2;
+    border-bottom: 0.35714285714rem solid $secondary;
     padding-bottom: 0.71429rem;
     margin-bottom: 0.71429rem;
 }
 .footer--top__header--description{
     @extend .footer--top__header;
-    border-color: #d6ce61;
+    border-color: $primary;
 }
 
 .social-links{
