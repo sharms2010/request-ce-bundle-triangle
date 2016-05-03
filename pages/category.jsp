@@ -24,7 +24,7 @@
                         <div class="panel-body text-center">
                             <span class="fa-stack center-block icon--size">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa ${category.getAttributeValue("Icon")} fa-stack-1x fa-inverse"></i>
+                                <i class="fa ${form.getAttributeValue("Icon")} fa-stack-1x fa-inverse"></i>
                             </span>
                             <h3 class="font-light max-min-height">${form.name}</h3>
                             <a href="${bundle.spaceLocation}/${kapp.slug}/${form.slug}">

@@ -2,11 +2,11 @@
     public static class CategoryHelper {
     
         Set<BundleCategory> categories;
-        Map<String, BundleCategory> categoriesByName;
+        Map<String, BundleCategory> categoriesBySlug;
         
         public CategoryHelper() {
             this.categories = null;
-            this.categoriesByName = null;
+            this.categoriesBySlug = null;
         }
         
         public List<BundleCategory> getCategories(Kapp kapp) {
@@ -14,22 +14,22 @@
                 return new ArrayList<BundleCategory>(categories);
             }
             this.categories = new TreeSet<BundleCategory>();
-            this.categoriesByName = new HashMap<String, BundleCategory>();
+            this.categoriesBySlug = new HashMap<String, BundleCategory>();
             
             List<BundleCategory> allCategories = new ArrayList<BundleCategory>();
             for (Category category : kapp.getCategories()){
                 BundleCategory bundleCategory = new BundleCategory(category);
                 allCategories.add(bundleCategory);
-                this.categoriesByName.put(category.getName(), bundleCategory);
+                this.categoriesBySlug.put(category.getSlug(), bundleCategory);
             }
             
             while (!allCategories.isEmpty()){
                 BundleCategory bundleCategory = allCategories.remove(0);
                 if (bundleCategory.hasAttribute("Parent")){
-                    String parentName = bundleCategory.getAttributeValue("Parent");
-                    if (categoriesByName.get(parentName) != null){
-                        categoriesByName.get(parentName).setSubcategory(bundleCategory);
-                        bundleCategory.setParentCategory(categoriesByName.get(parentName));
+                    String parentSlug = bundleCategory.getAttributeValue("Parent");
+                    if (categoriesBySlug.get(parentSlug) != null){
+                        categoriesBySlug.get(parentSlug).setSubcategory(bundleCategory);
+                        bundleCategory.setParentCategory(categoriesBySlug.get(parentSlug));
                         continue;
                     }
                 }
@@ -40,7 +40,7 @@
         }
         
         public List<BundleCategory> getCategories(Form form) {
-            if (this.categoriesByName == null){
+            if (this.categoriesBySlug == null){
                 this.getCategories(form.getKapp());
             }
             
@@ -52,8 +52,8 @@
             return new ArrayList<BundleCategory>(formCategories);
         }
         
-        public BundleCategory getCategory(String name){
-            return this.categoriesByName.get(name);
+        public BundleCategory getCategory(String slug){
+            return this.categoriesBySlug.get(slug);
         }
         
         public static class BundleCategory implements Comparable<BundleCategory> {
