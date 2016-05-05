@@ -39,7 +39,8 @@
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa ${bundleCategory.getAttributeValue("Icon")} fa-stack-1x fa-inverse"></i>
                                     </span>
-                                    <div class="truncate nav__text font-light">${text.escape(bundleCategory.name)}</div>
+                                    <h3 class="font-light">${text.escape(bundleCategory.name)}</h3>
+                                    <div>${bundleCategory.getAttributeValue("Description")}</div>
                                 </div>
                             </a>
                         </div>

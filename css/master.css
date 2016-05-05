@@ -75,11 +75,6 @@ a:hover {
   color: #445987;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-}
-
 .col-centered {
   display: inline-block;
   float: none;
@@ -183,6 +178,8 @@ form textarea:focus {
 }
 
 .right-details > ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -448,14 +445,11 @@ form textarea:focus {
 }
 .nav .nav__list {
   text-align: center;
-}
-.nav ul {
   /*      display: -moz-box;
           display: -webkit-box;
           display: box;*/
-  padding: none;
-  margin: none;
-  text-align: left;
+  padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 .nav li {
