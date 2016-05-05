@@ -4,6 +4,7 @@
         <thead>
             <tr>
                 <td class="font-bold p-t-0 gray">SUMMARY</td>
+                <td class="font-bold p-t-0 gray text-center">FOR</td>
                 <td class="font-bold p-t-0 text-right gray hidden-xs">STATUS</td>
             </tr>
         </thead>
@@ -11,6 +12,7 @@
             <c:forEach var="submission" items="${submissionsList}">
                 <tr>
                     <td class="font-bold p-b-0">${text.escape(submission.form.name)}</td>
+                    <td class="font-bold p-b-0 text-center">${submission.getValue('requested for')}</td>
                     <td class="font-bold text-right gray hidden-xs" rowspan="2">${submission.coreState}</td>
                 </tr>
                  <c:choose>
@@ -34,7 +36,7 @@
         </tbody>
         <tfoot>
         <tr>
-            <td class="font-bold" colspan="2"><center><a href="${bundle.spaceLocation}/${kapp.slug}?page=submissions&type=${type}&state=${state}">VIEW MORE</a></center></td>
+            <td class="font-bold" colspan="3"><center><a href="${bundle.spaceLocation}/${kapp.slug}?page=submissions&type=${type}&state=${state}">VIEW MORE</a></center></td>
         </tr>
         </tfoot>
     </table>
