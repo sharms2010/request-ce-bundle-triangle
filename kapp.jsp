@@ -49,30 +49,41 @@
             </div>
         </div>
     </div>
-    <!-- Approval and Requests panel display
+<!-- Approval and Requests panel display
     If{not empty list} is used  to not display table if the list is empty-->
     <div class="container m-b-4">
         <div class="row">
             <div class="col-sm-7 leftside">
-                <div class="panel panel-default">
-                    <div class="panel-heading background-tertiary">
-                        <div class="panel-title"><h4 class="white">YOUR REQUESTS - DRAFT</h4></div>
+                <c:set scope="request" var="submissionsListApproval" value="${SubmissionHelper.retrieveRecentSubmissions('Approval', 3)}"/>
+                <c:if test="${not empty submissionsListApproval}">
+                    <div class="panel panel-default ">
+                        <div class="panel-heading background-tertiary">
+                            <div class="panel-title">
+                                <h4 class="white">YOUR APPROVALS</h4>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <c:set scope="request" var="type" value="Approval"/>
+                            <c:set scope="request" var="state" value=""/>
+                            <c:set scope="request" var="submissionsList" value="${submissionsListApproval}"/>
+                            <c:import url="${bundle.path}/partials/submissionsTable.jsp" charEncoding="UTF-8"/>
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        <c:set scope="request" var="submissionsListDraft" value="${SubmissionHelper.retrieveRecentSubmissions('Service', 'Draft', 3)}"/>
-                        <c:choose>
-                            <c:when test="${not empty submissionsListDraft}">
-                                <c:set scope="request" var="type" value="Service"/>
-                                <c:set scope="request" var="state" value="Draft"/>
-                                <c:set scope="request" var="submissionsList" value="${submissionsListDraft}"/>
-                                <c:import url="${bundle.path}/partials/submissionsTable.jsp" charEncoding="UTF-8"/>
-                            </c:when>
-                            <c:otherwise>
-                                <h2 class="text-center">There are no Drafts to display</h2>
-                            </c:otherwise>
-                        </c:choose>
+                </c:if>
+                <c:set scope="request" var="submissionsListDraft" value="${SubmissionHelper.retrieveRecentSubmissions('Service', 'Draft', 3)}"/>
+                <c:if test="${not empty submissionsListDraft}">
+                    <div class="panel panel-default">
+                        <div class="panel-heading background-tertiary">
+                            <div class="panel-title"><h4 class="white">YOUR REQUESTS - DRAFT</h4></div>
+                        </div>
+                        <div class="panel-body">
+                            <c:set scope="request" var="type" value="Service"/>
+                            <c:set scope="request" var="state" value="Draft"/>
+                            <c:set scope="request" var="submissionsList" value="${submissionsListDraft}"/>
+                            <c:import url="${bundle.path}/partials/submissionsTable.jsp" charEncoding="UTF-8"/>
+                        </div>
                     </div>
-                </div>
+                </c:if>
                 <div class="panel panel-default">
                     <div class="panel-heading background-tertiary">
                         <div class="panel-title"><h4 class="white">YOUR REQUESTS - SUBMITTED</h4></div>
@@ -87,34 +98,12 @@
                                 <c:import url="${bundle.path}/partials/submissionsTable.jsp" charEncoding="UTF-8"/>
                             </c:when>
                             <c:otherwise>
-                                <h2 class="text-center">There are no Submissions to display</h2>
-                            </c:otherwise>
-                        </c:choose>
-                    </div>
-                </div>
-                <div class="panel panel-default ">
-                    <div class="panel-heading background-tertiary">
-                        <div class="panel-title">
-                            <h4 class="white">YOUR APPROVALS</h4>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <c:set scope="request" var="submissionsListApproval" value="${SubmissionHelper.retrieveRecentSubmissions('Approval', 3)}"/>
-                        <c:choose>
-                            <c:when test="${not empty submissionsListApproval}">
-                                <c:set scope="request" var="type" value="Approval"/>
-                                <c:set scope="request" var="state" value=""/>
-                                <c:set scope="request" var="submissionsList" value="${submissionsListApproval}"/>
-                                <c:import url="${bundle.path}/partials/submissionsTable.jsp" charEncoding="UTF-8"/>
-                            </c:when>
-                            <c:otherwise>
-                                <h2 class="text-center">There are no Approvals to display</h2>
+                                <p class="text-center">There are no Requests to display</p>
                             </c:otherwise>
                         </c:choose>
                     </div>
                 </div>
             </div>
-
             <div class="col-sm-5">
                 <!-- Kinetic Twitter feed -->
                 <div class=" hidden-xs">
