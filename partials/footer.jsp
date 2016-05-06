@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-8 gray line-height-60">
-                    <p>Build Date: ${buildDate}&nbsp;&nbsp;|&nbsp;&nbsp;<a href="${bundle.spaceLocation}/${kapp.slug}/feedback">feedback</a></p>
+                    <p>Build Date: <span data-moment>${buildDate}</span>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="${bundle.spaceLocation}/${kapp.slug}/feedback">feedback</a></p>
                 </div>
                 <div class="col-md-6 col-sm-4">
                     <ul class="social-links pull-right">
@@ -66,6 +66,6 @@
         </div>
     </div>
 </footer>
-    <!-- having the script tag her is a temporary work around due to url issue so that the twitter feed will show on the kapp page-->
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-    </script>
+<!-- having the script tag her is a temporary work around due to url issue so that the twitter feed will show on the kapp page-->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs"); 
+</script>

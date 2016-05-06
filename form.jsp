@@ -16,7 +16,6 @@
                 </small>
             </h2>
         </header>
-        <div class="errors"></div>
         <app:bodyContent/>
     </section>
 </bundle:layout>
